@@ -1,3 +1,16 @@
+- title: Estudo
+  url: docs
+  links:
+    - title: "Ciência"
+      url: "docs/ciencia"
+    - title: "Tecnologia"
+      url: "docs/tecnologia"
+      children:
+        - title: Eletricidade
+          url: "docs/tecnology/eletricidade#development"
+    - title: "Humanidades"
+      url: "docs/humanidades"
+
 - title: Documentation
   url: docs
   links:

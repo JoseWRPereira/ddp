@@ -46,7 +46,8 @@ feedback: true
 # Image and (square) dimension for logo (don't start with /)
 # If commented, will use material hat theme
 # logo: "assets/img/logo/SRCC-square-red.png"
-logo_pixels: 34
+logo: "assets/img/logo.png"
+logo_pixels: 42
 color: "#30638e"
 # color: "#8c1515" # primary color for header, buttons
 

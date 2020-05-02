@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Docsy Jekyll Theme
+title: Diferença de Potencial - DdP
 permalink: /
+icon: logo.svg
 ---
 
-# Welcome to Docsy Jekyll
+# Bem *vindum* ao sítio
+# {{ site.title }}.
 
 This is a starter template for a docsy jekyll theme.
 
