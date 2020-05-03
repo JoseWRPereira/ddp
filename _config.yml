@@ -34,10 +34,10 @@ github_repo: "ddp"
 # Optional
 twitter: DifdePotencial
 linkedin: josewrpereira
-dockerhub: vanessa
+dockerhub:
 
 # Should there be feedback buttons at the bottom of pages?
-feedback: true
+feedback: false
 
 # Link to a privacy policy in footer, uncomment and define if wanted
 # privacy: https://domain.com/privacy
