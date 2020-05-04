@@ -72,10 +72,10 @@
 			});
 
 			searchResultsEl.innerHTML = resultsHTML;
-			searchProcessEl.innerText = "Showing";
+			searchProcessEl.innerText = "Mostrando";
 		} else {
 			searchResultsEl.style.display = "none";
-			searchProcessEl.innerText = "No";
+			searchProcessEl.innerText = "Sem";
 		}
 	}
 
