@@ -18612,7 +18612,7 @@ footer {
 {
 /*                           BOTTOMBAR                   */
 .bottombar{background: #222; padding: 10px; position:static; width: 100%; text-align:center; color:#fff;}
-.bottombar ul li {display:inline; padding: 10px;}
+.bottombar ul li {display:inline; padding: 15px;}
 .bottombar ul li a {text-decoration:none; color:#777; font-size:30px;}
 .bottombar ul li a:hover {text-decoration:none; color:#fff;}
 }
@@ -18620,7 +18620,7 @@ footer {
 {
   /*                           BOTTOMBAR                   */
   .bottombar{background: #222; padding: 10px; position:static; width: 100%; text-align:center; color:#fff;}
-  .bottombar ul li {display:inline; padding: 10px;}
+  .bottombar ul li {display:inline; padding: 15px;}
   .bottombar ul li a {text-decoration:none; color:#777; font-size:30px;}
   .bottombar ul li a:hover {text-decoration:none; color:#fff;}
 }

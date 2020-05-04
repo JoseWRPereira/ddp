@@ -1,36 +1,49 @@
 <footer class="bg-dark py-1 row d-print-none">
 <div class="bottombar">
   <ul>
-    {% if site.twitter %}
-    <li>
-        <a href="">
-        <i class="fab fa-twitter"></i>
-        </a>
-    </li>
-    {% endif %}
     {% if site.linkedin %}
     <li>
-        <a href="">
+        <a href="https://br.linkedin.com/in/{{ site.linkedin }}" target="_blank">
         <i class="fab fa-linkedin"></i>
         </a>
     </li>
     {% endif %}
     {% if site.github %}
     <li>
-        <a href="">
+        <a href="https://github.com/{{ site.github_user }}" target="_blank">
         <i class="fab fa-github"></i>
+        </a>
+    </li>
+    {% endif %}
+    {% if site.twitter %}
+    <li>
+        <a href="https://twitter.com/{{ site.twitter }}" target="_blank">
+        <i class="fab fa-twitter"></i>
         </a>
     </li>
     {% endif %}
     {% if site.youtube %}
     <li>
-        <a href="">
+        <a href="https://www.youtube.com/channel/{{ site.youtube }}" target="_blank">
         <i class="fab fa-youtube"></i>
         </a>
     </li>
     {% endif %}
+    {% if site.instagram %}
+    <li>
+        <a href="https://www.instagram.com/{{ site.instagram }}" target="_blank">
+        <i class="fab fa-instagram"></i>
+        </a>
+    </li>
+    {% endif %}
   </ul>
-    <small>© 2020 {{ site.author }} All Rights Reserved</small>
+
+  <small>
+    <i class="fa fa-copyright fa-flip-horizontal"></i>
+    {{ site.ano }} {{ site.author }}
+    <br>
+    "Free as in freedom"
+  </small>
 </div>
 </footer>
 

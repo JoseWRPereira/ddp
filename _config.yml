@@ -17,6 +17,7 @@
 title: Diferença de Potencial
 email: diferencadepotencial@gmail.com
 author: José W R Pereira
+ano: 2020
 description: > # this means to ignore newlines until "baseurl:"
   Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 
@@ -32,10 +33,10 @@ github_user: "JoseWRPereira"
 github_repo: "ddp"
 
 # Optional
-twitter: DifdePotencial
+twitter: josewrpereira
 linkedin: josewrpereira
-youtube: josewrpereira
-github: JoseWRPereira
+youtube: UC9eYcDdYDLA5p-4j3pq3KjQ
+instagram: josewrpereira
 dockerhub:
 
 # Should there be feedback buttons at the bottom of pages?
