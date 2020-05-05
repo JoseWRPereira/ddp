@@ -10,21 +10,21 @@ badges:
 ---
 
 
-Ar, céu, brisa, espaço, imensidão…
-deixai ser levado a mais longínqua viagem
-de onde jamais se volta pois é bobagem
+Ar, céu, brisa, espaço, imensidão… <br>
+deixai ser levado a mais longínqua viagem <br>
+de onde jamais se volta pois é bobagem <br>
 
 <!--more-->
-retorna apenas a essência maior do ser
-num inebriante sabor de vazia coragem
-numa quietude de imensa exaltação…
-um vazio que retorna ao teu lugar
+retorna apenas a essência maior do ser <br>
+num inebriante sabor de vazia coragem <br>
+numa quietude de imensa exaltação… <br>
+um vazio que retorna ao teu lugar <br>
 
-Gota de esperança num mar de ilusões
-Gota de aconchego no mar solidão
-Terra toca o Céu e beija o mar
-pássaro alto no céu, belo sonhar
-Perdido em pensamento me volto a olhar
-Para a imensidão, perdido em mim viajar
-Descobri um mundo novo a conquistar
-Dentro de nós o paraíso também pode estar!
+Gota de esperança num mar de ilusões <br>
+Gota de aconchego no mar solidão <br>
+Terra toca o Céu e beija o mar <br>
+pássaro alto no céu, belo sonhar <br>
+Perdido em pensamento me volto a olhar <br>
+Para a imensidão, perdido em mim viajar <br>
+Descobri um mundo novo a conquistar <br>
+Dentro de nós o paraíso também pode estar! <br>
