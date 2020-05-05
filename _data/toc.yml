@@ -1,36 +1,19 @@
-- title: Estudo
+- title: Mundo
   url: docs
   links:
     - title: "Ciência"
       url: "docs/ciencia"
-    - title: "Tecnologia"
-      url: "docs/tecnologia"
-      children:
-        - title: Eletricidade
-          url: "docs/tecnology/eletricidade#development"
     - title: "Humanidades"
       url: "docs/humanidades"
+    - title: "Tecnologia"
+      url: "docs/tecnologia"
 
-- title: Documentation
-  url: docs
+- title: Computação
+  url: "docs/computacao"
   links:
-    - title: "Getting Started"
-      url: "docs/getting-started"
-      children:
-        - title: Features
-          url: "docs/getting-started#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
-    - title: "Extras"
-      url: "docs/extras"
-      children:
-        - title: Quizzes
-          url: "docs/extras/example-quiz"
-        - title: Tags Page
-          url: "tags"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news"
+    - title: Cultura Digital
+      url: "docs/cultura-digital"
+    - title: "Tecnologia Digital"
+      url: "docs/tecnologia-digital"
+    - title: "Pensamento Computacional"
+      url: "docs/pensamento-computacional"
