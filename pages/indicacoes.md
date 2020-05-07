@@ -7,62 +7,85 @@ permalink: /indicacoes/
 # Indicações
 
 
-## Curta Eletrônica []
-{% include alert.html type="primary" content="This is a primary alert" %}
+## Legendas
 
-[Curta Eletrônica](curtaeletronica.wordpress.com.br)
-
-
-<button class="btn btn-danger">
-     <i class="fab fa-youtube">
-     Curta eletrônica
-
-     </i>
-</button>
-
-Welcome to the {{ site.title }} Documentation pages! Here you can quickly jump to a
-particular page.
-
-# Buttons
-
-<button class="btn btn-danger">
-     Curta eletrônica
-     <i class="fab fa-youtube"></i>
-     <a href="www.google.com" color="red">CurtaEletrônica</a>
-</button>
-
-<!--<button class="btn btn-success">
-     <i class="fab fa-youtube"></i>
-     .btn-success
-</button>
-<button class="btn btn-info">.btn-info</button>
-<button class="btn btn-secondary">.btn-secondary</button>
-<button class="btn btn-primary">.btn-primary</button>
-<button class="btn btn-danger">.btn-danger</button>
-<button class="btn btn-warning">.btn-warning</button>-->
-
-## Badges
+<span class="badge badge-primary">.</span>
+<span class="badge badge-info">.</span>
+<span class="badge badge-secondary">.</span>
+<span class="badge badge-success">Eletrônica</span>
+<span class="badge badge-danger">LaTeX</span>
+<span class="badge badge-warning">Artes</span>
+<span class="badge badge-secondary">.</span>
+<span class="badge badge-info">.</span>
+<span class="badge badge-primary">.</span>
 
 
-<span class="badge badge-warning">warning-badge</span>
-<span class="badge badge-danger">danger-badge</span>
-<span class="badge badge-success">success-badge</span>
-<span class="badge badge-info">info-badge</span>
-<span class="badge badge-secondary">secondary-badge</span>
-<span class="badge badge-primary">primary-badge</span>
 
-## Alerts
+
+## Eletrônica
 
 {% include alert.html
-  type="info"
-  title="What is an alert?"
-  content="An alert is a box that can stand out to indicate important information. You can choose from levels success, warning, danger, info, and primary. This example is an info box, and the code for another might look like this:"
+  title="Luiz Bitencourt"
+  type="success"
+  content='
+  <a href="https://luizbitencourt.wordpress.com/" target="_blank">
+    <i class="fas fa-globe-americas"></i> Site
+  </a>
+  |
+  <a href="https://www.youtube.com/user/lrbgrundig/" target="_blank">
+    <i class="fab fa-youtube"></i> Youtube
+  </a> '
 %}
 
 
-{% include alert.html type="warning" content="This is a warning" %}
-{% include alert.html type="danger" content="This alerts danger!" %}
-{% include alert.html type="success" content="This alerts success" %}
-{% include alert.html type="info" content="This is useful information." %}
-{% include alert.html type="primary" content="This is a primary alert" %}
-{% include alert.html type="secondary" content="This is a secondary alert" %}
+{% include alert.html
+  title="O Professor Leandro"
+  type="success"
+  content='
+  <a href="https://oprofessorleandro.wordpress.com/" target="_blank">
+    <i class="fas fa-globe-americas"></i> Site
+  </a>
+  |
+  <a href="https://www.youtube.com/user/OProfessorLeandro/" target="_blank">
+    <i class="fab fa-youtube"></i> Youtube
+  </a> '
+%}
+
+
+
+## LaTeX
+
+{% include alert.html
+  title="Aprendo LaTeX - Antero Neves"
+  type="danger"
+  content='
+  <a href="https://aprendolatex.wordpress.com/" target="_blank">
+    <i class="fas fa-globe-americas"></i> Site
+  </a>
+  |
+  <a href="https://www.youtube.com/user/anteroneves/" target="_blank">
+    <i class="fab fa-youtube"></i> Youtube
+  </a> '
+%}
+
+
+
+## Artes
+
+{% include alert.html
+  title="Cafés e blablablás - Fernando Medeiros"
+  type="warning"
+  content='
+  <a href="https://anadelourdes.wordpress.com/" target="_blank">
+    <i class="fas fa-atlas"></i> Blog
+  </a>'
+%}
+
+{% include alert.html
+  title="Ana Teixeira"
+  type="warning"
+  content='
+  <a href="https://anadelourdes.wordpress.com/" target="_blank">
+    <i class="fas fa-atlas"></i> Blog
+  </a>'
+%}

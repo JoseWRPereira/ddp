@@ -1,11 +1,9 @@
 ---
 title:  "Introspecção"
-date:   2017-04-08 00:10:21
+date:   2017-04-07 00:10:21
 categories: Versos
 badges:
  - type: warning
-   tag: Versos
- - type: danger
    tag: versos
 ---
 
@@ -13,12 +11,12 @@ badges:
 Ar, céu, brisa, espaço, imensidão… <br>
 deixai ser levado a mais longínqua viagem <br>
 de onde jamais se volta pois é bobagem <br>
-
-<!--more-->
 retorna apenas a essência maior do ser <br>
 num inebriante sabor de vazia coragem <br>
 numa quietude de imensa exaltação… <br>
 um vazio que retorna ao teu lugar <br>
+
+<!--more-->
 
 Gota de esperança num mar de ilusões <br>
 Gota de aconchego no mar solidão <br>

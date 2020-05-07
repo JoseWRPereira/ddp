@@ -1,16 +1,13 @@
 ---
 title:  "A Jornada do Herói como ferramenta para desenvolver a leitura e a escrita"
-date:   2017-04-09 00:25:21
-categories: Educação
+date:   2017-04-09 07:21:21
+categories: Versos
 badges:
- - type: success
-   tag: Educação
- - type: danger
-   tag: Leitura
- - type: danger
-   tag: Escrita
+- type: info
+  tag: Educação
+- type: warning
+  tag: Escrita
 ---
-
 
 A Jornada do Herói pode ser uma ferramenta fantástica no processo de encantamento pela leitura e escrita. A utilização de temas ditos fantásticos ou de fantasia, produz o aspecto lúdico, atuando como agente criativo, associado ao modelo desenvolvido por Christopher Vogler, baseado na obra de Joseph Campbell, serve de fio condutor para o enriquecimento da leitura, produção de textos e dos mais diversos aspectos da vida.
 
