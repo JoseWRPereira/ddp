@@ -5,7 +5,7 @@ categories: Crônicas
 badges:
 - type: warning
   tag: Escrita
-- type: Secundary
+- type: secondary
   tag: Crônicas
 
 ---

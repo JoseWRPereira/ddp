@@ -15545,17 +15545,17 @@ a.text-dark:focus {
     .td-content>dl dd,
     .td-content .footnotes,
     .td-content>.alert {
-        max-width: 80%
+        max-width: 90%
     }
 }
 
 .-bg-blue {
     color: #fff;
-    background-color: #72a1e5
+    background-color: #72a1e5;
 }
 
 .-bg-blue p>a {
-    color: #a0c0ee
+    color: #a0c0ee;
 }
 
 .-bg-blue p>a:hover,

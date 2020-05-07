@@ -5,7 +5,7 @@ categories: Livros
 badges:
 - type: warning
   tag: Escrita
-- type: Danger
+- type: danger
   tag: Livros
 ---
 
