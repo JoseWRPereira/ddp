@@ -48,4 +48,4 @@ Se não gostar, [colabore]( {{site.baseurl}}/sobre/#contato) e ajude a melhorar.
 ### O Sítio
 
 Este sítio está disponível em [respositorio GitHub]({{ site.repo }}) e
-é baseado no [template Docsy jekyll](https://vsoch.github.com/docsy-jekyll/), que por sua vez é baseado no tema  [Docsy](https://github.com/google/docsy) renderizado com Hugo.
+é baseado no [template Docsy jekyll](https://vsoch.github.com/docsy-jekyll/), que por sua vez é baseado no tema  [Docsy](https://github.com/google/docsy).
