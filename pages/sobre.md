@@ -34,7 +34,7 @@ Se não gostar, [colabore]( {{site.baseurl}}/sobre/#contato) e ajude a melhorar.
 
 
 
-### Formação Profissional
+### Formação Acadêmica
 
 * Graduado em Automação Industrial no [IFSP](https://spo.ifsp.edu.br/automacao-industrial);
 * Especialista em Sistemas Eletrônicos para Controle pela [Faculdade SENAI de Tecnologia “Anchieta”](https://faculdades.sp.senai.br/sistemas-eletronicos-para-controle);

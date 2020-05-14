@@ -6,9 +6,125 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 May 2020 13:54:08 -0300</pubDate>
-    <lastBuildDate>Wed, 13 May 2020 13:54:08 -0300</lastBuildDate>
+    <pubDate>Wed, 13 May 2020 21:12:56 -0300</pubDate>
+    <lastBuildDate>Wed, 13 May 2020 21:12:56 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Interpretação de circuitos elétricos</title>
+        <description>&lt;h2 id=&quot;habilidades-e-competências&quot;&gt;Habilidades e Competências&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;análise e interpretação de diagramas e esquemas;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;desafio&quot;&gt;Desafio&lt;/h2&gt;
+
+&lt;p&gt;Dado o circuito da Figura 1, identificar:&lt;/p&gt;
+
+&lt;p&gt;Figura 1: Circuito elétrico&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/JoseWRPereira/ddp/docs/aulas/fig-ele/fig-circuitoDesafio.png&quot; alt=&quot;https://raw.githubusercontent.com/JoseWRPereira/ddp/docs/aulas/fig-ele/fig-circuitoDesafio.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;((site.repo))/docs/aulas/fig-ele/fig-circuitoDesafio.png&quot;&gt;((site.repo))/docs/aulas/fig-ele/fig-circuitoDesafio.png&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;• Os componentes presentes;
+• As funções de cada componente;
+• A configuração de ligação dos componentes: série ou paralelo.&lt;/p&gt;
+
+&lt;h1 id=&quot;componentes-em-um-diagrama&quot;&gt;Componentes em um diagrama&lt;/h1&gt;
+&lt;p&gt;Todo componente eletrônico possui uma função, ou seja, um comportamento que produz uma ação que atende a sua necessidade. Para que seu comportamento ocorra de modo esperado, todo componente possui condições de operação, sendo a principal dessas condições a alimentação.&lt;/p&gt;
+
+&lt;p&gt;A alimentação de um componente é a entrada de energia, que será processada e produzirá, através do comportamento do componente, uma nova forma de energia.&lt;/p&gt;
+
+&lt;p&gt;Utilizando a Figura 2 como exemplo, temos as seguintes conversões de energia:&lt;/p&gt;
+
+&lt;p&gt;Figura 2: Circuito elétrico&lt;/p&gt;
+
+&lt;p&gt;Componentes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Vcc : Fonte - Converte energia química, no caso de pilhas ou baterias, em energia elétrica;&lt;/li&gt;
+  &lt;li&gt;RD : Resistor - Converte energia elétrica em calor ao limitar a intensidade de corrente no seu ramo;&lt;/li&gt;
+  &lt;li&gt;D: LED - Converte energia elétrica em luz, permitindo que seja feita a sinalização luminosa, indicando que o circuito está ligado;&lt;/li&gt;
+  &lt;li&gt;RL : Resistor de carga - Converte energia elétrica em calor, produzindo aquecimento do elemento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Figura 3: Circuito elétrico&lt;/p&gt;
+
+&lt;p&gt;O circuito pode ser dividido em elemntos ativos e passivos, como mostrado na Figura 3.&lt;/p&gt;
+
+&lt;p&gt;Assim temos:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fonte: A fonte é o elemento ativo, ou seja, é o que fornece energia ao restante dos componenentes deste circuito.&lt;/li&gt;
+  &lt;li&gt;Carga: São os elementos passivos do circuito, ou seja, aqueles que consomem energia da fonte.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;configuração-do-circuito&quot;&gt;Configuração do circuito&lt;/h1&gt;
+&lt;p&gt;A análise de um circuito basicamente é o processo de segmentá-lo em partes menores, sem que haja alteração das suas características de funcionamento, de forma a simplificar seu manuseio.&lt;/p&gt;
+
+&lt;p&gt;Alguns conceitos são de fundamental importância para facilitar essa tarefa de análise do circuito, e um destes conceitos é o nó.&lt;/p&gt;
+
+&lt;p&gt;O nó é uma conexão entre pelo menos três elementos do circuito ou entre elementos ativos e passivos e é representada por uma circunferência preenchida unindo os terminais dos componentes.&lt;/p&gt;
+
+&lt;p&gt;A Figura 4 mostra em destaque os nós denominados como A e B. As setas nas linhas indicam o sentido da corrente, chegando ou saindo de cada nó.&lt;/p&gt;
+
+&lt;p&gt;Figura 4: Nós A e B .&lt;/p&gt;
+
+&lt;h2 id=&quot;ligação-em-série&quot;&gt;Ligação em série&lt;/h2&gt;
+&lt;p&gt;O trecho do circuito entre nós é chamado de ramo. Em um ramo, todos os seus componentes são ligados em série. A Figura 5 mostra os três ramos ligados aos pontos A e B , sendo o ramo central o único que possui mais do que um componente, ou seja, é o único que possui componentes em série. Assim pode-se afirmar que o resistor R D está em série com o LED D.&lt;/p&gt;
+
+&lt;p&gt;Figura 5: Ramos entre os nós A e B .&lt;/p&gt;
+
+&lt;h2 id=&quot;ligação-em-paralelo&quot;&gt;Ligação em paralelo&lt;/h2&gt;
+&lt;p&gt;O circuito da Figura 6 apresenta três nós (A, B e C ) e cinco ramos, cada um contendo apenas um elemento cada (Vcc , R1 , R2 , R3 e R4 ).&lt;/p&gt;
+
+&lt;p&gt;Figura 6: Nós do circuito.&lt;/p&gt;
+
+&lt;p&gt;Note que o nó C aparece duas vezes, mas não quer dizer que sejam pontos distintos, pelo contrário, é o mesmo ponto, representado em dois lugares. É o ponto de conexão entre os quatro resistores.&lt;/p&gt;
+
+&lt;p&gt;Como existem dois ramos ligados aos mesmos nós, isso significa que seus elementos estão em paralelo. Como em cada ramo só existe um resistor, então:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;R 1 é paralelo ao R 2&lt;/li&gt;
+  &lt;li&gt;R 3 é paralelo ao R 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nesse circuito, nenhum ramo apresenta mais do que um elemento, assim não há componentes em série.&lt;/p&gt;
+
+&lt;p&gt;Resolução do Desafio
+Dado o circuito da Figura 7, identificar:
+Figura 7: Circuito elétrico
+• Os componentes presentes;
+R D
+• As funções de cada componente;
+V cc
+• A configuração de ligação dos compo-
+D
+nentes: série ou paralelo.
+5.1 Resolução
+• Componente: função;
+– V CC : Fonte de Alimentação do circuito;
+– R D : Resistor limitador de corrente para o LED D;
+– D: Dispositivo de sinalização luminosa, LED;
+4
+R L– R L : Dispositivo de aquecimento, resistor de carga.
+• A configuração de ligação dos componentes: série ou paralelo.
+– Fonte(gerador) está em paralelo com o restante do circuito, consumidor.
+– R D está em série com o LED D.
+– R L está em paralelo com o ramo inteiro do R D e D e também em paralelo com a fonte.
+Note que R L não está em paralelo individualmente com R D e nem com o D, mas sim
+com os dois componentes associados.
+6 Atividades
+Identificar Associações de Resistores em Paralelo e em Série.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 13 May 2020 04:48:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/aula-ele-interpretaCircuitosEletricos/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/aula-ele-interpretaCircuitosEletricos/</guid>
+        
+        
+        <category>Aula</category>
+        
+      </item>
     
       <item>
         <title>Ética, Cidadania e Sociedade</title>
@@ -337,53 +453,6 @@ A percepção é o limite! &lt;br /&gt;&lt;/p&gt;
         
         
         <category>Livros</category>
-        
-      </item>
-    
-      <item>
-        <title>No hospital</title>
-        <description>&lt;p&gt;Um senhor oriental, pele branca e muito flácida denotava os seus noventa e dois anos.  Uma semana… Foi só o que precisou… Definhou… Já não mais era aquele senhor ativo, de vigor, ele já não mais existe… Já passara dois dos dez… Dez dias eram seu desengano.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;O senhor oriental era o vizinho de leito, que naquele corredor do hospital por algum tempo, como meu pai e tantos outros, também ali habitava.&lt;/p&gt;
-
-&lt;p&gt;Corredor gelado, passagem de um vento polar que cortava durante as noites sem fim. A luz obstruída apenas pela eletrocalha que foi instalada providencialmente à frente das luminárias, único conforte que se podia ter, caso houvesse condições de pensar e não apenas sentir incômodos e dores.&lt;/p&gt;
-
-&lt;p&gt;No quarto dia, um leito foi desocupado, no canto do quarto, um pouco mais resguardado dos ventos gelados, de leito me pai foi alterado. Haveria ali um pouco mais de conforto, dentro das condições postas.&lt;/p&gt;
-
-&lt;p&gt;O atendimento não é ruim não, se der sorte de ser atendido por um bom médico, o grande problema é a lotação. Alguns anos antes, meu pai ficara no mesmo hospital, num quarto ao lado, com uma fratura no osso da face, entre os olhos, é um cirurgião fez uma costura primorosa, hoje um desavisado não nota. Mas ele notou a diferença desde então, “- está um pouco melhor, mais organizado e mais limpo!”. Realmente, está melhor, eu passei duas noites acompanhando-o, uma super realidade lenta comandava o TIC-TAC do singelo relógio de parede, onde gritos e gemidos eram frequentes, a ala psiquiátrica estava ali na sala ao lado, então hora ou outra daquelas madrugadas infindáveis, surgiam pacientes nus fugindo dos leitos ou de seus assombros pessoais, assombrando pacientes que pouco podiam fazer contra costumeiros ataques, sem motivos aparentes, ao menos na minha realidade, até que o enfermeiro ou enfermeira de plantão resgatava-os a seus leitos.&lt;/p&gt;
-
-&lt;p&gt;Hoje um enfermeiro asseia um paciente vizinho dele, com todo cuidado, virando-o de uma lado e do outro, limpando-o respeitosamente, profissionalmente. Esticando e flexionando as pernas, a gota atrapalha. Depois de um bom tempo, em todas as partes o paciente limpo estava. Um trabalho realmente movido pelo amor em cuidar, não há final de Champions League que produza um Herói como aquele enfermeiro. E qual o motivo da comparação? Enquanto o Real Madri fazia seu primeiro gol, o enfermeiro tinha acabado de assear um paciente, e quando a Juventus empatou ele trocava a frauda de outro. Quem são os verdadeiros heróis? Tantos anônimos. Sim, é seu trabalho, mas também é o cuidado no momento mais necessário, sem preconceito, sem nojo, é doação, é fazer um momento muito difícil ser minimamente digno na vida de alguém. Simples assim.&lt;/p&gt;
-
-&lt;p&gt;Fui na enfermaria buscar um copo descartável, uma rápida olhada na TV que distrai os pacientes do corredor. Ao entrar no quarto, a acompanhante corria com olhar desesperado, o paciente que fora asseado teve um engasgo, rosto vermelho, respiração forte e agitada. Rapidamente se recuperou, qualquer susto é um desespero num hospital.&lt;/p&gt;
-
-&lt;p&gt;Alguns minutos depois… quem sabe, muitos minutos… uma enfermeira que vinha ajudar reconhece o paciente, um senhor muito amigo de seu falecido pai. Encontros que a vida proporciona, do lado dela, pois aparentemente ele não a reconheceu, mas não dava para saber, estava muito debilitado. Um leito melhor foi desocupado, e não se mediu esforços para transferi-lo. Um laço de amizade familiar também fazia força naquele precedimento de transferência, junto com outros seis braços de enfermeiros mobilizados. Trabalho em equipe.&lt;/p&gt;
-
-&lt;p&gt;Um senhor, paciente, acompanhado por sua senhora, que ao seu lado em uma carteira estilo universitária, conversam, alguns sorrisos.&lt;/p&gt;
-
-&lt;p&gt;Um outro senhor de muita idade, e de companhia de uma mulher, quem sabe filha.&lt;/p&gt;
-
-&lt;p&gt;Outros dois senhores, menos velhos, sem acompanhantes dividiam o quarto.&lt;/p&gt;
-
-&lt;p&gt;Tantas vidas, tanto sofrimento, tantas histórias….&lt;/p&gt;
-
-&lt;p&gt;Meu pai acordou do cochilo.&lt;/p&gt;
-
-&lt;p&gt;Troca a bolsa de soro, bota remédio na veia… é hora da janta.&lt;/p&gt;
-
-&lt;p&gt;Hora da janta, os pacientes se alimentam, e a pouca convivência traz à tona alguns comportamentos sociais básicos, pois depois de comer, muitos ainda sentados em seus leitos se botam em longas conversas…&lt;/p&gt;
-
-&lt;p&gt;– Eu era caminhoneiro. Dirigia por tudo quanto é lugar. Se me pedir para ir para algum lugar aqui em São Paulo eu não sei não, mas se pedir para ir prá Minas, Tocantins, pra Bahia eu vou. – Conta um capixaba do sul da Bahia, porque afinal de contas, cultura ou sotaque não tem linha divisória, não se distingue quem mora de um lado ou do outro da linha de divisa, então assim defino aquele senhor, que ainda contou que sua primeira esposa morrera em um acidente com o caminhão, tinha dois filhos, mas estes não ligavam muito para seu velho pai, apesar de ressaltar que não tinha nada de mal à falar deles. Daí justifica um dos muitos comentários, – Bom mesmo é ter uma mulher boa, que cuida da gente! – pois é em sua segunda esposa que encontra o apoio da família, que o ajuda a respirar mesmo com pulmões debilitados.&lt;/p&gt;
-
-&lt;p&gt;Quantas histórias não passam por lugares assim todos os dias, quanta tristeza e comoção? Duas noites antes, um colega de quarto se fora. Talvez em menos de uma semana o senhor oriental já tenha partido, possivelmente ao final deste texto… Ainda sem conhecer, quem, mesmo de longe, quem que esteve ali não sofrera junto, pois o fim é um denominador comum, um imperativo categórico, a empatia, a solidariedade o sofrer junto, um inane consolo, do fim.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 07 Jun 2017 04:41:21 -0300</pubDate>
-        <link>http://localhost:4000/ddp/2017/no-hospital/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2017/no-hospital/</guid>
-        
-        
-        <category>Crônicas</category>
         
       </item>
     

@@ -9,5 +9,5 @@ Também é publicado o material de apoio às aulas que desenvolvo com o objetivo
 
 ## Sobre o site
 
-Este sítio está disponível em 'https://github.com/JoseWRPereira/ddp' e
+Este sítio está disponível em https://github.com/JoseWRPereira/ddp e
 é baseado no [template Docsy jekyll](https://vsoch.github.com/docsy-jekyll/), que por sua vez é baseado no tema  [Docsy](https://github.com/google/docsy).

@@ -37,6 +37,18 @@ permalink: /indicacoes/
   </a> '
 %}
 
+{% include alert.html
+  title="Rodrigo Rech"
+  type="success"
+  content='
+  <a href="https://sites.google.com/view/rodrigorechifsp" target="_blank">
+    <i class="fas fa-globe-americas"></i> Site
+  </a>
+  |
+  <a href="https://www.youtube.com/watch?v=pGzTbgZDQz4&list=PLMdNWywlSE5SVvdt2tEfKK79EIYETfN1u" target="_blank">
+    <i class="fab fa-youtube"></i> Youtube
+  </a> '
+%}
 
 {% include alert.html
   title="O Professor Leandro"

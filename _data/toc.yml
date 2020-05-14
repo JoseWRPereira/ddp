@@ -1,19 +1,12 @@
 - title: Mundo
   url: docs
   links:
-    - title: "Ciência"
-      url: "docs/ciencia"
     - title: "Humanidades"
       url: "docs/humanidades"
-    - title: "Tecnologia"
-      url: "docs/tecnologia"
-
-- title: Computação
-  url: "docs/computacao"
+- title: Notas de Aula
+  url: "docs/aulas"
   links:
-    - title: Cultura Digital
-      url: "docs/cultura-digital"
-    - title: "Tecnologia Digital"
-      url: "docs/tecnologia-digital"
-    - title: "Pensamento Computacional"
-      url: "docs/pensamento-computacional"
+    - title: ELE
+      url: "docs/aulas/ele"
+    - title: SELDI
+      url: "docs/aulas/seldi"
