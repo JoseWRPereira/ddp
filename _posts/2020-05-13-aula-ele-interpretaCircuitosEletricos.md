@@ -112,7 +112,7 @@ Identificar associações de resistores em __paralelo__ e em __série__.
 
 ## Download
 
-[Nota de aula em PDF](https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true)
+[Notas de aula em PDF](https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true)
 
-
+## q U I Z
 {% include quiz.html file='aula-ele-interpreta-circuitos-eletricos' %}

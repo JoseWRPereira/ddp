@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 May 2020 09:50:18 -0300</pubDate>
-    <lastBuildDate>Thu, 14 May 2020 09:50:18 -0300</lastBuildDate>
+    <pubDate>Thu, 14 May 2020 10:52:44 -0300</pubDate>
+    <lastBuildDate>Thu, 14 May 2020 10:52:44 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -112,9 +112,10 @@
 
 &lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true&quot;&gt;Nota de aula em PDF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true&quot;&gt;Notas de aula em PDF&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;q U I Z&lt;/h2&gt;
+&lt;h2 id=&quot;q-u-i-z&quot;&gt;q U I Z&lt;/h2&gt;
+
 &lt;div class=&quot;admonition question&quot;&gt;
 &lt;p class=&quot;admonition-title&quot;&gt;Qual é a competência aqui trabalhada?&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;correct-1&quot;&gt;1. Interpretar diagramas e esquemas de circuitos elétricos;&lt;/span&gt;&lt;br /&gt;2. Interpretar unidades de medidas elétricas;&lt;br /&gt;3. Calcular grandezas elétricas em circuitos elétricos&lt;br /&gt;&lt;/p&gt;
@@ -123,13 +124,39 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;div class=&quot;admonition question&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;True or False, Pittsburgh is West of Philadelphia&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;correct-2&quot;&gt;1. true&lt;/span&gt;&lt;br /&gt;2. false&lt;br /&gt;&lt;/p&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Todas as fontes de energia elétrica convertem algum tipo de energia em energia elétrica. Pilhas e baterias produzem energia elétrica a partir da energia ________.&lt;/p&gt;
+&lt;p&gt;1. Térmica&lt;br /&gt;2. Cinética&lt;br /&gt;&lt;span class=&quot;correct-2&quot;&gt;3. Química&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;button class=&quot;btn btn-success&quot; onclick=&quot;$(&amp;quot;.correct-2&amp;quot;).css(&amp;quot;font-weight&amp;quot;, 600);$(&amp;quot;.correct-more-2&amp;quot;).css(&amp;quot;display&amp;quot;, &amp;quot;inline&amp;quot;)&quot;&gt;Mostrar resposta&lt;/button&gt;&lt;/p&gt;
-&lt;p class=&quot;well correct-more-2&quot; style=&quot;display:none&quot;&gt;The answer is True! Pittsburgh is 304.9 miles West of Philadelphia, or approximately
-a car ride of 4 hours and 52 minutes. Buckle up!
+&lt;p class=&quot;well correct-more-2&quot; style=&quot;display:none&quot;&gt;A energia de origem qúimica é produzida pelas reações das
+interações dos elementos que compõem a pilha/bateria.
+Quando a capacidade da reação diminui,
+a conversão de energia também diminui.
+Ao chegar nessa condição a pilha/bateria, se não for recarregável,
+deve ser descartada corretamente e substituída por outra compatível
+e em boas condições de uso.
 &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;admonition question&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Em um circuito contendo apenas uma bateria como fonte e um resistor como carga, as conexões entre eles podem ser consideradas como nós?&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;correct-3&quot;&gt;1. Sim&lt;/span&gt;&lt;br /&gt;2. Não&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button class=&quot;btn btn-success&quot; onclick=&quot;$(&amp;quot;.correct-3&amp;quot;).css(&amp;quot;font-weight&amp;quot;, 600);$(&amp;quot;.correct-more-3&amp;quot;).css(&amp;quot;display&amp;quot;, &amp;quot;inline&amp;quot;)&quot;&gt;Mostrar resposta&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;admonition question&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Componentes em um mesmo ramo estão associados em ________. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;correct-4&quot;&gt;1. Série&lt;/span&gt;&lt;br /&gt;2. Paralelo&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button class=&quot;btn btn-success&quot; onclick=&quot;$(&amp;quot;.correct-4&amp;quot;).css(&amp;quot;font-weight&amp;quot;, 600);$(&amp;quot;.correct-more-4&amp;quot;).css(&amp;quot;display&amp;quot;, &amp;quot;inline&amp;quot;)&quot;&gt;Mostrar resposta&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;admonition question&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Um ramo é um segmento do circuito delimitado entre dois nós distintos.&lt;/p&gt;
+&lt;p&gt;1. Falso&lt;br /&gt;&lt;span class=&quot;correct-5&quot;&gt;2. Verdadeiro&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button class=&quot;btn btn-success&quot; onclick=&quot;$(&amp;quot;.correct-5&amp;quot;).css(&amp;quot;font-weight&amp;quot;, 600);$(&amp;quot;.correct-more-5&amp;quot;).css(&amp;quot;display&amp;quot;, &amp;quot;inline&amp;quot;)&quot;&gt;Mostrar resposta&lt;/button&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 </description>
