@@ -6,13 +6,13 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 May 2020 21:12:56 -0300</pubDate>
-    <lastBuildDate>Wed, 13 May 2020 21:12:56 -0300</lastBuildDate>
+    <pubDate>Wed, 13 May 2020 22:08:25 -0300</pubDate>
+    <lastBuildDate>Wed, 13 May 2020 22:08:25 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Interpretação de circuitos elétricos</title>
-        <description>&lt;h2 id=&quot;habilidades-e-competências&quot;&gt;Habilidades e Competências&lt;/h2&gt;
+        <description>&lt;h1 id=&quot;habilidades-e-competências&quot;&gt;Habilidades e Competências&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;análise e interpretação de diagramas e esquemas;&lt;/li&gt;
 &lt;/ul&gt;
@@ -21,28 +21,25 @@
 
 &lt;h2 id=&quot;desafio&quot;&gt;Desafio&lt;/h2&gt;
 
-&lt;p&gt;Dado o circuito da Figura 1, identificar:&lt;/p&gt;
+&lt;p&gt;Dado o seguinte circuito,&lt;/p&gt;
 
-&lt;p&gt;Figura 1: Circuito elétrico&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafio-1.png?raw=true&quot; alt=&quot;Circuito elétrico do desafio - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/JoseWRPereira/ddp/docs/aulas/fig-ele/fig-circuitoDesafio.png&quot; alt=&quot;https://raw.githubusercontent.com/JoseWRPereira/ddp/docs/aulas/fig-ele/fig-circuitoDesafio.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;identificar:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;((site.repo))/docs/aulas/fig-ele/fig-circuitoDesafio.png&quot;&gt;((site.repo))/docs/aulas/fig-ele/fig-circuitoDesafio.png&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Os componentes presentes;&lt;/li&gt;
+  &lt;li&gt;As funções de cada componente;&lt;/li&gt;
+  &lt;li&gt;A configuração de ligação dos componentes: série ou paralelo.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;• Os componentes presentes;
-• As funções de cada componente;
-• A configuração de ligação dos componentes: série ou paralelo.&lt;/p&gt;
-
-&lt;h1 id=&quot;componentes-em-um-diagrama&quot;&gt;Componentes em um diagrama&lt;/h1&gt;
+&lt;h2 id=&quot;componentes-em-um-diagrama&quot;&gt;Componentes em um diagrama&lt;/h2&gt;
 &lt;p&gt;Todo componente eletrônico possui uma função, ou seja, um comportamento que produz uma ação que atende a sua necessidade. Para que seu comportamento ocorra de modo esperado, todo componente possui condições de operação, sendo a principal dessas condições a alimentação.&lt;/p&gt;
 
 &lt;p&gt;A alimentação de um componente é a entrada de energia, que será processada e produzirá, através do comportamento do componente, uma nova forma de energia.&lt;/p&gt;
 
-&lt;p&gt;Utilizando a Figura 2 como exemplo, temos as seguintes conversões de energia:&lt;/p&gt;
+&lt;p&gt;Utilizando o circuito do desafio como exemplo, temos as seguintes conversões de energia por componente:&lt;/p&gt;
 
-&lt;p&gt;Figura 2: Circuito elétrico&lt;/p&gt;
-
-&lt;p&gt;Componentes:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Vcc : Fonte - Converte energia química, no caso de pilhas ou baterias, em energia elétrica;&lt;/li&gt;
   &lt;li&gt;RD : Resistor - Converte energia elétrica em calor ao limitar a intensidade de corrente no seu ramo;&lt;/li&gt;
@@ -50,9 +47,8 @@
   &lt;li&gt;RL : Resistor de carga - Converte energia elétrica em calor, produzindo aquecimento do elemento.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Figura 3: Circuito elétrico&lt;/p&gt;
-
-&lt;p&gt;O circuito pode ser dividido em elemntos ativos e passivos, como mostrado na Figura 3.&lt;/p&gt;
+&lt;p&gt;O circuito pode ser dividido em elemntos ativos e passivos, como mostrado na Figura.
+&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioFonteCarga-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando a fonte e a carga - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Assim temos:&lt;/p&gt;
 &lt;ul&gt;
@@ -60,7 +56,7 @@
   &lt;li&gt;Carga: São os elementos passivos do circuito, ou seja, aqueles que consomem energia da fonte.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;configuração-do-circuito&quot;&gt;Configuração do circuito&lt;/h1&gt;
+&lt;h2 id=&quot;configuração-do-circuito&quot;&gt;Configuração do circuito&lt;/h2&gt;
 &lt;p&gt;A análise de um circuito basicamente é o processo de segmentá-lo em partes menores, sem que haja alteração das suas características de funcionamento, de forma a simplificar seu manuseio.&lt;/p&gt;
 
 &lt;p&gt;Alguns conceitos são de fundamental importância para facilitar essa tarefa de análise do circuito, e um destes conceitos é o nó.&lt;/p&gt;
@@ -71,15 +67,24 @@
 
 &lt;p&gt;Figura 4: Nós A e B .&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioNoInf-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó inferior - Interpretação de Circuitos Elétricos&quot; /&gt;
+&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioNoSup-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;ligação-em-série&quot;&gt;Ligação em série&lt;/h2&gt;
 &lt;p&gt;O trecho do circuito entre nós é chamado de ramo. Em um ramo, todos os seus componentes são ligados em série. A Figura 5 mostra os três ramos ligados aos pontos A e B , sendo o ramo central o único que possui mais do que um componente, ou seja, é o único que possui componentes em série. Assim pode-se afirmar que o resistor R D está em série com o LED D.&lt;/p&gt;
 
-&lt;p&gt;Figura 5: Ramos entre os nós A e B .&lt;/p&gt;
+&lt;p&gt;Figura 5: Ramos entre os nós A e B .
+&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoRLED-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoFonte-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;
+&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoRL-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ligação-em-paralelo&quot;&gt;Ligação em paralelo&lt;/h2&gt;
 &lt;p&gt;O circuito da Figura 6 apresenta três nós (A, B e C ) e cinco ramos, cada um contendo apenas um elemento cada (Vcc , R1 , R2 , R3 e R4 ).&lt;/p&gt;
 
 &lt;p&gt;Figura 6: Nós do circuito.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoExemplo-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Note que o nó C aparece duas vezes, mas não quer dizer que sejam pontos distintos, pelo contrário, é o mesmo ponto, representado em dois lugares. É o ponto de conexão entre os quatro resistores.&lt;/p&gt;
 
@@ -91,31 +96,36 @@
 
 &lt;p&gt;Nesse circuito, nenhum ramo apresenta mais do que um elemento, assim não há componentes em série.&lt;/p&gt;
 
-&lt;p&gt;Resolução do Desafio
-Dado o circuito da Figura 7, identificar:
-Figura 7: Circuito elétrico
-• Os componentes presentes;
-R D
-• As funções de cada componente;
-V cc
-• A configuração de ligação dos compo-
-D
-nentes: série ou paralelo.
-5.1 Resolução
-• Componente: função;
-– V CC : Fonte de Alimentação do circuito;
-– R D : Resistor limitador de corrente para o LED D;
-– D: Dispositivo de sinalização luminosa, LED;
-4
-R L– R L : Dispositivo de aquecimento, resistor de carga.
-• A configuração de ligação dos componentes: série ou paralelo.
-– Fonte(gerador) está em paralelo com o restante do circuito, consumidor.
-– R D está em série com o LED D.
-– R L está em paralelo com o ramo inteiro do R D e D e também em paralelo com a fonte.
-Note que R L não está em paralelo individualmente com R D e nem com o D, mas sim
-com os dois componentes associados.
-6 Atividades
-Identificar Associações de Resistores em Paralelo e em Série.&lt;/p&gt;
+&lt;h2 id=&quot;atividades&quot;&gt;Atividades&lt;/h2&gt;
+&lt;p&gt;Identificar Associações de Resistores em Paralelo e em Série.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Circuito 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ1-1.png?raw=true&quot; alt=&quot;Exercício 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Circuito 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ2-1.png?raw=true&quot; alt=&quot;Exercício 2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Circuito 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ3-1.png?raw=true&quot; alt=&quot;Exercício 3&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Circuito 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ4-1.png?raw=true&quot; alt=&quot;Exercício 4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true&quot;&gt;Nota de aula em PDF&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 13 May 2020 04:48:21 -0300</pubDate>
         <link>http://localhost:4000/ddp/2020/aula-ele-interpretaCircuitosEletricos/</link>
