@@ -1,0 +1,25 @@
+title: q U I Z
+randomized: true
+questions:
+
+ - type: "multiple-choice"
+   question: "Qual é a competência aqui trabalhada?"
+   items:
+    - choice: Interpretar diagramas e esquemas de circuitos elétricos;
+      correct: true
+    - choice: Interpretar unidades de medidas elétricas;
+      correct: false
+    - choice: Calcular grandezas elétricas em circuitos elétricos
+      correct: false
+   followup: 
+
+ - type: "multiple-choice"
+   question: "True or False, Pittsburgh is West of Philadelphia"
+   items:
+    - choice: True
+      correct: true
+    - choice: False
+      correct: false
+   followup: |
+      The answer is True! Pittsburgh is 304.9 miles West of Philadelphia, or approximately
+      a car ride of 4 hours and 52 minutes. Buckle up!

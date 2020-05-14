@@ -6,15 +6,15 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 May 2020 22:08:25 -0300</pubDate>
-    <lastBuildDate>Wed, 13 May 2020 22:08:25 -0300</lastBuildDate>
+    <pubDate>Thu, 14 May 2020 09:50:18 -0300</pubDate>
+    <lastBuildDate>Thu, 14 May 2020 09:50:18 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Interpretação de circuitos elétricos</title>
         <description>&lt;h1 id=&quot;habilidades-e-competências&quot;&gt;Habilidades e Competências&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;análise e interpretação de diagramas e esquemas;&lt;/li&gt;
+  &lt;li&gt;Análise e interpretação de diagramas e esquemas;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!--more--&gt;
@@ -34,17 +34,17 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;componentes-em-um-diagrama&quot;&gt;Componentes em um diagrama&lt;/h2&gt;
-&lt;p&gt;Todo componente eletrônico possui uma função, ou seja, um comportamento que produz uma ação que atende a sua necessidade. Para que seu comportamento ocorra de modo esperado, todo componente possui condições de operação, sendo a principal dessas condições a alimentação.&lt;/p&gt;
+&lt;p&gt;Todo componente eletrônico possui uma &lt;strong&gt;função&lt;/strong&gt;, ou seja, um &lt;strong&gt;comportamento&lt;/strong&gt; que produz uma ação que atende a sua necessidade. Para que seu comportamento ocorra de modo esperado, todo componente possui &lt;strong&gt;condições de operação&lt;/strong&gt;, sendo a principal dessas condições a alimentação.&lt;/p&gt;
 
 &lt;p&gt;A alimentação de um componente é a entrada de energia, que será processada e produzirá, através do comportamento do componente, uma nova forma de energia.&lt;/p&gt;
 
 &lt;p&gt;Utilizando o circuito do desafio como exemplo, temos as seguintes conversões de energia por componente:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Vcc : Fonte - Converte energia química, no caso de pilhas ou baterias, em energia elétrica;&lt;/li&gt;
-  &lt;li&gt;RD : Resistor - Converte energia elétrica em calor ao limitar a intensidade de corrente no seu ramo;&lt;/li&gt;
-  &lt;li&gt;D: LED - Converte energia elétrica em luz, permitindo que seja feita a sinalização luminosa, indicando que o circuito está ligado;&lt;/li&gt;
-  &lt;li&gt;RL : Resistor de carga - Converte energia elétrica em calor, produzindo aquecimento do elemento.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vcc : Fonte&lt;/strong&gt; - Converte energia química, no caso de pilhas ou baterias, em energia elétrica;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;RD : Resistor&lt;/strong&gt; - Converte energia elétrica em calor ao limitar a intensidade de corrente no seu ramo;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;D: LED&lt;/strong&gt; - Converte energia elétrica em luz, permitindo que seja feita a sinalização luminosa, indicando que o circuito está ligado;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;RL : Resistor de carga&lt;/strong&gt; - Converte energia elétrica em calor, produzindo aquecimento do elemento.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;O circuito pode ser dividido em elemntos ativos e passivos, como mostrado na Figura.
@@ -52,29 +52,26 @@
 
 &lt;p&gt;Assim temos:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Fonte: A fonte é o elemento ativo, ou seja, é o que fornece energia ao restante dos componenentes deste circuito.&lt;/li&gt;
-  &lt;li&gt;Carga: São os elementos passivos do circuito, ou seja, aqueles que consomem energia da fonte.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fonte&lt;/strong&gt;: A fonte é o &lt;strong&gt;elemento ativo&lt;/strong&gt;, ou seja, é o que &lt;strong&gt;fornece energia&lt;/strong&gt; ao restante dos componenentes deste circuito.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Carga&lt;/strong&gt;: São os &lt;strong&gt;elementos passivos&lt;/strong&gt; do circuito, ou seja, aqueles que &lt;strong&gt;consomem energia&lt;/strong&gt; da fonte.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;configuração-do-circuito&quot;&gt;Configuração do circuito&lt;/h2&gt;
 &lt;p&gt;A análise de um circuito basicamente é o processo de segmentá-lo em partes menores, sem que haja alteração das suas características de funcionamento, de forma a simplificar seu manuseio.&lt;/p&gt;
 
-&lt;p&gt;Alguns conceitos são de fundamental importância para facilitar essa tarefa de análise do circuito, e um destes conceitos é o nó.&lt;/p&gt;
+&lt;p&gt;Alguns conceitos são de fundamental importância para facilitar essa tarefa de análise do circuito, e um destes conceitos é o &lt;strong&gt;nó&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;O nó é uma conexão entre pelo menos três elementos do circuito ou entre elementos ativos e passivos e é representada por uma circunferência preenchida unindo os terminais dos componentes.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;nó&lt;/strong&gt; é uma &lt;strong&gt;conexão entre pelo menos três elementos do circuito&lt;/strong&gt; ou entre elementos ativos e passivos e é representada por uma circunferência preenchida unindo os terminais dos componentes.&lt;/p&gt;
 
-&lt;p&gt;A Figura 4 mostra em destaque os nós denominados como A e B. As setas nas linhas indicam o sentido da corrente, chegando ou saindo de cada nó.&lt;/p&gt;
-
-&lt;p&gt;Figura 4: Nós A e B .&lt;/p&gt;
+&lt;p&gt;A Figura a seguir mostra em destaque os nós denominados como &lt;strong&gt;A&lt;/strong&gt; e &lt;strong&gt;B&lt;/strong&gt;. As setas nas linhas indicam o sentido da corrente, chegando ou saindo de cada nó.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioNoInf-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó inferior - Interpretação de Circuitos Elétricos&quot; /&gt;
 &lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioNoSup-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ligação-em-série&quot;&gt;Ligação em série&lt;/h2&gt;
-&lt;p&gt;O trecho do circuito entre nós é chamado de ramo. Em um ramo, todos os seus componentes são ligados em série. A Figura 5 mostra os três ramos ligados aos pontos A e B , sendo o ramo central o único que possui mais do que um componente, ou seja, é o único que possui componentes em série. Assim pode-se afirmar que o resistor R D está em série com o LED D.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;O trecho do circuito entre nós é chamado de ramo. Em um ramo, todos os seus componentes são ligados em série&lt;/strong&gt;. A figura seguinte mostra os três ramos ligados aos pontos A e B , sendo o ramo central o único que possui mais do que um componente, ou seja, é o único que possui componentes em série. Assim pode-se afirmar que o &lt;strong&gt;resistor RD está em série com o LED D&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Figura 5: Ramos entre os nós A e B .
-&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoRLED-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoRLED-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoFonte-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;
 &lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoRL-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
@@ -82,13 +79,11 @@
 &lt;h2 id=&quot;ligação-em-paralelo&quot;&gt;Ligação em paralelo&lt;/h2&gt;
 &lt;p&gt;O circuito da Figura 6 apresenta três nós (A, B e C ) e cinco ramos, cada um contendo apenas um elemento cada (Vcc , R1 , R2 , R3 e R4 ).&lt;/p&gt;
 
-&lt;p&gt;Figura 6: Nós do circuito.&lt;/p&gt;
-
 &lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoExemplo-1.png?raw=true&quot; alt=&quot;Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Note que o nó C aparece duas vezes, mas não quer dizer que sejam pontos distintos, pelo contrário, é o mesmo ponto, representado em dois lugares. É o ponto de conexão entre os quatro resistores.&lt;/p&gt;
+&lt;p&gt;Note que &lt;strong&gt;o nó C aparece duas vezes, mas&lt;/strong&gt; não quer dizer que sejam pontos distintos, pelo contrário, &lt;strong&gt;é o mesmo ponto&lt;/strong&gt;, representado em dois lugares. É o ponto de conexão entre os quatro resistores.&lt;/p&gt;
 
-&lt;p&gt;Como existem dois ramos ligados aos mesmos nós, isso significa que seus elementos estão em paralelo. Como em cada ramo só existe um resistor, então:&lt;/p&gt;
+&lt;p&gt;Como existem dois ramos ligados aos &lt;strong&gt;mesmos nós&lt;/strong&gt;, isso significa que seus elementos &lt;strong&gt;estão em paralelo&lt;/strong&gt;. Como em cada ramo só existe um resistor, então:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;R 1 é paralelo ao R 2&lt;/li&gt;
   &lt;li&gt;R 3 é paralelo ao R 4&lt;/li&gt;
@@ -97,35 +92,46 @@
 &lt;p&gt;Nesse circuito, nenhum ramo apresenta mais do que um elemento, assim não há componentes em série.&lt;/p&gt;
 
 &lt;h2 id=&quot;atividades&quot;&gt;Atividades&lt;/h2&gt;
-&lt;p&gt;Identificar Associações de Resistores em Paralelo e em Série.&lt;/p&gt;
+&lt;p&gt;Identificar associações de resistores em &lt;strong&gt;paralelo&lt;/strong&gt; e em &lt;strong&gt;série&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Circuito 1&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;circuito-1&quot;&gt;Circuito 1&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ1-1.png?raw=true&quot; alt=&quot;Exercício 1&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Circuito 2&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;circuito-2&quot;&gt;Circuito 2&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ2-1.png?raw=true&quot; alt=&quot;Exercício 2&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Circuito 3&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;circuito-3&quot;&gt;Circuito 3&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ3-1.png?raw=true&quot; alt=&quot;Exercício 3&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Circuito 4&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;circuito-4&quot;&gt;Circuito 4&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ4-1.png?raw=true&quot; alt=&quot;Exercício 4&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true&quot;&gt;Nota de aula em PDF&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;q U I Z&lt;/h2&gt;
+&lt;div class=&quot;admonition question&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Qual é a competência aqui trabalhada?&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;correct-1&quot;&gt;1. Interpretar diagramas e esquemas de circuitos elétricos;&lt;/span&gt;&lt;br /&gt;2. Interpretar unidades de medidas elétricas;&lt;br /&gt;3. Calcular grandezas elétricas em circuitos elétricos&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button class=&quot;btn btn-success&quot; onclick=&quot;$(&amp;quot;.correct-1&amp;quot;).css(&amp;quot;font-weight&amp;quot;, 600);$(&amp;quot;.correct-more-1&amp;quot;).css(&amp;quot;display&amp;quot;, &amp;quot;inline&amp;quot;)&quot;&gt;Mostrar resposta&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;admonition question&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;True or False, Pittsburgh is West of Philadelphia&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;correct-2&quot;&gt;1. true&lt;/span&gt;&lt;br /&gt;2. false&lt;br /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button class=&quot;btn btn-success&quot; onclick=&quot;$(&amp;quot;.correct-2&amp;quot;).css(&amp;quot;font-weight&amp;quot;, 600);$(&amp;quot;.correct-more-2&amp;quot;).css(&amp;quot;display&amp;quot;, &amp;quot;inline&amp;quot;)&quot;&gt;Mostrar resposta&lt;/button&gt;&lt;/p&gt;
+&lt;p class=&quot;well correct-more-2&quot; style=&quot;display:none&quot;&gt;The answer is True! Pittsburgh is 304.9 miles West of Philadelphia, or approximately
+a car ride of 4 hours and 52 minutes. Buckle up!
+&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Wed, 13 May 2020 04:48:21 -0300</pubDate>
         <link>http://localhost:4000/ddp/2020/aula-ele-interpretaCircuitosEletricos/</link>
