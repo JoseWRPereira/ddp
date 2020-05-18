@@ -24,6 +24,24 @@ permalink: /indicacoes/
 
 ## Eletrônica
 
+
+
+
+{% include alert.html
+  title="Aprendiz da Automação - Vicente Parolis"
+  type="success"
+  content='
+<!--  <a href="https://luizbitencourt.wordpress.com/" target="_blank">
+    <i class="fas fa-globe-americas"></i> Site
+  </a>
+  |-->
+  <a href="https://www.youtube.com/channel/UCaHQHcqJobrE_jtxEhVqqNg/" target="_blank">
+    <i class="fab fa-youtube"></i> Youtube
+  </a> '
+%}
+
+
+
 {% include alert.html
   title="Luiz Bitencourt"
   type="success"
