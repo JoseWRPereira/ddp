@@ -20,19 +20,19 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Quiz</title>
-<meta property="og:title" content="Quiz" />
-<meta property="og:description" content="How to add interactive quizzes to your site." />
+<title>Sistemas Eletrônicos Digitais</title>
+<meta property="og:title" content="Sistemas Eletrônicos Digitais" />
+<meta property="og:description" content="Sistemas Eletrônicos Digitais" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Quiz">
-<meta itemprop="description" content="How to add interactive quizzes to your site.">
+<meta itemprop="name" content="Sistemas Eletrônicos Digitais">
+<meta itemprop="description" content="Sistemas Eletrônicos Digitais">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Quiz"/>
-<meta name="twitter:description" content="How to add interactive quizzes to your site."/>
+<meta name="twitter:title" content="Sistemas Eletrônicos Digitais"/>
+<meta name="twitter:description" content="Sistemas Eletrônicos Digitais"/>
 
 <link rel="stylesheet" href="/ddp/assets/css/main.css">
 <link rel="stylesheet" href="/ddp/assets/css/palette.css">
@@ -277,8 +277,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_docs/extras/example-quiz.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_docs/extras/example-quiz.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_docs/aulas/seldi.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_docs/aulas/seldi.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -295,82 +295,28 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/docs/extras/example-quiz">Quiz</a>
+                <a href="http://localhost:4000/ddp/docs/aulas/seldi">Sistemas Eletrônicos Digitais</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="quizzes">Quizzes</h1>
+            <h1 id="seldi">SELDI</h1>
 
-<p>As of version 0.0.12, mkdocs-jekyll has support for basic quizzes! These are
-intended to help educate your users about the content of your documentation.
-For a quiz, you can add a new file to the folder <code class="language-plaintext highlighter-rouge">_data/quizzes</code>, and write a 
-questions file based on the format shown in <code class="language-plaintext highlighter-rouge">_data/quizzes/example-quiz.yml</code>.
-Here is a simple example of a multiple choice question (which can also serve as 
-True/False):</p>
+<p>Material de apoio às aulas de Sistemas Digitais Eletrônicos do curso
+Técnico em Eletroeletrônica no SENAI Jandira.</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">This is the Quiz Title</span>
-<span class="na">randomized</span><span class="pi">:</span> <span class="no">false</span>
-<span class="na">questions</span><span class="pi">:</span>
+<p>O conteúdo aqui apresentado tem o intuito servir de alternativa ao processo
+ensino-aprendizagem de Programação em C para microcontrolador.
+Não sendo assim um conjunto de informações de uso geral em linguagem C,
+mas sim restritas as estratégias por mim adotadas.</p>
 
- <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">multiple-choice"</span>
-   <span class="na">question</span><span class="pi">:</span> <span class="s2">"</span><span class="s">True</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">False,</span><span class="nv"> </span><span class="s">Pittsburgh</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">West</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Philadelphia"</span>
-   <span class="na">items</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">choice</span><span class="pi">:</span> <span class="s">True</span>
-      <span class="na">correct</span><span class="pi">:</span> <span class="no">true</span>
-    <span class="pi">-</span> <span class="na">choice</span><span class="pi">:</span> <span class="s">False</span>
-      <span class="na">correct</span><span class="pi">:</span> <span class="no">false</span>
-   <span class="na">followup</span><span class="pi">:</span> <span class="pi">|</span> 
-      <span class="s">The answer is True! Pittsburgh is 304.9 miles West of </span>
-      <span class="s">Philadelphia, or approximately a car ride of </span>
-      <span class="s">4 hours and 52 minutes. Buckle up!</span>
-</code></pre></div></div>
+<p>Bons estudos!</p>
 
-<p>The quiz is rendered with a “Show Answer” button below each question, and when
-the user clicks it, any questions that are flagged with <code class="language-plaintext highlighter-rouge">correct: true</code> will be 
-bolded, and if a followup section is included, it will be displayed.
-See the live example at the end of this page.</p>
-
-<h2 id="options">Options</h2>
-
-<h4 id="title">Title</h4>
-
-<p>If you include a title, it will be rendered at the top of the quiz. This is
-optional - you can leave it out and add it before the include on the page.</p>
-
-<h4 id="random">Random</h4>
-
-<p>If you want your questions to be presented randomly, just add randomized: true
-to the data.</p>
-
-<h2 id="example-quiz">Example Quiz</h2>
-
-<p>If I want to include the quiz located at <code class="language-plaintext highlighter-rouge">_data/quizzes/example-quiz.yml</code>, I 
-can do so like this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include quiz.html file='example-quiz' %}
-</code></pre></div></div>
-
-<p>The rendered quiz is shown here:</p>
-
-<h2>This is the Quiz Title</h2>
-<div class="admonition question">
-<p class="admonition-title">What is your favorite color?</p>
-<p>1. Red<br />2. Blue<br />3. Green<br /></p>
-</div>
-<p><button class="btn btn-success" onclick="$(&quot;.correct-1&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-1&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Mostrar resposta</button></p>
-<p class="well correct-more-1" style="display:none">There is no correct answer to asking your favorite color! All choices would be good.</p>
-<p><br /></p>
-<div class="admonition question">
-<p class="admonition-title">True or False, Pittsburgh is West of Philadelphia</p>
-<p><span class="correct-2">1. true</span><br />2. false<br /></p>
-</div>
-<p><button class="btn btn-success" onclick="$(&quot;.correct-2&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-2&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Mostrar resposta</button></p>
-<p class="well correct-more-2" style="display:none">The answer is True! Pittsburgh is 304.9 miles West of Philadelphia, or approximately 
-a car ride of 4 hours and 52 minutes. Buckle up!
-</p>
-<p><br /></p>
-
+<h2 id="seldi---sistemas-eletrônicos-digitais">SELDI - Sistemas Eletrônicos Digitais</h2>
+<ul>
+  <li>Aula 01 - Estrutura básica de programação em Linguagem C
+(<a href="https://github.com/JoseWRPereira/aula-seldi-basicoProgC/blob/master/seldi-01-estruturaBasicaProgC.pdf?raw=true">Slides</a>)</li>
+</ul>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -422,7 +368,7 @@ $.each(headers, function(i, header){
 </script>
 
 <script>
-$('h1').first().append('<div></div>')</script>
+$('h1').first().append('<div><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ddp/tags#SELDI ">SELDI</a></span><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ddp/tags#SENAI ">SENAI</a></span></div>')</script>
 
 
             

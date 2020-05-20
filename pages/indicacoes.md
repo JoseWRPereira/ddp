@@ -24,9 +24,6 @@ permalink: /indicacoes/
 
 ## Eletrônica
 
-
-
-
 {% include alert.html
   title="Aprendiz da Automação - Vicente Parolis"
   type="success"
@@ -69,7 +66,7 @@ permalink: /indicacoes/
 %}
 
 {% include alert.html
-  title="O Professor Leandro"
+  title="O Professor Leandro - Leandro Poloni"
   type="success"
   content='
   <a href="https://oprofessorleandro.wordpress.com/" target="_blank">
