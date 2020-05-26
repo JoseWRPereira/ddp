@@ -10,6 +10,7 @@ icon: logo.svg
 <p>Assine o <a href="{{ site.baseurl }}/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
 <br>
+<hr/><hr/>
 
 {% for post in site.posts limit:10 %}
    <div class="post-preview">
@@ -19,7 +20,7 @@ icon: logo.svg
    {{ post.content | split:'<!--more-->' | first }}
    {% if post.content contains '<!--more-->' %}
       <a href="{{ site.baseurl }}{{ post.url }}">leia mais </a>
-   {% endif %} 
+   {% endif %}
    </div>
    <hr>
 {% endfor %}
