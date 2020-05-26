@@ -400,4 +400,4 @@ $R_7 = 100\Omega$.
 
 ## Download
 
-[Nota de aula em PDF](https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/pdf/aula-ele-calculaOhmKirchhoff.pdf?raw=true)
+[Nota de aula em PDF](https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/pdf/aula-ele-calcReq-1LeiOhm.pdf?raw=true)

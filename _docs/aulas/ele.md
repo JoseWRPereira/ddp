@@ -13,4 +13,4 @@ description: Eletricidade Básica.
 ([PDF](https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true))
 
 * [Aula 02 - Cálculo de Req e 1ª Lei de Ohm]({{site.baseurl}}/2020/aula-ele-calculaReqOhm)
-([PDF](https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/pdf/aula-ele-calculaOhmKirchhoff.pdf?raw=true))
+([PDF](https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/pdf/aula-ele-calcReq-1LeiOhm.pdf?raw=true))
