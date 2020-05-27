@@ -1,12 +1,13 @@
 ---
-title: Sistemas Eletrônicos Digitais
+title: Programação em Linguagem C
 tags:
+ - ProgC
  - SELDI
  - SENAI
 description: Sistemas Eletrônicos Digitais
 ---
 
-# SELDI
+# Programação em Linguagem C
 
 Material de apoio às aulas de Sistemas Digitais Eletrônicos do curso
 Técnico em Eletroeletrônica no SENAI Jandira.
@@ -18,6 +19,9 @@ mas sim restritas as estratégias por mim adotadas.
 
 Bons estudos!
 
-## SELDI - Sistemas Eletrônicos Digitais
-* Aula 01 - Estrutura básica de programação em Linguagem C
-([Slides](https://github.com/JoseWRPereira/aula-seldi-basicoProgC/blob/master/seldi-01-estruturaBasicaProgC.pdf?raw=true))
+
+* [Aula 01 - Compilador Online, Estrutura básica de programação em Linguagem C, Entradas e saídas de dados]
+([Slides](https://github.com/JoseWRPereira/aula-progC/blob/master/progC-01.pdf?raw=true))
+
+* [Aula 02 - Funções, Organização do projeto, Diagramas]
+([Slides](https://github.com/JoseWRPereira/aula-progC/blob/master/progC-02.pdf?raw=true))
