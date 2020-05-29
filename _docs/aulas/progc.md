@@ -25,3 +25,6 @@ Bons estudos!
 
 * [Aula 02 - Funções, Organização do projeto, Diagramas]
 ([Slides](https://github.com/JoseWRPereira/aula-progC/blob/master/progC-02.pdf?raw=true))
+
+* [Aula 03 - Estruturas condicionais e de repetição]
+([Slides](https://github.com/JoseWRPereira/aula-progC/blob/master/progC-03.pdf?raw=true))
