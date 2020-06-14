@@ -6,9 +6,190 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 May 2020 17:23:09 -0300</pubDate>
-    <lastBuildDate>Thu, 28 May 2020 17:23:09 -0300</lastBuildDate>
+    <pubDate>Sat, 13 Jun 2020 22:18:43 -0300</pubDate>
+    <lastBuildDate>Sat, 13 Jun 2020 22:18:43 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>URI1001 - Entrada e Saída de Dados</title>
+        <description>&lt;h1 id=&quot;extremamente-básico&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001&quot;&gt;Extremamente Básico&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.&lt;/p&gt;
+
+&lt;p&gt;A primeira dúvida é: &lt;strong&gt;como ler um número digitado pelo usuário e armazená-lo em uma variável?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;estrutura-básica-de-um-programa-em-c&quot;&gt;Estrutura básica de um programa em C&lt;/h2&gt;
+
+&lt;p&gt;Todo programa em linguagem C é estruturado em funções. Uma única função principal e obrigatória, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main()&lt;/code&gt;, que denota o início da execução do programa.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A execução do programa basicamente é realizada através do processador que lê dados nas memórias e manipula-os de acordo com a sequencia de instruções do programa, que é armazenada em uma das memórias.&lt;/p&gt;
+
+&lt;p&gt;Assim, tudo é leitura, manipulação e escrita de dados. A manipulação de dados envolve operações lógicas, aritméticas e de movimentação de dados.&lt;/p&gt;
+
+&lt;p&gt;Para um programa poder interagir um periférico como tela, teclado, mouse, impressora, câmera ou qualquer outro, é necessário que esse periférico esteja mapeado em uma região de memória, ou seja, um espaço de memória é reservado para configurar, parametrizar e trocar dados com o periférico.&lt;/p&gt;
+
+&lt;p&gt;Ao inserir um dispositivo novo ao sistema, um novo espaço deve ser mapeado, mas para computadores de uso geral, alguns dispositivos são denominados de padrão, ou seja, todo computador tem uma entrada padrão e uma saída padrão, que é o teclado e o monitor, respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Para manipular dados nesses dispositivos padrão, é necessário incluir funções existentes na instalação do compilador no sistema operacional.
+Essas funções estão presentes na biblioteca &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdio.h&lt;/code&gt;: Entradas e Saídas Padrão (&lt;strong&gt;St&lt;/strong&gt;an&lt;strong&gt;d&lt;/strong&gt;ard &lt;strong&gt;I&lt;/strong&gt;nput &lt;strong&gt;O&lt;/strong&gt;utput).&lt;/p&gt;
+
+&lt;h3 id=&quot;stdioh&quot;&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/cstdio/&quot;&gt;stdio.h&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Para inclusão utilizar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include&lt;/code&gt;, indicar que a bilioteca é nativa da instalação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; entre o nome da bilioteca, que deve possuir uma extensão &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.h&lt;/code&gt; para indicar que é o seu cabeçalho (&lt;a href=&quot;https://www.w3schools.in/c-tutorial/c-header-files/&quot;&gt;&lt;em&gt;header&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Os arquivos de inclusão não são os arquivos fonte, mas sim os arquivos de cabeçalho, que possuem as informações necessárias para a chamada das funções presentes nessa biblioteca.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;leitura-e-escrita-de-dados&quot;&gt;&lt;a href=&quot;https://www.w3schools.in/c-tutorial/input-output/&quot;&gt;Leitura e escrita de dados&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;A leitura de dados é feita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scanf()&lt;/code&gt; e a escrita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;printf()&lt;/code&gt;, sendo que ambas utilizam uma quantidade variável de argumentos, mas seu primeiro argumento é um formato de caracteres.&lt;/p&gt;
+
+&lt;h3 id=&quot;o-formato&quot;&gt;&lt;a href=&quot;https://www.w3schools.in/c-tutorial/format-specifiers/&quot;&gt;O formato&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Basicamente se trata de uma &lt;a href=&quot;https://www.w3schools.in/c-tutorial/strings/&quot;&gt;cadeia de caracteres&lt;/a&gt; (&lt;em&gt;string&lt;/em&gt;) que possui uma mensagem a ser enviada à saída padrão, ou como devem ser lidos da entrada padrão.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mensagem de exibicao&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Podendo ser incluida a indicação de variável na posição que ela deve aparecer utilizando o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; e o seu tipo.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exibe a variavel %d &quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Após o formato são incluidas as variáveis que substituem as marcações na string, na ordem em que elas aparecem.&lt;/p&gt;
+
+&lt;h3 id=&quot;scanf&quot;&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/io/fscanf&quot;&gt;scanf()&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Leitura de um dado que é armazenado na &lt;a href=&quot;https://www.w3schools.in/c-tutorial/variables/&quot;&gt;variável&lt;/a&gt; num.&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Leitura de dois dados que são armazenado nas variáveis A e B.&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ou ainda:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d %d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Os argumentos seguintes ao formato devem ser os endereços das variáveis que vão receber os dados lidos da entrada padrão conforme o formato do primeiro argumento.&lt;/p&gt;
+
+&lt;h3 id=&quot;print&quot;&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/io/fprintf&quot;&gt;print()&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Exibição de dados da variável soma.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = %d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;No lugar da marcação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%d&lt;/code&gt; deve ser inserido o conteúdo da variável soma.&lt;/p&gt;
+
+&lt;p&gt;Todo apresentação de dados na plataforma URI devem possuir um fim de linha, denotado pelo caractere &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt;, equivalente à tecla Enter.&lt;/p&gt;
+
+&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
+&lt;p&gt;O resultado completo para o desafio
+&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001?_blanck&quot;&gt;URI 1001 Extremamente Básico&lt;/a&gt; na minha formulação é:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;xis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xis&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sat, 13 Jun 2020 14:11:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/uri1001c_entradaSaidaDados/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1001c_entradaSaidaDados/</guid>
+        
+        
+        <category>ProgC</category>
+        
+      </item>
+    
+      <item>
+        <title>URI1001 - Entrada e Saída de Dados</title>
+        <description>&lt;h1 id=&quot;extremamente-básico&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001&quot;&gt;Extremamente Básico&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.&lt;/p&gt;
+
+&lt;p&gt;A primeira dúvida é: &lt;strong&gt;como ler um número digitado pelo usuário e armazená-lo em uma variável?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;leitura-de-dados&quot;&gt;Leitura de dados&lt;/h2&gt;
+&lt;p&gt;Com uma busca rápida no Google, encontrei o a resposta para a leitura de dados em &lt;a href=&quot;https://www.w3schools.com/python/ref_func_input.asp?_blank&quot;&gt;w3schools.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;input&quot;&gt;input()&lt;/h3&gt;
+&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input()&lt;/code&gt; realiza a leitura de uma cadeia de caracteres (string) da entrada padrão (teclado). O resultado lido é atribuído a variável &lt;em&gt;a&lt;/em&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a = input()&lt;/code&gt;. O tipo da variável é definida dinamicamente, ou seja, no momento que é feita a atribuição do dado, este é reconhecido e a variável é declarada com esse mesmo tipo, nesse caso, string.&lt;/p&gt;
+
+&lt;p&gt;Mas é necessário que, após as leituras dos dois valores, seja feita a soma, ou seja, as entradas devem ser números e não cadeias de caracteres (string).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Como converter a string lida em um número do tipo inteiro?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;casting&quot;&gt;Casting&lt;/h3&gt;
+&lt;p&gt;O processo para a conversão entre tipos de dados é chamado de
+&lt;a href=&quot;https://www.w3schools.com/python/python_casting.asp?_blank&quot;&gt;casting&lt;/a&gt;, onde um dado sofre uma &lt;a href=&quot;https://translate.google.com.br/?hl=pt-BR#view=home&amp;amp;op=translate&amp;amp;sl=en&amp;amp;tl=pt&amp;amp;text=casting&quot;&gt;modelagem&lt;/a&gt; do seu tipo original para o tipo desejado.&lt;/p&gt;
+
+&lt;p&gt;Assim, a entrada de dados é feita pela função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input()&lt;/code&gt;, cujo resultado é modelado para o tipo inteiro e por fim atribuído a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;.
+O mesmo ocorre para a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt;. Em seguida a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma&lt;/code&gt; recebe o resultado da operação de &lt;a href=&quot;https://www.w3schools.com/python/python_operators.asp?_blank&quot;&gt;soma&lt;/a&gt; entre elas.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;print&quot;&gt;print()&lt;/h3&gt;
+&lt;p&gt;Por fim a apresentação do resultado, que pode ser feita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print()&lt;/code&gt;, mas como inserir uma variável no meio da string?&lt;/p&gt;
+
+&lt;h3 id=&quot;presentation-error&quot;&gt;Presentation Error&lt;/h3&gt;
+&lt;p&gt;Uma primeira forma encontrada foi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma )&lt;/code&gt;, porém a plataforma avaliava com erro de apresentação, &lt;em&gt;Presentation error&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;especulação&quot;&gt;Especulação&lt;/h3&gt;
+&lt;p&gt;Entre devaneios e &lt;strong&gt;especulações&lt;/strong&gt;, imagino que o problema ocorra pela composição de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string + variável&lt;/code&gt; apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\0'&lt;/code&gt;. Exemplo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a=4&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b=5&lt;/code&gt; então &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma=9&lt;/code&gt;. A saída do comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma)&lt;/code&gt;, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça comprir as exigências, pois o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'0'&lt;/code&gt; não aparece na tela.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cuidado!&lt;/strong&gt; Isso é uma especulação, estou aprendendo python.&lt;/p&gt;
+
+&lt;h3 id=&quot;format&quot;&gt;.format()&lt;/h3&gt;
+&lt;p&gt;Duas outras ótimas fontes de pesquisa são: &lt;a href=&quot;https://pt.stackoverflow.com/questions/225498/formatando-strings-com-format-e&quot;&gt;stack&lt;strong&gt;overflow&lt;/strong&gt;&lt;/a&gt; e a própria documentação da linguagem &lt;a href=&quot;https://docs.python.org/3/library/string.html#custom-string-formatting&quot;&gt;docs.python.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
+&lt;p&gt;O resultado completo para o desafio
+&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001?_blanck&quot;&gt;URI 1001 Extremamente Básico&lt;/a&gt; na minha formulação é:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sat, 13 Jun 2020 13:04:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/uri1001python_entradaSaidaDados/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1001python_entradaSaidaDados/</guid>
+        
+        
+        <category>ProgPy</category>
+        
+      </item>
     
       <item>
         <title>Resistência equivalente total e 1ª Lei de Ohm</title>
@@ -787,107 +968,6 @@ o ato de participar é uma condição humana,  daquele que vive na convivência 
         
         
         <category>Livros</category>
-        
-      </item>
-    
-      <item>
-        <title>A fundação</title>
-        <description>&lt;p&gt;A Fundação é considerado um dos maiores clássicos de Ficção Científica e Asimov elevado a um alto grau de prestígio, por ter criado todo um universo ficcional e mostrar o caminho que foi seguido por muitos depois dele.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;A história de A Fundação se passa num futuro em que a raça humana se espalhou pela galáxia, e Trantor, que é a capital do Império, se vê ameaçada pelas previsões de Hari Seldon, cientista criador da psico-história. Daí por diante são vários recortes de momentos históricos e acontecimentos que se entrelaçam mostrando o curso da historia e da relação que a Fundação, criada por Seldon, desenvolve sob aspecto político e religioso, envolvendo a sobrevivência, a necessidade e a dominação em relação aos vizinhos e ao Império.&lt;/p&gt;
-
-&lt;p&gt;A figura icônica de Hari Seldon, é acusado de traição por alegar o declínio e posterior queda do Império por dez mil anos. Sua previsão é realizada através da psico-história.&lt;/p&gt;
-
-&lt;p&gt;“Entretanto, a queda do Império, cavalheiros, é uma coisa sólida e não será fácil evitá-la. Ela é ditada por uma burocracia em ascensão, um dinamismo em declínio, um congelamento de castas, um represamento da curiosidade… e uma centena de outros fatores.”&lt;/p&gt;
-
-&lt;p&gt;Ele propõe a criação de uma equipe de Enciclopedistas que reuniriam todo o conhecimento existente, minimizando assim a era de trevas para apenas mil anos. Sem um sucesso aparente Hari Seldon é autorizado a montar, no planeta Terminus na borda da galáxia, a sua Fundação que abrigaria os enciclopedistas, ficando assim isolado do Império.&lt;/p&gt;
-
-&lt;p&gt;Hari Seldon não só previu mas talvez tenha entendido os movimentos e mecanismos políticos e históricos, de forma que anteviu uma série de crises e deixou recomendações para superá-las.&lt;/p&gt;
-
-&lt;p&gt;“Entretando, …, o tronco de árvore podre, até o instante exato em que a rajada de vento da tempestade o parte ao meio, tem todo o aspecto de poder que sempre teve. “&lt;/p&gt;
-
-&lt;p&gt;Aparentemente, algumas críticas são inseridas nas falas das personagens, tendo um caráter atemporal por se tratar de questões inerentemente humanas.&lt;/p&gt;
-
-&lt;p&gt;“A violência é o último refúgio do incompetente”&lt;/p&gt;
-
-&lt;p&gt;Podemos encontrar uma grande crítica ao modo de pensar das religiões:&lt;/p&gt;
-
-&lt;p&gt;“Durante esse tempo todo, vocês invariavelmente confiaram na autoridade ou no passado… e nunca em si próprios.”&lt;/p&gt;
-
-&lt;p&gt;“…isso é uma atitude doentia, um reflexo condicionado que põe de lado a independência de suas mentes sempre que é uma questão de se opor à autoridade.”&lt;/p&gt;
-
-&lt;p&gt;“…religião é uma das grandes influências civilizatórias da história,…”&lt;/p&gt;
-
-&lt;p&gt;A condição de alianças e dominação e exposta em vários momentos, tanto do ponto de vista do indivíduo como de grupos. Outro aspecto é a burocracia e lentidão do grandioso Império, evidenciado no final, contrapondo-o à Fundação, enxuta, ágil e eficiente.&lt;/p&gt;
-
-&lt;p&gt;As questões morais e éticas são abordadas e as corrupções afim de auferir ganhos próprios e substâncias são expostos de forma a mostrar que este é o curso inevitável desse modelo de organização social, mesmo que envolvendo a galáxia ou as relações domésticas.&lt;/p&gt;
-
-&lt;p&gt;“Nunca deixe seu senso de moral impedir você de fazer o que é certo!”&lt;/p&gt;
-
-&lt;p&gt;“Um desintegrador é uma boa arma, mas pode apontar para os dois lados.”&lt;/p&gt;
-
-&lt;p&gt;“…crises Seldon não são resolvidas por indivíduos, mas por forças históricas. Hari Seldon, quando planejou seu curso da história futura, não contava com heroísmos brilhantes, mas com amplos panoramas da economia e da sociologia.”&lt;/p&gt;
-
-&lt;p&gt;“Mas é muito difícil de aguentar pequenas coisas quando o fervor patriótico do perigo iminente não está presente.”&lt;/p&gt;
-
-&lt;p&gt;Não tem como não traçar um paralelo com a nossa própria história, até ouso a dizer que é a nossa história contada com uma outra roupagem, outro tempo, outra tecnologia, mas os mesmos problemas, conflitos e interesses.&lt;/p&gt;
-
-&lt;p&gt;“Outras crises acontecerão no futuro, quando o poder do dinheiro tiver se esgotado, da mesma forma que a religião se esgotou hoje.”&lt;/p&gt;
-
-&lt;p&gt;História que causam uma identificação são uma forma de agradar o público, quando nos identificamos com algo temos uma certa predileção pelo que é ali contado, pela narrativa, como uma olhada no espelho, mas nos colocando sob a perspectiva de espectador histórico. Para mim, Asimov reescreveu a história humana, com seus aspectos próprios, e o fez de forma muito interessante e com críticas elegantemente inseridas ao longo dos diálogos e dos recortes históricos.&lt;/p&gt;
-
-&lt;p&gt;Muitas são as possibilidades dentro da história, muitos detalhes podem ser elucidados, ressaltados e a curiosidade fica para o restante da obra, que será devidamente apreciada no momento certo, por enquanto ficou uma ótima impressão de Asimov.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Durante meu exame médico de rotina, um breve papo literário aconteceu, questionado sobre o que eu estava a ler citei Douglas Adams e seu Guia do Mochileiro das Galáxias, mas fui ligeiramente contido com a frase:&lt;/p&gt;
-
-&lt;p&gt;– Não!!! Isso é coisa de criança, leia Isaac Asimov, A Fundação, aí você se torna gente grande.&lt;/p&gt;
-
-&lt;p&gt;Não tive concordância em estar gostando do Guia, mas concordamos quando citei Tolkien.&lt;/p&gt;
-
-&lt;p&gt;Bom, devo dizer que ele não estava errado, mas também não estava de todo o certo.&lt;/p&gt;
-
-&lt;p&gt;Agora… pelo que me recordo a especialidade dele, além de medicina do trabalho, é neurociência … psicopedagogia … será que também é psico-história?&lt;/p&gt;
-</description>
-        <pubDate>Tue, 11 Jul 2017 04:43:21 -0300</pubDate>
-        <link>http://localhost:4000/ddp/2017/a-fundacao/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2017/a-fundacao/</guid>
-        
-        
-        <category>Livros</category>
-        
-      </item>
-    
-      <item>
-        <title>Sobre (preposição)</title>
-        <description>&lt;p&gt;Há um limite concreto no espaço &lt;br /&gt;
-Há um limite concreto no tempo &lt;br /&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Que não permite o deslocamento para além daquele muro, &lt;br /&gt;
-ou daquele portão, portal de sabedoria ou de prazeres &lt;br /&gt;
-Que impede de ser forte e experiente, ousado e responsável, &lt;br /&gt;
-contar os contos, milhares já vividos e nem metade já vislumbrados &lt;br /&gt;
-Daquelas tantas besteiras cultivadas com tanto apreço, &lt;br /&gt;
-a que preço ? migalhas aos pombos em revoada &lt;br /&gt;
-e de satisfação que outrora feliz se fez, agora, cadê aquele sentido? &lt;br /&gt;
-em que direção caminhar, correr seria melhor, mas falta … juventude &lt;br /&gt;
-e naquele final da última juventude, perceber o que à vista se fez &lt;br /&gt;
-mas nunca percebeu-se, pois não é de bom tom chegar tão longe &lt;br /&gt;
-tão na beirada, prestes a escapulir num infinito &lt;br /&gt;
-e chegar ao final da equação com a resposta: &lt;br /&gt;
-A percepção é o limite! &lt;br /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 01 Jul 2017 04:17:21 -0300</pubDate>
-        <link>http://localhost:4000/ddp/2017/sobre-preposicao/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2017/sobre-preposicao/</guid>
-        
-        
-        <category>Versos</category>
         
       </item>
     

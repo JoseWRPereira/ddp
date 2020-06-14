@@ -3,6 +3,8 @@
   links:
     - title: "Humanidades"
       url: "docs/humanidades"
+    - title: "Programação"
+      url: "docs/tecnology/programacao"
 - title: Notas de Aula
   url: "docs/aulas"
   links:
