@@ -284,8 +284,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/2020-06-13-uri1001python_entradaSaidaDados.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/2020-06-13-uri1001python_entradaSaidaDados.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/2020-06-13-uri1001py_entradaSaidaDados.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/2020-06-13-uri1001py_entradaSaidaDados.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -302,7 +302,7 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/2020/uri1001python_entradaSaidaDados/">URI1001 - Entrada e Saída de Dados</a>
+                <a href="http://localhost:4000/ddp/2020/uri1001py_entradaSaidaDados/">URI1001 - Entrada e Saída de Dados</a>
               </li>
             </ol>
           </nav>
@@ -347,7 +347,7 @@ O mesmo ocorre para a variável <code class="language-plaintext highlighter-roug
 <p>Uma primeira forma encontrada foi <code class="language-plaintext highlighter-rouge">print("X = ", soma )</code>, porém a plataforma avaliava com erro de apresentação, <em>Presentation error</em>.</p>
 
 <h3 id="especulação">Especulação</h3>
-<p>Entre devaneios e <strong>especulações</strong>, imagino que o problema ocorra pela composição de <code class="language-plaintext highlighter-rouge">string + variável</code> apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: <code class="language-plaintext highlighter-rouge">'\0'</code>. Exemplo: <code class="language-plaintext highlighter-rouge">a=4</code> e <code class="language-plaintext highlighter-rouge">b=5</code> então <code class="language-plaintext highlighter-rouge">soma=9</code>. A saída do comando <code class="language-plaintext highlighter-rouge">print("X = ", soma)</code>, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça comprir as exigências, pois o <code class="language-plaintext highlighter-rouge">'0'</code> não aparece na tela.</p>
+<p>Entre devaneios e <strong>especulações</strong>, imagino que o problema ocorra pela composição de <code class="language-plaintext highlighter-rouge">string + variável</code> apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: <code class="language-plaintext highlighter-rouge">'\0'</code>. Exemplo: <code class="language-plaintext highlighter-rouge">a=4</code> e <code class="language-plaintext highlighter-rouge">b=5</code> então <code class="language-plaintext highlighter-rouge">soma=9</code>. A saída do comando <code class="language-plaintext highlighter-rouge">print("X = ", soma)</code>, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça cumprir as exigências, pois o <code class="language-plaintext highlighter-rouge">'0'</code> não aparece na tela.</p>
 
 <p><strong>Cuidado!</strong> Isso é uma especulação, estou aprendendo python.</p>
 

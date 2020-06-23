@@ -1,8 +1,8 @@
 ---
 title: Programação
 tags:
- - Python
  - C
+ - Python
 description: Resolução de problemas baseada em programação.
 ---
 
@@ -20,8 +20,11 @@ Não há o objetivo de apresentar a resolução de todos os desafios da platafor
 
 O **objetivo é resolver os problemas**, mas no caminho, apreciar o aprendizado de linguagens de programação.
 
-## Python
-* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001python_entradaSaidaDados)
-
 ## C
 * [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001c_entradaSaidaDados)
+* [URI-1002-Variável de dupla precisão]({{site.baseurl}}/2020/uri1002c_areaDoCirculo)
+* [URI-1005-define]({{site.baseurl}}/2020/uri1005c_media1)
+
+## Python
+* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001py_entradaSaidaDados)
+

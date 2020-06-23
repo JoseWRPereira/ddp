@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Artigos</title>
-<meta property="og:title" content="Artigos" />
+<title>URI1002 - Variável de dupla precisão</title>
+<meta property="og:title" content="URI1002 - Variável de dupla precisão" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Artigos">
+<meta itemprop="name" content="URI1002 - Variável de dupla precisão">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Artigos"/>
+<meta name="twitter:title" content="URI1002 - Variável de dupla precisão"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -284,8 +284,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/pages/archive.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/pages/archive.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/2020-06-22-uri1002c_areaDoCirculo.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/2020-06-22-uri1002c_areaDoCirculo.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -302,139 +302,68 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/archive/">Artigos</a>
+                <a href="http://localhost:4000/ddp/2020/uri1002c_areaDoCirculo/">URI1002 - Variável de dupla precisão</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="índice-de-artigos">Índice de Artigos</h1>
+            <h1 style="margin-bottom:0px">URI1002 - Variável de dupla precisão</h1>
+<span class="badge badge-success">C</span>
+<span class="post-date" style="font-style: italic;">2020-06-22</span>
+<h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do Círculo</a></h1>
 
-<h2 class="c-archives__year" id="2020-ref">2020</h2>
-<ul class="c-archives__list">
-<li class="c-archives__item">
-  20-06-22: <a href="/ddp/2020/uri1005c-media1/">URI1002 - define</a>
-  </li>
+<p>O problema inicial solicita que o programa calcule a área de um círculo dado o valor do raio.</p>
 
+<p>Para o cálculo da área é utilizada a seguinte equação: <code class="language-plaintext highlighter-rouge">area = n.raio²</code>.</p>
 
-<li class="c-archives__item">
-  20-06-22: <a href="/ddp/2020/uri1002c_areaDoCirculo/">URI1002 - Variável de dupla precisão</a>
-  </li>
+<!--more-->
 
+<h2 id="entrada-de-dados">Entrada de dados</h2>
 
-<li class="c-archives__item">
-  20-06-13: <a href="/ddp/2020/uri1001c_entradaSaidaDados/">URI1001 - Entrada e Saída de Dados</a>
-  </li>
+<p>O dado de entrada do programa é o <code class="language-plaintext highlighter-rouge">raio</code>, declarado como uma variável de <a href="https://en.wikipedia.org/wiki/IEEE_754">dupla precisão</a>, como indicado no próprio desafio, assim a sua leitura fica <code class="language-plaintext highlighter-rouge">%lf</code> no formato da função <code class="language-plaintext highlighter-rouge">scanf()</code>.</p>
 
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">double</span> <span class="n">raio</span><span class="p">;</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">raio</span> <span class="p">);</span>
+</code></pre></div></div>
 
-<li class="c-archives__item">
-  20-06-13: <a href="/ddp/2020/uri1001py_entradaSaidaDados/">URI1001 - Entrada e Saída de Dados</a>
-  </li>
+<h2 id="processamento">Processamento</h2>
 
+<p>O cálculo da área pode ser feita utilizando uma função específica para a potência, porém ainda não é necessária a sua utilização, que será explorada em uma próxima oportunidade.</p>
 
-<li class="c-archives__item">
-  20-05-26: <a href="/ddp/2020/aula-ele-calculaReqOhm/">Resistência equivalente total e 1ª Lei de Ohm</a>
-  </li>
+<p>Então para o processamento da área pode-se utilizar o produto do raio, por ele mesmo e o valor aproximado do PI, que é declarado em <code class="language-plaintext highlighter-rouge">n</code>.</p>
 
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">raio</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
 
-<li class="c-archives__item">
-  20-05-13: <a href="/ddp/2020/aula-ele-interpretaCircuitosEletricos/">Interpretação de circuitos elétricos</a>
-  </li>
+<span class="n">area</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">raio</span> <span class="o">*</span> <span class="n">raio</span><span class="p">;</span>
+</code></pre></div></div>
 
+<h2 id="saída-de-dedos">Saída de dedos</h2>
 
-<li class="c-archives__item">
-  20-05-05: <a href="/ddp/2020/univesp-1ecs-resumo/">Ética, Cidadania e Sociedade</a>
-  </li>
-</ul>
-<h2 class="c-archives__year" id="2019-ref">2019</h2>
-<ul class="c-archives__list">
+<p>A saída deve ser apresentada com quatro casas decimais utilizando <code class="language-plaintext highlighter-rouge">%.4f</code>.</p>
 
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"A=%.4f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">area</span> <span class="p">);</span>
+</code></pre></div></div>
 
-<li class="c-archives__item">
-  19-04-21: <a href="/ddp/2019/lobo-de-rua/">Lobo de rua</a>
-  </li>
+<h2 id="resolução">Resolução</h2>
 
+<p>Juntando as partes na resolução do desafio temos:</p>
 
-<li class="c-archives__item">
-  19-01-07: <a href="/ddp/2019/o-auto-da-maga-josefa/">O auto da maga Josefa</a>
-  </li>
-</ul>
-<h2 class="c-archives__year" id="2017-ref">2017</h2>
-<ul class="c-archives__list">
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">raio</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
 
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">raio</span> <span class="p">);</span>
 
-<li class="c-archives__item">
-  17-12-02: <a href="/ddp/2017/deuses-americanos/">Deuses americanos</a>
-  </li>
+  <span class="n">area</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">raio</span> <span class="o">*</span> <span class="n">raio</span><span class="p">;</span>
 
+  <span class="n">printf</span><span class="p">(</span><span class="s">"A=%.4f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">area</span> <span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<li class="c-archives__item">
-  17-07-30: <a href="/ddp/2017/sonhar-e-sorrir-milho-verde/">Sonhar e sorrir (milho verde)</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-07-15: <a href="/ddp/2017/a-velha-casa-da-colina/">A velha casa da colina</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-07-11: <a href="/ddp/2017/a-fundacao/">A fundação</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-07-01: <a href="/ddp/2017/sobre-preposicao/">Sobre (preposição)</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-06-16: <a href="/ddp/2017/o-guia-do-mochileiro-das-galaxias/">Filhos do fim do mundo</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-06-07: <a href="/ddp/2017/no-hospital/">No hospital</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-05-28: <a href="/ddp/2017/filhos-do-fim-do-mundo/">Filhos do fim do mundo</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-05-15: <a href="/ddp/2017/doente-de-cidade/">Doente de cidade</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-05-07: <a href="/ddp/2017/jogador-n1/">Jogador nº 1</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-13: <a href="/ddp/2017/Tia-Vanda/">Tia Vanda</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-10: <a href="/ddp/2017/farelos-de-sonhos/">Farelos de sonhos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-09: <a href="/ddp/2017/A-Jornada-do-Heroi-como-ferramenta-para-desenvolver-leitura-escrita/">A Jornada do Herói como ferramenta para desenvolver a leitura e a escrita</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-08: <a href="/ddp/2017/solidao/">Solidão solidão</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-06: <a href="/ddp/2017/introspeccao/">Introspecção</a>
-  </li></ul>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -485,7 +414,8 @@ $.each(headers, function(i, header){
 })
 </script>
 
-
+<script>
+$('h1').first().append('<div></div>')</script>
 
 
             

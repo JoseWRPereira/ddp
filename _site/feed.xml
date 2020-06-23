@@ -6,9 +6,143 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Jun 2020 22:18:43 -0300</pubDate>
-    <lastBuildDate>Sat, 13 Jun 2020 22:18:43 -0300</lastBuildDate>
+    <pubDate>Mon, 22 Jun 2020 22:37:19 -0300</pubDate>
+    <lastBuildDate>Mon, 22 Jun 2020 22:37:19 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>URI1002 - define</title>
+        <description>&lt;h1 id=&quot;média-1&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1005&quot;&gt;Média 1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;entrada-de-dados&quot;&gt;Entrada de dados&lt;/h2&gt;
+
+&lt;p&gt;Os dados de entrada do programa são duas notas &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, declaradas como variáveis de &lt;a href=&quot;https://en.wikipedia.org/wiki/IEEE_754&quot;&gt;dupla precisão&lt;/a&gt;, como indicado no próprio desafio, assim para a sua leitura é usado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%lf&lt;/code&gt; no formato da função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scanf()&lt;/code&gt; para cada variável.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;processamento&quot;&gt;Processamento&lt;/h2&gt;
+
+&lt;p&gt;No cálculo da média ponderada, cada nota é multiplicada por um fator de ponderação, esses produtos são somados e o resultado dividido pela soma desses fatores.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PESO_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Os fatores de ponderação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PESO_A&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PESO_B&lt;/code&gt; são declarados como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;define&lt;/code&gt; ou definições. 
+As definições são substituídas durante o &lt;a href=&quot;https://www.ime.usp.br/~pf/algoritmos/apend/preprocessor.html&quot;&gt;pré-processamento&lt;/a&gt; do código pelos valores declarados.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define PESO_A  3.5
+#define PESO_B  7.5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;saída-de-dedos&quot;&gt;Saída de dedos&lt;/h2&gt;
+
+&lt;p&gt;A saída deve ser apresentada com cinco casas decimais utilizando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%.5f&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MEDIA = %.5f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
+
+&lt;p&gt;Juntando as partes na resolução do desafio temos:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define PESO_A  3.5
+#define PESO_B  7.5
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PESO_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MEDIA = %.5f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 22 Jun 2020 18:52:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/uri1005c-media1/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1005c-media1/</guid>
+        
+        
+        <category>ProgC</category>
+        
+      </item>
+    
+      <item>
+        <title>URI1002 - Variável de dupla precisão</title>
+        <description>&lt;h1 id=&quot;área-do-círculo&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1002&quot;&gt;Área do Círculo&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema inicial solicita que o programa calcule a área de um círculo dado o valor do raio.&lt;/p&gt;
+
+&lt;p&gt;Para o cálculo da área é utilizada a seguinte equação: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;area = n.raio²&lt;/code&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;entrada-de-dados&quot;&gt;Entrada de dados&lt;/h2&gt;
+
+&lt;p&gt;O dado de entrada do programa é o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raio&lt;/code&gt;, declarado como uma variável de &lt;a href=&quot;https://en.wikipedia.org/wiki/IEEE_754&quot;&gt;dupla precisão&lt;/a&gt;, como indicado no próprio desafio, assim a sua leitura fica &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%lf&lt;/code&gt; no formato da função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scanf()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;processamento&quot;&gt;Processamento&lt;/h2&gt;
+
+&lt;p&gt;O cálculo da área pode ser feita utilizando uma função específica para a potência, porém ainda não é necessária a sua utilização, que será explorada em uma próxima oportunidade.&lt;/p&gt;
+
+&lt;p&gt;Então para o processamento da área pode-se utilizar o produto do raio, por ele mesmo e o valor aproximado do PI, que é declarado em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14159&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;saída-de-dedos&quot;&gt;Saída de dedos&lt;/h2&gt;
+
+&lt;p&gt;A saída deve ser apresentada com quatro casas decimais utilizando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%.4f&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A=%.4f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
+
+&lt;p&gt;Juntando as partes na resolução do desafio temos:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14159&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A=%.4f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 22 Jun 2020 18:46:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/uri1002c_areaDoCirculo/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1002c_areaDoCirculo/</guid>
+        
+        
+        <category>ProgC</category>
+        
+      </item>
     
       <item>
         <title>URI1001 - Entrada e Saída de Dados</title>
@@ -165,7 +299,7 @@ O mesmo ocorre para a variável &lt;code class=&quot;language-plaintext highligh
 &lt;p&gt;Uma primeira forma encontrada foi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma )&lt;/code&gt;, porém a plataforma avaliava com erro de apresentação, &lt;em&gt;Presentation error&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;especulação&quot;&gt;Especulação&lt;/h3&gt;
-&lt;p&gt;Entre devaneios e &lt;strong&gt;especulações&lt;/strong&gt;, imagino que o problema ocorra pela composição de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string + variável&lt;/code&gt; apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\0'&lt;/code&gt;. Exemplo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a=4&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b=5&lt;/code&gt; então &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma=9&lt;/code&gt;. A saída do comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma)&lt;/code&gt;, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça comprir as exigências, pois o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'0'&lt;/code&gt; não aparece na tela.&lt;/p&gt;
+&lt;p&gt;Entre devaneios e &lt;strong&gt;especulações&lt;/strong&gt;, imagino que o problema ocorra pela composição de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string + variável&lt;/code&gt; apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\0'&lt;/code&gt;. Exemplo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a=4&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b=5&lt;/code&gt; então &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma=9&lt;/code&gt;. A saída do comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma)&lt;/code&gt;, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça cumprir as exigências, pois o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'0'&lt;/code&gt; não aparece na tela.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cuidado!&lt;/strong&gt; Isso é uma especulação, estou aprendendo python.&lt;/p&gt;
 
@@ -183,8 +317,8 @@ O mesmo ocorre para a variável &lt;code class=&quot;language-plaintext highligh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Sat, 13 Jun 2020 13:04:21 -0300</pubDate>
-        <link>http://localhost:4000/ddp/2020/uri1001python_entradaSaidaDados/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1001python_entradaSaidaDados/</guid>
+        <link>http://localhost:4000/ddp/2020/uri1001py_entradaSaidaDados/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1001py_entradaSaidaDados/</guid>
         
         
         <category>ProgPy</category>
@@ -917,54 +1051,6 @@ o ato de participar é uma condição humana,  daquele que vive na convivência 
         <pubDate>Sat, 02 Dec 2017 05:51:21 -0200</pubDate>
         <link>http://localhost:4000/ddp/2017/deuses-americanos/</link>
         <guid isPermaLink="true">http://localhost:4000/ddp/2017/deuses-americanos/</guid>
-        
-        
-        <category>Livros</category>
-        
-      </item>
-    
-      <item>
-        <title>Sonhar e sorrir (milho verde)</title>
-        <description>&lt;p&gt;Era um fim de tarde de domingo, os raios de sol riscavam o céu e alguma luz amarelada adentrava o pequeno restaurante especializado em milho, localizado em um movimentado cruzamento na zona norte da cidade. O estabelecimento não era grande, com um ambiente inovador quando fora inaugurado, e já se passaram certamente algo próximo à um milheiro de outros domingos e o lugar merece uma boa reforma, mas atende bem ao público que ali frequenta, com pamonha, torta, sorvetes, sucos e o que mais se imaginar feito com milho verde.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;O público que frequenta é diversificado, mas não ultrapassa a classe média, seja lá o que isso signifique… e nesse dia havia metade da lotação, uns dois casais, um senhor sozinho, e minha família, que não frequenta assiduamente o local mas que sempre que pode e retorna a este lado da cidade, delicia-se com os sabores do local.&lt;/p&gt;
-
-&lt;p&gt;Entra então no local mais uma família, ainda sem me chamar a atenção ocuparam uma mesa no canto, bem em frente ao meu campo de visão. Eram o pai, a mãe e dois filhos meninos. Os adultos aparentavam uns trinta anos de vida e muito sofrimento, talvez até tivessem menos, e seus filhos algo em torno de sete e nove, deduzi.&lt;/p&gt;
-
-&lt;p&gt;Fizeram seu pedido e conversavam enquanto a comida não chegava.&lt;/p&gt;
-
-&lt;p&gt;A comida então chegou e minha atenção foi solicitada, não por ela, pois já estava comendo, mas por uma daquelas cenas em que a vida muda e enxergamos mais e melhor, foi a vida solicitando a minha atenção.&lt;/p&gt;
-
-&lt;p&gt;A comida sei que não foi muita, não havia o mínimo sinal de ostentação, era o que o seu dinheiro conseguia pagar, certamente, mas foi sublime. O pai e a mãe trataram logo de separar os pedaços de pamonha e de torta para cada um deles. Enquanto os filhos olhavam com aqueles olhos de jabuticaba, brilhando, posso dizer que aquela era a melhor comida do mundo. Queriam certamente avançar, mas contidos pela educação, esperaram os pais ajeitar-lhes o talher nas pequenas mãos, depois de terem facilitado e cortado a comida em pedaços pequenos.&lt;/p&gt;
-
-&lt;p&gt;Sorriam e mastigavam, entre uma olhada alegre para o pai e um sorriso legítimo para a mãe, os meninos eram alegres. O pai contava alguma história para eles, enquanto a mãe vez ou outra fazia alguma pergunta instigante e os dois meninos tentavam adivinhar o que iria acontecer. Entre continuações acertadas com exaltações de alegria ou erros de pouca frustração, os meninos eram realmente felizes, estavam vivendo aquele instante em que se é pleno, em que ser pobre ou rico nada quer dizer, pois o espírito naqueles instantes é realmente livre e o mundo não pesa, nem oprime, nem caleja, momentos em que a vida vale a pena.&lt;/p&gt;
-
-&lt;p&gt;Jamais esquecerei aqueles pais, pobres, que mesmo em condições ruins, possibilitam toda a riqueza que pode existir em vida aos filhos, sonhar e sorrir, serem felizes!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 30 Jul 2017 04:49:21 -0300</pubDate>
-        <link>http://localhost:4000/ddp/2017/sonhar-e-sorrir-milho-verde/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2017/sonhar-e-sorrir-milho-verde/</guid>
-        
-        
-        <category>Crônicas</category>
-        
-      </item>
-    
-      <item>
-        <title>A velha casa da colina</title>
-        <description>&lt;p&gt;Uma casa mal assombrada, no topo de uma colina, um acaso leva dois amigos que brincavam de bola até ela (será mesmo?), uma ousadia adolescente motivada por um desejo insipiente de glória e uma história marcada por uma desgraça, A Velha Casa da Colina rouba a alma de um grande amigo e assim algumas vidas são marcadas e definidas por uma tragédia, e a cidade de Pedraskaem, maldita desde a sua geografia, é mais uma vez abalada, mas não pela última vez.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;A história é intrigante desde seu início, sendo que seus elementos são apresentados de forma natural e o cenário vai sendo montado na medida. Muitos pontos são colocados, talvez, como ganchos para futuras obras deixando a curiosidade atiçada, e como senso de humor do autor, que é claro e notório, principalmente com os nomes dos sócios fundadores da empresa de engenharia que Nick, o protagonista da história trabalha, da secretária e da ex-namorada e talvez de alguma outra personagem que por mim passou despercebido.&lt;/p&gt;
-
-&lt;p&gt;A história é muito bem construída, acompanhei todas as cenas como se estivesse vendo um filme, preso pela história que fluía muito rápido, daquelas que fazem a gente ficar tenso e torcendo por um final… até que o final vem, uma surpresa total, e você solta aquele palavrão πßτ#@χ¥€ο%π#ρ$ω∗§$#% !!!! Não é possível que aconteceu isso!! Mais um final inesperado e fantástico construído pelo Fábio M. Barreto.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 15 Jul 2017 04:48:21 -0300</pubDate>
-        <link>http://localhost:4000/ddp/2017/a-velha-casa-da-colina/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2017/a-velha-casa-da-colina/</guid>
         
         
         <category>Livros</category>

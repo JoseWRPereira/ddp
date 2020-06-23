@@ -45,7 +45,7 @@ Por fim a apresentação do resultado, que pode ser feita utilizando a função 
 Uma primeira forma encontrada foi `print("X = ", soma )`, porém a plataforma avaliava com erro de apresentação, *Presentation error*.
 
 ### Especulação
-Entre devaneios e **especulações**, imagino que o problema ocorra pela composição de `string + variável` apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: `'\0'`. Exemplo: `a=4` e `b=5` então `soma=9`. A saída do comando `print("X = ", soma)`, especulo que seja "X = '\0' 9", ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça comprir as exigências, pois o `'0'` não aparece na tela.
+Entre devaneios e **especulações**, imagino que o problema ocorra pela composição de `string + variável` apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: `'\0'`. Exemplo: `a=4` e `b=5` então `soma=9`. A saída do comando `print("X = ", soma)`, especulo que seja "X = '\0' 9", ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça cumprir as exigências, pois o `'0'` não aparece na tela.
 
 **Cuidado!** Isso é uma especulação, estou aprendendo python.
 

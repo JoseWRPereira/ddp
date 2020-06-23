@@ -1,0 +1,67 @@
+---
+title:  "URI1002 - Variável de dupla precisão"
+date:   2020-06-22 21:46:21
+categories: ProgC
+badges:
+ - type: success
+   tag: C
+---
+
+# [Área do Círculo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1002)
+
+O problema inicial solicita que o programa calcule a área de um círculo dado o valor do raio.
+
+Para o cálculo da área é utilizada a seguinte equação: `area = n.raio²`.
+
+<!--more-->
+
+## Entrada de dados
+
+O dado de entrada do programa é o `raio`, declarado como uma variável de [dupla precisão](https://en.wikipedia.org/wiki/IEEE_754), como indicado no próprio desafio, assim a sua leitura fica `%lf` no formato da função `scanf()`.
+
+```c
+  double raio;
+  scanf("%lf", &raio );
+```
+
+## Processamento
+
+O cálculo da área pode ser feita utilizando uma função específica para a potência, porém ainda não é necessária a sua utilização, que será explorada em uma próxima oportunidade.
+
+Então para o processamento da área pode-se utilizar o produto do raio, por ele mesmo e o valor aproximado do PI, que é declarado em `n`.
+
+```c
+double n = 3.14159;
+double raio, area;
+
+area = n * raio * raio;
+```
+
+## Saída de dedos
+
+A saída deve ser apresentada com quatro casas decimais utilizando `%.4f`.
+
+```c
+printf("A=%.4f\n", area );
+```
+
+
+## Resolução
+
+Juntando as partes na resolução do desafio temos:
+
+```c
+#include <stdio.h>
+int main( void )
+{
+  double n = 3.14159;
+  double raio, area;
+
+  scanf("%lf", &raio );
+
+  area = n * raio * raio;
+
+  printf("A=%.4f\n", area );
+  return( 0 );
+}
+```
