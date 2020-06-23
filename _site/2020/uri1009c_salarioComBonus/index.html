@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>URI1005 - define</title>
-<meta property="og:title" content="URI1005 - define" />
+<title>URI1009 - Cadeia de caracteres</title>
+<meta property="og:title" content="URI1009 - Cadeia de caracteres" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="URI1005 - define">
+<meta itemprop="name" content="URI1009 - Cadeia de caracteres">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="URI1005 - define"/>
+<meta name="twitter:title" content="URI1009 - Cadeia de caracteres"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -284,8 +284,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/2020-06-22-uri1005c_media1.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/2020-06-22-uri1005c_media1.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/2020-06-22-uri1009c_salarioComBonus.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/2020-06-22-uri1009c_salarioComBonus.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -302,49 +302,41 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/2020/uri1005c_media1/">URI1005 - define</a>
+                <a href="http://localhost:4000/ddp/2020/uri1009c_salarioComBonus/">URI1009 - Cadeia de caracteres</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 style="margin-bottom:0px">URI1005 - define</h1>
+            <h1 style="margin-bottom:0px">URI1009 - Cadeia de caracteres</h1>
 <span class="badge badge-success">C</span>
 <span class="post-date" style="font-style: italic;">2020-06-22</span>
-<h1 id="média-1"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1005">Média 1</a></h1>
+<h1 id="salário-com-bônus"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1009">Salário com Bônus</a></h1>
 
-<p>O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.</p>
+<p>O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.</p>
 
 <!--more-->
 
 <h2 id="entrada-de-dados">Entrada de dados</h2>
 
-<p>Os dados de entrada do programa são duas notas <code class="language-plaintext highlighter-rouge">A</code> e <code class="language-plaintext highlighter-rouge">B</code>, declaradas como variáveis de <a href="https://en.wikipedia.org/wiki/IEEE_754">dupla precisão</a>, como indicado no próprio desafio, assim para a sua leitura é usado <code class="language-plaintext highlighter-rouge">%lf</code> no formato da função <code class="language-plaintext highlighter-rouge">scanf()</code> para cada variável.</p>
+<p>Os dados de entrada contém um texto com o primeiro nome do vendedor e 2 valores de dupla precisão com duas casas decimais, representando o salário fixo do vendedor e montante total das vendas efetuadas por este vendedor, respectivamente.</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">double</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span> <span class="p">);</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
+<p>Para a entrada com o nome do vendedor é declarado um vetor com o número de elementos suficiente para um nome. O valor aqui escolhido foi o <code class="language-plaintext highlighter-rouge">20</code>.</p>
+
+<p>Em linguagem C não existe o tipo <code class="language-plaintext highlighter-rouge">string</code>, para armazenar a <a href="http://linguagemc.com.br/string-em-c-vetor-de-caracteres/">cadeia de caracteres</a> é utilizado o <code class="language-plaintext highlighter-rouge">%s</code> e um vetor <code class="language-plaintext highlighter-rouge">char nomeVendedor[20]</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">char</span> <span class="n">nomeVendedor</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+  <span class="kt">double</span> <span class="n">salarioFixo</span><span class="p">,</span> <span class="n">montanteVendas</span><span class="p">;</span>
+
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span>  <span class="n">nomeVendedor</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">salarioFixo</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">montanteVendas</span> <span class="p">);</span>
 </code></pre></div></div>
 
-<h2 id="processamento">Processamento</h2>
+<h2 id="saída-de-dedos-com-processamento">Saída de dedos com Processamento</h2>
 
-<p>No cálculo da média ponderada, cada nota é multiplicada por um fator de ponderação, esses produtos são somados e o resultado dividido pela soma desses fatores.</p>
+<p>A saída deve ser apresentada com duas casas decimais por ser um valor monetârio, utilizando <code class="language-plaintext highlighter-rouge">%.2f</code> e o valor a ser exibido pode ser calculado diretamente no campo do parâmetro.</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">double</span> <span class="n">media</span><span class="p">;</span>
-  <span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">B</span><span class="o">*</span><span class="n">PESO_B</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">PESO_B</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>Os fatores de ponderação <code class="language-plaintext highlighter-rouge">PESO_A</code> e <code class="language-plaintext highlighter-rouge">PESO_B</code> são declarados como <code class="language-plaintext highlighter-rouge">define</code> ou definições. 
-As definições são substituídas durante o <a href="https://www.ime.usp.br/~pf/algoritmos/apend/preprocessor.html">pré-processamento</a> do código pelos valores declarados.</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define PESO_A  3.5
-#define PESO_B  7.5
-</span></code></pre></div></div>
-
-<h2 id="saída-de-dedos">Saída de dedos</h2>
-
-<p>A saída deve ser apresentada com cinco casas decimais utilizando <code class="language-plaintext highlighter-rouge">%.5f</code>.</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">printf</span><span class="p">(</span><span class="s">"MEDIA = %.5f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">media</span> <span class="p">);</span>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">printf</span><span class="p">(</span><span class="s">"TOTAL = R$ %.2f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">salarioFixo</span> <span class="o">+</span> <span class="n">montanteVendas</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">15</span> <span class="p">);</span>
 </code></pre></div></div>
 
 <h2 id="resolução">Resolução</h2>
@@ -353,17 +345,16 @@ As definições são substituídas durante o <a href="https://www.ime.usp.br/~pf
 
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
 </span>
-<span class="cp">#define PESO_A  3.5
-#define PESO_B  7.5
-</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
 <span class="p">{</span>
-  <span class="kt">double</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
-  <span class="kt">double</span> <span class="n">media</span><span class="p">;</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span> <span class="p">);</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
-  <span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">B</span><span class="o">*</span><span class="n">PESO_B</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">PESO_B</span><span class="p">);</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">"MEDIA = %.5f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">media</span> <span class="p">);</span>
+  <span class="kt">char</span> <span class="n">nomeVendedor</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+  <span class="kt">double</span> <span class="n">salarioFixo</span><span class="p">,</span> <span class="n">montanteVendas</span><span class="p">;</span>
+
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span>  <span class="n">nomeVendedor</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">salarioFixo</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">montanteVendas</span> <span class="p">);</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">"TOTAL = R$ %.2f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">salarioFixo</span> <span class="o">+</span> <span class="n">montanteVendas</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">15</span> <span class="p">);</span>
   <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>

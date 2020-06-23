@@ -6,12 +6,72 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 Jun 2020 22:56:28 -0300</pubDate>
-    <lastBuildDate>Mon, 22 Jun 2020 22:56:28 -0300</lastBuildDate>
+    <pubDate>Mon, 22 Jun 2020 23:49:21 -0300</pubDate>
+    <lastBuildDate>Mon, 22 Jun 2020 23:49:21 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>URI1002 - define</title>
+        <title>URI1009 - Cadeia de caracteres</title>
+        <description>&lt;h1 id=&quot;salário-com-bônus&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1009&quot;&gt;Salário com Bônus&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;entrada-de-dados&quot;&gt;Entrada de dados&lt;/h2&gt;
+
+&lt;p&gt;Os dados de entrada contém um texto com o primeiro nome do vendedor e 2 valores de dupla precisão com duas casas decimais, representando o salário fixo do vendedor e montante total das vendas efetuadas por este vendedor, respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Para a entrada com o nome do vendedor é declarado um vetor com o número de elementos suficiente para um nome. O valor aqui escolhido foi o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;20&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Em linguagem C não existe o tipo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string&lt;/code&gt;, para armazenar a &lt;a href=&quot;http://linguagemc.com.br/string-em-c-vetor-de-caracteres/&quot;&gt;cadeia de caracteres&lt;/a&gt; é utilizado o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%s&lt;/code&gt; e um vetor &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;char nomeVendedor[20]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;saída-de-dedos-com-processamento&quot;&gt;Saída de dedos com Processamento&lt;/h2&gt;
+
+&lt;p&gt;A saída deve ser apresentada com duas casas decimais por ser um valor monetârio, utilizando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%.2f&lt;/code&gt; e o valor a ser exibido pode ser calculado diretamente no campo do parâmetro.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TOTAL = R$ %.2f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
+
+&lt;p&gt;Juntando as partes na resolução do desafio temos:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TOTAL = R$ %.2f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 22 Jun 2020 20:40:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/uri1009c_salarioComBonus/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1009c_salarioComBonus/</guid>
+        
+        
+        <category>ProgC</category>
+        
+      </item>
+    
+      <item>
+        <title>URI1005 - define</title>
         <description>&lt;h1 id=&quot;média-1&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1005&quot;&gt;Média 1&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.&lt;/p&gt;
@@ -1006,51 +1066,6 @@ o ato de participar é uma condição humana,  daquele que vive na convivência 
         <pubDate>Mon, 07 Jan 2019 05:52:21 -0200</pubDate>
         <link>http://localhost:4000/ddp/2019/o-auto-da-maga-josefa/</link>
         <guid isPermaLink="true">http://localhost:4000/ddp/2019/o-auto-da-maga-josefa/</guid>
-        
-        
-        <category>Livros</category>
-        
-      </item>
-    
-      <item>
-        <title>Deuses americanos</title>
-        <description>&lt;p&gt;“Pense em nós como uma espécie de símbolo. Somos o sonho que a humanidade cria para dar sentido às sombras na parede da caverna. Muito bem, agora vá em frente.”&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Deuses Americanos conta a história de Shadow, um homem que prestes a sair da cadeia depois de cumprir sua sentença, tem seus planos de vida simples e feliz, ao lado da esposa que o espera e do trabalho ofertado pelo melhor amigo, arrasados pela morte de ambos de forma duplamente trágica. Ao embarcar de volta para casa, Shadow conhece um sujeito um tanto peculiar, de nome Wednesday, que lhe oferece um emprego. Segue então seu contato com outros deuses antigos, mesmo sem entender ou acreditar inicialmente, seu chefe está convocando todos para uma batalha contra os deuses novos.&lt;/p&gt;
-
-&lt;p&gt;A história forma uma trama criativa contrapondo deuses antigos com os deuses novos e traz a noção de que a essência de vida de um deus é a crença que há nele, assim, no momento em que um deus é completamente esquecido, ele ou ela deixa de existir.&lt;/p&gt;
-
-&lt;p&gt;“Até o ranzinza Czernobog parecia estar se divertindo. Shadow sentiu como se, de repente, um peso saísse de seus ombros: três idosos estavam se divertindo, passeando no Maior Carrossel do Mundo. E daí que acabassem sendo expulsos? Valia o risco — valia qualquer risco —, para depois poder se gabar de ter andado no Maior Carrossel do Mundo, não valia? Não valia o risco só por poder montar em um daqueles monstros gloriosos?”&lt;/p&gt;
-
-&lt;p&gt;Neil Gaiman traz aspectos de formação do povo norte americano, de como a crença nos diversos deuses chegou em navios negreiros, através de imigrações de muitos povos em busca de uma terra nova e livre e ainda considera os deuses nativos. Então fica claro como os diversos deuses moldaram a cultura americana e como essa cultura criou de forma orgânica os deuses modernos, trazidos à existência através dos muitos cultos prestados pelas pessoas ao deixar de prestar oferendas aos deuses ancestrais e ofertar inúmeras horas daquilo que nos é tão caro em frente à TV, o tempo. Os deuses de origem grega e romana não estão presentes, pois, estão presentes fortemente na cultura ocidental, assim, não são deuses decadentes e não teriam motivos para lutar uma batalha por sobrevivência.&lt;/p&gt;
-
-&lt;p&gt;“Nunca houve uma só guerra que não tenha sido travada entre dois grupos inteiramente convictos de que estão fazendo o que é certo.”&lt;/p&gt;
-
-&lt;p&gt;Desde o começo, o livro trás passagens que pouco prestamos atenção, por aparentar conversas normais, mas que estão dando dicas que podem fazer o leitor mais familiarizado com diversas mitologias, principalmente a nódica, reconhecer a presença das características e dos próprios deuses, e para os não familiarizados é uma introdução aos conceitos e características dos deuses. Todas essas passagens acabam abrindo arcos que de alguma forma são fechados até o final da história. A impressão que fico ao final do livro é que não consegui perceber todos os detalhes da trama desenvolvida, e que terei que ler outras vezes para me aprofundar e perceber mais detalhes, o que considero muito bom, pois apesar de conseguir compreender a história, sei que ela tem mais a me oferecer se eu souber atentar a todos os detalhes, nomes, comportamentos e nuances.&lt;/p&gt;
-
-&lt;p&gt;“Na Bíblia inteira, Jesus só prometeu um lugar no paraíso para um único cara, pelo menos pessoalmente. Não foi Pedro nem Paulo, nenhum daqueles homens. Era um ladrão condenado, bem na hora da execução. Então não despreze as pessoas que estão no corredor da morte. Talvez elas saibam de algo que você não sabe.”&lt;/p&gt;
-
-&lt;p&gt;Gaiman possui uma forma fluida de escrever, não deixa a leitura ser cansativa com descrições muito longas ou com partes inúteis, e nem muito breves, criando lacunas que atrapalham o entendimento, ele consegue equilibrar e fornecer informações concisas e na medida para cativar e criar interesse. A linguagem dos personagens é natural, sem forçar diálogos rebuscados ou eruditos em personagens coloquiais, adequada ao ambiente de pequena cidade de interior ou ao ambiente urbano das grandes cidades, ou mesmo no aspecto de aventura, mistério e fantasia que predomina na história.&lt;/p&gt;
-
-&lt;p&gt;“quando o Senhor nos dá um talento ou uma habilidade, é nossa obrigação usá-la da melhor forma possível.”&lt;/p&gt;
-
-&lt;p&gt;A história possui um narrador onisciente e imparcial, as personagens são interessantes e bem desenvolvidas, mostra que o conhecimento de Gaiman vai além do senso comum, traz deuses pouco conhecidos como os deuses do leste europeu e africanos. Talvez o personagem menos expressiva acabe sendo o próprio Shadow, mas creio que seja de propósito, afinal, ele é um homem que perdeu tudo, inclusivo motivos para viver, então ser alguém inexpressivo e que não se assusta ou se admira com as coisas é algo natural, pois ele não espera mais nada das pessoas ou da própria vida, ele simplesmente segue.&lt;/p&gt;
-
-&lt;p&gt;“Talvez eu consiga um final feliz.&lt;/p&gt;
-
-&lt;p&gt;— Não só não existem finais felizes — retrucou a deusa —, como tampouco existem finais.”&lt;/p&gt;
-
-&lt;p&gt;No final, deuses americanos é uma história que mostra que a vida não é uma luta entre o bem contra o mal, ou do velho contra o novo, mas uma grande aventura, de muitos caminhos, muitos encontros, muitos aspectos e que aquela grande tempestade pode conter muito mais do que água!&lt;/p&gt;
-
-&lt;p&gt;“Não é o pescado o que você leva para casa no fim do dia.&lt;/p&gt;
-
-&lt;p&gt;É a paz de espírito.”&lt;/p&gt;
-</description>
-        <pubDate>Sat, 02 Dec 2017 05:51:21 -0200</pubDate>
-        <link>http://localhost:4000/ddp/2017/deuses-americanos/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2017/deuses-americanos/</guid>
         
         
         <category>Livros</category>
