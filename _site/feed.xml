@@ -6,9 +6,128 @@
 </description>
     <link>http://localhost:4000/ddp/</link>
     <atom:link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 Jun 2020 23:49:21 -0300</pubDate>
-    <lastBuildDate>Mon, 22 Jun 2020 23:49:21 -0300</lastBuildDate>
+    <pubDate>Tue, 23 Jun 2020 21:30:40 -0300</pubDate>
+    <lastBuildDate>Tue, 23 Jun 2020 21:30:40 -0300</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>URI1010 - Entrada de múltiplas variáveis por linha</title>
+        <description>&lt;h1 id=&quot;cálculo-simples&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1010&quot;&gt;Cálculo Simples&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).&lt;/p&gt;
+
+&lt;p&gt;O problema aqui encontrado é &lt;strong&gt;como fazer a entrada desses três parâmetros por linha?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;entrada-de-dados&quot;&gt;Entrada de dados&lt;/h2&gt;
+
+&lt;p&gt;Para ler mais do que um valor por linha de &lt;a href=&quot;https://pt.stackoverflow.com/questions/230522/entrada-de-n%C3%BAmeros-na-mesma-linha-em-python&quot;&gt;entrada de dados&lt;/a&gt; pode-se utilizar o método &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input().split(&quot; &quot;)&lt;/code&gt; sendo  o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt; o caractere que &lt;a href=&quot;https://www.deepl.com/translator#en/pt/split&quot;&gt;separa em partes&lt;/a&gt; a string de entrada.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Em python é possível que uma função retorne múltiplos valores, diferente da linguagem C, que só pode retornar apenas um valor por função.&lt;/p&gt;
+
+&lt;h2 id=&quot;modelamento-dos-dados-de-entrada&quot;&gt;Modelamento dos dados de entrada&lt;/h2&gt;
+
+&lt;p&gt;Os dados lidos são modelados para os devidos tipos:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;saída-de-dedos&quot;&gt;Saída de dedos&lt;/h2&gt;
+&lt;p&gt;O cálculo é realizado direto no argumento do método &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.format()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;VALOR A PAGAR: R$ {:.2f}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
+
+&lt;p&gt;Juntando as partes na resolução do desafio temos:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;VALOR A PAGAR: R$ {:.2f}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 23 Jun 2020 17:53:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/uri1010py_calculoSimples/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1010py_calculoSimples/</guid>
+        
+        
+        <category>ProgPy</category>
+        
+      </item>
+    
+      <item>
+        <title>URI1002 - Formatação de casas decimais</title>
+        <description>&lt;h1 id=&quot;área-do-círculo&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1002&quot;&gt;Área do Círculo&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema solicita que o programa calcule a área de um círculo dado o valor do raio.&lt;/p&gt;
+
+&lt;p&gt;Para o cálculo da área é utilizada a seguinte equação: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;area = n.raio²&lt;/code&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;entrada-de-dados&quot;&gt;Entrada de dados&lt;/h2&gt;
+
+&lt;p&gt;O dado de entrada do programa é o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raio&lt;/code&gt;, que é modelado para o tipo &lt;a href=&quot;https://www.w3schools.com/python/python_datatypes.asp&quot;&gt;float&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;processamento&quot;&gt;Processamento&lt;/h2&gt;
+
+&lt;p&gt;Então para o processamento da área pode-se utilizar o produto do raio, por ele mesmo e o valor aproximado do PI, que é declarado em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.14159&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;saída-de-dedos&quot;&gt;Saída de dedos&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Como formatar a saída para um determinado número de casas decimais?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A saída deve ser apresentada com quatro &lt;a href=&quot;https://pt.stackoverflow.com/questions/176243/como-limitar-n%C3%BAmeros-decimais-em-python&quot;&gt;casas decimais&lt;/a&gt; utilizando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{:.4f}&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A={:.4f}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
+
+&lt;p&gt;Juntando as partes na resolução do desafio temos:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.14159&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A={:.4f}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 23 Jun 2020 17:20:21 -0300</pubDate>
+        <link>http://localhost:4000/ddp/2020/uri1002py_areaDoCirculo/</link>
+        <guid isPermaLink="true">http://localhost:4000/ddp/2020/uri1002py_areaDoCirculo/</guid>
+        
+        
+        <category>ProgPy</category>
+        
+      </item>
     
       <item>
         <title>URI1009 - Cadeia de caracteres</title>
@@ -143,7 +262,7 @@ As definições são substituídas durante o &lt;a href=&quot;https://www.ime.us
         <title>URI1002 - Variável de dupla precisão</title>
         <description>&lt;h1 id=&quot;área-do-círculo&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1002&quot;&gt;Área do Círculo&lt;/a&gt;&lt;/h1&gt;
 
-&lt;p&gt;O problema inicial solicita que o programa calcule a área de um círculo dado o valor do raio.&lt;/p&gt;
+&lt;p&gt;O problema solicita que o programa calcule a área de um círculo dado o valor do raio.&lt;/p&gt;
 
 &lt;p&gt;Para o cálculo da área é utilizada a seguinte equação: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;area = n.raio²&lt;/code&gt;.&lt;/p&gt;
 
@@ -1013,62 +1132,6 @@ o ato de participar é uma condição humana,  daquele que vive na convivência 
         
         
         <category>Resumo</category>
-        
-      </item>
-    
-      <item>
-        <title>Lobo de rua</title>
-        <description>&lt;p&gt;Numa agonia absurdamente atormentadora, maior do que sua miserável vida nas ruas e becos imundos da maior capital do país, Raul se encontra passando por uma transformação assustadora, maldição que contraíra a pouco mais que uma lua cheia, sendo esta o gatilho para sua transformação drástica e medonha em Lobisomem, sedento por carne e sangue, mas que no dia seguindo lhe restam dores insuportáveis e sensações horríveis.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Um lobo veterano, Tito, encontra e toma de conta de Raul, por afinidade ou sua própria segurança, mostra um caminho seguro para a noite de tormenta e tenta ajudá-lo a lidar melhor com a maldição.&lt;/p&gt;
-
-&lt;p&gt;Jana Bianchi explora de forma formidável os espaços da cidade, o centro, mercado municipal, o longo caminho até a profunda periferia da zona leste, trazendo uma visão cinematográfica principalmente para quem vive ou viveu em sampa.&lt;/p&gt;
-
-&lt;p&gt;As características do lobisomem, as informações técnicas do especialista no início de cada capítulo, os detalhes e informações que eu pouco imaginava sobre esse folclore ficaram extremamente bem encaixadas com a ambientação urbana.&lt;/p&gt;
-
-&lt;p&gt;Os capítulos narram por diversos pontos de vista a breve história aqui contada, mas com muita riqueza entrelaça as histórias das personagens de modo a criar vários ganchos para continuações, em especial para o universo da galeria Creta, que ao compreender do que se trata realmente, produz uma explosão de possibilidades.&lt;/p&gt;
-
-&lt;p&gt;Excelente livro porque conseguimos ver e viver a história, sofrer junto, ter esperança e se reconhecer como sociedade que se amaldiçoa e produz bençãos constantes. Uma dicotomia real, lobos e homens como todos nós, morremos diariamente para poder seguir vivendo, mesmo que em agonia buscamos uma saída, uma esperança.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 21 Apr 2019 04:54:21 -0300</pubDate>
-        <link>http://localhost:4000/ddp/2019/lobo-de-rua/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2019/lobo-de-rua/</guid>
-        
-        
-        <category>Livros</category>
-        
-      </item>
-    
-      <item>
-        <title>O auto da maga Josefa</title>
-        <description>&lt;p&gt;Um caçador de ‘coisa ruim’ junta-se a uma maga e percorrem o agreste atrás de demônios, lobisomens, maldições, mulas sem cabeça e todo tipo de ruindade que possa existir, e usando magia, rezas, exorcismos, conjurações, a dupla restabelece a paz no lugar castigado. Apesar da improvável parceria, e da personalidade difícil da maga, os dois formam uma bela dupla, ela com seus encantos e magias e ele com suas armas e ‘sabidurias’.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;“Sua lâmina tinha poderes diversos: era de prata, para dar conta de lobisomens; benzida, para enviar demônios de volta ao inferno; amaldiçoada, caso enfrentasse anjos caídos; banhada em veneno de cobra, se tivesse que acabar com chupa-cabras ou mulas sem cabeça, e bem afiada, para dar cabo de cabras safados.”&lt;/p&gt;
-
-&lt;p&gt;A premissa básica do livro de Paola Siviero é simples, mas extremamente bem construída, e nos coloca, envolvidos pela forma como constrói a história, dentro do ambiente, do sotaque, do jeito como as pessoas falam e de como as coisas acontecem, muito fielmente apresentados, ao menos do ponto de vista deste cabeça chata, principalmente por saber que a escritora não é nordestina, e sim mineira criada no vale do paraíba.&lt;/p&gt;
-
-&lt;p&gt;O livro possui uma capa no estilo xilogravura, típico de literatura de cordel, fonte de inspiração notória de muitas passagens.&lt;/p&gt;
-
-&lt;p&gt;O livro é dividido em dez capítulos, sendo a maioria com um arco de história fechado em si, mas que fecham um grande arco ao final.&lt;/p&gt;
-
-&lt;p&gt;As historias perpassam muitas crendices, muitas práticas, causos envolvendo, não só espíritos malignos ou chupa-cabras, comuns em nosso imaginário popular, mas também criaturas pouco prováveis para o nordeste como vampiros e gênios de lâmpadas de desejos, mas todos muito bem abordados, justificados e fazem completo sentido no universo posto.&lt;/p&gt;
-
-&lt;p&gt;Algumas passagens senti referências a obra clássica de Ariano Suassuna, O Auto da Compadecida, onde imagino que seja difícil escapar dessa referência por tamanha importância em nossa literatura regionalista, inclusive no humor presente em toda a obra.&lt;/p&gt;
-
-&lt;p&gt;O auto da maga Josefa é uma grata surpresa, um belo livro, uma belíssima homenagem à cultura brasileira. Parabéns Paola Siviero. Parabéns Dame Blanche pelo ótimo trabalho. Grato por me levar de volta ao sertão!&lt;/p&gt;
-
-&lt;p&gt;“Não é o caminho que tomas, é a direção que segues.”&lt;/p&gt;
-</description>
-        <pubDate>Mon, 07 Jan 2019 05:52:21 -0200</pubDate>
-        <link>http://localhost:4000/ddp/2019/o-auto-da-maga-josefa/</link>
-        <guid isPermaLink="true">http://localhost:4000/ddp/2019/o-auto-da-maga-josefa/</guid>
-        
-        
-        <category>Livros</category>
         
       </item>
     

@@ -29,4 +29,7 @@ O **objetivo é resolver os problemas**, mas no caminho, **apreciar o aprendizad
 
 ## Python
 * [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001py_entradaSaidaDados)
+* [URI-1002-Formatação de casas decimais]({{site.baseurl}}/2020/uri1002py_areaDoCirculo)
+* [URI-1010-Entrada de múltiplas variáveis por linha]({{site.baseurl}}/2020/uri1010py_calculoSimples)
+
 

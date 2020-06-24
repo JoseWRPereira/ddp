@@ -9,7 +9,7 @@ badges:
 
 # [Área do Círculo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1002)
 
-O problema inicial solicita que o programa calcule a área de um círculo dado o valor do raio.
+O problema solicita que o programa calcule a área de um círculo dado o valor do raio.
 
 Para o cálculo da área é utilizada a seguinte equação: `area = n.raio²`.
 
