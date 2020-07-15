@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introspecção"
-date:   2017-04-07 00:10:21
+date:   2014-10-06 00:10:21
 categories: Versos
 badges:
  - type: warning
