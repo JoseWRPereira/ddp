@@ -1,0 +1,30 @@
+I"�<h1 id="programação-em-linguagem-c">Programação em Linguagem C</h1>
+
+<p>Material de apoio às aulas de Sistemas Digitais Eletrônicos do curso
+Técnico em Eletroeletrônica no SENAI Jandira.</p>
+
+<p>O conteúdo aqui apresentado tem o intuito servir de alternativa ao processo
+ensino-aprendizagem de Programação em C para microcontrolador.
+Não sendo assim um conjunto de informações de uso geral em linguagem C,
+mas sim restritas as estratégias por mim adotadas.</p>
+
+<p>Bons estudos!</p>
+
+<ul>
+  <li>
+    <p>[Aula 01 - Compilador Online, Estrutura básica de programação em Linguagem C, Entradas e saídas de dados]
+(<a href="https://github.com/JoseWRPereira/aula-progC/blob/master/progC-01.pdf?raw=true">Slides</a>)</p>
+  </li>
+  <li>
+    <p>[Aula 02 - Funções, Organização do projeto, Diagramas]
+(<a href="https://github.com/JoseWRPereira/aula-progC/blob/master/progC-02.pdf?raw=true">Slides</a>)</p>
+  </li>
+  <li>
+    <p>[Aula 03 - Estruturas condicionais e de repetição]
+(<a href="https://github.com/JoseWRPereira/aula-progC/blob/master/progC-03.pdf?raw=true">Slides</a>)</p>
+  </li>
+</ul>
+
+<p>[Pisca LED]
+(<a href="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/2020-07-08-P0101-blinkLED.md">P0101-blinkLED</a>)</p>
+:ET

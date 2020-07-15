@@ -1,0 +1,17 @@
+- title: Norteador
+  url: docs/norteador
+  links:
+    - title: "Humanidades"
+      url: docs/humanidades
+    - title: "Tecnologia"
+      url: "docs/tecnologia"
+      children:
+        - title: "Desafios URI"
+          url: "docs/tecnology/progURI"
+        - title: ELEtricidade
+          url: "docs/aulas/ele"
+        - title: Prog-C
+          url: "docs/aulas/progc"
+
+#        - title: externo
+#         external_url: https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/2020-07-08-P0101-blinkLED.md

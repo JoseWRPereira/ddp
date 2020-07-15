@@ -1,0 +1,58 @@
+I"<h1 id="média-1"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1005">Média 1</a></h1>
+
+<p>O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.</p>
+
+<!--more-->
+
+<h2 id="entrada-de-dados">Entrada de dados</h2>
+
+<p>Os dados de entrada do programa são duas notas <code class="language-plaintext highlighter-rouge">A</code> e <code class="language-plaintext highlighter-rouge">B</code>, declaradas como variáveis de <a href="https://en.wikipedia.org/wiki/IEEE_754">dupla precisão</a>, como indicado no próprio desafio, assim para a sua leitura é usado <code class="language-plaintext highlighter-rouge">%lf</code> no formato da função <code class="language-plaintext highlighter-rouge">scanf()</code> para cada variável.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">double</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="processamento">Processamento</h2>
+
+<p>No cálculo da média ponderada, cada nota é multiplicada por um fator de ponderação, esses produtos são somados e o resultado dividido pela soma desses fatores.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">double</span> <span class="n">media</span><span class="p">;</span>
+  <span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">B</span><span class="o">*</span><span class="n">PESO_B</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">PESO_B</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Os fatores de ponderação <code class="language-plaintext highlighter-rouge">PESO_A</code> e <code class="language-plaintext highlighter-rouge">PESO_B</code> são declarados como <code class="language-plaintext highlighter-rouge">define</code> ou definições. 
+As definições são substituídas durante o <a href="https://www.ime.usp.br/~pf/algoritmos/apend/preprocessor.html">pré-processamento</a> do código pelos valores declarados.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define PESO_A  3.5
+#define PESO_B  7.5
+</span></code></pre></div></div>
+
+<h2 id="saída-de-dedos">Saída de dedos</h2>
+
+<p>A saída deve ser apresentada com cinco casas decimais utilizando <code class="language-plaintext highlighter-rouge">%.5f</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">printf</span><span class="p">(</span><span class="s">"MEDIA = %.5f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">media</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="resolução">Resolução</h2>
+
+<p>Juntando as partes na resolução do desafio temos:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="cp">#define PESO_A  3.5
+#define PESO_B  7.5
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">media</span><span class="p">;</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
+  <span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">B</span><span class="o">*</span><span class="n">PESO_B</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">PESO_A</span> <span class="o">+</span> <span class="n">PESO_B</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"MEDIA = %.5f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">media</span> <span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,148 @@
+I"�'<h1 id="habilidades-e-competências">Habilidades e Competências</h1>
+<ul>
+  <li>Análise e interpretação de diagramas e esquemas;</li>
+</ul>
+
+<!--more-->
+
+<h2 id="desafio">Desafio</h2>
+
+<p>Dado o seguinte circuito,</p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafio-1.png?raw=true" alt="Circuito elétrico do desafio - Interpretação de Circuitos Elétricos" /></p>
+
+<p>identificar:</p>
+
+<ul>
+  <li>Os componentes presentes;</li>
+  <li>As funções de cada componente;</li>
+  <li>A configuração de ligação dos componentes: série ou paralelo.</li>
+</ul>
+
+<h2 id="componentes-em-um-diagrama">Componentes em um diagrama</h2>
+<p>Todo componente eletrônico possui uma <strong>função</strong>, ou seja, um <strong>comportamento</strong> que produz uma ação que atende a sua necessidade. Para que seu comportamento ocorra de modo esperado, todo componente possui <strong>condições de operação</strong>, sendo a principal dessas condições a alimentação.</p>
+
+<p>A alimentação de um componente é a entrada de energia, que será processada e produzirá, através do comportamento do componente, uma nova forma de energia.</p>
+
+<p>Utilizando o circuito do desafio como exemplo, temos as seguintes conversões de energia por componente:</p>
+
+<ul>
+  <li><strong>Vcc : Fonte</strong> - Converte energia química, no caso de pilhas ou baterias, em energia elétrica;</li>
+  <li><strong>RD : Resistor</strong> - Converte energia elétrica em calor ao limitar a intensidade de corrente no seu ramo;</li>
+  <li><strong>D: LED</strong> - Converte energia elétrica em luz, permitindo que seja feita a sinalização luminosa, indicando que o circuito está ligado;</li>
+  <li><strong>RL : Resistor de carga</strong> - Converte energia elétrica em calor, produzindo aquecimento do elemento.</li>
+</ul>
+
+<p>O circuito pode ser dividido em elemntos ativos e passivos, como mostrado na Figura.
+<img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioFonteCarga-1.png?raw=true" alt="Circuito elétrico destacando a fonte e a carga - Interpretação de Circuitos Elétricos" /></p>
+
+<p>Assim temos:</p>
+<ul>
+  <li><strong>Fonte</strong>: A fonte é o <strong>elemento ativo</strong>, ou seja, é o que <strong>fornece energia</strong> ao restante dos componenentes deste circuito.</li>
+  <li><strong>Carga</strong>: São os <strong>elementos passivos</strong> do circuito, ou seja, aqueles que <strong>consomem energia</strong> da fonte.</li>
+</ul>
+
+<h2 id="configuração-do-circuito">Configuração do circuito</h2>
+<p>A análise de um circuito basicamente é o processo de segmentá-lo em partes menores, sem que haja alteração das suas características de funcionamento, de forma a simplificar seu manuseio.</p>
+
+<p>Alguns conceitos são de fundamental importância para facilitar essa tarefa de análise do circuito, e um destes conceitos é o <strong>nó</strong>.</p>
+
+<p>O <strong>nó</strong> é uma <strong>conexão entre pelo menos três elementos do circuito</strong> ou entre elementos ativos e passivos e é representada por uma circunferência preenchida unindo os terminais dos componentes.</p>
+
+<p>A Figura a seguir mostra em destaque os nós denominados como <strong>A</strong> e <strong>B</strong>. As setas nas linhas indicam o sentido da corrente, chegando ou saindo de cada nó.</p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioNoInf-1.png?raw=true" alt="Circuito elétrico destacando o nó inferior - Interpretação de Circuitos Elétricos" />
+<img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioNoSup-1.png?raw=true" alt="Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos" /></p>
+
+<h2 id="ligação-em-série">Ligação em série</h2>
+<p><strong>O trecho do circuito entre nós é chamado de ramo. Em um ramo, todos os seus componentes são ligados em série</strong>. A figura seguinte mostra os três ramos ligados aos pontos A e B , sendo o ramo central o único que possui mais do que um componente, ou seja, é o único que possui componentes em série. Assim pode-se afirmar que o <strong>resistor RD está em série com o LED D</strong>.</p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoRLED-1.png?raw=true" alt="Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos" /></p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoFonte-1.png?raw=true" alt="Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos" />
+<img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoDesafioRamoRL-1.png?raw=true" alt="Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos" /></p>
+
+<h2 id="ligação-em-paralelo">Ligação em paralelo</h2>
+<p>O circuito da Figura 6 apresenta três nós (A, B e C ) e cinco ramos, cada um contendo apenas um elemento cada (Vcc , R1 , R2 , R3 e R4 ).</p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-circuitoExemplo-1.png?raw=true" alt="Circuito elétrico destacando o nó superior - Interpretação de Circuitos Elétricos" /></p>
+
+<p>Note que <strong>o nó C aparece duas vezes, mas</strong> não quer dizer que sejam pontos distintos, pelo contrário, <strong>é o mesmo ponto</strong>, representado em dois lugares. É o ponto de conexão entre os quatro resistores.</p>
+
+<p>Como existem dois ramos ligados aos <strong>mesmos nós</strong>, isso significa que seus elementos <strong>estão em paralelo</strong>. Como em cada ramo só existe um resistor, então:</p>
+<ul>
+  <li>R 1 é paralelo ao R 2</li>
+  <li>R 3 é paralelo ao R 4</li>
+</ul>
+
+<p>Nesse circuito, nenhum ramo apresenta mais do que um elemento, assim não há componentes em série.</p>
+
+<h2 id="atividades">Atividades</h2>
+<p>Identificar associações de resistores em <strong>paralelo</strong> e em <strong>série</strong>.</p>
+
+<h3 id="circuito-1">Circuito 1</h3>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ1-1.png?raw=true" alt="Exercício 1" /></p>
+
+<h3 id="circuito-2">Circuito 2</h3>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ2-1.png?raw=true" alt="Exercício 2" /></p>
+
+<h3 id="circuito-3">Circuito 3</h3>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ3-1.png?raw=true" alt="Exercício 3" /></p>
+
+<h3 id="circuito-4">Circuito 4</h3>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/fig/fig-ativ4-1.png?raw=true" alt="Exercício 4" /></p>
+
+<h2 id="download">Download</h2>
+
+<p><a href="https://github.com/JoseWRPereira/aula-ele-interpretaCircuitoEletrico/blob/master/pdf/aula-ele-interpretaCircuitosEletricos.pdf?raw=true">Notas de aula em PDF</a></p>
+
+<h2 id="q-u-i-z">q U I Z</h2>
+
+<div class="admonition question">
+<p class="admonition-title">Qual é a competência aqui trabalhada?</p>
+<p><span class="correct-1">1. Interpretar diagramas e esquemas de circuitos elétricos;</span><br />2. Interpretar unidades de medidas elétricas;<br />3. Calcular grandezas elétricas em circuitos elétricos<br /></p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-1&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-1&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Mostrar resposta</button></p>
+
+<p><br /></p>
+<div class="admonition question">
+<p class="admonition-title">Todas as fontes de energia elétrica convertem algum tipo de energia em energia elétrica. Pilhas e baterias produzem energia elétrica a partir da energia ________.</p>
+<p>1. Térmica<br />2. Cinética<br /><span class="correct-2">3. Química</span><br /></p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-2&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-2&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Mostrar resposta</button></p>
+<p class="well correct-more-2" style="display:none">A energia de origem qúimica é produzida pelas reações das
+interações dos elementos que compõem a pilha/bateria.
+Quando a capacidade da reação diminui,
+a conversão de energia também diminui.
+Ao chegar nessa condição a pilha/bateria, se não for recarregável,
+deve ser descartada corretamente e substituída por outra compatível
+e em boas condições de uso.
+</p>
+<p><br /></p>
+<div class="admonition question">
+<p class="admonition-title">Em um circuito contendo apenas uma bateria como fonte e um resistor como carga, as conexões entre eles podem ser consideradas como nós?</p>
+<p><span class="correct-3">1. Sim</span><br />2. Não<br /></p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-3&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-3&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Mostrar resposta</button></p>
+
+<p><br /></p>
+<div class="admonition question">
+<p class="admonition-title">Componentes em um mesmo ramo estão associados em ________. </p>
+<p><span class="correct-4">1. Série</span><br />2. Paralelo<br /></p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-4&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-4&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Mostrar resposta</button></p>
+
+<p><br /></p>
+<div class="admonition question">
+<p class="admonition-title">Um ramo é um segmento do circuito delimitado entre dois nós distintos.</p>
+<p>1. Falso<br /><span class="correct-5">2. Verdadeiro</span><br /></p>
+</div>
+<p><button class="btn btn-success" onclick="$(&quot;.correct-5&quot;).css(&quot;font-weight&quot;, 600);$(&quot;.correct-more-5&quot;).css(&quot;display&quot;, &quot;inline&quot;)">Mostrar resposta</button></p>
+
+<p><br /></p>
+
+:ET

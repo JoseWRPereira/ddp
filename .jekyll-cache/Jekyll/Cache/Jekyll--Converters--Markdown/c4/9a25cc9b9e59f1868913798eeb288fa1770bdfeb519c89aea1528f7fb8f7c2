@@ -1,0 +1,54 @@
+I"�<h1 id="extremamente-básico"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001">Extremamente Básico</a></h1>
+
+<p>O problema inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>A primeira dúvida é: <strong>como ler um número digitado pelo usuário e armazená-lo em uma variável?</strong></p>
+
+<!--more-->
+
+<h2 id="leitura-de-dados">Leitura de dados</h2>
+<p>Com uma busca rápida no Google, encontrei o a resposta para a leitura de dados em <a href="https://www.w3schools.com/python/ref_func_input.asp?_blank">w3schools.com</a>.</p>
+
+<h3 id="input">input()</h3>
+<p>A função <code class="language-plaintext highlighter-rouge">input()</code> realiza a leitura de uma cadeia de caracteres (string) da entrada padrão (teclado). O resultado lido é atribuído a variável <em>a</em>, <code class="language-plaintext highlighter-rouge">a = input()</code>. O tipo da variável é definida dinamicamente, ou seja, no momento que é feita a atribuição do dado, este é reconhecido e a variável é declarada com esse mesmo tipo, nesse caso, string.</p>
+
+<p>Mas é necessário que, após as leituras dos dois valores, seja feita a soma, ou seja, as entradas devem ser números e não cadeias de caracteres (string).</p>
+
+<p><strong>Como converter a string lida em um número do tipo inteiro?</strong></p>
+
+<h3 id="casting">Casting</h3>
+<p>O processo para a conversão entre tipos de dados é chamado de
+<a href="https://www.w3schools.com/python/python_casting.asp?_blank">casting</a>, onde um dado sofre uma <a href="https://translate.google.com.br/?hl=pt-BR#view=home&amp;op=translate&amp;sl=en&amp;tl=pt&amp;text=casting">modelagem</a> do seu tipo original para o tipo desejado.</p>
+
+<p>Assim, a entrada de dados é feita pela função <code class="language-plaintext highlighter-rouge">input()</code>, cujo resultado é modelado para o tipo inteiro e por fim atribuído a variável <code class="language-plaintext highlighter-rouge">a</code>.
+O mesmo ocorre para a variável <code class="language-plaintext highlighter-rouge">b</code>. Em seguida a variável <code class="language-plaintext highlighter-rouge">soma</code> recebe o resultado da operação de <a href="https://www.w3schools.com/python/python_operators.asp?_blank">soma</a> entre elas.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></div></div>
+
+<h3 id="print">print()</h3>
+<p>Por fim a apresentação do resultado, que pode ser feita utilizando a função <code class="language-plaintext highlighter-rouge">print()</code>, mas como inserir uma variável no meio da string?</p>
+
+<h3 id="presentation-error">Presentation Error</h3>
+<p>Uma primeira forma encontrada foi <code class="language-plaintext highlighter-rouge">print("X = ", soma )</code>, porém a plataforma avaliava com erro de apresentação, <em>Presentation error</em>.</p>
+
+<h3 id="especulação">Especulação</h3>
+<p>Entre devaneios e <strong>especulações</strong>, imagino que o problema ocorra pela composição de <code class="language-plaintext highlighter-rouge">string + variável</code> apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: <code class="language-plaintext highlighter-rouge">'\0'</code>. Exemplo: <code class="language-plaintext highlighter-rouge">a=4</code> e <code class="language-plaintext highlighter-rouge">b=5</code> então <code class="language-plaintext highlighter-rouge">soma=9</code>. A saída do comando <code class="language-plaintext highlighter-rouge">print("X = ", soma)</code>, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça cumprir as exigências, pois o <code class="language-plaintext highlighter-rouge">'0'</code> não aparece na tela.</p>
+
+<p><strong>Cuidado!</strong> Isso é uma especulação, estou aprendendo python.</p>
+
+<h3 id="format">.format()</h3>
+<p>Duas outras ótimas fontes de pesquisa são: <a href="https://pt.stackoverflow.com/questions/225498/formatando-strings-com-format-e">stack<strong>overflow</strong></a> e a própria documentação da linguagem <a href="https://docs.python.org/3/library/string.html#custom-string-formatting">docs.python.org</a>.</p>
+
+<h2 id="resolução">Resolução</h2>
+<p>O resultado completo para o desafio
+<a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001?_blanck">URI 1001 Extremamente Básico</a> na minha formulação é:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"X = {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span> <span class="n">soma</span> <span class="p">)</span> <span class="p">)</span>
+</code></pre></div></div>
+:ET

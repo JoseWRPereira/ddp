@@ -1,0 +1,54 @@
+I"<h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do Círculo</a></h1>
+
+<p>O problema solicita que o programa calcule a área de um círculo dado o valor do raio.</p>
+
+<p>Para o cálculo da área é utilizada a seguinte equação: <code class="language-plaintext highlighter-rouge">area = n.raio²</code>.</p>
+
+<!--more-->
+
+<h2 id="entrada-de-dados">Entrada de dados</h2>
+
+<p>O dado de entrada do programa é o <code class="language-plaintext highlighter-rouge">raio</code>, declarado como uma variável de <a href="https://en.wikipedia.org/wiki/IEEE_754">dupla precisão</a>, como indicado no próprio desafio, assim a sua leitura fica <code class="language-plaintext highlighter-rouge">%lf</code> no formato da função <code class="language-plaintext highlighter-rouge">scanf()</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">double</span> <span class="n">raio</span><span class="p">;</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">raio</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="processamento">Processamento</h2>
+
+<p>O cálculo da área pode ser feita utilizando uma função específica para a potência, porém ainda não é necessária a sua utilização, que será explorada em uma próxima oportunidade.</p>
+
+<p>Então para o processamento da área pode-se utilizar o produto do raio, por ele mesmo e o valor aproximado do PI, que é declarado em <code class="language-plaintext highlighter-rouge">n</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">raio</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
+
+<span class="n">area</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">raio</span> <span class="o">*</span> <span class="n">raio</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="saída-de-dedos">Saída de dedos</h2>
+
+<p>A saída deve ser apresentada com quatro casas decimais utilizando <code class="language-plaintext highlighter-rouge">%.4f</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"A=%.4f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">area</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="resolução">Resolução</h2>
+
+<p>Juntando as partes na resolução do desafio temos:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">raio</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
+
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">raio</span> <span class="p">);</span>
+
+  <span class="n">area</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">raio</span> <span class="o">*</span> <span class="n">raio</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">"A=%.4f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">area</span> <span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

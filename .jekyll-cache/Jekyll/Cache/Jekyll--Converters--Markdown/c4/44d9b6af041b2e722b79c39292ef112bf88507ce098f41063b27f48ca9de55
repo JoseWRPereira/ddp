@@ -1,0 +1,388 @@
+I"�F<h1 id="habilidades-e-competências">Habilidades e Competências</h1>
+<ul>
+  <li>Calcular grandezas elétricas em circuitos elétricos;</li>
+  <li>Calcular a resistência equivalente total de circuitos elétricos.</li>
+</ul>
+
+<!--more-->
+
+<h2 id="desafio">Desafio</h2>
+<p>Dado o circuito da Figura 1, considerar: R1 = 330 $\Omega$, R2 = 150 $\Omega$, R3 = 270 $\Omega$,R4 = 400 $\Omega$ e R5 = 100 $\Omega$.</p>
+
+<p>Identificar:</p>
+<ul>
+  <li>os nós do circuito;</li>
+  <li>a configuração de ligação dos componentes: série ou paralelo;</li>
+  <li>Calcular a resistência equivalente em cada ramo;</li>
+  <li>Simplificar o circuito ao redesenhá-lo;</li>
+  <li>Repetir o processo até obter a resistência equivalente total.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><em>Figura 1: Circuito elétrico misto</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-desafio-1.png?raw=true" alt="Circuito elétrico do desafio - Interpretação de Circuitos Elétricos" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="revisitando-conhecimentos">Revisitando Conhecimentos</h2>
+<p>A identificação de configurações e características do circuito é fundamental para a sua análise.</p>
+
+<p>Entre os principais pontos estão:</p>
+
+<ul>
+  <li>
+    <p>A identificação da(s) fonte(s) e da(s) carga(s) do circuito;</p>
+  </li>
+  <li>
+    <p>A identificação dos nós;</p>
+  </li>
+  <li>
+    <p>A identificação dos ramos;</p>
+  </li>
+  <li>
+    <p>As ligações em série e em paralelo.</p>
+  </li>
+</ul>
+
+<h2 id="lei-de-ohm">Lei de Ohm</h2>
+
+<p>A <strong>primeira lei de Ohm</strong> é a relação entre as três grandezas elétricas básicas: <strong>tensão</strong>, <strong>resistência</strong> e <strong>corrente</strong>.</p>
+
+<p>Considerando o circuito da Figura 2:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">* Figura 2: Circuito elétrico Simples*</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-circuitoSimples-1.png?raw=true" alt="Circuito elétrico do desafio - Interpretação de Circuitos Elétricos" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><em>Vcc</em>: Fonte de tensão ajustável, em Volts[V];</li>
+  <li><em>I</em>: Intensidade de corrente elétrica, em Amperes [A];</li>
+  <li><em>Rt</em>: Resistência elétrica em Ohms [ $\Omega$ ].</li>
+</ul>
+
+<p><a href="https://pt.wikipedia.org/wiki/Georg_Simon_Ohm"><strong>Georg Simon Ohm</strong></a> percebeu que a relação entre tensão e corrente em um circuito resistivo é constante, ou seja, para um dado circuito, com uma resistência fixa, ao variar a tensão aplicada aos seus terminais
+a intensidade da corrente que percorre o circuito varia de forma proporcional.</p>
+
+<p>Ao tomar nota de alguns pontos de medição, pode-se desenhar um gráfico como na Figura 3, e perceber que os pontos anotados formam uma reta. Isso ocorre pela proporcionalidade entre a variável manipulada, aquela que é ajustada por quem conduz a experiência, e a variável controlada, que é aquela que depende de outro parâmetro do sistema, e que não é manipulada diretamente.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><em>Figura 3: Grafico $V_{CC}$ x $I$</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-leiOhmGrafico-1.png?raw=true" alt="Circuito elétrico do desafio - Interpretação de Circuitos Elétricos" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Estão destacados no gráfico três pontos, <strong>A</strong>, <strong>B</strong> e <strong>C</strong>, e pode-se perceber que o ponto <strong>B</strong> está localizado em uma tensão que é o dobro da tensão do ponto <strong>A</strong>, por consequência, a intensidade da corrente produzida também é o dobro. O mesmo ocorre no ponto <strong>C</strong> em relação ao ponto <strong>B</strong>.</p>
+
+<p>A representação matemática para uma reta, é uma equação do primeiro grau, assim a equação que representa a reta do gráfico da Figura 3 pode ser obtida da seguinte forma:</p>
+
+<p>Escolha dois pontos quaisquer da reta, <strong>A</strong> e <strong>B</strong>, <strong>A</strong> e <strong>C</strong>, <strong>B</strong> e <strong>C</strong>, ou ainda algum deles com a origem <strong>(0,0)</strong>.</p>
+
+<p>Pontos escolhidos: <strong>B</strong> e <strong>(0,0)</strong>.</p>
+
+<p>Ao projetar o ponto <strong>B</strong> no eixo da tensão, temos um triângulo retângulo formado pelos pontos: <strong>B</strong>, <strong>(4,0)</strong> e <strong>(0,0)</strong>.</p>
+
+<p>Utilizando a relação $\frac{\Delta I}{\Delta V}$, temos o coeficiente algular da reta $G$.</p>
+
+\[\begin{eqnarray}
+  \frac{\Delta I}{\Delta V} &amp; = &amp; G \nonumber \\
+  \Delta I &amp; = &amp; G .\Delta V \nonumber \\
+  I - I_0 &amp; = &amp; G . (V - V_0)
+\end{eqnarray}\]
+
+<p>Como a origem foi escolhida como um dos pontos do triângulo, o $\Delta I$ será o próprio valor no ponto $B$, ou seja, $I_0$ e $V_0$ valem $0$.</p>
+
+<p>\(\begin{eqnarray}
+  \label{eqn:leiOhmG}
+  I &amp; = &amp; G . V
+\end{eqnarray}\)
+Analogamente à <a href="https://www.todamateria.com.br/equacao-da-reta/">equação da reta</a> $f(x) = ax + b$ temos que:</p>
+
+<ul>
+  <li>
+    <p>$I$ é o resultado da função, é a variável dependente pois varia em função da variável independete;</p>
+  </li>
+  <li>
+    <p>$V$ é a variável independente, é manipulada por quem conduz o experimento, ajustando o valor da fonte para um valor desejado;</p>
+  </li>
+  <li>
+    <p>$G$ é coeficiente angular, valor que exprime o quanto a reta está inclinada.</p>
+  </li>
+</ul>
+
+<p>O coeficiente angular <strong>G</strong> mostra que, para um ânglo de inclinação pequeno, uma variação de tensão alta produz uma variação de corrente é pequena, ou seja, a condução é ruim. Com um ângulo de inclinação grande, uma variação de tensão pequena produz uma grande variação de corrente, ou seja, uma ótima condução.</p>
+
+<p>O coeficiente angular <strong>G</strong> é denominado como <em>condutância</em>, e sua unidade é o <em>Siemens[S]</em>.</p>
+
+<p>A condutância é o inverso da resistência, ou seja, dois aspectos de um mesmo fenômeno.
+\(\begin{eqnarray}
+  \label{eqn:GinvR}
+  G &amp; = &amp; \frac{1}{R}
+\end{eqnarray}\)</p>
+
+<p>Substituindo ($G = \frac{1}{R}$) em ($I = G . V$), temos a <strong>Primeira Lei de OHM</strong>.
+\(\begin{eqnarray}
+  \label{eqn:leiOhmR}
+  I &amp; = &amp; \frac{1}{R} . V
+\end{eqnarray}\)</p>
+
+<h2 id="associação-de-resistores-em-série">Associação de Resistores em Série</h2>
+
+<p>Dado um ramo qualquer de um circuito resistivo, sabe-se que todos os elementos nele contidos estão associados em série, pois, aplicada uma diferença de potencial às suas extremidades, a corrente que percorre esse ramo é a mesma em todos os componentes, havendo apenas um caminho entre os nós conectados às extremidades.</p>
+
+<p>Ao aplicar uma diferença de pontencial não nula entre os nós $A$ e $B$, haverá uma corrente elétrica entre esses pontos. O valor da intensidade dessa corrente depende, além da própria tensão, da resistência que o ramo apresenta, como diz a 1ª Lei de Ohm.</p>
+
+<p>Todo elemento inserido em série no ramo, acrescenta resistência a ele.
+Todo ramo com mais do que um resistor, pode ser substituído por um ramo equivalente, sem que haja mudança dos parâmetros elétricos do circuito, desde que não se altere a resistência equivalente do ramo, como mostrado na Figura 4.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><em>Figura 4: Ramo entre nós $A$ e $B$</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-rSerie-1.png?raw=true" alt="Ramo entre nós" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A Figura 4(a) mostra o ramo com dois resistores, que formam a resistência total do ramo, que é ilustrado na Figura 4(b) com a resistência equivalente.
+Pode-se representar a resistência equivalente em um ramo da seguinte forma:
+\(\begin{eqnarray}
+R_1 + R_2 = R_{eq}
+\end{eqnarray}\)
+Para uma quantidade de resistores no ramo maior do que dois, a resistência equivalente é calculada da mesma forma:
+\(\begin{eqnarray}
+R_1 + R_2 + ... + R_n = R_{eq}
+\end{eqnarray}\)</p>
+
+<h2 id="associação-de-resistores-em-paralelo">Associação de Resistores em Paralelo</h2>
+
+<p>A intensidade da corrente que circula em um ramo, depende da tensão aplicada aos seus nós e da resistência total do ramo. Assim, para o circuito da Figura 5(a) a corrente total depende apenas do valor de $V_{CC}$ e $R_1$. Não havendo mudanças nesses valores, também não haverá mudança no valor da intensidade de corrente, denotada $I_T$. A intensidade da corrente que flui da fonte é a mesma que atravessa a carga, com uma certa resistência e condutância.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><em>Figura 5: Circuito em paralelo</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-paralelo-1.png?raw=true" alt="Circuito em paralelo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao inserir outro ramo ao circuito, como mostrado na Figura 5(b), a intensidade da corrente no ramo de $R_1$ não é alterado, pois a tensão entre os pontos $A$ e $B$ não muda, bem como seu valor ôhmico, porém, a intensidade total da corrente muda, pois há agora um novo caminho, um novo ramo para circulação da corrente.</p>
+
+<p>A mudança do circuito (a) para o (b), produz um novo caminho para a circulação da corrente. Pode-se dizer então que com a inclusão do novo ramo, conectado aos mesmos pontos do ramo já existente, há uma maior facilidade para a corrente fluir, pois agora são dois caminhos, aumentando a condutância entre os nós.</p>
+
+<p>Pode-se obter a condutância total do circuito paralelo somando as condutâncias dos ramos, da seguinte forma:
+\(\begin{eqnarray}
+  G_T &amp; = &amp; G_{R_1} + G_{R_2}
+\label{eqn:GT}
+\end{eqnarray}\)
+A forma mais comum é trabalhar com a resistência e não a condutância, então,
+substituindo a condutância pelo inverso da resistência pode-se obter a resistência total:
+\(\begin{eqnarray}
+  \frac{1}{R_T}	&amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
+	\nonumber\\
+	R_T &amp; = &amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} }
+	\label{eq:paralelo}
+\end{eqnarray}\)</p>
+
+<p>Da mesma forma pode-se aplicar para circuitos com varios ramos em paralelo, basta somar as condutâncias:
+\(\begin{eqnarray}
+	G_T &amp; = &amp; G_1 + G_2 + ... + G_n
+\end{eqnarray}\)
+Analogamente para a resistência total temos:
+\(\begin{eqnarray}
+	\label{eq:nrparalelo}
+	R_T &amp; = &amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n} }
+\end{eqnarray}\)</p>
+
+<h3 id="associação-em-paralelo---apenas-2-resistores">Associação em Paralelo - Apenas 2 resistores</h3>
+
+<p>O cálculo de resistores em paralelo pode ser realizado manipulando a Equação da associação em paralelo da seguinte forma:
+\(\begin{eqnarray}
+	G_{eq} &amp; = &amp; G_{R_1} + G_{R_2} \nonumber\\
+	\nonumber\\
+	\frac{1}{R_{eq}}	&amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
+	\nonumber\\
+	\frac{1}{R_{eq}}	&amp; = &amp; \frac{R_1 + R_2}{R_1.R_2} \nonumber\\
+	\nonumber\\
+	R_{eq}	&amp; = &amp; \frac{R_1.R_2}{R_1 + R_2} \nonumber
+\end{eqnarray}\)
+<strong>Atenção!</strong> Essa forma só é válida para a associação de dois resistôres.</p>
+
+<h3 id="associação-resistores-em-paralelo---todos-iguais">Associação resistores em paralelo - Todos iguais</h3>
+
+<p>Outra forma particular para calcular resistência equivalente é quanto os resistores em paralelo são <strong>todos</strong> de mesmo valor, então o cálculo pode ser realizado manipulado a Equação da condutância equivalente da seguinte forma:</p>
+
+<p><em>Dados os seguintes resistores em paralelo e nomeados sequencialmente: $R_1$ = $R_2$ = … = $R_n$.</em>
+\(\begin{eqnarray}
+	G_{eq} &amp; = &amp; G_1 + G_2 + ... + G_n \nonumber\\
+	\nonumber\\
+	\frac{1}{R_{eq}} &amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\nonumber\\
+	\nonumber\\
+	\frac{1}{R_{eq}} &amp; = &amp; n.\frac{1}{R} \nonumber\\
+	\nonumber\\
+	\frac{1}{R_{eq}} &amp; = &amp; \frac{n}{R} \nonumber\\
+	\nonumber\\
+	\frac{R_{eq}}{1} &amp; = &amp; \frac{R}{n} \nonumber\\
+	\nonumber\\
+	R_{eq} &amp; = &amp; \frac{R}{n}
+\end{eqnarray}\)
+Atenção! Essa forma só é válida para a associação de resistôres iguais.</p>
+
+<h2 id="leis-de-kirchhoff">Leis de Kirchhoff</h2>
+
+<p>A <strong>primeira lei de Kirchhoff</strong> fala sobre as correntes em um nó, por isso é comum ser chamada de <strong>lei dos nós</strong>, enquanto que a <strong>segunda lei de Kirchhoff</strong> fala sobre as tensões em uma malha, sendo assim a <strong>lei das malhas</strong>.</p>
+
+<h3 id="1ª-lei-de-kirchhoff">1ª Lei de Kirchhoff</h3>
+
+<p><strong>A soma das correntes em um nó é igual a zero.</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><em>Figura 6: Circuito em paralelo</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-noSupInf-1.png?raw=true" alt="Circuito em paralelo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A Figura 6 mostra o sentido convencional da corrente nos dois nós do circuito.</p>
+
+<p>Tendo um nó como referência, adota-se uma convenção para o sentido da corrente. Assim, a corrente que chega ao nó é anotada como positiva e a corrente que sai é negativa. O oposto também pode ser adotado.</p>
+
+<p>Escrevendo, pela definição, a equação para o nó $A$ temos:
+\(\begin{eqnarray}
+\label{eq:1kirchhoff}
+(+I_T) + (-I_1) + (-I_2) &amp; = &amp; 0\\
+I_T - I_1 - I_2 &amp; = &amp; 0 \nonumber\\
+I_T = I_1 + I_2
+\end{eqnarray}\)
+Da mesma forma para o nó $B$:
+\(\begin{eqnarray}
+(-I_T) + (+I_1) + (+I_2) &amp; = &amp; 0 \nonumber\\
+I_1 + I_2 &amp; = &amp; I_T \nonumber
+\end{eqnarray}\)</p>
+
+<h3 id="2ª-lei-de-kirchhoff">2ª Lei de Kirchhoff</h3>
+
+<p>A Figura 7 mostra os dois ramos que formam o circuito em série.
+A limitação dos ramos são os nós $A$ e $B$, cuja diferença de potencial é proporcionada pelo ramo da fonte, tensão gerada. Essa diferença de potencial, é aplicada ao ramo que contém os resistores, $R_1$ e $R_2$, que dividem essa tensão em valores parciais, denominados de queda de tensão.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><em>Figura 7: Circuito em Série</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-malha-1.png?raw=true" alt="Circuito em paralelo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A segunda lei de Kirchhoff diz que: <strong>A soma das tensões (ou quedas de tensão) em uma malha é igual a zero</strong>.</p>
+
+<p>Adotando um ponto como referencia de partida, por exemplo o ponto $A$, percorre-se no sentido da corrente, por todo circuito até retornar ao ponto de partida. Ao encontrar uma indicação de tensão no mesmo sentido, adota-o como valor positivo, e no sentido contrário, adota-o como negativo.</p>
+
+<p>Assim, pode-se representar a equação da malha pela definição da seguinte forma:
+\(\begin{eqnarray}
+	(-V_{R1}) + (-V_{R2}) + (V_{CC})  &amp; = &amp; 0 \\
+	-V_{R1} - V_{R2} + V_{CC} &amp; = &amp; 0 \nonumber\\
+	 V_{CC} &amp; = &amp; V_{R1} + V_{R2}
+\end{eqnarray}\)</p>
+
+<p>Sabemos que em um ramo cada resistor apresenta uma parcela proporcional da resistência total, pois a soma dessas parcelas é a própria resistência total.
+\(\begin{eqnarray}
+R_1 + R_2 = R_{T_{ramo}}
+\end{eqnarray}\)
+Temos que $R_{T_{ramo}}$ é a resistência total do ramo e é formada por duas partes, $R_1$ e $R_2$, somados. Assim cada resistor é uma parte da resistência total do ramo, um parte do todo.</p>
+
+<p>Sabemos que a parte dividida pelo todo é uma relação de proporcionalidade e que a queda de tensão em cada resistor do ramo é proporcional a sua resistência em relação a resistência total, assim temos que:
+\(\begin{eqnarray}
+\frac{R_1}{R_2+R_1} &amp; = &amp; \frac{V_{R1}}{V_{R2}+V_{R1}}\\
+\nonumber\\
+V_{AB} &amp; = &amp; V_{R1} + V_{R2} \\
+\nonumber\\
+\frac{R_1}{R_2+R_1} &amp; = &amp; \frac{V_{R1}}{V_{AB}}
+\end{eqnarray}\)
+Isolando-se $V_{R1}$  temos:
+\(\begin{eqnarray}
+V_{R1} &amp; = &amp; \frac{R_1}{R_2 + R_1} . V_{AB}
+\end{eqnarray}\)
+Iguanlmente para $V_{R2}$:
+\(\begin{eqnarray}
+V_{R2} &amp; = &amp; \frac{R_2}{R_2 + R_1} . V_{AB}
+\end{eqnarray}\)</p>
+
+<h2 id="atividades">Atividades</h2>
+
+<p>Calcular a resistência equivatente total dos circuitos.</p>
+
+<h3 id="circuito-1">Circuito 1</h3>
+<p>Dados:
+$R_1 = 1k2\Omega$,
+$R_2 = 300\Omega$ e
+$R_3 = 120\Omega$.</p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ1-1.png?raw=true" alt="Atividade 1" /></p>
+
+<h3 id="circuito-2">Circuito 2</h3>
+<p>Dados:
+$R_1 = 2k7\Omega$,
+$R_2 = 24k\Omega$,
+$R_3 = 3k3\Omega$ e
+$R_4 = 200\Omega$.</p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ2-1.png?raw=true" alt="Atividade 2" /></p>
+
+<h3 id="circuito-3">Circuito 3</h3>
+<p>Dados:
+$R_1 = 100\Omega$,
+$R_2 = 100\Omega$,
+$R_3 = 100\Omega$,
+$R_4 = 300\Omega$,
+$R_5 = 200\Omega$,
+$R_6 = 100\Omega$, e
+$R_7 = 100\Omega$.</p>
+
+<p><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ3-1.png?raw=true" alt="Atividade 3" /></p>
+
+<h2 id="download">Download</h2>
+
+<p><a href="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/pdf/aula-ele-calcReq-1LeiOhm.pdf?raw=true">Nota de aula em PDF</a></p>
+:ET
