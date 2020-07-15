@@ -22,3 +22,6 @@ O livro traz elementos comuns do nosso dia a dia como sociedade, várias crític
 O autor constrói conceitos que vieram a se tornar realidade, como o próprio Guia ou mesmo o Peixe-Babel e outros que são de difícil concepção mas que maravilham pela genialidade como o Gerador de Improbabilidade Infinita, responsável pelas viagens intergalácticas.
 
 Inspiração filosófica, traz menção à busca fundamental da vida,  e para uma resposta sem sentido, a necessidade de se fazer a pergunta certa para poder trilhar o caminho certo. Genialmente traz a intertextualidade com a realidade, 42 é a resposta, mas a genialidade de Bob Dylan traz a pergunta: “Quantos caminhos é preciso caminhar?” Isso por si só já garante uma reflexão profunda da Vida, do Universo e de Tudo Mais… uma pausa! NÃO ENTRE EM PÂNICO!
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

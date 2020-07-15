@@ -23,3 +23,6 @@ As características do lobisomem, as informações técnicas do especialista no 
 Os capítulos narram por diversos pontos de vista a breve história aqui contada, mas com muita riqueza entrelaça as histórias das personagens de modo a criar vários ganchos para continuações, em especial para o universo da galeria Creta, que ao compreender do que se trata realmente, produz uma explosão de possibilidades.
 
 Excelente livro porque conseguimos ver e viver a história, sofrer junto, ter esperança e se reconhecer como sociedade que se amaldiçoa e produz bençãos constantes. Uma dicotomia real, lobos e homens como todos nós, morremos diariamente para poder seguir vivendo, mesmo que em agonia buscamos uma saída, uma esperança.
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

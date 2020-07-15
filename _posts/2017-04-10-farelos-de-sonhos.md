@@ -27,3 +27,6 @@ Qual é sua história? Onde está sua família? Por que veio parar aqui? Qual fo
 No infinito passar de gente, alguém ajuda, mas ainda sim são migalhas, farelos de sonhos cada vez mais secos…
 
 O semáforo abriu!
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

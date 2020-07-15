@@ -17,3 +17,7 @@ Uma casa mal assombrada, no topo de uma colina, um acaso leva dois amigos que br
 A história é intrigante desde seu início, sendo que seus elementos são apresentados de forma natural e o cenário vai sendo montado na medida. Muitos pontos são colocados, talvez, como ganchos para futuras obras deixando a curiosidade atiçada, e como senso de humor do autor, que é claro e notório, principalmente com os nomes dos sócios fundadores da empresa de engenharia que Nick, o protagonista da história trabalha, da secretária e da ex-namorada e talvez de alguma outra personagem que por mim passou despercebido.
 
 A história é muito bem construída, acompanhei todas as cenas como se estivesse vendo um filme, preso pela história que fluía muito rápido, daquelas que fazem a gente ficar tenso e torcendo por um final… até que o final vem, uma surpresa total, e você solta aquele palavrão πßτ#@χ¥€ο%π#ρ$ω∗§$#% !!!! Não é possível que aconteceu isso!! Mais um final inesperado e fantástico construído pelo Fábio M. Barreto.
+
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

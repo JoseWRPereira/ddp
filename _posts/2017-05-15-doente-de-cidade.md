@@ -46,3 +46,7 @@ Logo em seguida chegaram os outros dois, percebemos que ficaram próximos uns do
 Olhei desconcertado para meu pai, e desacreditando no que via, senti uma mistura de alívio e vergonha! Meu pai ria da minha cara, afinal todo o alarde dos dias anteriores era por causa de entregadores de jornal, que em minha mente viraram uma quadrilha de ladrões ou sequestradores.
 
 Fui trabalhar refletindo aquilo tudo… Na primeira vez o motoqueiro que me seguiu devia só estar tentando me avisar do portão que ficara aberto. Penso agora que a melhor coisa foi não estar armado. Não consigo saber o que faria, talvez atirasse, mas talvez não o fizesse… quem sabe? O medo cega, distorce a realidade, faz de um inocente um bandido e um bandido inocente. O que dizer de tantos sintomas dessa doença não classificada… só pude perceber que estou doente de cidade!
+
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

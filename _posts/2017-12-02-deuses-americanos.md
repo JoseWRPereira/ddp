@@ -43,3 +43,6 @@ No final, deuses americanos é uma história que mostra que a vida não é uma l
 “Não é o pescado o que você leva para casa no fim do dia.
 
 É a paz de espírito.”
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

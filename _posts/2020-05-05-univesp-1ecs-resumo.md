@@ -59,11 +59,9 @@ A participação no convívio produz impasses, diferentes desejos e vontades, co
 
 # Conclusão
 
-A ética proporciona uma discussão sobre as orientações das ações humanas em caráter particular, de modo a ensinar a bem conduzir nossas vidas, a conduzir interesses, desejos e decisões a um público para gerar engajamento político, que produzam um incremento de valor à vida.
-
-
-
-
-[Ética][etica-wiki]
+A [ética][etica-wiki] proporciona uma discussão sobre as orientações das ações humanas em caráter particular, de modo a ensinar a bem conduzir nossas vidas, a conduzir interesses, desejos e decisões a um público para gerar engajamento político, que produzam um incremento de valor à vida.
 
 [etica-wiki]: https://pt.wikipedia.org/wiki/%C3%89tica
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

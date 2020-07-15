@@ -70,3 +70,7 @@ Não tive concordância em estar gostando do Guia, mas concordamos quando citei 
 Bom, devo dizer que ele não estava errado, mas também não estava de todo o certo.
 
 Agora… pelo que me recordo a especialidade dele, além de medicina do trabalho, é neurociência … psicopedagogia … será que também é psico-história?
+
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

@@ -29,3 +29,6 @@ Algumas passagens senti referências a obra clássica de Ariano Suassuna, O Auto
 O auto da maga Josefa é uma grata surpresa, um belo livro, uma belíssima homenagem à cultura brasileira. Parabéns Paola Siviero. Parabéns Dame Blanche pelo ótimo trabalho. Grato por me levar de volta ao sertão!
 
 “Não é o caminho que tomas, é a direção que segues.”
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

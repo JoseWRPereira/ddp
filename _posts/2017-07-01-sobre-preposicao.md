@@ -27,3 +27,7 @@ mas nunca percebeu-se, pois não é de bom tom chegar tão longe <br>
 tão na beirada, prestes a escapulir num infinito <br>
 e chegar ao final da equação com a resposta: <br>
 A percepção é o limite! <br>
+
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

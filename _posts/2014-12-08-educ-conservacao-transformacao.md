@@ -59,3 +59,7 @@ A educação é, assim, uma eterna busca pelo equilíbrio entre a conservação 
 [4] Duarte, Melina **A lei do Talião e o princípio de igualdade entre crime e punição na Filosofia do Direito de Hegel.** Revista Eletrônica Estudos Hegelianos. Ano 6, nº10, Junho-2009: 75-85
 
 [5] Araguaia,Mariana **Piaget e o desenvolvimento moral na criança.** Site Brasil Escola http://www.brasilescola.com/biografia/piaget-desenvolvimento-moral-na-crianca.htm <Acesso em 22/11/2014>
+
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

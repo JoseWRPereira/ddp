@@ -25,3 +25,7 @@ Durante a trama, são mostrados vários comportamentos, os sentimentos das perso
 Um final inesperado, agitado e com muito suspense, tensão que não permite que larguemos a leitura até seu desenrolar final, com muitas coisas a serem pensadas e repensadas.
 
 Livro muito bom!
+
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)

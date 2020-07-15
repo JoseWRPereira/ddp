@@ -36,3 +36,4 @@ O **objetivo é resolver os problemas**, mas no caminho, **apreciar o aprendizad
 * [URI-1010-Entrada de múltiplas variáveis por linha]({{site.baseurl}}/2020/uri1010py_calculoSimples)
 
 
+[Voltar]({{site.baseurl}}/docs/tecnologia)

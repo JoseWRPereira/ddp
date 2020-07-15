@@ -28,3 +28,6 @@ A comida sei que não foi muita, não havia o mínimo sinal de ostentação, era
 Sorriam e mastigavam, entre uma olhada alegre para o pai e um sorriso legítimo para a mãe, os meninos eram alegres. O pai contava alguma história para eles, enquanto a mãe vez ou outra fazia alguma pergunta instigante e os dois meninos tentavam adivinhar o que iria acontecer. Entre continuações acertadas com exaltações de alegria ou erros de pouca frustração, os meninos eram realmente felizes, estavam vivendo aquele instante em que se é pleno, em que ser pobre ou rico nada quer dizer, pois o espírito naqueles instantes é realmente livre e o mundo não pesa, nem oprime, nem caleja, momentos em que a vida vale a pena.
 
 Jamais esquecerei aqueles pais, pobres, que mesmo em condições ruins, possibilitam toda a riqueza que pode existir em vida aos filhos, sonhar e sorrir, serem felizes!
+
+
+[Voltar]({{site.baseurl}}/docs/humanidades)
