@@ -6,8 +6,8 @@
       children:
         - title: "Desafios URI"
           url: "docs/tecnology/progURI"
-        - title: Prog-C
-          url: "docs/aulas/progc"
+        - title: "uC PIC"
+          url: "docs/tecnology/ucPIC"
     - title: "Educação"
       url: "docs/educacao"
     - title: "Ciências"

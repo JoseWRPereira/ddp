@@ -1,5 +1,7 @@
 ---
+layout: page
 title: Eletricidade
+permalink: /docs/science/ele
 tags:
  - ELE
  - SENAI

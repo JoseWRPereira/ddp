@@ -13,7 +13,7 @@ description: Resoluções de problemas baseadas em programação.
 
 A resolução de problemas está contida das competências gerais da [BNCC]({{site.baseurl}}/docs/#2-pensamento-científico-criativo-e-crítico) e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.
 
-Para alcançar um bom nível ou excelência em uma habilidade, ela precisa ser lapidada de forma prática, pela repetição, análise e avaliação crítica dos resultados encontrados e também do processo de resolução.
+Para alcançar um bom nível ou excelência em uma habilidade, ela precisa ser lapidada de forma prática, pela repetição, análise e avaliação crítica dos resultados obtidos e também do processo de resolução.
 
 Um ótimo caminho para o desenvolvimento da habilidade em programação é a resolução de desafios, de forma orientada, com complexidade gradativa, utilizando a linguagem de interesse. Para atender essa questão, uma plataforma que avalio como excelente é a [URI Online Judge](https://www.urionlinejudge.com.br/judge/pt/login/).
 

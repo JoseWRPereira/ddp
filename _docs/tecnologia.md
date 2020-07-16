@@ -19,3 +19,5 @@ Acredito na tecnologia como o conjunto de ferramentas para explorar competência
 As principais áreas de interesse e estudo, tanto pessoal quanto profissionalmente, acabam possuindo algumas ferramentas em comum, sendo estas destacadas em notas de aulas ou roteiro de estudo: 
 
 * [Desafios da plataforma URI na mediação do aprendizado de linguagens de programação]({{site.baseurl}}/docs/tecnology/progURI)
+
+* [Microcontrolador PIC]({{site.baseurl}}/docs/tecnology/ucPIC)
