@@ -62,4 +62,4 @@ A educação é, assim, uma eterna busca pelo equilíbrio entre a conservação 
 
 
 
-[Voltar]({{site.baseurl}}/docs/humanidades)
+[Voltar]({{site.baseurl}}/docs/educacao)

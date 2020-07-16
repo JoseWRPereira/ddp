@@ -64,4 +64,4 @@ A [ética][etica-wiki] proporciona uma discussão sobre as orientações das aç
 [etica-wiki]: https://pt.wikipedia.org/wiki/%C3%89tica
 
 
-[Voltar]({{site.baseurl}}/docs/humanidades)
+[Voltar]({{site.baseurl}}/docs/educacao)

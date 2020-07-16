@@ -31,4 +31,4 @@ Este texto foi produzido baseado em atividade realizada dentro do curso de Inter
 Outra fonte de referência para o tema abordado, foi um trabalho exposto em uma feira de ciências, visitada por mim a alguns anos atrás, de autoria de Giuliana Cappelli e Gabriela Matias sob orientação do Profº Mauro Henrique Santos da Escola Estadual “João Baptista de Oliveira”, de Itapecerica da Serra / SP. O trabalho desenvolvido para despertar a capacidade narrativa em crianças na faixa etária de 11 e 12 anos ficou guardado em minhas memórias e numa folha de divulgação do projeto que fixei à minha estante de livros, para que não se perdesse entre números e devaneios.
 
 
-[Voltar]({{site.baseurl}}/docs/humanidades)
+[Voltar]({{site.baseurl}}/docs/educacao)
