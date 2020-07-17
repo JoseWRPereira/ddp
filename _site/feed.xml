@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-16T21:49:43-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-16T23:04:11-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0101 - Blink LED</title><link href="http://localhost:4000/ddp/2020/P0101-blinkLED/" rel="alternate" type="text/html" title="P0101 - Blink LED" /><published>2020-07-16T21:43:21-03:00</published><updated>2020-07-16T21:43:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0101-blinkLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0101-blinkLED/">&lt;h1 id=&quot;pisca-led&quot;&gt;Pisca LED&lt;/h1&gt;
 
 &lt;p&gt;Acionar um LED de forma intermitente com frequência de 1Hz.&lt;/p&gt;
@@ -15,10 +15,7 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/_posts/tUcPIC/imgP0101/circuito.jpg&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/circuito.jpg&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/circuito.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: Próprio autor&lt;/td&gt;
@@ -59,7 +56,7 @@
 
 #define _XTAL_FREQ     4000000  // Freq. clock interno: 4MHz(padrão)
 
-void main(void)                // Função principal = main.
+void main(void)                 // Função principal = main.
 {                               // Início do bloco da função main.
     PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
     TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
@@ -144,17 +141,15 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
 
 &lt;p&gt;O programa aqui apresentado utiliza o pino D0 do PORTD do microcontrolador por ser o PORT mais fácil de trabalhar.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;Como esse pino é parametrizado, habilitado e inicializado?&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Como esse pino é parametrizado, habilitado e inicializado?&lt;/h4&gt;
 
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;Como configurar o pino como saída?&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Como configurar o pino como saída?&lt;/h4&gt;
+
+&lt;/div&gt;
 
 &lt;h4 id=&quot;registradores&quot;&gt;Registradores&lt;/h4&gt;
 
@@ -172,7 +167,7 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/sfr-PIC16F886-7.png&quot; alt=&quot;SFR&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/sfr-PIC16F886-7.png?raw=true&quot; alt=&quot;SFR     &quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887&lt;/td&gt;
@@ -192,7 +187,7 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/portdreg.png&quot; alt=&quot;PORTDreg&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portdreg.png?raw=true&quot; alt=&quot;PORTDreg&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887&lt;/td&gt;
@@ -227,7 +222,7 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/trisdreg.png&quot; alt=&quot;TRISDreg&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisdreg.png?raw=true&quot; alt=&quot;TRISDreg&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887 pág. 57&lt;/td&gt;
@@ -252,7 +247,7 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/portD4-0_diagrama.png&quot; alt=&quot;DiagramaRD0-4&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD4-0_diagrama.png?raw=true&quot; alt=&quot;DiagramaRD0-4&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887 pág. 58&lt;/td&gt;
@@ -279,8 +274,8 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/portD0_0.png&quot; alt=&quot;PORTD0-0&quot; /&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/trisd0_0.png&quot; alt=&quot;TRISD0-0&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD0_0.png?raw=true&quot; alt=&quot;PORTD0-0&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisd0_0.png?raw=true&quot; alt=&quot;TRISD0-0&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887 pág. 58&lt;/td&gt;
@@ -320,35 +315,7 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 
 &lt;p&gt;Garantindo assim a correta execução e atendendo ao objetivo inicial de acionar o LED de forma intermitente com frequẽncia de 1Hz, ou seja, 500ms ligado e o mesmo tempo desligado.&lt;/p&gt;
 
-&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;warning&lt;/h4&gt;
-This is a warning
-&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;danger&lt;/h4&gt;
-This alerts danger!
-&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;success&lt;/h4&gt;
-This alerts success
-&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;info&lt;/h4&gt;
-This is useful information.
-&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;primary&lt;/h4&gt;
-This is a primary alert
-&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-secondary&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;secondary&lt;/h4&gt;
-This is a secondary alert
-&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Pisca LED</summary></entry><entry><title type="html">URI1010 - Entrada de múltiplas variáveis por linha</title><link href="http://localhost:4000/ddp/2020/uri1010py_calculoSimples/" rel="alternate" type="text/html" title="URI1010 - Entrada de múltiplas variáveis por linha" /><published>2020-06-23T17:53:21-03:00</published><updated>2020-06-23T17:53:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1010py_calculoSimples</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1010py_calculoSimples/">&lt;h1 id=&quot;cálculo-simples&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1010&quot;&gt;Cálculo Simples&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Pisca LED</summary></entry><entry><title type="html">URI1010 - Entrada de múltiplas variáveis por linha</title><link href="http://localhost:4000/ddp/2020/uri1010py_calculoSimples/" rel="alternate" type="text/html" title="URI1010 - Entrada de múltiplas variáveis por linha" /><published>2020-06-23T17:53:21-03:00</published><updated>2020-06-23T17:53:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1010py_calculoSimples</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1010py_calculoSimples/">&lt;h1 id=&quot;cálculo-simples&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1010&quot;&gt;Cálculo Simples&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).&lt;/p&gt;
 

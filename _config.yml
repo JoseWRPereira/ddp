@@ -27,6 +27,10 @@ baseurl: "/ddp" # the subpath of your site, e.g. /blog
 # This is mostly for testing
 url: "https://josewrpereira.github.io" # the base hostname & protocol for your site
 
+# Loading images 
+baseurlimg: "https://github.com/JoseWRPereira/ddp/blob/master/"
+rawimg: "?raw=true"
+
 # Social (First three Required)
 repo: "https://github.com/JoseWRPereira/ddp"
 github_user: "JoseWRPereira"
