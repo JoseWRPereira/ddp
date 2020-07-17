@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Resistência equivalente total e 1ª Lei de Ohm</title>
-<meta property="og:title" content="Resistência equivalente total e 1ª Lei de Ohm" />
+<title>P0101 - Blink LED</title>
+<meta property="og:title" content="P0101 - Blink LED" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Resistência equivalente total e 1ª Lei de Ohm">
+<meta itemprop="name" content="P0101 - Blink LED">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Resistência equivalente total e 1ª Lei de Ohm"/>
+<meta name="twitter:title" content="P0101 - Blink LED"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -282,8 +282,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/cEletricidade/2020-05-26-aula-ele-calculaReqOhm.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/cEletricidade/2020-05-26-aula-ele-calculaReqOhm.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2020-07-16-P0101-blinkLED.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2020-07-16-P0101-blinkLED.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -300,401 +300,364 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/2020/aula-ele-calculaReqOhm/">Resistência equivalente total e 1ª Lei de Ohm</a>
+                <a href="http://localhost:4000/ddp/2020/P0101-blinkLED/">P0101 - Blink LED</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 style="margin-bottom:0px">Resistência equivalente total e 1ª Lei de Ohm</h1>
-<span class="badge badge-danger">SENAI</span><span class="badge badge-secondary">Eletricidade</span><span class="badge badge-secondary">Req</span><span class="badge badge-secondary">1ª Lei de Ohm</span>
-<span class="post-date" style="font-style: italic;">2020-05-26</span>
-<h1 id="habilidades-e-competências">Habilidades e Competências</h1>
-<ul>
-  <li>Calcular grandezas elétricas em circuitos elétricos;</li>
-  <li>Calcular a resistência equivalente total de circuitos elétricos.</li>
-</ul>
+            <h1 style="margin-bottom:0px">P0101 - Blink LED</h1>
+<span class="badge badge-danger">microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span>
+<span class="post-date" style="font-style: italic;">2020-07-16</span>
+<h1 id="pisca-led">Pisca LED</h1>
+
+<p>Acionar um LED de forma intermitente com frequência de 1Hz.</p>
 
 <!--more-->
 
-<h2 id="desafio">Desafio</h2>
-<p>Dado o circuito da Figura 1, considerar: R1 = 330 $\Omega$, R2 = 150 $\Omega$, R3 = 270 $\Omega$,R4 = 400 $\Omega$ e R5 = 100 $\Omega$.</p>
-
-<p>Identificar:</p>
-<ul>
-  <li>os nós do circuito;</li>
-  <li>a configuração de ligação dos componentes: série ou paralelo;</li>
-  <li>Calcular a resistência equivalente em cada ramo;</li>
-  <li>Simplificar o circuito ao redesenhá-lo;</li>
-  <li>Repetir o processo até obter a resistência equivalente total.</li>
-</ul>
+<h2 id="circuito">Circuito</h2>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><em>Figura 1: Circuito elétrico misto</em></th>
+      <th style="text-align: center">Figura 1: Circuito de acionamento do LED</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-desafio-1.png?raw=true" alt="Circuito elétrico do desafio - Interpretação de Circuitos Elétricos" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/_posts/tUcPIC/imgP0101/circuito.jpg" alt="circuito" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/circuito.jpg" alt="circuito" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Fonte: Próprio autor</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="revisitando-conhecimentos">Revisitando Conhecimentos</h2>
-<p>A identificação de configurações e características do circuito é fundamental para a sua análise.</p>
+<h2 id="programa-firmware">Programa (<em>Firmware</em>)</h2>
 
-<p>Entre os principais pontos estão:</p>
+<pre><code class="language-C">/*
+ * File:   main.c
+ * Author: josewrpereira
+ * 
+ * Created on 21 de Setembro de 2019, 19:01
+ * 
+ * IDE:         MPLAB X IDE v3.15
+ * Compiler:    XC8 v1.45
+ * OS:          Deepin 15.11 X86_64
+ * Kernel:      4.15.0-30deepin-generic
+ * 
+ * Objetivo: 
+ *      Piscar o LED com intervalo de 500 ms
+ * 
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD0     |19     | LED
+ */
 
-<ul>
-  <li>
-    <p>A identificação da(s) fonte(s) e da(s) carga(s) do circuito;</p>
-  </li>
-  <li>
-    <p>A identificação dos nós;</p>
-  </li>
-  <li>
-    <p>A identificação dos ramos;</p>
-  </li>
-  <li>
-    <p>As ligações em série e em paralelo.</p>
-  </li>
-</ul>
 
-<h2 id="lei-de-ohm">Lei de Ohm</h2>
+#include &lt;xc.h&gt;                 // Inclui biblioteca padrão do compilador XC8 
+                                // para microcontroladores Microchip.
 
-<p>A <strong>primeira lei de Ohm</strong> é a relação entre as três grandezas elétricas básicas: <strong>tensão</strong>, <strong>resistência</strong> e <strong>corrente</strong>.</p>
+#pragma config FOSC  = INTRC_NOCLKOUT   // Fonte de clock: oscilador interno
+#pragma config WDTE  = OFF      // Desabilita WatchDog Timer 
+#pragma config MCLRE = OFF      // Desab. Master Clear via pino
+#pragma config LVP   = OFF      // Desab. gravação em baixa tensão
 
-<p>Considerando o circuito da Figura 2:</p>
+#define _XTAL_FREQ     4000000  // Freq. clock interno: 4MHz(padrão)
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">* Figura 2: Circuito elétrico Simples*</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-circuitoSimples-1.png?raw=true" alt="Circuito elétrico do desafio - Interpretação de Circuitos Elétricos" /></td>
-    </tr>
-  </tbody>
-</table>
+void main(void)                // Função principal = main.
+{                               // Início do bloco da função main.
+    PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
+    TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
+    
+    while( 1 )                  // Laço de repetição infinito.
+    {                           // Inicio do laço de repetição.
+        PORTDbits.RD0 = 1;      // Liga RD0.
+        __delay_ms(500);        // Espera 500 ms.
+        PORTDbits.RD0 = 0;      // Desliga RD0.
+        __delay_ms(500);        // Espera 500 ms.
+    }                           // Fim do laço de repetição.
+    return;                     // Caracteriza main como uma função sem retorno.
+}                               // Fim do bloco da função main.
 
-<ul>
-  <li><em>Vcc</em>: Fonte de tensão ajustável, em Volts[V];</li>
-  <li><em>I</em>: Intensidade de corrente elétrica, em Amperes [A];</li>
-  <li><em>Rt</em>: Resistência elétrica em Ohms [ $\Omega$ ].</li>
-</ul>
+</code></pre>
 
-<p><a href="https://pt.wikipedia.org/wiki/Georg_Simon_Ohm"><strong>Georg Simon Ohm</strong></a> percebeu que a relação entre tensão e corrente em um circuito resistivo é constante, ou seja, para um dado circuito, com uma resistência fixa, ao variar a tensão aplicada aos seus terminais
-a intensidade da corrente que percorre o circuito varia de forma proporcional.</p>
+<h3 id="comentários">Comentários</h3>
 
-<p>Ao tomar nota de alguns pontos de medição, pode-se desenhar um gráfico como na Figura 3, e perceber que os pontos anotados formam uma reta. Isso ocorre pela proporcionalidade entre a variável manipulada, aquela que é ajustada por quem conduz a experiência, e a variável controlada, que é aquela que depende de outro parâmetro do sistema, e que não é manipulada diretamente.</p>
+<p>Os comentários são importantes para evidenciar ou explicar trechos de código que não são explícitos, de forma a garantir uma boa compreensão para quem venha a estudar o código.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><em>Figura 3: Grafico $V_{CC}$ x $I$</em></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-leiOhmGrafico-1.png?raw=true" alt="Circuito elétrico do desafio - Interpretação de Circuitos Elétricos" /></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Estão destacados no gráfico três pontos, <strong>A</strong>, <strong>B</strong> e <strong>C</strong>, e pode-se perceber que o ponto <strong>B</strong> está localizado em uma tensão que é o dobro da tensão do ponto <strong>A</strong>, por consequência, a intensidade da corrente produzida também é o dobro. O mesmo ocorre no ponto <strong>C</strong> em relação ao ponto <strong>B</strong>.</p>
-
-<p>A representação matemática para uma reta, é uma equação do primeiro grau, assim a equação que representa a reta do gráfico da Figura 3 pode ser obtida da seguinte forma:</p>
-
-<p>Escolha dois pontos quaisquer da reta, <strong>A</strong> e <strong>B</strong>, <strong>A</strong> e <strong>C</strong>, <strong>B</strong> e <strong>C</strong>, ou ainda algum deles com a origem <strong>(0,0)</strong>.</p>
-
-<p>Pontos escolhidos: <strong>B</strong> e <strong>(0,0)</strong>.</p>
-
-<p>Ao projetar o ponto <strong>B</strong> no eixo da tensão, temos um triângulo retângulo formado pelos pontos: <strong>B</strong>, <strong>(4,0)</strong> e <strong>(0,0)</strong>.</p>
-
-<p>Utilizando a relação $\frac{\Delta I}{\Delta V}$, temos o coeficiente algular da reta $G$.</p>
-
-\[\begin{eqnarray}
-  \frac{\Delta I}{\Delta V} &amp; = &amp; G \nonumber \\
-  \Delta I &amp; = &amp; G .\Delta V \nonumber \\
-  I - I_0 &amp; = &amp; G . (V - V_0)
-\end{eqnarray}\]
-
-<p>Como a origem foi escolhida como um dos pontos do triângulo, o $\Delta I$ será o próprio valor no ponto $B$, ou seja, $I_0$ e $V_0$ valem $0$.</p>
-
-<p>\(\begin{eqnarray}
-  \label{eqn:leiOhmG}
-  I &amp; = &amp; G . V
-\end{eqnarray}\)
-Analogamente à <a href="https://www.todamateria.com.br/equacao-da-reta/">equação da reta</a> $f(x) = ax + b$ temos que:</p>
+<p>Em linguagem C os comentátios podem ser feitos em <code class="language-plaintext highlighter-rouge">blocos</code> ou em <code class="language-plaintext highlighter-rouge">linha</code>:</p>
 
 <ul>
-  <li>
-    <p>$I$ é o resultado da função, é a variável dependente pois varia em função da variável independete;</p>
-  </li>
-  <li>
-    <p>$V$ é a variável independente, é manipulada por quem conduz o experimento, ajustando o valor da fonte para um valor desejado;</p>
-  </li>
-  <li>
-    <p>$G$ é coeficiente angular, valor que exprime o quanto a reta está inclinada.</p>
-  </li>
+  <li>Bloco: tem como delimitador inicial <code class="language-plaintext highlighter-rouge">/*</code> e o final <code class="language-plaintext highlighter-rouge">*/</code>. Todo o conteúdo entre os delimitadores não são considerados pelo compilador, sendo úteis apenas para os programadores.</li>
+  <li>Linha: a marcação <code class="language-plaintext highlighter-rouge">//</code> indica que todo o conteúdo à direita até o fim da linha é comentário, e da mesma forma não é considerado pelo compilador.</li>
 </ul>
 
-<p>O coeficiente angular <strong>G</strong> mostra que, para um ânglo de inclinação pequeno, uma variação de tensão alta produz uma variação de corrente é pequena, ou seja, a condução é ruim. Com um ângulo de inclinação grande, uma variação de tensão pequena produz uma grande variação de corrente, ou seja, uma ótima condução.</p>
+<p>Uma das informações que considero ser útil é mostrar quais pinos são usados e em qual aplicação, conforme segue:</p>
 
-<p>O coeficiente angular <strong>G</strong> é denominado como <em>condutância</em>, e sua unidade é o <em>Siemens[S]</em>.</p>
+<pre><code class="language-C"> /*
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD0     |19     | LED
+*/
+</code></pre>
 
-<p>A condutância é o inverso da resistência, ou seja, dois aspectos de um mesmo fenômeno.
-\(\begin{eqnarray}
-  \label{eqn:GinvR}
-  G &amp; = &amp; \frac{1}{R}
-\end{eqnarray}\)</p>
+<h3 id="inclusões-de-bibliotecas">Inclusões de bibliotecas</h3>
 
-<p>Substituindo ($G = \frac{1}{R}$) em ($I = G . V$), temos a <strong>Primeira Lei de OHM</strong>.
-\(\begin{eqnarray}
-  \label{eqn:leiOhmR}
-  I &amp; = &amp; \frac{1}{R} . V
-\end{eqnarray}\)</p>
+<p>O código <code class="language-plaintext highlighter-rouge">#include &lt;xc.h&gt;</code> inclui a biblioteca padrão do compilador XC8 para microcontroladores Microchip, de modo a oferecer funções básicas e as definições ou nomenclaturas dos registradores.</p>
 
-<h2 id="associação-de-resistores-em-série">Associação de Resistores em Série</h2>
+<h3 id="configurações-de-operação-do-uc">Configurações de operação do uC</h3>
 
-<p>Dado um ramo qualquer de um circuito resistivo, sabe-se que todos os elementos nele contidos estão associados em série, pois, aplicada uma diferença de potencial às suas extremidades, a corrente que percorre esse ramo é a mesma em todos os componentes, havendo apenas um caminho entre os nós conectados às extremidades.</p>
+<p>Algumas diretivas de compilação como <code class="language-plaintext highlighter-rouge">#pragma config</code> possibilitam o acesso exclusivo a alguns periféricos apenas durante a programação, entre eles temos as seguintes configurações básicas:</p>
 
-<p>Ao aplicar uma diferença de pontencial não nula entre os nós $A$ e $B$, haverá uma corrente elétrica entre esses pontos. O valor da intensidade dessa corrente depende, além da própria tensão, da resistência que o ramo apresenta, como diz a 1ª Lei de Ohm.</p>
+<pre><code class="language-C">#pragma config FOSC  = INTRC_NOCLKOUT   // Fonte de clock: oscilador interno
+#pragma config WDTE  = OFF              // Desabilita WatchDog Timer 
+#pragma config MCLRE = OFF              // Desab. Master Clear via pino
+#pragma config LVP   = OFF              // Desab. gravação em baixa tensão
+</code></pre>
 
-<p>Todo elemento inserido em série no ramo, acrescenta resistência a ele.
-Todo ramo com mais do que um resistor, pode ser substituído por um ramo equivalente, sem que haja mudança dos parâmetros elétricos do circuito, desde que não se altere a resistência equivalente do ramo, como mostrado na Figura 4.</p>
+<p>Um destaque para a primeira linha em que o registrador <code class="language-plaintext highlighter-rouge">FOSC</code> é configurado para o oscilador interno. Por uma questão de simplificação de montagem inicial do circuito, optou-se por tal configuração por não necessitar de um cristal oscilador e seus capacitores conectados externamente.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><em>Figura 4: Ramo entre nós $A$ e $B$</em></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-rSerie-1.png?raw=true" alt="Ramo entre nós" /></td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="definições">Definições</h3>
 
-<p>A Figura 4(a) mostra o ramo com dois resistores, que formam a resistência total do ramo, que é ilustrado na Figura 4(b) com a resistência equivalente.
-Pode-se representar a resistência equivalente em um ramo da seguinte forma:
-\(\begin{eqnarray}
-R_1 + R_2 = R_{eq}
-\end{eqnarray}\)
-Para uma quantidade de resistores no ramo maior do que dois, a resistência equivalente é calculada da mesma forma:
-\(\begin{eqnarray}
-R_1 + R_2 + ... + R_n = R_{eq}
-\end{eqnarray}\)</p>
+<p>A definição <code class="language-plaintext highlighter-rouge">_XTAL_FREQ</code> deve assumir o valor do oscilador que estiver sendo utilizado na configuração, neste caso, o oscilador interno com o valor padrão é 4MHz.</p>
 
-<h2 id="associação-de-resistores-em-paralelo">Associação de Resistores em Paralelo</h2>
+<pre><code class="language-C">#define _XTAL_FREQ     4000000
+</code></pre>
 
-<p>A intensidade da corrente que circula em um ramo, depende da tensão aplicada aos seus nós e da resistência total do ramo. Assim, para o circuito da Figura 5(a) a corrente total depende apenas do valor de $V_{CC}$ e $R_1$. Não havendo mudanças nesses valores, também não haverá mudança no valor da intensidade de corrente, denotada $I_T$. A intensidade da corrente que flui da fonte é a mesma que atravessa a carga, com uma certa resistência e condutância.</p>
+<h3 id="programa-principal">Programa principal</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><em>Figura 5: Circuito em paralelo</em></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-paralelo-1.png?raw=true" alt="Circuito em paralelo" /></td>
-    </tr>
-  </tbody>
-</table>
+<p>Todo programa em linguagem C deve possuir uma função principal, cujo nome é obrigatório <code class="language-plaintext highlighter-rouge">main</code>. 
+As demais funções devem possuir nomes de acordo com a tarefa que executam, mas são de total responsabilidade do programador.</p>
 
-<p>Ao inserir outro ramo ao circuito, como mostrado na Figura 5(b), a intensidade da corrente no ramo de $R_1$ não é alterado, pois a tensão entre os pontos $A$ e $B$ não muda, bem como seu valor ôhmico, porém, a intensidade total da corrente muda, pois há agora um novo caminho, um novo ramo para circulação da corrente.</p>
+<p>Como no microcontrolador não há um sistema operacional para invocar a execução do programa, a função principal não necessita de um retorno, bem como não possui argumentos de entrada.</p>
 
-<p>A mudança do circuito (a) para o (b), produz um novo caminho para a circulação da corrente. Pode-se dizer então que com a inclusão do novo ramo, conectado aos mesmos pontos do ramo já existente, há uma maior facilidade para a corrente fluir, pois agora são dois caminhos, aumentando a condutância entre os nós.</p>
+<pre><code class="language-C">void main(void)
+{                               // Início do bloco da função main.
 
-<p>Pode-se obter a condutância total do circuito paralelo somando as condutâncias dos ramos, da seguinte forma:
-\(\begin{eqnarray}
-  G_T &amp; = &amp; G_{R_1} + G_{R_2}
-\label{eqn:GT}
-\end{eqnarray}\)
-A forma mais comum é trabalhar com a resistência e não a condutância, então,
-substituindo a condutância pelo inverso da resistência pode-se obter a resistência total:
-\(\begin{eqnarray}
-  \frac{1}{R_T}	&amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
-	\nonumber\\
-	R_T &amp; = &amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} }
-	\label{eq:paralelo}
-\end{eqnarray}\)</p>
+    return;                     // Caracteriza main como uma função sem retorno.
+}                               // Fim do bloco da função main.
+</code></pre>
 
-<p>Da mesma forma pode-se aplicar para circuitos com varios ramos em paralelo, basta somar as condutâncias:
-\(\begin{eqnarray}
-	G_T &amp; = &amp; G_1 + G_2 + ... + G_n
-\end{eqnarray}\)
-Analogamente para a resistência total temos:
-\(\begin{eqnarray}
-	\label{eq:nrparalelo}
-	R_T &amp; = &amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n} }
-\end{eqnarray}\)</p>
+<h3 id="parametrizar-habilitar-e-inicializar">Parametrizar, habilitar e inicializar</h3>
 
-<h3 id="associação-em-paralelo---apenas-2-resistores">Associação em Paralelo - Apenas 2 resistores</h3>
+<p>A estrutura básica do programa para o microcontrolador(<em>firmware</em>) consiste em dois blocos de código, sendo o primeiro para a configuração e o segundo para o programa.</p>
 
-<p>O cálculo de resistores em paralelo pode ser realizado manipulando a Equação da associação em paralelo da seguinte forma:
-\(\begin{eqnarray}
-	G_{eq} &amp; = &amp; G_{R_1} + G_{R_2} \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}}	&amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}}	&amp; = &amp; \frac{R_1 + R_2}{R_1.R_2} \nonumber\\
-	\nonumber\\
-	R_{eq}	&amp; = &amp; \frac{R_1.R_2}{R_1 + R_2} \nonumber
-\end{eqnarray}\)
-<strong>Atenção!</strong> Essa forma só é válida para a associação de dois resistôres.</p>
+<p>O bloco de configuração consiste em parametrizar, habilitar e/ou inicializar os periféricos e dados utilizados no programa.</p>
 
-<h3 id="associação-resistores-em-paralelo---todos-iguais">Associação resistores em paralelo - Todos iguais</h3>
+<p>O bloco para o programa consiste no código que normalmente é executado de forma repetida enquanto o sistema estiver em execução, ou seja, enquanto o microcontrolador estiver ligado.</p>
 
-<p>Outra forma particular para calcular resistência equivalente é quanto os resistores em paralelo são <strong>todos</strong> de mesmo valor, então o cálculo pode ser realizado manipulado a Equação da condutância equivalente da seguinte forma:</p>
+<p>O programa aqui apresentado utiliza o pino D0 do PORTD do microcontrolador por ser o PORT mais fácil de trabalhar.</p>
 
-<p><em>Dados os seguintes resistores em paralelo e nomeados sequencialmente: $R_1$ = $R_2$ = … = $R_n$.</em>
-\(\begin{eqnarray}
-	G_{eq} &amp; = &amp; G_1 + G_2 + ... + G_n \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}} &amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}} &amp; = &amp; n.\frac{1}{R} \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}} &amp; = &amp; \frac{n}{R} \nonumber\\
-	\nonumber\\
-	\frac{R_{eq}}{1} &amp; = &amp; \frac{R}{n} \nonumber\\
-	\nonumber\\
-	R_{eq} &amp; = &amp; \frac{R}{n}
-\end{eqnarray}\)
-Atenção! Essa forma só é válida para a associação de resistôres iguais.</p>
+<blockquote>
+  <blockquote>
+    <p>Como esse pino é parametrizado, habilitado e inicializado?</p>
+  </blockquote>
+</blockquote>
 
-<h2 id="leis-de-kirchhoff">Leis de Kirchhoff</h2>
+<blockquote>
+  <blockquote>
+    <p>Como configurar o pino como saída?</p>
+  </blockquote>
+</blockquote>
 
-<p>A <strong>primeira lei de Kirchhoff</strong> fala sobre as correntes em um nó, por isso é comum ser chamada de <strong>lei dos nós</strong>, enquanto que a <strong>segunda lei de Kirchhoff</strong> fala sobre as tensões em uma malha, sendo assim a <strong>lei das malhas</strong>.</p>
+<h4 id="registradores">Registradores</h4>
 
-<h3 id="1ª-lei-de-kirchhoff">1ª Lei de Kirchhoff</h3>
+<p>Todos os pinos possuem ao menos um circuito específico a eles conectados para realizar as funções as quais foram planejadas, entre elas, entrada digital, saída digital, contadores, comunicação, leitura de sinal analógico, etc.</p>
 
-<p><strong>A soma das correntes em um nó é igual a zero.</strong></p>
+<p>Todos os periféricos, como circuitos, são configurados por sinais elétricos em portas específicas, e tais sinais podem ser acessados através do mapeamento desses sinais em um conjunto de registradores específico denominados <strong>Registradores de Funções Especiais</strong> (<em>SFR - Special Function Register</em>).</p>
+
+<p>A Figura 2 mostra o mapa de registradores do PIC16F887 e pode ser acessada na página 25 do seu <a href="http://ww1.microchip.com/downloads/en/devicedoc/41291d.pdf"><em>datasheet</em></a>.</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><em>Figura 6: Circuito em paralelo</em></th>
+      <th style="text-align: center">Figura 2: Mapa dos Registradores de Funções Especiais (<em>SFR</em>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-noSupInf-1.png?raw=true" alt="Circuito em paralelo" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/sfr-PIC16F886-7.png" alt="SFR" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
     </tr>
   </tbody>
 </table>
 
-<p>A Figura 6 mostra o sentido convencional da corrente nos dois nós do circuito.</p>
+<p>Em destaque estão os registradores <code class="language-plaintext highlighter-rouge">PORTD</code> e <code class="language-plaintext highlighter-rouge">TRISD</code>, que são os responsáveis pela configuração e manipulação dos pinos conectados ao PORTD, inclusive o pino <code class="language-plaintext highlighter-rouge">D0</code> em que está conectado o ramo do circuito com o LED.</p>
 
-<p>Tendo um nó como referência, adota-se uma convenção para o sentido da corrente. Assim, a corrente que chega ao nó é anotada como positiva e a corrente que sai é negativa. O oposto também pode ser adotado.</p>
-
-<p>Escrevendo, pela definição, a equação para o nó $A$ temos:
-\(\begin{eqnarray}
-\label{eq:1kirchhoff}
-(+I_T) + (-I_1) + (-I_2) &amp; = &amp; 0\\
-I_T - I_1 - I_2 &amp; = &amp; 0 \nonumber\\
-I_T = I_1 + I_2
-\end{eqnarray}\)
-Da mesma forma para o nó $B$:
-\(\begin{eqnarray}
-(-I_T) + (+I_1) + (+I_2) &amp; = &amp; 0 \nonumber\\
-I_1 + I_2 &amp; = &amp; I_T \nonumber
-\end{eqnarray}\)</p>
-
-<h3 id="2ª-lei-de-kirchhoff">2ª Lei de Kirchhoff</h3>
-
-<p>A Figura 7 mostra os dois ramos que formam o circuito em série.
-A limitação dos ramos são os nós $A$ e $B$, cuja diferença de potencial é proporcionada pelo ramo da fonte, tensão gerada. Essa diferença de potencial, é aplicada ao ramo que contém os resistores, $R_1$ e $R_2$, que dividem essa tensão em valores parciais, denominados de queda de tensão.</p>
+<p>A Figura 3 mostra a representação do registrador PORTD utilizado para ler ou escrever um nível lógico no pino 19 ou RD0 do microcontrolador.</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><em>Figura 7: Circuito em Série</em></th>
+      <th style="text-align: center">Figura 3: Registrador PORTD</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-malha-1.png?raw=true" alt="Circuito em paralelo" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/portdreg.png" alt="PORTDreg" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
     </tr>
   </tbody>
 </table>
 
-<p>A segunda lei de Kirchhoff diz que: <strong>A soma das tensões (ou quedas de tensão) em uma malha é igual a zero</strong>.</p>
+<p>O PORTD possui 8 bits acessíveis individualmente e independentes, como indicado pelo <code class="language-plaintext highlighter-rouge">R/W</code> acima do nome de cada bit. 
+O <code class="language-plaintext highlighter-rouge">-x</code> significa que o valor de <em>reset</em> é desconecido, podendo ser 0 ou 1, mas nã é possível afirmar qual valor que estará cada bit ao ligar ou religar o microcontrolador.</p>
 
-<p>Adotando um ponto como referencia de partida, por exemplo o ponto $A$, percorre-se no sentido da corrente, por todo circuito até retornar ao ponto de partida. Ao encontrar uma indicação de tensão no mesmo sentido, adota-o como valor positivo, e no sentido contrário, adota-o como negativo.</p>
+<p>Ao <em>setar</em> qualquer um dos bits do registrador com a instrução <code class="language-plaintext highlighter-rouge">PORTDbits.RDn = 1;</code> sendo <code class="language-plaintext highlighter-rouge">n</code> o número do bit que se está manipilando, o respectivo pino assume a tensão de alimentação do chip, +5V.</p>
 
-<p>Assim, pode-se representar a equação da malha pela definição da seguinte forma:
-\(\begin{eqnarray}
-	(-V_{R1}) + (-V_{R2}) + (V_{CC})  &amp; = &amp; 0 \\
-	-V_{R1} - V_{R2} + V_{CC} &amp; = &amp; 0 \nonumber\\
-	 V_{CC} &amp; = &amp; V_{R1} + V_{R2}
-\end{eqnarray}\)</p>
+<p>Ao <em>resetar</em> qualquer um dos bits do registrador com a instrução <code class="language-plaintext highlighter-rouge">PORTDbits.RDn = 0;</code> sendo <code class="language-plaintext highlighter-rouge">n</code> o número do bit que se está manipilando, o respectivo pino assume o valor de 0V.</p>
 
-<p>Sabemos que em um ramo cada resistor apresenta uma parcela proporcional da resistência total, pois a soma dessas parcelas é a própria resistência total.
-\(\begin{eqnarray}
-R_1 + R_2 = R_{T_{ramo}}
-\end{eqnarray}\)
-Temos que $R_{T_{ramo}}$ é a resistência total do ramo e é formada por duas partes, $R_1$ e $R_2$, somados. Assim cada resistor é uma parte da resistência total do ramo, um parte do todo.</p>
+<p>Para realizar a leitura do pino, pode-se utilizar o seguinte comando: <code class="language-plaintext highlighter-rouge">var = PORTDbits.RDn;</code>, sendo <code class="language-plaintext highlighter-rouge">n</code> o número do bit acessado e <code class="language-plaintext highlighter-rouge">var</code> a variável que recebe o estado do pino acessado.</p>
 
-<p>Sabemos que a parte dividida pelo todo é uma relação de proporcionalidade e que a queda de tensão em cada resistor do ramo é proporcional a sua resistência em relação a resistência total, assim temos que:
-\(\begin{eqnarray}
-\frac{R_1}{R_2+R_1} &amp; = &amp; \frac{V_{R1}}{V_{R2}+V_{R1}}\\
-\nonumber\\
-V_{AB} &amp; = &amp; V_{R1} + V_{R2} \\
-\nonumber\\
-\frac{R_1}{R_2+R_1} &amp; = &amp; \frac{V_{R1}}{V_{AB}}
-\end{eqnarray}\)
-Isolando-se $V_{R1}$  temos:
-\(\begin{eqnarray}
-V_{R1} &amp; = &amp; \frac{R_1}{R_2 + R_1} . V_{AB}
-\end{eqnarray}\)
-Iguanlmente para $V_{R2}$:
-\(\begin{eqnarray}
-V_{R2} &amp; = &amp; \frac{R_2}{R_2 + R_1} . V_{AB}
-\end{eqnarray}\)</p>
+<p>Os dois estados lógicos são representados com os valores booleanos 0 e 1 e tais estados são assumidos quando a tensão no pino está dentro de um determinado intervalo de tensao:</p>
+<ul>
+  <li>2,0V &lt; Nível Lógico Alto &lt; 5.0V</li>
+  <li>0,0V &lt; Nível Lógico Baixo &lt; 0,8V</li>
+</ul>
 
-<h2 id="atividades">Atividades</h2>
+<p>Note que para o intervalo entre 0,8 e 2,0, não há um estado bem definido, assim não é possível garantir para qual estado lógico será interpretada a leitura do pino.</p>
 
-<p>Calcular a resistência equivatente total dos circuitos.</p>
+<p>A Figura 4 mostra a representação do registrador TRISD utilizado para configura o pino como entrada ou saída de dados no pino 19 ou RD0 do microcontrolador.</p>
 
-<h3 id="circuito-1">Circuito 1</h3>
-<p>Dados:
-$R_1 = 1k2\Omega$,
-$R_2 = 300\Omega$ e
-$R_3 = 120\Omega$.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 4: Registrador TRISD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/trisdreg.png" alt="TRISDreg" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 57</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ1-1.png?raw=true" alt="Atividade 1" /></p>
+<p>O TRISD possui 8 bits acessíveis individualmente e independentes, como indicado pelo <code class="language-plaintext highlighter-rouge">R/W</code> acima do nome de cada bit. 
+O <code class="language-plaintext highlighter-rouge">-1</code> significa que o valor de <em>reset</em> é <code class="language-plaintext highlighter-rouge">1</code>, ou seja, todos os pinos são inicializados como entrada.</p>
 
-<h3 id="circuito-2">Circuito 2</h3>
-<p>Dados:
-$R_1 = 2k7\Omega$,
-$R_2 = 24k\Omega$,
-$R_3 = 3k3\Omega$ e
-$R_4 = 200\Omega$.</p>
+<p>Um pino do PORTD pode ser configurado como entrada de dados com a seguinte instrução: <code class="language-plaintext highlighter-rouge">TRISDbits.TRISDn = 1;</code>, onde <code class="language-plaintext highlighter-rouge">n</code> é o número do bit que está se configurando.</p>
 
-<p><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ2-1.png?raw=true" alt="Atividade 2" /></p>
+<p>Para a configuração do pino como saída pode-se utilizar o seguinte comando: <code class="language-plaintext highlighter-rouge">TRISDbits.TRISDn = 0;</code>.</p>
 
-<h3 id="circuito-3">Circuito 3</h3>
-<p>Dados:
-$R_1 = 100\Omega$,
-$R_2 = 100\Omega$,
-$R_3 = 100\Omega$,
-$R_4 = 300\Omega$,
-$R_5 = 200\Omega$,
-$R_6 = 100\Omega$, e
-$R_7 = 100\Omega$.</p>
+<p>Tais registradores são um mapeamento do circuito da Figura 5, conforme segue.</p>
 
-<p><img src="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ3-1.png?raw=true" alt="Atividade 3" /></p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 5: Diagrama dos pinos RD&lt;4:0&gt;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/portD4-0_diagrama.png" alt="DiagramaRD0-4" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="download">Download</h2>
+<p>Note que as ações de escrita e leitura de determinados registradores produz um sinal de controle no circuito do respectivo pino. O terminal <code class="language-plaintext highlighter-rouge">WR PORTD</code> é acionado quando a ação de escrita no PORTD ocorre. O mesmo ocorre para <code class="language-plaintext highlighter-rouge">WR TRISD</code>. Para a ação de leitura do registrador, é gerado um sinal de acionamento em <code class="language-plaintext highlighter-rouge">RD TRISD</code> ou <code class="language-plaintext highlighter-rouge">RD PORTD</code>, respectivamente.</p>
 
-<p><a href="https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/pdf/aula-ele-calcReq-1LeiOhm.pdf?raw=true">Nota de aula em PDF</a></p>
+<p>Os comandos de escrita acionam biestáveis (<em>flip-flops</em>) para armazenar a configuração ou o último dado escrito no pino. Para a leitura há apenas <em>buffers</em> de acesso ao dado do pino mediante os sinais de controle.</p>
+
+<p>As instruções de inicialização e configuração são apresentados abaixo e cada linha está ilustrada nas Figuras 6 e 7 em seguida:</p>
+
+<pre><code class="language-C">    PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
+    TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
+</code></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 6: Diagrama dos pinos RD0-4</th>
+      <th style="text-align: center">Figura 7: Diagrama dos pinos RD0-4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/portD0_0.png" alt="PORTD0-0" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/P0101-blinkLED/blob/master/img/trisd0_0.png" alt="TRISD0-0" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
+      <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ao-infinito-e-além">Ao infinito e além</h3>
+<p>A condição mais comum é que o programa fique sendo executado de forma repetida durante todo o período em que o microcontrolador estiver ligado, assim utiliza-se um laço de repetição com uma condição que é verdadeira sempre.</p>
+
+<pre><code class="language-C">    while( 1 )                  // Laço de repetição infinito.
+    {                           // Inicio do laço de repetição.
+    }                           // Fim do laço de repetição.
+</code></pre>
+
+<p>Note que em linguagem C, para uma variável numérica, todo valor diferente de zero possui o estado lógico 1 (verdadeiro), enquanto que apenas o zero possui o estado lógico 0 (falso).</p>
+
+<p>Após a configuração do pino, sua inicialização, dentro do loop infinito a sequência de passos que atende o objetivo proposto.</p>
+
+<ol>
+  <li>Acionar RD0, ligando o LED;</li>
+  <li>Produzir um atraso de 500ms;</li>
+  <li>Desacionar RD0, desligando o LED;</li>
+  <li>Produzir um atraso de 500ms.</li>
+</ol>
+
+<p>Codificando esses passos temos:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>      <span class="c1">// Liga RD0.</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>        <span class="c1">// Espera 500 ms.</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>      <span class="c1">// Desliga RD0.</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>        <span class="c1">// Espera 500 ms.</span>
+</code></pre></div></div>
+
+<p>Os quatro passos completam o ciclo de acionamento do LED, e então este ciclo se repete em função do laço a qual ele está inserido.</p>
+
+<p>Garantindo assim a correta execução e atendendo ao objetivo inicial de acionar o LED de forma intermitente com frequẽncia de 1Hz, ou seja, 500ms ligado e o mesmo tempo desligado.</p>
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">warning</h4>
+This is a warning
+</div>
+
+<div class="alert alert-danger" role="alert">
+<h4 class="alert-heading">danger</h4>
+This alerts danger!
+</div>
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">success</h4>
+This alerts success
+</div>
+
+<div class="alert alert-info" role="alert">
+<h4 class="alert-heading">info</h4>
+This is useful information.
+</div>
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">primary</h4>
+This is a primary alert
+</div>
+
+<div class="alert alert-secondary" role="alert">
+<h4 class="alert-heading">secondary</h4>
+This is a secondary alert
+</div>
 
 
 <script

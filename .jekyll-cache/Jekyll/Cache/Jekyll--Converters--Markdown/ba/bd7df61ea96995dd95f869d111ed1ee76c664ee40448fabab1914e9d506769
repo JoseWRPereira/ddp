@@ -1,7 +1,12 @@
-I"�<h1 id="índice-de-artigos">Índice de Artigos</h1>
+I"m<h1 id="índice-de-artigos">Índice de Artigos</h1>
 
 <h2 class="c-archives__year" id="2020-ref">2020</h2>
 <ul class="c-archives__list">
+<li class="c-archives__item">
+  20-07-16: <a href="/ddp/2020/P0101-blinkLED/">P0101 - Pisca LED</a>
+  </li>
+
+
 <li class="c-archives__item">
   20-06-23: <a href="/ddp/2020/uri1010py_calculoSimples/">URI1010 - Entrada de múltiplas variáveis por linha</a>
   </li>
@@ -110,6 +115,11 @@
 
 <li class="c-archives__item">
   17-05-15: <a href="/ddp/2017/doente-de-cidade/">Doente de cidade</a>
+  </li>
+
+
+<li class="c-archives__item">
+  17-05-07: <a href="/ddp/2017/jogador-n1/">Jogador nº 1</a>
   </li>
 
 
