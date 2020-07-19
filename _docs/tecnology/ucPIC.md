@@ -19,7 +19,7 @@ Para alcançar um bom nível ou excelência em uma habilidade, ela precisa ser l
 O **objetivo é resolver os problemas**, mas no caminho, **apreciar o aprendizado** de linguagens de programação e da interface com o mundo físico.
 
 ## C
-* [P0101 - Blink LED]({{site.baseurl}}/2020/P0101-blinkLED)
+* [P0101 - Pisca LED]({{site.baseurl}}/2020/P0101-piscaLED)
 
 
 [Voltar]({{site.baseurl}}/docs/tecnologia)

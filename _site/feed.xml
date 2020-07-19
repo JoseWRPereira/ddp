@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-16T23:04:11-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0101 - Blink LED</title><link href="http://localhost:4000/ddp/2020/P0101-blinkLED/" rel="alternate" type="text/html" title="P0101 - Blink LED" /><published>2020-07-16T21:43:21-03:00</published><updated>2020-07-16T21:43:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0101-blinkLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0101-blinkLED/">&lt;h1 id=&quot;pisca-led&quot;&gt;Pisca LED&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-19T00:19:13-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0101 - Pisca LED</title><link href="http://localhost:4000/ddp/2020/P0101-piscaLED/" rel="alternate" type="text/html" title="P0101 - Pisca LED" /><published>2020-07-16T21:43:21-03:00</published><updated>2020-07-16T21:43:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0101-piscaLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0101-piscaLED/">&lt;h1 id=&quot;pisca-led&quot;&gt;Pisca LED&lt;/h1&gt;
 
 &lt;p&gt;Acionar um LED de forma intermitente com frequência de 1Hz.&lt;/p&gt;
 
@@ -16,6 +16,9 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/circuito.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLED.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: Próprio autor&lt;/td&gt;

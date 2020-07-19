@@ -1,4 +1,4 @@
-I"�G<h1 id="pisca-led">Pisca LED</h1>
+I"UF<h1 id="pisca-led">Pisca LED</h1>
 
 <p>Acionar um LED de forma intermitente com frequência de 1Hz.</p>
 
@@ -15,6 +15,9 @@
   <tbody>
     <tr>
       <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/circuito.jpg?raw=true" alt="circuito" /></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLED.gif?raw=true" alt="circuito" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: Próprio autor</td>
@@ -140,17 +143,15 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
 
 <p>O programa aqui apresentado utiliza o pino D0 do PORTD do microcontrolador por ser o PORT mais fácil de trabalhar.</p>
 
-<blockquote>
-  <blockquote>
-    <p>Como esse pino é parametrizado, habilitado e inicializado?</p>
-  </blockquote>
-</blockquote>
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Como esse pino é parametrizado, habilitado e inicializado?</h4>
 
-<blockquote>
-  <blockquote>
-    <p>Como configurar o pino como saída?</p>
-  </blockquote>
-</blockquote>
+</div>
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Como configurar o pino como saída?</h4>
+
+</div>
 
 <h4 id="registradores">Registradores</h4>
 
@@ -168,10 +169,7 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="/_posts/tUcPIC/imgP0101/sfr-PIC16F886-7.png" alt="SFR" /></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/circuito.jpg?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/sfr-PIC16F886-7.png?raw=true" alt="SFR     " /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
@@ -191,7 +189,7 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="/_posts/tUcPIC/imgP0101/portdreg.png?raw=true" alt="PORTDreg" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portdreg.png?raw=true" alt="PORTDreg" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
@@ -226,7 +224,7 @@ O <code class="language-plaintext highlighter-rouge">-x</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="/_posts/tUcPIC/imgP0101/trisdreg.png?raw=true" alt="TRISDreg" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisdreg.png?raw=true" alt="TRISDreg" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 57</td>
@@ -251,7 +249,7 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="/_posts/tUcPIC/imgP0101/portD4-0_diagrama.png?raw=true" alt="DiagramaRD0-4" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD4-0_diagrama.png?raw=true" alt="DiagramaRD0-4" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
@@ -278,12 +276,8 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="/_posts/tUcPIC/imgP0101/portD0_0.png?raw=true" alt="PORTD0-0" /></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><img src="/_posts/tUcPIC/imgP0101/trisd0_0.png?raw=true" alt="TRISD0-0" /></td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD0_0.png?raw=true" alt="PORTD0-0" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisd0_0.png?raw=true" alt="TRISD0-0" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
@@ -323,33 +317,5 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
 
 <p>Garantindo assim a correta execução e atendendo ao objetivo inicial de acionar o LED de forma intermitente com frequẽncia de 1Hz, ou seja, 500ms ligado e o mesmo tempo desligado.</p>
 
-<div class="alert alert-warning" role="alert">
-<h4 class="alert-heading">warning</h4>
-This is a warning
-</div>
-
-<div class="alert alert-danger" role="alert">
-<h4 class="alert-heading">danger</h4>
-This alerts danger!
-</div>
-
-<div class="alert alert-success" role="alert">
-<h4 class="alert-heading">success</h4>
-This alerts success
-</div>
-
-<div class="alert alert-info" role="alert">
-<h4 class="alert-heading">info</h4>
-This is useful information.
-</div>
-
-<div class="alert alert-primary" role="alert">
-<h4 class="alert-heading">primary</h4>
-This is a primary alert
-</div>
-
-<div class="alert alert-secondary" role="alert">
-<h4 class="alert-heading">secondary</h4>
-This is a secondary alert
-</div>
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 :ET
