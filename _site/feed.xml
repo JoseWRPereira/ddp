@@ -1,21 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-19T00:30:25-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-21T20:05:08-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0101 - Pisca LED</title><link href="http://localhost:4000/ddp/2020/P0101-piscaLED/" rel="alternate" type="text/html" title="P0101 - Pisca LED" /><published>2020-07-16T21:43:21-03:00</published><updated>2020-07-16T21:43:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0101-piscaLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0101-piscaLED/">&lt;h1 id=&quot;pisca-led&quot;&gt;Pisca LED&lt;/h1&gt;
+
+&lt;p&gt;Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Hello world&quot;&lt;/code&gt;&lt;/em&gt; ou em português &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Ola mundo&quot;&lt;/code&gt;. Tal prática ocorre pelo fato de que fazer a exibição de uma mensagem na saída padrão, que geralmente é o monitor, ser o programa mínimo funcional que se pode fazer em um programa de computador.&lt;/p&gt;
+
+&lt;p&gt;Em um sistema microcontrolado, o programa equivalente ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Ola mundo&quot;&lt;/code&gt; é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pisca LED&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Assim, o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pisca LED&lt;/code&gt; ou &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Blink LED&lt;/code&gt;&lt;/em&gt; é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (&lt;em&gt;firmware&lt;/em&gt;), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
 
 &lt;p&gt;Acionar um LED de forma intermitente com frequência de 1Hz.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;circuito&quot;&gt;Circuito&lt;/h2&gt;
+&lt;h2 id=&quot;circuito-hardware&quot;&gt;Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O dispositivo responsável por acionar o LED é o microcontrolador(uC), através de um pino configurado como saída. Este pino pode estar fornecendo corrente como fonte (&lt;em&gt;source&lt;/em&gt;) ao ramo ou drenando (&lt;em&gt;sink&lt;/em&gt;) corrente dele.&lt;/p&gt;
+
+&lt;p&gt;As configurações como fonte e dreno são mostradas na Figura 1 respectivamente em (a) e (b).&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Circuito de acionamento do LED&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(a): Ligação de pino como fonte (&lt;em&gt;source&lt;/em&gt;)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(b): Ligação de pino como dreno (&lt;em&gt;sink&lt;/em&gt;)&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLED.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsource.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsink.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: Próprio autor&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: Próprio autor&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O pino do uC possui limitação de corrente, que pode variar a depender do modelo ou fabricante.
+O uC aqui utilizado, PIC16F887, possui corrente máxima de 25mA, conforme indica o seu &lt;a href=&quot;http://ww1.microchip.com/downloads/en/devicedoc/41291d.pdf&quot;&gt;datasheet&lt;/a&gt;, seção &lt;em&gt;17.0 Electrical especifications&lt;/em&gt;, página 241, tanto para fonte quanto para dreno. A corrente máxima combinada para os pinos do PORTA, PORTB e PORTE é de 200mA, assim como os valores somados para os pinos do PORTC e PORTD, em 200mA, tanto para fonte quanto para dreno. Como em ambas as ocasiões a corrente máxima é a mesma, não existe uma predileção por uma configuração de montagem ou outra. Tal predileção ocorre quando a capacidade combinada de uma configuração é maior do que a outra, normalmente drenar corrente é a condição mais comum.&lt;/p&gt;
+
+&lt;p&gt;Para o uC aqui abordado, ambas as formas de ligação possuem as mesmas condições, não havendo diferença em capacidade de condução para o pino como fonte ou dreno.&lt;/p&gt;
+
+&lt;p&gt;A vantagem de utilizar o pino como fonte é trabalhar com uma lógica direta, em que o estado lógico 1(verdadeiro) produz o acionamento do LED, enquanto que na configuração do pino como dreno a lógica de acionamento é invertida, pois o pino em 0(zero) produz o acionamento do LED.&lt;/p&gt;
+
+&lt;h2 id=&quot;programa-firmware&quot;&gt;Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O programa em microcontrolador é denominado &lt;em&gt;firmware&lt;/em&gt;, assim como para computador é denominado &lt;em&gt;software&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Um único arquivo de código fonte (&lt;em&gt;Source Files&lt;/em&gt;) é criado nesse projeto, como pode-se ver na Figura 2, denominado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;Fonte: Próprio autor&lt;/td&gt;
@@ -23,7 +67,9 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;programa-firmware&quot;&gt;Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+&lt;p&gt;É uma boa prática nomear o arquivo fonte com o nome &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; quando ele possuir a função principal do programa, que possui o mesmo nome. Os demais arquivos fonte devem possuir nomes relacionados às funções que eles contém.&lt;/p&gt;
+
+&lt;p&gt;Segue o código fonte para o projeto Pisca LED.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;/*
  * File:   main.c
@@ -73,9 +119,18 @@ void main(void)                 // Função principal = main.
 
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;O programa presente no arquivo fonte &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; possui o seguinte arranjo:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Comentários;&lt;/li&gt;
+  &lt;li&gt;Inclusão de bibliotecas;&lt;/li&gt;
+  &lt;li&gt;Diretivas de compilação;&lt;/li&gt;
+  &lt;li&gt;Definições úteis ao programa;&lt;/li&gt;
+  &lt;li&gt;Programa principal.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&quot;comentários&quot;&gt;Comentários&lt;/h3&gt;
 
-&lt;p&gt;Os comentários são importantes para evidenciar ou explicar trechos de código que não são explícitos, de forma a garantir uma boa compreensão para quem venha a estudar o código.&lt;/p&gt;
+&lt;p&gt;Os comentários são importantes para evidenciar ou explicar trechos de código que não são explícitos, de forma a garantir uma boa compreensão para quem venha a estudar o código, ou ainda evidenciar a identificação do projeto, do autor, informações de versão de interfaces e  compiladores utilizados para criar o projeto, seu objetivo e um mapa simplificado de alocação de pinos.&lt;/p&gt;
 
 &lt;p&gt;Em linguagem C os comentátios podem ser feitos em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blocos&lt;/code&gt; ou em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linha&lt;/code&gt;:&lt;/p&gt;
 
@@ -157,12 +212,12 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
 
 &lt;p&gt;Todos os periféricos, como circuitos, são configurados por sinais elétricos em portas específicas, e tais sinais podem ser acessados através do mapeamento desses sinais em um conjunto de registradores específico denominados &lt;strong&gt;Registradores de Funções Especiais&lt;/strong&gt; (&lt;em&gt;SFR - Special Function Register&lt;/em&gt;).&lt;/p&gt;
 
-&lt;p&gt;A Figura 2 mostra o mapa de registradores do PIC16F887 e pode ser acessada na página 25 do seu &lt;a href=&quot;http://ww1.microchip.com/downloads/en/devicedoc/41291d.pdf&quot;&gt;&lt;em&gt;datasheet&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A Figura 3 mostra o mapa de registradores do PIC16F887 e pode ser acessada na página 25 do seu &lt;a href=&quot;http://ww1.microchip.com/downloads/en/devicedoc/41291d.pdf&quot;&gt;&lt;em&gt;datasheet&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Mapa dos Registradores de Funções Especiais (&lt;em&gt;SFR&lt;/em&gt;)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Mapa dos Registradores de Funções Especiais (&lt;em&gt;SFR&lt;/em&gt;)&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -177,12 +232,12 @@ As demais funções devem possuir nomes de acordo com a tarefa que executam, mas
 
 &lt;p&gt;Em destaque estão os registradores &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRISD&lt;/code&gt;, que são os responsáveis pela configuração e manipulação dos pinos conectados ao PORTD, inclusive o pino &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D0&lt;/code&gt; em que está conectado o ramo do circuito com o LED.&lt;/p&gt;
 
-&lt;p&gt;A Figura 3 mostra a representação do registrador PORTD utilizado para ler ou escrever um nível lógico no pino 19 ou RD0 do microcontrolador.&lt;/p&gt;
+&lt;p&gt;A Figura 4 mostra a representação do registrador PORTD utilizado para ler ou escrever um nível lógico no pino 19 ou RD0 do microcontrolador.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Registrador PORTD&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Registrador PORTD&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -212,12 +267,12 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code
 
 &lt;p&gt;Note que para o intervalo entre 0,8 e 2,0, não há um estado bem definido, assim não é possível garantir para qual estado lógico será interpretada a leitura do pino.&lt;/p&gt;
 
-&lt;p&gt;A Figura 4 mostra a representação do registrador TRISD utilizado para configura o pino como entrada ou saída de dados no pino 19 ou RD0 do microcontrolador.&lt;/p&gt;
+&lt;p&gt;A Figura 5 mostra a representação do registrador TRISD utilizado para configura o pino como entrada ou saída de dados no pino 19 ou RD0 do microcontrolador.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Registrador TRISD&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Registrador TRISD&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -237,12 +292,12 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 
 &lt;p&gt;Para a configuração do pino como saída pode-se utilizar o seguinte comando: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRISDbits.TRISDn = 0;&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Tais registradores são um mapeamento do circuito da Figura 5, conforme segue.&lt;/p&gt;
+&lt;p&gt;Tais registradores são um mapeamento do circuito da Figura 6, conforme segue.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Diagrama dos pinos RD&amp;lt;4:0&amp;gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Diagrama dos pinos RD&amp;lt;4:0&amp;gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -259,7 +314,7 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 
 &lt;p&gt;Os comandos de escrita acionam biestáveis (&lt;em&gt;flip-flops&lt;/em&gt;) para armazenar a configuração ou o último dado escrito no pino. Para a leitura há apenas &lt;em&gt;buffers&lt;/em&gt; de acesso ao dado do pino mediante os sinais de controle.&lt;/p&gt;
 
-&lt;p&gt;As instruções de inicialização e configuração são apresentados abaixo e cada linha está ilustrada nas Figuras 6 e 7 em seguida:&lt;/p&gt;
+&lt;p&gt;As instruções de inicialização e configuração são apresentados abaixo e cada linha está ilustrada nas Figuras 7 e 8 em seguida:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;    PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
     TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
@@ -268,8 +323,8 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Diagrama dos pinos RD0-4&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Diagrama dos pinos RD0-4&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Inicialização do pino RD0-4&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 8: Configuração do RD0-4 como saída&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;

@@ -1,26 +1,44 @@
-I"�E<h1 id="pisca-led">Pisca LED</h1>
+I"!Q<h1 id="pisca-led">Pisca LED</h1>
+
+<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que fazer a exibição de uma mensagem na saída padrão, que geralmente é o monitor, ser o programa mínimo funcional que se pode fazer em um programa de computador.</p>
+
+<p>Em um sistema microcontrolado, o programa equivalente ao <code class="language-plaintext highlighter-rouge">"Ola mundo"</code> é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: <code class="language-plaintext highlighter-rouge">Pisca LED</code>.</p>
+
+<p>Assim, o <code class="language-plaintext highlighter-rouge">Pisca LED</code> ou <em><code class="language-plaintext highlighter-rouge">Blink LED</code></em> é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (<em>firmware</em>), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.</p>
+
+<h2 id="objetivo">Objetivo</h2>
 
 <p>Acionar um LED de forma intermitente com frequência de 1Hz.</p>
 
 <!--more-->
 
-<h2 id="circuito">Circuito</h2>
+<h2 id="circuito-hardware">Circuito (<em>Hardware</em>)</h2>
+
+<p>O dispositivo responsável por acionar o LED é o microcontrolador(uC), através de um pino configurado como saída. Este pino pode estar fornecendo corrente como fonte (<em>source</em>) ao ramo ou drenando (<em>sink</em>) corrente dele.</p>
+
+<p>As configurações como fonte e dreno são mostradas na Figura 1 respectivamente em (a) e (b).</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Figura 1: Circuito de acionamento do LED</th>
+      <th style="text-align: center">Figura 1(a): Configuração de fonte (<em>source</em>)</th>
+      <th style="text-align: center">Figura 1(b): Configuração de dreno (<em>sink</em>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLED.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
     </tr>
     <tr>
+      <td style="text-align: center">Fonte: Próprio autor</td>
       <td style="text-align: center">Fonte: Próprio autor</td>
     </tr>
   </tbody>
 </table>
+
+<p>O pino do uC possui limitação de corrente, que pode variar a depender do modelo ou fabricante.
+O uC aqui utilizado, PIC16F887, possui corrente máxima de 25mA, conforme indica o seu <a href="http://ww1.microchip.com/downloads/en/devicedoc/41291d.pdf">datasheet</a>, seção <em>17.0 Electrical especifications</em>, página 241, tanto para fonte quanto para dreno. A corrente máxima combinada para os pinos do PORTA, PORTB e PORTE é de 200mA, assim como os valores somados para os pinos do PORTC e PORTD, em 200mA, tanto para fonte quanto para dreno. Como em ambas as ocasiões a corrente máxima é a mesma, não existe uma predileção por uma configuração de montagem ou outra. Tal predileção ocorre quando a capacidade combinada de uma configuração é maior do que a aoutra, normalmente drenar corrente é a condição mais comum.</p>
 
 <h2 id="programa-firmware">Programa (<em>Firmware</em>)</h2>
 

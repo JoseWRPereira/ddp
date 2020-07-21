@@ -1,4 +1,4 @@
-I")<h1 id="postagens">Postagens</h1>
+I"| <h1 id="postagens">Postagens</h1>
 
 <p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
@@ -11,6 +11,14 @@
    <span class="post-date">2020-07-16</span><br />
    <span class="badge badge-danger">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span>
    <h1 id="pisca-led">Pisca LED</h1>
+
+<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que fazer a exibição de uma mensagem na saída padrão, que geralmente é o monitor, ser o programa mínimo funcional que se pode fazer em um programa de computador.</p>
+
+<p>Em um sistema microcontrolado, o programa equivalente ao <code class="language-plaintext highlighter-rouge">"Ola mundo"</code> é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: <code class="language-plaintext highlighter-rouge">Pisca LED</code>.</p>
+
+<p>Assim, o <code class="language-plaintext highlighter-rouge">Pisca LED</code> ou <em><code class="language-plaintext highlighter-rouge">Blink LED</code></em> é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (<em>firmware</em>), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.</p>
+
+<h2 id="objetivo">Objetivo</h2>
 
 <p>Acionar um LED de forma intermitente com frequência de 1Hz.</p>
 
