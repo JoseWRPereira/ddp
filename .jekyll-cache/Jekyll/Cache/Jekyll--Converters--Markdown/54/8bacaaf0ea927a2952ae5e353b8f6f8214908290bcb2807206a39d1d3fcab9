@@ -1,0 +1,40 @@
+I"	<h1 id="salário-com-bônus"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1009">Salário com Bônus</a></h1>
+
+<p>O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.</p>
+
+<p>Assuntos abordados:</p>
+<ul>
+  <li>Cadeia de caracteres.</li>
+</ul>
+
+<!--more-->
+
+<hr />
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">C</h4>
+
+</div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">char</span> <span class="n">nomeVendedor</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+  <span class="kt">double</span> <span class="n">salarioFixo</span><span class="p">,</span> <span class="n">montanteVendas</span><span class="p">;</span>
+
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span>  <span class="n">nomeVendedor</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">salarioFixo</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">montanteVendas</span> <span class="p">);</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">"TOTAL = R$ %.2f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">salarioFixo</span> <span class="o">+</span> <span class="n">montanteVendas</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">15</span> <span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><a href="/ddp/2020/uri1009c">Código detalhado C</a></p>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/progURI">Voltar</a></p>
+:ET

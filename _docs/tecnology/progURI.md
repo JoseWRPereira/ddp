@@ -25,18 +25,10 @@ O **objetivo é resolver os problemas**, mas no caminho, **apreciar o aprendizad
 
 ## Resoluções
 * [URI-1001 Extremamente básico ]({{site.baseurl}}/2020/uri1001)
+* [URI-1002 Área do círculo ]({{site.baseurl}}/2020/uri1002)
+* [URI-1005 Média 1 ]({{site.baseurl}}/2020/uri1005)
+* [URI-1009 Salário com Bônus]({{site.baseurl}}/2020/uri1009)
+* [URI-1010 Cálculo Simples]({{site.baseurl}}/2020/uri1010)
 
-## C
-* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001c)
-* [URI-1002-Variável de dupla precisão]({{site.baseurl}}/2020/uri1002c)
-* [URI-1005-define]({{site.baseurl}}/2020/uri1005c)
-* [URI-1009-Cadeia de Caracteres]({{site.baseurl}}/2020/uri1009c)
-
-
-## Python
-* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001py)
-* [URI-1002-Formatação de casas decimais]({{site.baseurl}}/2020/uri1002py)
-* [URI-1010-Entrada de múltiplas variáveis por linha]({{site.baseurl}}/2020/uri1010py)
-
-
+<hr/>
 [Voltar]({{site.baseurl}}/docs/tecnologia)

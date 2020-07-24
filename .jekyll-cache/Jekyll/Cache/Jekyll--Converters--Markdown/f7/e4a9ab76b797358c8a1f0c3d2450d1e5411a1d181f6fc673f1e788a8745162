@@ -1,0 +1,52 @@
+I"6<h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do círculo</a></h1>
+
+<p>O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>Assuntos abordados:</p>
+<ul>
+  <li>Variáveis do tipo inteiro;</li>
+  <li>Leitura de variáveis;</li>
+  <li>Processamento das variáveis: operações aritméticas;</li>
+  <li>Exibição dos dados;</li>
+</ul>
+
+<!--more-->
+
+<hr />
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">C</h4>
+
+</div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">xis</span><span class="p">;</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
+  <span class="n">xis</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"X = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">xis</span> <span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><a href="/ddp/2020/uri1001c">Código detalhado C</a></p>
+
+<hr />
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Python</h4>
+
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"X = {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span> <span class="n">soma</span> <span class="p">)</span> <span class="p">)</span>
+</code></pre></div></div>
+<p><a href="/ddp/2020/uri1001py">Código detalhado Python</a></p>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/progURI">voltar</a></p>
+:ET

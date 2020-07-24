@@ -1,0 +1,190 @@
+I"r <h1 id="postagens">Postagens</h1>
+
+<p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
+
+<br />
+<hr /><hr />
+
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1001/">URI1001</a></h2>
+   <span class="post-date">2020-07-23</span><br />
+   <span class="badge badge-success">C</span><span class="badge badge-primary">Python</span>
+   <h1 id="extremamente-básico"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001">Extremamente Básico</a></h1>
+
+<p>O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>Assuntos abordados:</p>
+<ul>
+  <li>Variáveis do tipo inteiro;</li>
+  <li>Leitura de variáveis;</li>
+  <li>Processamento das variáveis: operações aritméticas;</li>
+  <li>Exibição dos dados;</li>
+</ul>
+
+
+   
+      <a href="/ddp/2020/uri1001/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/P0101-piscaLED/">P0101 - Pisca LED</a></h2>
+   <span class="post-date">2020-07-16</span><br />
+   <span class="badge badge-danger">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span>
+   <h1 id="pisca-led">Pisca LED</h1>
+
+<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que fazer a exibição de uma mensagem na saída padrão, que geralmente é o monitor, ser o programa mínimo funcional que se pode fazer em um programa de computador.</p>
+
+<p>Em um sistema microcontrolado, o programa equivalente ao <code class="language-plaintext highlighter-rouge">"Ola mundo"</code> é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: <code class="language-plaintext highlighter-rouge">Pisca LED</code>.</p>
+
+<p>Assim, o <code class="language-plaintext highlighter-rouge">Pisca LED</code> ou <em><code class="language-plaintext highlighter-rouge">Blink LED</code></em> é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (<em>firmware</em>), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar um LED de forma intermitente com frequência de 1Hz.</p>
+
+
+   
+      <a href="/ddp/2020/P0101-piscaLED/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1010py/">URI1010 - Entrada de múltiplas variáveis por linha</a></h2>
+   <span class="post-date">2020-06-23</span><br />
+   <span class="badge badge-primary">Python</span>
+   <h1 id="cálculo-simples"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1010">Cálculo Simples</a></h1>
+
+<p>O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).</p>
+
+<p>O problema aqui encontrado é <strong>como fazer a entrada desses três parâmetros por linha?</strong></p>
+
+
+   
+      <a href="/ddp/2020/uri1010py/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1002py/">URI1002 - Formatação de casas decimais</a></h2>
+   <span class="post-date">2020-06-23</span><br />
+   <span class="badge badge-primary">Python</span>
+   <h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do Círculo</a></h1>
+
+<p>O problema solicita que o programa calcule a área de um círculo dado o valor do raio.</p>
+
+<p>Para o cálculo da área é utilizada a seguinte equação: <code class="language-plaintext highlighter-rouge">area = n.raio²</code>.</p>
+
+
+   
+      <a href="/ddp/2020/uri1002py/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1009c/">URI1009 - Cadeia de caracteres</a></h2>
+   <span class="post-date">2020-06-22</span><br />
+   <span class="badge badge-success">C</span>
+   <h1 id="salário-com-bônus"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1009">Salário com Bônus</a></h1>
+
+<p>O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.</p>
+
+
+   
+      <a href="/ddp/2020/uri1009c/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1005c/">URI1005 - define</a></h2>
+   <span class="post-date">2020-06-22</span><br />
+   <span class="badge badge-success">C</span>
+   <h1 id="média-1"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1005">Média 1</a></h1>
+
+<p>O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.</p>
+
+
+   
+      <a href="/ddp/2020/uri1005c/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1002c/">URI1002 - Variável de dupla precisão</a></h2>
+   <span class="post-date">2020-06-22</span><br />
+   <span class="badge badge-success">C</span>
+   <h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do Círculo</a></h1>
+
+<p>O problema solicita que o programa calcule a área de um círculo dado o valor do raio.</p>
+
+<p>Para o cálculo da área é utilizada a seguinte equação: <code class="language-plaintext highlighter-rouge">area = n.raio²</code>.</p>
+
+
+   
+      <a href="/ddp/2020/uri1002c/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1001c/">URI1001 - Entrada e Saída de Dados</a></h2>
+   <span class="post-date">2020-06-13</span><br />
+   <span class="badge badge-success">C</span>
+   <h1 id="extremamente-básico"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001">Extremamente Básico</a></h1>
+
+<p>O problema inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>A primeira dúvida é: <strong>como ler um número digitado pelo usuário e armazená-lo em uma variável?</strong></p>
+
+
+   
+      <a href="/ddp/2020/uri1001c/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1001py/">URI1001 - Entrada e Saída de Dados</a></h2>
+   <span class="post-date">2020-06-13</span><br />
+   <span class="badge badge-primary">Python</span>
+   <h1 id="extremamente-básico"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001">Extremamente Básico</a></h1>
+
+<p>O problema inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>A primeira dúvida é: <strong>como ler um número digitado pelo usuário e armazená-lo em uma variável?</strong></p>
+
+
+   
+      <a href="/ddp/2020/uri1001py/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/aula-ele-calculaReqOhm/">Resistência equivalente total e 1ª Lei de Ohm</a></h2>
+   <span class="post-date">2020-05-26</span><br />
+   <span class="badge badge-danger">SENAI</span><span class="badge badge-secondary">Eletricidade</span><span class="badge badge-secondary">Req</span><span class="badge badge-secondary">1ª Lei de Ohm</span>
+   <h1 id="habilidades-e-competências">Habilidades e Competências</h1>
+<ul>
+  <li>Calcular grandezas elétricas em circuitos elétricos;</li>
+  <li>Calcular a resistência equivalente total de circuitos elétricos.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2020/aula-ele-calculaReqOhm/">leia mais </a>
+   
+   </div>
+   <hr />
+
+
+Quer ver mais? Acesse <a href="/ddp/archive/">artigos</a>.
+</p>
+:ET

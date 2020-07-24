@@ -1,0 +1,37 @@
+I"U<h1 id="aprendendo-com-desafios">Aprendendo com desafios</h1>
+
+<p>A resolução de problemas está contida das competências gerais da <a href="/ddp/docs/#2-pensamento-científico-criativo-e-crítico">BNCC</a> e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.</p>
+
+<p>Para alcançar um bom nível ou excelência em uma habilidade, ela precisa ser lapidada de forma prática, pela repetição, análise e avaliação crítica dos resultados obtidos e também do processo de resolução.</p>
+
+<p>Um ótimo caminho para o desenvolvimento da habilidade em programação é a resolução de desafios, de forma orientada, com complexidade gradativa, utilizando a linguagem de interesse. Para atender essa questão, uma plataforma que avalio como excelente é a <a href="https://www.urionlinejudge.com.br/judge/pt/login/">URI Online Judge</a>.</p>
+
+<p>O objetivo apresentado aqui é registrar as funções, estruturas e elementos ao avançar nos desafios da plataforma para as diferentes linguagens que <strong>vou aprendendo</strong>.</p>
+
+<p>Não há o objetivo de apresentar a resolução de todos os desafios da plataforma, mas sim os novos elementos que vão sendo agregados aos conhecimentos da linguagem.</p>
+
+<p>O <strong>objetivo é resolver os problemas</strong>, mas no caminho, <strong>apreciar o aprendizado</strong> de linguagens de programação.</p>
+
+<h2 id="resoluções">Resoluções</h2>
+<ul>
+  <li><a href="/ddp/2020/uri1001">URI-1001 Extremamente básico </a></li>
+  <li><a href="/ddp/2020/uri1002">URI-1002 Área do círculo </a></li>
+</ul>
+
+<h2 id="c">C</h2>
+<ul>
+  <li><a href="/ddp/2020/uri1002c">URI-1002-Variável de dupla precisão</a></li>
+  <li><a href="/ddp/2020/uri1005c">URI-1005-define</a></li>
+  <li><a href="/ddp/2020/uri1009c">URI-1009-Cadeia de Caracteres</a></li>
+</ul>
+
+<h2 id="python">Python</h2>
+<ul>
+  <li><a href="/ddp/2020/uri1002py">URI-1002-Formatação de casas decimais</a></li>
+  <li><a href="/ddp/2020/uri1010py">URI-1010-Entrada de múltiplas variáveis por linha</a></li>
+</ul>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnologia">Voltar</a></p>
+:ET

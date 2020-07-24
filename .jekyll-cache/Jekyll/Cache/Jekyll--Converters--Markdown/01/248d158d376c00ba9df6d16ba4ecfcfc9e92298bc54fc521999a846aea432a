@@ -1,0 +1,59 @@
+I"�<h1 id="cálculo-simples"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1010">Cálculo Simples</a></h1>
+
+<p>O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).</p>
+
+<p>O problema aqui encontrado é <strong>como fazer a entrada desses três parâmetros por linha?</strong></p>
+
+<!--more-->
+
+<h2 id="entrada-de-dados">Entrada de dados</h2>
+
+<p>Para ler mais do que um valor por linha de <a href="https://pt.stackoverflow.com/questions/230522/entrada-de-n%C3%BAmeros-na-mesma-linha-em-python">entrada de dados</a> pode-se utilizar o método <code class="language-plaintext highlighter-rouge">input().split(" ")</code> sendo  o <code class="language-plaintext highlighter-rouge">" "</code> o caractere que <a href="https://www.deepl.com/translator#en/pt/split">separa em partes</a> a string de entrada.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">codigo1</span><span class="p">,</span><span class="n">qtd1</span><span class="p">,</span><span class="n">valor1</span><span class="o">=</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="n">codigo2</span><span class="p">,</span><span class="n">qtd2</span><span class="p">,</span><span class="n">valor2</span><span class="o">=</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Em python é possível que uma função retorne múltiplos valores, diferente da linguagem C, que só pode retornar apenas um valor por função.</p>
+
+<h2 id="modelamento-dos-dados-de-entrada">Modelamento dos dados de entrada</h2>
+
+<p>Os dados lidos são modelados para os devidos tipos:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">codigo1</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">codigo1</span><span class="p">)</span>
+<span class="n">qtd1</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">qtd1</span><span class="p">)</span>
+<span class="n">valor1</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valor1</span><span class="p">)</span>
+
+<span class="n">codigo2</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">codigo2</span><span class="p">)</span>
+<span class="n">qtd2</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">qtd2</span><span class="p">)</span>
+<span class="n">valor2</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valor2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="saída-de-dedos">Saída de dedos</h2>
+<p>O cálculo é realizado direto no argumento do método <code class="language-plaintext highlighter-rouge">.format()</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"VALOR A PAGAR: R$ {:.2f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">qtd1</span><span class="o">*</span><span class="n">valor1</span><span class="o">+</span><span class="n">qtd2</span><span class="o">*</span><span class="n">valor2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="resolução">Resolução</h2>
+
+<p>Juntando as partes na resolução do desafio temos:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">codigo1</span><span class="p">,</span><span class="n">qtd1</span><span class="p">,</span><span class="n">valor1</span><span class="o">=</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="n">codigo2</span><span class="p">,</span><span class="n">qtd2</span><span class="p">,</span><span class="n">valor2</span><span class="o">=</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+
+<span class="n">codigo1</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">codigo1</span><span class="p">)</span>
+<span class="n">qtd1</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">qtd1</span><span class="p">)</span>
+<span class="n">valor1</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valor1</span><span class="p">)</span>
+
+<span class="n">codigo2</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">codigo2</span><span class="p">)</span>
+<span class="n">qtd2</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">qtd2</span><span class="p">)</span>
+<span class="n">valor2</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valor2</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"VALOR A PAGAR: R$ {:.2f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">qtd1</span><span class="o">*</span><span class="n">valor1</span><span class="o">+</span><span class="n">qtd2</span><span class="o">*</span><span class="n">valor2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><a href="/ddp/2020/uri1010py">Voltar</a></p>
+:ET

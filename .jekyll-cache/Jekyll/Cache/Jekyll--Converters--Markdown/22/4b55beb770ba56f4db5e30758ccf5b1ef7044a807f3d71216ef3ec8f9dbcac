@@ -1,0 +1,38 @@
+I"<h1 id="cálculo-simples"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1010">Cálculo Simples</a></h1>
+
+<p>O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).</p>
+
+<p>Assuntos abordados:</p>
+<ul>
+  <li>Entrada de múltiplas variáveis por linha.</li>
+</ul>
+
+<!--more-->
+
+<hr />
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Python</h4>
+
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">codigo1</span><span class="p">,</span><span class="n">qtd1</span><span class="p">,</span><span class="n">valor1</span><span class="o">=</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+<span class="n">codigo2</span><span class="p">,</span><span class="n">qtd2</span><span class="p">,</span><span class="n">valor2</span><span class="o">=</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+
+<span class="n">codigo1</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">codigo1</span><span class="p">)</span>
+<span class="n">qtd1</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">qtd1</span><span class="p">)</span>
+<span class="n">valor1</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valor1</span><span class="p">)</span>
+
+<span class="n">codigo2</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">codigo2</span><span class="p">)</span>
+<span class="n">qtd2</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">qtd2</span><span class="p">)</span>
+<span class="n">valor2</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">valor2</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"VALOR A PAGAR: R$ {:.2f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">qtd1</span><span class="o">*</span><span class="n">valor1</span><span class="o">+</span><span class="n">qtd2</span><span class="o">*</span><span class="n">valor2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><a href="/ddp/2020/uri1010py">Código detalhado Python</a></p>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/progURI">Voltar</a></p>
+:ET

@@ -1,0 +1,46 @@
+I"�<h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do Círculo</a></h1>
+
+<p>O problema solicita que o programa calcule a área de um círculo dado o valor do raio.</p>
+
+<p>Para o cálculo da área é utilizada a seguinte equação: <code class="language-plaintext highlighter-rouge">area = n.raio²</code>.</p>
+
+<!--more-->
+
+<h2 id="entrada-de-dados">Entrada de dados</h2>
+
+<p>O dado de entrada do programa é o <code class="language-plaintext highlighter-rouge">raio</code>, que é modelado para o tipo <a href="https://www.w3schools.com/python/python_datatypes.asp">float</a>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h2 id="processamento">Processamento</h2>
+
+<p>Então para o processamento da área pode-se utilizar o produto do raio, por ele mesmo e o valor aproximado do PI, que é declarado em <code class="language-plaintext highlighter-rouge">n</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">n</span><span class="o">=</span><span class="mf">3.14159</span>
+<span class="n">area</span><span class="o">=</span><span class="n">n</span><span class="o">*</span><span class="n">raio</span><span class="o">*</span><span class="n">raio</span>
+</code></pre></div></div>
+
+<h2 id="saída-de-dedos">Saída de dedos</h2>
+
+<p><strong>Como formatar a saída para um determinado número de casas decimais?</strong></p>
+
+<p>A saída deve ser apresentada com quatro <a href="https://pt.stackoverflow.com/questions/176243/como-limitar-n%C3%BAmeros-decimais-em-python">casas decimais</a> utilizando <code class="language-plaintext highlighter-rouge">{:.4f}</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"A={:.4f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">area</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="resolução">Resolução</h2>
+
+<p>Juntando as partes na resolução do desafio temos:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">n</span><span class="o">=</span><span class="mf">3.14159</span>
+<span class="n">area</span><span class="o">=</span><span class="n">n</span><span class="o">*</span><span class="n">raio</span><span class="o">*</span><span class="n">raio</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"A={:.4f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">area</span><span class="p">))</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><a href="/ddp/2020/uri1002">Voltar</a></p>
+:ET

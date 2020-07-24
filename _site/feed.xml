@@ -1,21 +1,185 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-23T21:45:39-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">URI1001 - Entrada e Saída de Dados</title><link href="http://localhost:4000/ddp/2020/uri1001/" rel="alternate" type="text/html" title="URI1001 - Entrada e Saída de Dados" /><published>2020-07-23T18:29:21-03:00</published><updated>2020-07-23T18:29:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1001</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1001/">&lt;h1 id=&quot;extremamente-básico&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001&quot;&gt;Extremamente Básico&lt;/a&gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-23T22:35:11-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">URI1010</title><link href="http://localhost:4000/ddp/2020/uri1010/" rel="alternate" type="text/html" title="URI1010" /><published>2020-07-23T19:28:21-03:00</published><updated>2020-07-23T19:28:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1010</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1010/">&lt;h1 id=&quot;cálculo-simples&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1010&quot;&gt;Cálculo Simples&lt;/a&gt;&lt;/h1&gt;
 
-&lt;p&gt;O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.&lt;/p&gt;
+&lt;p&gt;O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).&lt;/p&gt;
 
-&lt;p&gt;O título do desafio reflete a ideia de estrutura de um programa, pois a sua resolução é composta apenas pelas ações básicas: ler, processar e exibir, independente da linguagem que se utilize. O que pode diferir entre as linguagens é a necessidade de que as ações estejam dentro de uma função ou não.&lt;/p&gt;
-
-&lt;p&gt;Para a resolução então é necessário responder três perguntas:&lt;/p&gt;
+&lt;p&gt;Assuntos abordados:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Qual é a estrutura básica do programa?&lt;/li&gt;
-  &lt;li&gt;Como ler um dado do tipo inteiro?&lt;/li&gt;
-  &lt;li&gt;Como realizar operações algébricas básicas?&lt;/li&gt;
-  &lt;li&gt;Como exibir um dado do tipo inteiro?&lt;/li&gt;
+  &lt;li&gt;Entrada de múltiplas variáveis por linha.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;Detalhamento das resoluções para as respectivas linguagens: &lt;a href=&quot;/ddp/2020/uri1001/#c&quot;&gt;C&lt;/a&gt; e &lt;a href=&quot;/ddp/2020/uri1001/#python&quot;&gt;Python&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Python&lt;/h4&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;VALOR A PAGAR: R$ {:.2f}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1010py&quot;&gt;Código detalhado Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Cálculo Simples</summary></entry><entry><title type="html">URI1009</title><link href="http://localhost:4000/ddp/2020/uri1009/" rel="alternate" type="text/html" title="URI1009" /><published>2020-07-23T19:25:21-03:00</published><updated>2020-07-23T19:25:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1009</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1009/">&lt;h1 id=&quot;salário-com-bônus&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1009&quot;&gt;Salário com Bônus&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.&lt;/p&gt;
+
+&lt;p&gt;Assuntos abordados:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cadeia de caracteres.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;C&lt;/h4&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TOTAL = R$ %.2f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1009c&quot;&gt;Código detalhado C&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Salário com Bônus</summary></entry><entry><title type="html">URI1005</title><link href="http://localhost:4000/ddp/2020/uri1005/" rel="alternate" type="text/html" title="URI1005" /><published>2020-07-23T19:20:21-03:00</published><updated>2020-07-23T19:20:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1005</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1005/">&lt;h1 id=&quot;média-1&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1005&quot;&gt;Média 1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.&lt;/p&gt;
+
+&lt;p&gt;Assuntos abordados:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Defines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;C&lt;/h4&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define PESO_A  3.5
+#define PESO_B  7.5
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PESO_A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PESO_B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MEDIA = %.5f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1005c&quot;&gt;Código detalhado C&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Média 1</summary></entry><entry><title type="html">URI1002</title><link href="http://localhost:4000/ddp/2020/uri1002/" rel="alternate" type="text/html" title="URI1002" /><published>2020-07-23T19:10:21-03:00</published><updated>2020-07-23T19:10:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1002</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1002/">&lt;h1 id=&quot;área-do-círculo&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1002&quot;&gt;Área do círculo&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O problema solicita que o programa calcule a área de um círculo dado o valor do raio.&lt;/p&gt;
+
+&lt;p&gt;Para o cálculo da área é utilizada a seguinte equação: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;area = n.raio²&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Assuntos abordados:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Variável de dupla precisão;&lt;/li&gt;
+  &lt;li&gt;Formatação de casas decimais.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;C&lt;/h4&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14159&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A=%.4f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1002c&quot;&gt;Código detalhado C&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Python&lt;/h4&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.14159&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A={:.4f}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1002py&quot;&gt;Código detalhado Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Área do círculo</summary></entry><entry><title type="html">URI1001</title><link href="http://localhost:4000/ddp/2020/uri1001/" rel="alternate" type="text/html" title="URI1001" /><published>2020-07-23T18:29:21-03:00</published><updated>2020-07-23T18:29:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1001</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1001/">&lt;h1 id=&quot;extremamente-básico&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001&quot;&gt;Extremamente Básico&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.&lt;/p&gt;
+
+&lt;p&gt;Assuntos abordados:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Variáveis do tipo inteiro;&lt;/li&gt;
+  &lt;li&gt;Leitura de variáveis;&lt;/li&gt;
+  &lt;li&gt;Processamento das variáveis: operações aritméticas;&lt;/li&gt;
+  &lt;li&gt;Exibição dos dados;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
 
 &lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
 &lt;h4 class=&quot;alert-heading&quot;&gt;C&lt;/h4&gt;
@@ -33,6 +197,9 @@
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1001c&quot;&gt;Código detalhado C&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
 &lt;h4 class=&quot;alert-heading&quot;&gt;Python&lt;/h4&gt;
@@ -44,179 +211,9 @@
 &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = {}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1001py&quot;&gt;Código detalhado Python&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;c&quot;&gt;C&lt;/h1&gt;
-
-&lt;h2 id=&quot;estrutura-básica-de-um-programa-em-c&quot;&gt;Estrutura básica de um programa em C&lt;/h2&gt;
-
-&lt;p&gt;Todo programa em linguagem C é estruturado em &lt;strong&gt;funções&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;função&quot;&gt;Função&lt;/h2&gt;
-
-&lt;p&gt;Uma &lt;strong&gt;função&lt;/strong&gt; é um &lt;strong&gt;conjunto de instruções&lt;/strong&gt;, &lt;strong&gt;ordenadas de forma lógica&lt;/strong&gt;, de modo a &lt;strong&gt;atender um objetivo&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Uma função pode ter argumentos, que são variáveis que recebem dados a serem processados.&lt;/p&gt;
-
-&lt;p&gt;Uma função tem um parâmetro de retorno, que é uma variável com o conteúdo resultante do processo executado.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retorno&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome_da_funcao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argumentos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parametro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parametro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;// Conjunto de instruções&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// ordenadas logicamente&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// para atender o objetivo&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retorno&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As chaves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;}&lt;/code&gt; indicam o início e o fim de um bloco de código, são delimitadores de um trecho de código que estão unidos por uma condição ou função.&lt;/p&gt;
-
-&lt;h2 id=&quot;tipo-de-dados&quot;&gt;Tipo de dados&lt;/h2&gt;
-
-&lt;p&gt;Um dado em computação é um número que é armazenado em um espaço de memória. O tamanho e o formato desse armazenamento definem o tipo de dado.&lt;/p&gt;
-
-&lt;p&gt;Os dados mais comuns em linguagem C são denominados &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;char&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;A unidade básica desses dados é o &lt;strong&gt;bit&lt;/strong&gt;. 
-O agrupamento de &lt;strong&gt;8 bits&lt;/strong&gt; é um &lt;strong&gt;byte&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Em grande parte dos processadores, ao agrupar &lt;strong&gt;4 bytes&lt;/strong&gt;, tem-se uma variável do tipo &lt;strong&gt;int&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Mais detalhes podem ser encontrados em &lt;a href=&quot;https://pt.wikibooks.org/wiki/Programar_em_C/Tipos_de_dados&quot;&gt;wikibooks - Linguagem C&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Quando uma função não possui argumentos, pode-se deixar os parênteses sem declaração alguma ou utilizar a palavra reservada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;void&lt;/code&gt;, que indica que não há parâmetro alí, ou que é vazio.&lt;/p&gt;
-
-&lt;h2 id=&quot;main&quot;&gt;Main&lt;/h2&gt;
-
-&lt;p&gt;Todo programa em linguagem C deve possuir uma função principal, que obrigatoriamente é declarada como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main()&lt;/code&gt;, que denota o início da execução do programa. As demais funções são executadas a partir da função principal, sendo o programador responsável pelo seu nome, mas aconselha-se que faça sentido em relação ao seu objetivo.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;O programa principal aqui declarado não possui argumentos, assim declarado como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;void&lt;/code&gt;. 
-Tipicamente um programa em linguagem C é executado a partir de outro programa, geralmente de um sistema operacional. Ao final da execução o sistema operacional deve receber um dado indicando o &lt;strong&gt;status&lt;/strong&gt; da execução, ou seja, se houve algum erro por exemplo. O valor de retorno 0(zero) indica que a execução ocorreu sem problemas.&lt;/p&gt;
-
-&lt;h2 id=&quot;periféricos&quot;&gt;Periféricos&lt;/h2&gt;
-
-&lt;p&gt;A execução do programa basicamente é realizada através do processador que lê dados nas memórias e manipula-os de acordo com a sequência de instruções do programa, que é armazenada em uma dessas memórias.&lt;/p&gt;
-
-&lt;p&gt;Assim, tudo é leitura, manipulação e escrita de dados. A manipulação de dados envolve operações lógicas, aritméticas e de movimentação de dados.&lt;/p&gt;
-
-&lt;p&gt;Para que um programa possa interagir com um periférico como a tela, o teclado, o mouse, a impressora, a câmera ou qualquer outro, é necessário que esse periférico esteja mapeado em uma região de memória, ou seja, um espaço de memória é reservado para configurar, parametrizar e trocar dados com o periférico.&lt;/p&gt;
-
-&lt;p&gt;Ao inserir um dispositivo novo ao sistema, um novo espaço da memória é mapeado, ou seja, atribuido para a operação desse dispositivo. Alguns dispositivos são denominados de padrão, todo computador tem uma entrada padrão e uma saída padrão, que é o teclado e o monitor, respectivamente.&lt;/p&gt;
-
-&lt;p&gt;Para manipular dados nesses dispositivos padrão, é necessário incluir funções existentes na instalação do compilador no sistema operacional.
-Essas funções estão presentes na biblioteca &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdio.h&lt;/code&gt;: Entradas e Saídas Padrão (&lt;strong&gt;St&lt;/strong&gt;an&lt;strong&gt;d&lt;/strong&gt;ard &lt;strong&gt;I&lt;/strong&gt;nput &lt;strong&gt;O&lt;/strong&gt;utput).&lt;/p&gt;
-
-&lt;h2 id=&quot;stdioh&quot;&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/cstdio/&quot;&gt;stdio.h&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Para incluir uma biblioteca utiliza-se a diretiva &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include&lt;/code&gt;, e entre os símbolos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; o nome da bilioteca contida na instalação do compilador, que deve possuir uma extensão &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.h&lt;/code&gt; para indicar que é o seu cabeçalho (&lt;a href=&quot;https://www.w3schools.in/c-tutorial/c-header-files/&quot;&gt;&lt;em&gt;header&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Os arquivos de inclusão não são os arquivos fonte, mas sim os arquivos de cabeçalho, que possuem as informações necessárias para a chamada das funções presentes nessa biblioteca.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;leitura-e-escrita-de-dados&quot;&gt;&lt;a href=&quot;https://www.w3schools.in/c-tutorial/input-output/&quot;&gt;Leitura e escrita de dados&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;A leitura de dados é feita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scanf()&lt;/code&gt; e a escrita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;printf()&lt;/code&gt;, sendo que ambas utilizam uma quantidade variável de argumentos, mas seu primeiro argumento é um formato de caracteres.&lt;/p&gt;
-
-&lt;h2 id=&quot;o-formato&quot;&gt;&lt;a href=&quot;https://www.w3schools.in/c-tutorial/format-specifiers/&quot;&gt;O formato&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Basicamente se trata de uma &lt;a href=&quot;https://www.w3schools.in/c-tutorial/strings/&quot;&gt;cadeia de caracteres&lt;/a&gt; (&lt;em&gt;string&lt;/em&gt;) que possui uma mensagem a ser enviada à saída padrão, ou como devem ser lidos da entrada padrão.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mensagem de exibicao&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Podendo ser incluida a indicação de variável na posição que ela deve aparecer utilizando o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; e o seu tipo.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exibe a variavel %d &quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Após o formato são incluidas as variáveis que substituem as marcações na string, na ordem em que elas aparecem.&lt;/p&gt;
-
-&lt;h2 id=&quot;scanf&quot;&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/io/fscanf&quot;&gt;scanf()&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Leitura de um dado que é armazenado na &lt;a href=&quot;https://www.w3schools.in/c-tutorial/variables/&quot;&gt;variável&lt;/a&gt; num.&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Leitura de dois dados que são armazenado nas variáveis A e B.&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Ou ainda:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d %d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Os argumentos seguintes ao formato devem ser os &lt;strong&gt;endereços das variáveis&lt;/strong&gt; que vão receber os dados lidos da entrada padrão conforme o formato do primeiro argumento.&lt;/p&gt;
-
-&lt;h2 id=&quot;print&quot;&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/io/fprintf&quot;&gt;print()&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Exibição de dados da variável soma.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = %d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;No lugar da marcação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%d&lt;/code&gt; deve ser inserido o conteúdo da variável soma.&lt;/p&gt;
-
-&lt;p&gt;Todo apresentação de dados na plataforma URI devem possuir um fim de linha, denotado pelo caractere &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt;, equivalente à tecla Enter.&lt;/p&gt;
-
-&lt;h1 id=&quot;python&quot;&gt;Python&lt;/h1&gt;
-
-&lt;p&gt;Utilizando a linguagem Python, a estrutura do programa é bem simplificada se comparada à linguagem C, não necessitando declarar a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt;, e no caso desse desafio inicial, nenhum função é necessária ser declarada, sendo que a execução do programa se dá pelo início do código.&lt;/p&gt;
-
-&lt;p&gt;Python possui alocação dinâmica da memória, ou seja, uma variável pode ser declarada a qualquer momento que ela for utilizada pela primeira vez. O dado que for inserido nela é o que define o tipo de dado. Tudo feito dinamicamente pelo interpretador da linguagem.&lt;/p&gt;
-
-&lt;p&gt;Apesar dessas diferenças, as etapas básicas são as mesmas: leitura, processamento e exibição.&lt;/p&gt;
-
-&lt;h2 id=&quot;leitura-de-dados&quot;&gt;Leitura de dados&lt;/h2&gt;
-&lt;p&gt;Com uma busca rápida no Google, encontrei o a resposta para a leitura de dados em &lt;a href=&quot;https://www.w3schools.com/python/ref_func_input.asp?_blank&quot;&gt;w3schools.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;input&quot;&gt;input()&lt;/h3&gt;
-&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input()&lt;/code&gt; realiza a leitura de uma cadeia de caracteres (string) da entrada padrão (teclado). O resultado lido é atribuído a variável &lt;em&gt;a&lt;/em&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a = input()&lt;/code&gt;. O tipo da variável é definida dinamicamente, ou seja, no momento que é feita a atribuição do dado, este é reconhecido e a variável é declarada com esse mesmo tipo, nesse caso, string.&lt;/p&gt;
-
-&lt;p&gt;Mas é necessário que, após as leituras dos dois valores, seja feita a soma, ou seja, as entradas devem ser números e não cadeias de caracteres (string).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Como converter a string lida em um número do tipo inteiro?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;casting&quot;&gt;Casting&lt;/h3&gt;
-&lt;p&gt;O processo para a conversão entre tipos de dados é chamado de
-&lt;a href=&quot;https://www.w3schools.com/python/python_casting.asp?_blank&quot;&gt;casting&lt;/a&gt;, onde um dado sofre uma &lt;a href=&quot;https://translate.google.com.br/?hl=pt-BR#view=home&amp;amp;op=translate&amp;amp;sl=en&amp;amp;tl=pt&amp;amp;text=casting&quot;&gt;modelagem&lt;/a&gt; do seu tipo original para o tipo desejado.&lt;/p&gt;
-
-&lt;p&gt;Assim, a entrada de dados é feita pela função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input()&lt;/code&gt;, cujo resultado é modelado para o tipo inteiro e por fim atribuído a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;.
-O mesmo ocorre para a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt;. Em seguida a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma&lt;/code&gt; recebe o resultado da operação de &lt;a href=&quot;https://www.w3schools.com/python/python_operators.asp?_blank&quot;&gt;soma&lt;/a&gt; entre elas.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;print-1&quot;&gt;print()&lt;/h2&gt;
-&lt;p&gt;Por fim a apresentação do resultado, que pode ser feita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print()&lt;/code&gt;, mas como inserir uma variável no meio da string?&lt;/p&gt;
-
-&lt;h2 id=&quot;presentation-error&quot;&gt;Presentation Error&lt;/h2&gt;
-&lt;p&gt;Uma primeira forma encontrada foi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma )&lt;/code&gt;, porém a plataforma avaliava com erro de apresentação, &lt;em&gt;Presentation error&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;especulação&quot;&gt;Especulação&lt;/h2&gt;
-&lt;p&gt;Entre devaneios e &lt;strong&gt;especulações&lt;/strong&gt;, imagino que o problema ocorra pela composição de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string + variável&lt;/code&gt; apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\0'&lt;/code&gt;. Exemplo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a=4&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b=5&lt;/code&gt; então &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma=9&lt;/code&gt;. A saída do comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma)&lt;/code&gt;, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça cumprir as exigências, pois o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'0'&lt;/code&gt; não aparece na tela.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cuidado!&lt;/strong&gt; Isso é uma especulação, estou aprendendo python.&lt;/p&gt;
-
-&lt;h2 id=&quot;format&quot;&gt;.format()&lt;/h2&gt;
-&lt;p&gt;Duas outras ótimas fontes de pesquisa são: &lt;a href=&quot;https://pt.stackoverflow.com/questions/225498/formatando-strings-com-format-e&quot;&gt;stack&lt;strong&gt;overflow&lt;/strong&gt;&lt;/a&gt; e a própria documentação da linguagem &lt;a href=&quot;https://docs.python.org/3/library/string.html#custom-string-formatting&quot;&gt;docs.python.org&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Extremamente Básico</summary></entry><entry><title type="html">P0101 - Pisca LED</title><link href="http://localhost:4000/ddp/2020/P0101-piscaLED/" rel="alternate" type="text/html" title="P0101 - Pisca LED" /><published>2020-07-16T21:43:21-03:00</published><updated>2020-07-16T21:43:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0101-piscaLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0101-piscaLED/">&lt;h1 id=&quot;pisca-led&quot;&gt;Pisca LED&lt;/h1&gt;
 
@@ -589,7 +586,7 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 
 &lt;p&gt;Garantindo assim a correta execução e atendendo ao objetivo inicial de acionar o LED de forma intermitente com frequẽncia de 1Hz, ou seja, 500ms ligado e o mesmo tempo desligado.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Pisca LED</summary></entry><entry><title type="html">URI1010 - Entrada de múltiplas variáveis por linha</title><link href="http://localhost:4000/ddp/2020/uri1010py/" rel="alternate" type="text/html" title="URI1010 - Entrada de múltiplas variáveis por linha" /><published>2020-06-23T17:53:21-03:00</published><updated>2020-06-23T17:53:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1010py</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1010py/">&lt;h1 id=&quot;cálculo-simples&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1010&quot;&gt;Cálculo Simples&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Pisca LED</summary></entry><entry><title type="html">URI1010</title><link href="http://localhost:4000/ddp/2020/uri1010py/" rel="alternate" type="text/html" title="URI1010" /><published>2020-06-23T17:53:21-03:00</published><updated>2020-06-23T17:53:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1010py</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1010py/">&lt;h1 id=&quot;cálculo-simples&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1010&quot;&gt;Cálculo Simples&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).&lt;/p&gt;
 
@@ -642,7 +639,11 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 &lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;VALOR A PAGAR: R$ {:.2f}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ProgPy" /><summary type="html">Cálculo Simples</summary></entry><entry><title type="html">URI1002 - Formatação de casas decimais</title><link href="http://localhost:4000/ddp/2020/uri1002py/" rel="alternate" type="text/html" title="URI1002 - Formatação de casas decimais" /><published>2020-06-23T17:20:21-03:00</published><updated>2020-06-23T17:20:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1002py</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1002py/">&lt;h1 id=&quot;área-do-círculo&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1002&quot;&gt;Área do Círculo&lt;/a&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1010&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ProgPy" /><summary type="html">Cálculo Simples</summary></entry><entry><title type="html">URI1002 - Formatação de casas decimais</title><link href="http://localhost:4000/ddp/2020/uri1002py/" rel="alternate" type="text/html" title="URI1002 - Formatação de casas decimais" /><published>2020-06-23T17:20:21-03:00</published><updated>2020-06-23T17:20:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1002py</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1002py/">&lt;h1 id=&quot;área-do-círculo&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1002&quot;&gt;Área do Círculo&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;O problema solicita que o programa calcule a área de um círculo dado o valor do raio.&lt;/p&gt;
 
@@ -682,7 +683,11 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.14159&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A={:.4f}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ProgPy" /><summary type="html">Área do Círculo</summary></entry><entry><title type="html">URI1009 - Cadeia de caracteres</title><link href="http://localhost:4000/ddp/2020/uri1009c/" rel="alternate" type="text/html" title="URI1009 - Cadeia de caracteres" /><published>2020-06-22T20:40:21-03:00</published><updated>2020-06-22T20:40:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1009c</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1009c/">&lt;h1 id=&quot;salário-com-bônus&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1009&quot;&gt;Salário com Bônus&lt;/a&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1002&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ProgPy" /><summary type="html">Área do Círculo</summary></entry><entry><title type="html">URI1009</title><link href="http://localhost:4000/ddp/2020/uri1009c/" rel="alternate" type="text/html" title="URI1009" /><published>2020-06-22T20:40:21-03:00</published><updated>2020-06-22T20:40:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1009c</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1009c/">&lt;h1 id=&quot;salário-com-bônus&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1009&quot;&gt;Salário com Bônus&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.&lt;/p&gt;
 
@@ -729,7 +734,11 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TOTAL = R$ %.2f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ProgC" /><summary type="html">Salário com Bônus</summary></entry><entry><title type="html">URI1005 - define</title><link href="http://localhost:4000/ddp/2020/uri1005c/" rel="alternate" type="text/html" title="URI1005 - define" /><published>2020-06-22T18:52:21-03:00</published><updated>2020-06-22T18:52:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1005c</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1005c/">&lt;h1 id=&quot;média-1&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1005&quot;&gt;Média 1&lt;/a&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1009&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ProgC" /><summary type="html">Salário com Bônus</summary></entry><entry><title type="html">URI1005</title><link href="http://localhost:4000/ddp/2020/uri1005c/" rel="alternate" type="text/html" title="URI1005" /><published>2020-06-22T18:52:21-03:00</published><updated>2020-06-22T18:52:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1005c</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1005c/">&lt;h1 id=&quot;média-1&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1005&quot;&gt;Média 1&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.&lt;/p&gt;
 
@@ -785,642 +794,8 @@ As definições são substituídas durante o &lt;a href=&quot;https://www.ime.us
   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MEDIA = %.5f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ProgC" /><summary type="html">Média 1</summary></entry><entry><title type="html">URI1002 - Variável de dupla precisão</title><link href="http://localhost:4000/ddp/2020/uri1002c/" rel="alternate" type="text/html" title="URI1002 - Variável de dupla precisão" /><published>2020-06-22T18:46:21-03:00</published><updated>2020-06-22T18:46:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1002c</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1002c/">&lt;h1 id=&quot;área-do-círculo&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1002&quot;&gt;Área do Círculo&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;O problema solicita que o programa calcule a área de um círculo dado o valor do raio.&lt;/p&gt;
-
-&lt;p&gt;Para o cálculo da área é utilizada a seguinte equação: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;area = n.raio²&lt;/code&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;entrada-de-dados&quot;&gt;Entrada de dados&lt;/h2&gt;
-
-&lt;p&gt;O dado de entrada do programa é o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raio&lt;/code&gt;, declarado como uma variável de &lt;a href=&quot;https://en.wikipedia.org/wiki/IEEE_754&quot;&gt;dupla precisão&lt;/a&gt;, como indicado no próprio desafio, assim a sua leitura fica &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%lf&lt;/code&gt; no formato da função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scanf()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;processamento&quot;&gt;Processamento&lt;/h2&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;O cálculo da área pode ser feita utilizando uma função específica para a potência, porém ainda não é necessária a sua utilização, que será explorada em uma próxima oportunidade.&lt;/p&gt;
-
-&lt;p&gt;Então para o processamento da área pode-se utilizar o produto do raio, por ele mesmo e o valor aproximado do PI, que é declarado em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14159&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;saída-de-dedos&quot;&gt;Saída de dedos&lt;/h2&gt;
-
-&lt;p&gt;A saída deve ser apresentada com quatro casas decimais utilizando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%.4f&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A=%.4f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
-
-&lt;p&gt;Juntando as partes na resolução do desafio temos:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14159&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;A=%.4f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;area&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ProgC" /><summary type="html">Área do Círculo</summary></entry><entry><title type="html">URI1001 - Entrada e Saída de Dados</title><link href="http://localhost:4000/ddp/2020/uri1001c/" rel="alternate" type="text/html" title="URI1001 - Entrada e Saída de Dados" /><published>2020-06-13T14:11:21-03:00</published><updated>2020-06-13T14:11:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1001c</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1001c/">&lt;h1 id=&quot;extremamente-básico&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001&quot;&gt;Extremamente Básico&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;O problema inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.&lt;/p&gt;
-
-&lt;p&gt;A primeira dúvida é: &lt;strong&gt;como ler um número digitado pelo usuário e armazená-lo em uma variável?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;estrutura-básica-de-um-programa-em-c&quot;&gt;Estrutura básica de um programa em C&lt;/h2&gt;
-
-&lt;p&gt;Todo programa em linguagem C é estruturado em &lt;strong&gt;funções&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;função&quot;&gt;Função&lt;/h3&gt;
-
-&lt;p&gt;Uma &lt;strong&gt;função&lt;/strong&gt; é um &lt;strong&gt;conjunto de instruções&lt;/strong&gt;, &lt;strong&gt;ordenadas de forma lógica&lt;/strong&gt;, de modo a &lt;strong&gt;atender um objetivo&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Uma função pode ter argumentos, que são variáveis que recebem dados a serem processados.&lt;/p&gt;
-
-&lt;p&gt;Uma função tem um parâmetro de retorno, que é uma variável com o conteúdo resultante do processo executado.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retorno&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome_da_funcao&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argumentos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parametro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parametro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;// Conjunto de instruções&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// ordenadas logicamente&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// para atender o objetivo&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retorno&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As chaves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;}&lt;/code&gt; indicam o início e o fim de um bloco de código, são delimitadores de um trecho de código que estão unidos por uma condição ou função.&lt;/p&gt;
-
-&lt;h3 id=&quot;tipo-de-dados&quot;&gt;Tipo de dados&lt;/h3&gt;
-
-&lt;p&gt;Um dado em computação é um número que é armazenado em um espaço de memória. O tamanho e o formato desse armazenamento definem o tipo de dado.&lt;/p&gt;
-
-&lt;p&gt;Os dados mais comuns em linguagem C são denominados &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;char&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;A unidade básica desses dados é o &lt;strong&gt;bit&lt;/strong&gt;. 
-O agrupamento de &lt;strong&gt;8 bits&lt;/strong&gt; é um &lt;strong&gt;byte&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Em grande parte dos processadores, ao agrupar &lt;strong&gt;4 bytes&lt;/strong&gt;, tem-se uma variável do tipo &lt;strong&gt;int&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Mais detalhes podem ser encontrados em &lt;a href=&quot;https://pt.wikibooks.org/wiki/Programar_em_C/Tipos_de_dados&quot;&gt;wikibooks - Linguagem C&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Quando uma função não possui argumentos, pode-se deixar os parênteses sem declaração alguma ou utilizar a palavra reservada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;void&lt;/code&gt;, que indica que não há parâmetro alí, ou que é vazio.&lt;/p&gt;
-
-&lt;h3 id=&quot;main&quot;&gt;Main&lt;/h3&gt;
-
-&lt;p&gt;Todo programa em linguagem C deve possuir uma função principal, que obrigatoriamente é declarada como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main()&lt;/code&gt;, que denota o início da execução do programa. As demais funções são executadas a partir da função principal, sendo o programador responsável pelo seu nome, mas aconselha-se que faça sentido em relação ao seu objetivo.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;O programa principal aqui declarado não possui argumentos, assim declarado como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;void&lt;/code&gt;. 
-Tipicamente um programa em linguagem C é executado a partir de outro programa, geralmente de um sistema operacional. Ao final da execução o sistema operacional deve receber um dado indicando o &lt;strong&gt;status&lt;/strong&gt; da execução, ou seja, se houve algum erro por exemplo. O valor de retorno 0(zero) indica que a execução ocorreu sem problemas.&lt;/p&gt;
-
-&lt;h2 id=&quot;periféricos&quot;&gt;Periféricos&lt;/h2&gt;
-
-&lt;p&gt;A execução do programa basicamente é realizada através do processador que lê dados nas memórias e manipula-os de acordo com a sequencia de instruções do programa, que é armazenada em uma das memórias.&lt;/p&gt;
-
-&lt;p&gt;Assim, tudo é leitura, manipulação e escrita de dados. A manipulação de dados envolve operações lógicas, aritméticas e de movimentação de dados.&lt;/p&gt;
-
-&lt;p&gt;Para um programa poder interagir um periférico como tela, teclado, mouse, impressora, câmera ou qualquer outro, é necessário que esse periférico esteja mapeado em uma região de memória, ou seja, um espaço de memória é reservado para configurar, parametrizar e trocar dados com o periférico.&lt;/p&gt;
-
-&lt;p&gt;Ao inserir um dispositivo novo ao sistema, um novo espaço deve ser mapeado, mas para computadores de uso geral, alguns dispositivos são denominados de padrão, ou seja, todo computador tem uma entrada padrão e uma saída padrão, que é o teclado e o monitor, respectivamente.&lt;/p&gt;
-
-&lt;p&gt;Para manipular dados nesses dispositivos padrão, é necessário incluir funções existentes na instalação do compilador no sistema operacional.
-Essas funções estão presentes na biblioteca &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdio.h&lt;/code&gt;: Entradas e Saídas Padrão (&lt;strong&gt;St&lt;/strong&gt;an&lt;strong&gt;d&lt;/strong&gt;ard &lt;strong&gt;I&lt;/strong&gt;nput &lt;strong&gt;O&lt;/strong&gt;utput).&lt;/p&gt;
-
-&lt;h3 id=&quot;stdioh&quot;&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/cstdio/&quot;&gt;stdio.h&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Para inclusão utilizar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include&lt;/code&gt;, indicar que a bilioteca é nativa da instalação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; entre o nome da bilioteca, que deve possuir uma extensão &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.h&lt;/code&gt; para indicar que é o seu cabeçalho (&lt;a href=&quot;https://www.w3schools.in/c-tutorial/c-header-files/&quot;&gt;&lt;em&gt;header&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Os arquivos de inclusão não são os arquivos fonte, mas sim os arquivos de cabeçalho, que possuem as informações necessárias para a chamada das funções presentes nessa biblioteca.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;leitura-e-escrita-de-dados&quot;&gt;&lt;a href=&quot;https://www.w3schools.in/c-tutorial/input-output/&quot;&gt;Leitura e escrita de dados&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;A leitura de dados é feita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scanf()&lt;/code&gt; e a escrita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;printf()&lt;/code&gt;, sendo que ambas utilizam uma quantidade variável de argumentos, mas seu primeiro argumento é um formato de caracteres.&lt;/p&gt;
-
-&lt;h3 id=&quot;o-formato&quot;&gt;&lt;a href=&quot;https://www.w3schools.in/c-tutorial/format-specifiers/&quot;&gt;O formato&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Basicamente se trata de uma &lt;a href=&quot;https://www.w3schools.in/c-tutorial/strings/&quot;&gt;cadeia de caracteres&lt;/a&gt; (&lt;em&gt;string&lt;/em&gt;) que possui uma mensagem a ser enviada à saída padrão, ou como devem ser lidos da entrada padrão.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mensagem de exibicao&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Podendo ser incluida a indicação de variável na posição que ela deve aparecer utilizando o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; e o seu tipo.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exibe a variavel %d &quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Após o formato são incluidas as variáveis que substituem as marcações na string, na ordem em que elas aparecem.&lt;/p&gt;
-
-&lt;h3 id=&quot;scanf&quot;&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/io/fscanf&quot;&gt;scanf()&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Leitura de um dado que é armazenado na &lt;a href=&quot;https://www.w3schools.in/c-tutorial/variables/&quot;&gt;variável&lt;/a&gt; num.&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Leitura de dois dados que são armazenado nas variáveis A e B.&lt;/p&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Ou ainda:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d %d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Os argumentos seguintes ao formato devem ser os endereços das variáveis que vão receber os dados lidos da entrada padrão conforme o formato do primeiro argumento.&lt;/p&gt;
-
-&lt;h3 id=&quot;print&quot;&gt;&lt;a href=&quot;https://en.cppreference.com/w/c/io/fprintf&quot;&gt;print()&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Exibição de dados da variável soma.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = %d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;No lugar da marcação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%d&lt;/code&gt; deve ser inserido o conteúdo da variável soma.&lt;/p&gt;
-
-&lt;p&gt;Todo apresentação de dados na plataforma URI devem possuir um fim de linha, denotado pelo caractere &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\n&lt;/code&gt;, equivalente à tecla Enter.&lt;/p&gt;
-
-&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
-&lt;p&gt;O resultado completo para o desafio
-&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001?_blanck&quot;&gt;URI 1001 Extremamente Básico&lt;/a&gt; na minha formulação é:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;xis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xis&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ProgC" /><summary type="html">Extremamente Básico</summary></entry><entry><title type="html">URI1001 - Entrada e Saída de Dados</title><link href="http://localhost:4000/ddp/2020/uri1001py/" rel="alternate" type="text/html" title="URI1001 - Entrada e Saída de Dados" /><published>2020-06-13T13:04:21-03:00</published><updated>2020-06-13T13:04:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1001py</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1001py/">&lt;h1 id=&quot;extremamente-básico&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001&quot;&gt;Extremamente Básico&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;O problema inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.&lt;/p&gt;
-
-&lt;p&gt;A primeira dúvida é: &lt;strong&gt;como ler um número digitado pelo usuário e armazená-lo em uma variável?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;leitura-de-dados&quot;&gt;Leitura de dados&lt;/h2&gt;
-&lt;p&gt;Com uma busca rápida no Google, encontrei o a resposta para a leitura de dados em &lt;a href=&quot;https://www.w3schools.com/python/ref_func_input.asp?_blank&quot;&gt;w3schools.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;input&quot;&gt;input()&lt;/h3&gt;
-&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input()&lt;/code&gt; realiza a leitura de uma cadeia de caracteres (string) da entrada padrão (teclado). O resultado lido é atribuído a variável &lt;em&gt;a&lt;/em&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a = input()&lt;/code&gt;. O tipo da variável é definida dinamicamente, ou seja, no momento que é feita a atribuição do dado, este é reconhecido e a variável é declarada com esse mesmo tipo, nesse caso, string.&lt;/p&gt;
-
-&lt;p&gt;Mas é necessário que, após as leituras dos dois valores, seja feita a soma, ou seja, as entradas devem ser números e não cadeias de caracteres (string).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Como converter a string lida em um número do tipo inteiro?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;casting&quot;&gt;Casting&lt;/h3&gt;
-&lt;p&gt;O processo para a conversão entre tipos de dados é chamado de
-&lt;a href=&quot;https://www.w3schools.com/python/python_casting.asp?_blank&quot;&gt;casting&lt;/a&gt;, onde um dado sofre uma &lt;a href=&quot;https://translate.google.com.br/?hl=pt-BR#view=home&amp;amp;op=translate&amp;amp;sl=en&amp;amp;tl=pt&amp;amp;text=casting&quot;&gt;modelagem&lt;/a&gt; do seu tipo original para o tipo desejado.&lt;/p&gt;
-
-&lt;p&gt;Assim, a entrada de dados é feita pela função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input()&lt;/code&gt;, cujo resultado é modelado para o tipo inteiro e por fim atribuído a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt;.
-O mesmo ocorre para a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt;. Em seguida a variável &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma&lt;/code&gt; recebe o resultado da operação de &lt;a href=&quot;https://www.w3schools.com/python/python_operators.asp?_blank&quot;&gt;soma&lt;/a&gt; entre elas.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;print&quot;&gt;print()&lt;/h3&gt;
-&lt;p&gt;Por fim a apresentação do resultado, que pode ser feita utilizando a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print()&lt;/code&gt;, mas como inserir uma variável no meio da string?&lt;/p&gt;
-
-&lt;h3 id=&quot;presentation-error&quot;&gt;Presentation Error&lt;/h3&gt;
-&lt;p&gt;Uma primeira forma encontrada foi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma )&lt;/code&gt;, porém a plataforma avaliava com erro de apresentação, &lt;em&gt;Presentation error&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;especulação&quot;&gt;Especulação&lt;/h3&gt;
-&lt;p&gt;Entre devaneios e &lt;strong&gt;especulações&lt;/strong&gt;, imagino que o problema ocorra pela composição de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string + variável&lt;/code&gt; apresentada na saída padrão. Ao concatenar(juntar) a string com a variável na exibição, no meio dessa união deve ficar o terminador de string: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\0'&lt;/code&gt;. Exemplo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a=4&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b=5&lt;/code&gt; então &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soma=9&lt;/code&gt;. A saída do comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print(&quot;X = &quot;, soma)&lt;/code&gt;, especulo que seja “X = ‘\0’ 9”, ou seja, para a saída padrão, são duas strings exibidas na tela, mesmo que uma após a outra, mesmo que visualmente pareça cumprir as exigências, pois o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'0'&lt;/code&gt; não aparece na tela.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cuidado!&lt;/strong&gt; Isso é uma especulação, estou aprendendo python.&lt;/p&gt;
-
-&lt;h3 id=&quot;format&quot;&gt;.format()&lt;/h3&gt;
-&lt;p&gt;Duas outras ótimas fontes de pesquisa são: &lt;a href=&quot;https://pt.stackoverflow.com/questions/225498/formatando-strings-com-format-e&quot;&gt;stack&lt;strong&gt;overflow&lt;/strong&gt;&lt;/a&gt; e a própria documentação da linguagem &lt;a href=&quot;https://docs.python.org/3/library/string.html#custom-string-formatting&quot;&gt;docs.python.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;resolução&quot;&gt;Resolução&lt;/h2&gt;
-&lt;p&gt;O resultado completo para o desafio
-&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1001?_blanck&quot;&gt;URI 1001 Extremamente Básico&lt;/a&gt; na minha formulação é:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X = {}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>José W R Pereira</name></author><category term="ProgPy" /><summary type="html">Extremamente Básico</summary></entry><entry><title type="html">Resistência equivalente total e 1ª Lei de Ohm</title><link href="http://localhost:4000/ddp/2020/aula-ele-calculaReqOhm/" rel="alternate" type="text/html" title="Resistência equivalente total e 1ª Lei de Ohm" /><published>2020-05-26T08:22:21-03:00</published><updated>2020-05-26T08:22:21-03:00</updated><id>http://localhost:4000/ddp/2020/aula-ele-calculaReqOhm</id><content type="html" xml:base="http://localhost:4000/ddp/2020/aula-ele-calculaReqOhm/">&lt;h1 id=&quot;habilidades-e-competências&quot;&gt;Habilidades e Competências&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Calcular grandezas elétricas em circuitos elétricos;&lt;/li&gt;
-  &lt;li&gt;Calcular a resistência equivalente total de circuitos elétricos.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;desafio&quot;&gt;Desafio&lt;/h2&gt;
-&lt;p&gt;Dado o circuito da Figura 1, considerar: R1 = 330 $\Omega$, R2 = 150 $\Omega$, R3 = 270 $\Omega$,R4 = 400 $\Omega$ e R5 = 100 $\Omega$.&lt;/p&gt;
-
-&lt;p&gt;Identificar:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;os nós do circuito;&lt;/li&gt;
-  &lt;li&gt;a configuração de ligação dos componentes: série ou paralelo;&lt;/li&gt;
-  &lt;li&gt;Calcular a resistência equivalente em cada ramo;&lt;/li&gt;
-  &lt;li&gt;Simplificar o circuito ao redesenhá-lo;&lt;/li&gt;
-  &lt;li&gt;Repetir o processo até obter a resistência equivalente total.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;em&gt;Figura 1: Circuito elétrico misto&lt;/em&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-desafio-1.png?raw=true&quot; alt=&quot;Circuito elétrico do desafio - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;revisitando-conhecimentos&quot;&gt;Revisitando Conhecimentos&lt;/h2&gt;
-&lt;p&gt;A identificação de configurações e características do circuito é fundamental para a sua análise.&lt;/p&gt;
-
-&lt;p&gt;Entre os principais pontos estão:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;A identificação da(s) fonte(s) e da(s) carga(s) do circuito;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A identificação dos nós;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A identificação dos ramos;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;As ligações em série e em paralelo.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;lei-de-ohm&quot;&gt;Lei de Ohm&lt;/h2&gt;
-
-&lt;p&gt;A &lt;strong&gt;primeira lei de Ohm&lt;/strong&gt; é a relação entre as três grandezas elétricas básicas: &lt;strong&gt;tensão&lt;/strong&gt;, &lt;strong&gt;resistência&lt;/strong&gt; e &lt;strong&gt;corrente&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Considerando o circuito da Figura 2:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;* Figura 2: Circuito elétrico Simples*&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-circuitoSimples-1.png?raw=true&quot; alt=&quot;Circuito elétrico do desafio - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Vcc&lt;/em&gt;: Fonte de tensão ajustável, em Volts[V];&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;I&lt;/em&gt;: Intensidade de corrente elétrica, em Amperes [A];&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Rt&lt;/em&gt;: Resistência elétrica em Ohms [ $\Omega$ ].&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pt.wikipedia.org/wiki/Georg_Simon_Ohm&quot;&gt;&lt;strong&gt;Georg Simon Ohm&lt;/strong&gt;&lt;/a&gt; percebeu que a relação entre tensão e corrente em um circuito resistivo é constante, ou seja, para um dado circuito, com uma resistência fixa, ao variar a tensão aplicada aos seus terminais
-a intensidade da corrente que percorre o circuito varia de forma proporcional.&lt;/p&gt;
-
-&lt;p&gt;Ao tomar nota de alguns pontos de medição, pode-se desenhar um gráfico como na Figura 3, e perceber que os pontos anotados formam uma reta. Isso ocorre pela proporcionalidade entre a variável manipulada, aquela que é ajustada por quem conduz a experiência, e a variável controlada, que é aquela que depende de outro parâmetro do sistema, e que não é manipulada diretamente.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;em&gt;Figura 3: Grafico $V_{CC}$ x $I$&lt;/em&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-leiOhmGrafico-1.png?raw=true&quot; alt=&quot;Circuito elétrico do desafio - Interpretação de Circuitos Elétricos&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Estão destacados no gráfico três pontos, &lt;strong&gt;A&lt;/strong&gt;, &lt;strong&gt;B&lt;/strong&gt; e &lt;strong&gt;C&lt;/strong&gt;, e pode-se perceber que o ponto &lt;strong&gt;B&lt;/strong&gt; está localizado em uma tensão que é o dobro da tensão do ponto &lt;strong&gt;A&lt;/strong&gt;, por consequência, a intensidade da corrente produzida também é o dobro. O mesmo ocorre no ponto &lt;strong&gt;C&lt;/strong&gt; em relação ao ponto &lt;strong&gt;B&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;A representação matemática para uma reta, é uma equação do primeiro grau, assim a equação que representa a reta do gráfico da Figura 3 pode ser obtida da seguinte forma:&lt;/p&gt;
-
-&lt;p&gt;Escolha dois pontos quaisquer da reta, &lt;strong&gt;A&lt;/strong&gt; e &lt;strong&gt;B&lt;/strong&gt;, &lt;strong&gt;A&lt;/strong&gt; e &lt;strong&gt;C&lt;/strong&gt;, &lt;strong&gt;B&lt;/strong&gt; e &lt;strong&gt;C&lt;/strong&gt;, ou ainda algum deles com a origem &lt;strong&gt;(0,0)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pontos escolhidos: &lt;strong&gt;B&lt;/strong&gt; e &lt;strong&gt;(0,0)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ao projetar o ponto &lt;strong&gt;B&lt;/strong&gt; no eixo da tensão, temos um triângulo retângulo formado pelos pontos: &lt;strong&gt;B&lt;/strong&gt;, &lt;strong&gt;(4,0)&lt;/strong&gt; e &lt;strong&gt;(0,0)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Utilizando a relação $\frac{\Delta I}{\Delta V}$, temos o coeficiente algular da reta $G$.&lt;/p&gt;
-
-\[\begin{eqnarray}
-  \frac{\Delta I}{\Delta V} &amp;amp; = &amp;amp; G \nonumber \\
-  \Delta I &amp;amp; = &amp;amp; G .\Delta V \nonumber \\
-  I - I_0 &amp;amp; = &amp;amp; G . (V - V_0)
-\end{eqnarray}\]
-
-&lt;p&gt;Como a origem foi escolhida como um dos pontos do triângulo, o $\Delta I$ será o próprio valor no ponto $B$, ou seja, $I_0$ e $V_0$ valem $0$.&lt;/p&gt;
-
-&lt;p&gt;\(\begin{eqnarray}
-  \label{eqn:leiOhmG}
-  I &amp;amp; = &amp;amp; G . V
-\end{eqnarray}\)
-Analogamente à &lt;a href=&quot;https://www.todamateria.com.br/equacao-da-reta/&quot;&gt;equação da reta&lt;/a&gt; $f(x) = ax + b$ temos que:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;$I$ é o resultado da função, é a variável dependente pois varia em função da variável independete;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;$V$ é a variável independente, é manipulada por quem conduz o experimento, ajustando o valor da fonte para um valor desejado;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;$G$ é coeficiente angular, valor que exprime o quanto a reta está inclinada.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;O coeficiente angular &lt;strong&gt;G&lt;/strong&gt; mostra que, para um ânglo de inclinação pequeno, uma variação de tensão alta produz uma variação de corrente é pequena, ou seja, a condução é ruim. Com um ângulo de inclinação grande, uma variação de tensão pequena produz uma grande variação de corrente, ou seja, uma ótima condução.&lt;/p&gt;
-
-&lt;p&gt;O coeficiente angular &lt;strong&gt;G&lt;/strong&gt; é denominado como &lt;em&gt;condutância&lt;/em&gt;, e sua unidade é o &lt;em&gt;Siemens[S]&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;A condutância é o inverso da resistência, ou seja, dois aspectos de um mesmo fenômeno.
-\(\begin{eqnarray}
-  \label{eqn:GinvR}
-  G &amp;amp; = &amp;amp; \frac{1}{R}
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;p&gt;Substituindo ($G = \frac{1}{R}$) em ($I = G . V$), temos a &lt;strong&gt;Primeira Lei de OHM&lt;/strong&gt;.
-\(\begin{eqnarray}
-  \label{eqn:leiOhmR}
-  I &amp;amp; = &amp;amp; \frac{1}{R} . V
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;h2 id=&quot;associação-de-resistores-em-série&quot;&gt;Associação de Resistores em Série&lt;/h2&gt;
-
-&lt;p&gt;Dado um ramo qualquer de um circuito resistivo, sabe-se que todos os elementos nele contidos estão associados em série, pois, aplicada uma diferença de potencial às suas extremidades, a corrente que percorre esse ramo é a mesma em todos os componentes, havendo apenas um caminho entre os nós conectados às extremidades.&lt;/p&gt;
-
-&lt;p&gt;Ao aplicar uma diferença de pontencial não nula entre os nós $A$ e $B$, haverá uma corrente elétrica entre esses pontos. O valor da intensidade dessa corrente depende, além da própria tensão, da resistência que o ramo apresenta, como diz a 1ª Lei de Ohm.&lt;/p&gt;
-
-&lt;p&gt;Todo elemento inserido em série no ramo, acrescenta resistência a ele.
-Todo ramo com mais do que um resistor, pode ser substituído por um ramo equivalente, sem que haja mudança dos parâmetros elétricos do circuito, desde que não se altere a resistência equivalente do ramo, como mostrado na Figura 4.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;em&gt;Figura 4: Ramo entre nós $A$ e $B$&lt;/em&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-rSerie-1.png?raw=true&quot; alt=&quot;Ramo entre nós&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A Figura 4(a) mostra o ramo com dois resistores, que formam a resistência total do ramo, que é ilustrado na Figura 4(b) com a resistência equivalente.
-Pode-se representar a resistência equivalente em um ramo da seguinte forma:
-\(\begin{eqnarray}
-R_1 + R_2 = R_{eq}
-\end{eqnarray}\)
-Para uma quantidade de resistores no ramo maior do que dois, a resistência equivalente é calculada da mesma forma:
-\(\begin{eqnarray}
-R_1 + R_2 + ... + R_n = R_{eq}
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;h2 id=&quot;associação-de-resistores-em-paralelo&quot;&gt;Associação de Resistores em Paralelo&lt;/h2&gt;
-
-&lt;p&gt;A intensidade da corrente que circula em um ramo, depende da tensão aplicada aos seus nós e da resistência total do ramo. Assim, para o circuito da Figura 5(a) a corrente total depende apenas do valor de $V_{CC}$ e $R_1$. Não havendo mudanças nesses valores, também não haverá mudança no valor da intensidade de corrente, denotada $I_T$. A intensidade da corrente que flui da fonte é a mesma que atravessa a carga, com uma certa resistência e condutância.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;em&gt;Figura 5: Circuito em paralelo&lt;/em&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-paralelo-1.png?raw=true&quot; alt=&quot;Circuito em paralelo&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Ao inserir outro ramo ao circuito, como mostrado na Figura 5(b), a intensidade da corrente no ramo de $R_1$ não é alterado, pois a tensão entre os pontos $A$ e $B$ não muda, bem como seu valor ôhmico, porém, a intensidade total da corrente muda, pois há agora um novo caminho, um novo ramo para circulação da corrente.&lt;/p&gt;
-
-&lt;p&gt;A mudança do circuito (a) para o (b), produz um novo caminho para a circulação da corrente. Pode-se dizer então que com a inclusão do novo ramo, conectado aos mesmos pontos do ramo já existente, há uma maior facilidade para a corrente fluir, pois agora são dois caminhos, aumentando a condutância entre os nós.&lt;/p&gt;
-
-&lt;p&gt;Pode-se obter a condutância total do circuito paralelo somando as condutâncias dos ramos, da seguinte forma:
-\(\begin{eqnarray}
-  G_T &amp;amp; = &amp;amp; G_{R_1} + G_{R_2}
-\label{eqn:GT}
-\end{eqnarray}\)
-A forma mais comum é trabalhar com a resistência e não a condutância, então,
-substituindo a condutância pelo inverso da resistência pode-se obter a resistência total:
-\(\begin{eqnarray}
-  \frac{1}{R_T}	&amp;amp; = &amp;amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
-	\nonumber\\
-	R_T &amp;amp; = &amp;amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} }
-	\label{eq:paralelo}
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;p&gt;Da mesma forma pode-se aplicar para circuitos com varios ramos em paralelo, basta somar as condutâncias:
-\(\begin{eqnarray}
-	G_T &amp;amp; = &amp;amp; G_1 + G_2 + ... + G_n
-\end{eqnarray}\)
-Analogamente para a resistência total temos:
-\(\begin{eqnarray}
-	\label{eq:nrparalelo}
-	R_T &amp;amp; = &amp;amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n} }
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;h3 id=&quot;associação-em-paralelo---apenas-2-resistores&quot;&gt;Associação em Paralelo - Apenas 2 resistores&lt;/h3&gt;
-
-&lt;p&gt;O cálculo de resistores em paralelo pode ser realizado manipulando a Equação da associação em paralelo da seguinte forma:
-\(\begin{eqnarray}
-	G_{eq} &amp;amp; = &amp;amp; G_{R_1} + G_{R_2} \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}}	&amp;amp; = &amp;amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}}	&amp;amp; = &amp;amp; \frac{R_1 + R_2}{R_1.R_2} \nonumber\\
-	\nonumber\\
-	R_{eq}	&amp;amp; = &amp;amp; \frac{R_1.R_2}{R_1 + R_2} \nonumber
-\end{eqnarray}\)
-&lt;strong&gt;Atenção!&lt;/strong&gt; Essa forma só é válida para a associação de dois resistôres.&lt;/p&gt;
-
-&lt;h3 id=&quot;associação-resistores-em-paralelo---todos-iguais&quot;&gt;Associação resistores em paralelo - Todos iguais&lt;/h3&gt;
-
-&lt;p&gt;Outra forma particular para calcular resistência equivalente é quanto os resistores em paralelo são &lt;strong&gt;todos&lt;/strong&gt; de mesmo valor, então o cálculo pode ser realizado manipulado a Equação da condutância equivalente da seguinte forma:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Dados os seguintes resistores em paralelo e nomeados sequencialmente: $R_1$ = $R_2$ = … = $R_n$.&lt;/em&gt;
-\(\begin{eqnarray}
-	G_{eq} &amp;amp; = &amp;amp; G_1 + G_2 + ... + G_n \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}} &amp;amp; = &amp;amp; \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}} &amp;amp; = &amp;amp; n.\frac{1}{R} \nonumber\\
-	\nonumber\\
-	\frac{1}{R_{eq}} &amp;amp; = &amp;amp; \frac{n}{R} \nonumber\\
-	\nonumber\\
-	\frac{R_{eq}}{1} &amp;amp; = &amp;amp; \frac{R}{n} \nonumber\\
-	\nonumber\\
-	R_{eq} &amp;amp; = &amp;amp; \frac{R}{n}
-\end{eqnarray}\)
-Atenção! Essa forma só é válida para a associação de resistôres iguais.&lt;/p&gt;
-
-&lt;h2 id=&quot;leis-de-kirchhoff&quot;&gt;Leis de Kirchhoff&lt;/h2&gt;
-
-&lt;p&gt;A &lt;strong&gt;primeira lei de Kirchhoff&lt;/strong&gt; fala sobre as correntes em um nó, por isso é comum ser chamada de &lt;strong&gt;lei dos nós&lt;/strong&gt;, enquanto que a &lt;strong&gt;segunda lei de Kirchhoff&lt;/strong&gt; fala sobre as tensões em uma malha, sendo assim a &lt;strong&gt;lei das malhas&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;1ª-lei-de-kirchhoff&quot;&gt;1ª Lei de Kirchhoff&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;A soma das correntes em um nó é igual a zero.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;em&gt;Figura 6: Circuito em paralelo&lt;/em&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-noSupInf-1.png?raw=true&quot; alt=&quot;Circuito em paralelo&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A Figura 6 mostra o sentido convencional da corrente nos dois nós do circuito.&lt;/p&gt;
-
-&lt;p&gt;Tendo um nó como referência, adota-se uma convenção para o sentido da corrente. Assim, a corrente que chega ao nó é anotada como positiva e a corrente que sai é negativa. O oposto também pode ser adotado.&lt;/p&gt;
-
-&lt;p&gt;Escrevendo, pela definição, a equação para o nó $A$ temos:
-\(\begin{eqnarray}
-\label{eq:1kirchhoff}
-(+I_T) + (-I_1) + (-I_2) &amp;amp; = &amp;amp; 0\\
-I_T - I_1 - I_2 &amp;amp; = &amp;amp; 0 \nonumber\\
-I_T = I_1 + I_2
-\end{eqnarray}\)
-Da mesma forma para o nó $B$:
-\(\begin{eqnarray}
-(-I_T) + (+I_1) + (+I_2) &amp;amp; = &amp;amp; 0 \nonumber\\
-I_1 + I_2 &amp;amp; = &amp;amp; I_T \nonumber
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;h3 id=&quot;2ª-lei-de-kirchhoff&quot;&gt;2ª Lei de Kirchhoff&lt;/h3&gt;
-
-&lt;p&gt;A Figura 7 mostra os dois ramos que formam o circuito em série.
-A limitação dos ramos são os nós $A$ e $B$, cuja diferença de potencial é proporcionada pelo ramo da fonte, tensão gerada. Essa diferença de potencial, é aplicada ao ramo que contém os resistores, $R_1$ e $R_2$, que dividem essa tensão em valores parciais, denominados de queda de tensão.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;&lt;em&gt;Figura 7: Circuito em Série&lt;/em&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-malha-1.png?raw=true&quot; alt=&quot;Circuito em paralelo&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A segunda lei de Kirchhoff diz que: &lt;strong&gt;A soma das tensões (ou quedas de tensão) em uma malha é igual a zero&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Adotando um ponto como referencia de partida, por exemplo o ponto $A$, percorre-se no sentido da corrente, por todo circuito até retornar ao ponto de partida. Ao encontrar uma indicação de tensão no mesmo sentido, adota-o como valor positivo, e no sentido contrário, adota-o como negativo.&lt;/p&gt;
-
-&lt;p&gt;Assim, pode-se representar a equação da malha pela definição da seguinte forma:
-\(\begin{eqnarray}
-	(-V_{R1}) + (-V_{R2}) + (V_{CC})  &amp;amp; = &amp;amp; 0 \\
-	-V_{R1} - V_{R2} + V_{CC} &amp;amp; = &amp;amp; 0 \nonumber\\
-	 V_{CC} &amp;amp; = &amp;amp; V_{R1} + V_{R2}
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;p&gt;Sabemos que em um ramo cada resistor apresenta uma parcela proporcional da resistência total, pois a soma dessas parcelas é a própria resistência total.
-\(\begin{eqnarray}
-R_1 + R_2 = R_{T_{ramo}}
-\end{eqnarray}\)
-Temos que $R_{T_{ramo}}$ é a resistência total do ramo e é formada por duas partes, $R_1$ e $R_2$, somados. Assim cada resistor é uma parte da resistência total do ramo, um parte do todo.&lt;/p&gt;
-
-&lt;p&gt;Sabemos que a parte dividida pelo todo é uma relação de proporcionalidade e que a queda de tensão em cada resistor do ramo é proporcional a sua resistência em relação a resistência total, assim temos que:
-\(\begin{eqnarray}
-\frac{R_1}{R_2+R_1} &amp;amp; = &amp;amp; \frac{V_{R1}}{V_{R2}+V_{R1}}\\
-\nonumber\\
-V_{AB} &amp;amp; = &amp;amp; V_{R1} + V_{R2} \\
-\nonumber\\
-\frac{R_1}{R_2+R_1} &amp;amp; = &amp;amp; \frac{V_{R1}}{V_{AB}}
-\end{eqnarray}\)
-Isolando-se $V_{R1}$  temos:
-\(\begin{eqnarray}
-V_{R1} &amp;amp; = &amp;amp; \frac{R_1}{R_2 + R_1} . V_{AB}
-\end{eqnarray}\)
-Iguanlmente para $V_{R2}$:
-\(\begin{eqnarray}
-V_{R2} &amp;amp; = &amp;amp; \frac{R_2}{R_2 + R_1} . V_{AB}
-\end{eqnarray}\)&lt;/p&gt;
-
-&lt;h2 id=&quot;atividades&quot;&gt;Atividades&lt;/h2&gt;
-
-&lt;p&gt;Calcular a resistência equivatente total dos circuitos.&lt;/p&gt;
-
-&lt;h3 id=&quot;circuito-1&quot;&gt;Circuito 1&lt;/h3&gt;
-&lt;p&gt;Dados:
-$R_1 = 1k2\Omega$,
-$R_2 = 300\Omega$ e
-$R_3 = 120\Omega$.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ1-1.png?raw=true&quot; alt=&quot;Atividade 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;circuito-2&quot;&gt;Circuito 2&lt;/h3&gt;
-&lt;p&gt;Dados:
-$R_1 = 2k7\Omega$,
-$R_2 = 24k\Omega$,
-$R_3 = 3k3\Omega$ e
-$R_4 = 200\Omega$.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ2-1.png?raw=true&quot; alt=&quot;Atividade 2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;circuito-3&quot;&gt;Circuito 3&lt;/h3&gt;
-&lt;p&gt;Dados:
-$R_1 = 100\Omega$,
-$R_2 = 100\Omega$,
-$R_3 = 100\Omega$,
-$R_4 = 300\Omega$,
-$R_5 = 200\Omega$,
-$R_6 = 100\Omega$, e
-$R_7 = 100\Omega$.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/fig/fig-ativ3-1.png?raw=true&quot; alt=&quot;Atividade 3&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;download&quot;&gt;Download&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/JoseWRPereira/aula-ele-calculaReqOhm/blob/master/pdf/aula-ele-calcReq-1LeiOhm.pdf?raw=true&quot;&gt;Nota de aula em PDF&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Aula" /><summary type="html">Habilidades e Competências Calcular grandezas elétricas em circuitos elétricos; Calcular a resistência equivalente total de circuitos elétricos.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1005&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ProgC" /><summary type="html">Média 1</summary></entry></feed>

@@ -1,0 +1,54 @@
+I"�<h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do círculo</a></h1>
+
+<p>O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>Assuntos abordados:</p>
+<ul>
+  <li>Variável de dupla precisão;</li>
+  <li>Formatação de casas decimais.</li>
+</ul>
+
+<!--more-->
+
+<hr />
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">C</h4>
+
+</div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">.</span><span class="mi">14159</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">raio</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
+
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%lf"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">raio</span> <span class="p">);</span>
+
+  <span class="n">area</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">raio</span> <span class="o">*</span> <span class="n">raio</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">"A=%.4f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">area</span> <span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><a href="/ddp/2020/uri1002c">Código detalhado C</a></p>
+
+<hr />
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Python</h4>
+
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">n</span><span class="o">=</span><span class="mf">3.14159</span>
+<span class="n">area</span><span class="o">=</span><span class="n">n</span><span class="o">*</span><span class="n">raio</span><span class="o">*</span><span class="n">raio</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"A={:.4f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">area</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><a href="/ddp/2020/uri1002py">Código detalhado Python</a></p>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/progURI">voltar</a></p>
+:ET
