@@ -23,17 +23,20 @@ Não há o objetivo de apresentar a resolução de todos os desafios da platafor
 
 O **objetivo é resolver os problemas**, mas no caminho, **apreciar o aprendizado** de linguagens de programação.
 
+## Resoluções
+* [URI-1001 Extremamente básico ]({{site.baseurl}}/2020/uri1001)
+
 ## C
-* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001c_entradaSaidaDados)
-* [URI-1002-Variável de dupla precisão]({{site.baseurl}}/2020/uri1002c_areaDoCirculo)
-* [URI-1005-define]({{site.baseurl}}/2020/uri1005c_media1)
-* [URI-1009-Cadeia de Caracteres]({{site.baseurl}}/2020/uri1009c_salarioComBonus)
+* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001c)
+* [URI-1002-Variável de dupla precisão]({{site.baseurl}}/2020/uri1002c)
+* [URI-1005-define]({{site.baseurl}}/2020/uri1005c)
+* [URI-1009-Cadeia de Caracteres]({{site.baseurl}}/2020/uri1009c)
 
 
 ## Python
-* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001py_entradaSaidaDados)
-* [URI-1002-Formatação de casas decimais]({{site.baseurl}}/2020/uri1002py_areaDoCirculo)
-* [URI-1010-Entrada de múltiplas variáveis por linha]({{site.baseurl}}/2020/uri1010py_calculoSimples)
+* [URI-1001-Entrada e Saída de Dados]({{site.baseurl}}/2020/uri1001py)
+* [URI-1002-Formatação de casas decimais]({{site.baseurl}}/2020/uri1002py)
+* [URI-1010-Entrada de múltiplas variáveis por linha]({{site.baseurl}}/2020/uri1010py)
 
 
 [Voltar]({{site.baseurl}}/docs/tecnologia)

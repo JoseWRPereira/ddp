@@ -1,0 +1,118 @@
+I"�'<h1 id="extremamente-básico"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001">Extremamente Básico</a></h1>
+
+<p>O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>O título do desafio reflete a ideia de estrutura de um programa, pois a sua resolução é composta apenas pelas ações básicas: ler, processar e exibir, independente da linguagem que se utilize. O que pode diferir entre as linguagens é a necessidade de que as ações estejam dentro de uma função ou não.</p>
+
+<p>Para a resolução então é necessário responder três perguntas:</p>
+<ul>
+  <li>Qual é a estrutura básica do programa?</li>
+  <li>Como ler um dado do tipo inteiro?</li>
+  <li>Como realizar operações algébricas básicas?</li>
+  <li>Como exibir um dado do tipo inteiro?</li>
+</ul>
+
+<!--more-->
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">josewrpereira@outlook.com</h4>
+Linguagem C
+</div>
+
+<h2 id="estrutura-básica-de-um-programa-em-c">Estrutura básica de um programa em C</h2>
+
+<p>Todo programa em linguagem C é estruturado em funções. Uma única função principal é obrigatória, <code class="language-plaintext highlighter-rouge">main()</code>, que denota o início da execução do programa.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>A execução do programa basicamente é realizada através do processador que lê dados nas memórias e manipula-os de acordo com a sequencia de instruções do programa, que é armazenada em uma das memórias.</p>
+
+<p>Assim, tudo é leitura, manipulação e escrita de dados. A manipulação de dados envolve operações lógicas, aritméticas e de movimentação de dados.</p>
+
+<p>Para um programa poder interagir um periférico como tela, teclado, mouse, impressora, câmera ou qualquer outro, é necessário que esse periférico esteja mapeado em uma região de memória, ou seja, um espaço de memória é reservado para configurar, parametrizar e trocar dados com o periférico.</p>
+
+<p>Ao inserir um dispositivo novo ao sistema, um novo espaço deve ser mapeado, mas para computadores de uso geral, alguns dispositivos são denominados de padrão, ou seja, todo computador tem uma entrada padrão e uma saída padrão, que é o teclado e o monitor, respectivamente.</p>
+
+<p>Para manipular dados nesses dispositivos padrão, é necessário incluir funções existentes na instalação do compilador no sistema operacional.
+Essas funções estão presentes na biblioteca <code class="language-plaintext highlighter-rouge">stdio.h</code>: Entradas e Saídas Padrão (<strong>St</strong>an<strong>d</strong>ard <strong>I</strong>nput <strong>O</strong>utput).</p>
+
+<h3 id="stdioh"><a href="http://www.cplusplus.com/reference/cstdio/">stdio.h</a></h3>
+
+<p>Para inclusão utilizar <code class="language-plaintext highlighter-rouge">#include</code>, indicar que a bilioteca é nativa da instalação <code class="language-plaintext highlighter-rouge">&lt;</code> e <code class="language-plaintext highlighter-rouge">&gt;</code> entre o nome da bilioteca, que deve possuir uma extensão <code class="language-plaintext highlighter-rouge">.h</code> para indicar que é o seu cabeçalho (<a href="https://www.w3schools.in/c-tutorial/c-header-files/"><em>header</em></a>).</p>
+
+<p>Os arquivos de inclusão não são os arquivos fonte, mas sim os arquivos de cabeçalho, que possuem as informações necessárias para a chamada das funções presentes nessa biblioteca.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="leitura-e-escrita-de-dados"><a href="https://www.w3schools.in/c-tutorial/input-output/">Leitura e escrita de dados</a></h2>
+
+<p>A leitura de dados é feita utilizando a função <code class="language-plaintext highlighter-rouge">scanf()</code> e a escrita utilizando a função <code class="language-plaintext highlighter-rouge">printf()</code>, sendo que ambas utilizam uma quantidade variável de argumentos, mas seu primeiro argumento é um formato de caracteres.</p>
+
+<h3 id="o-formato"><a href="https://www.w3schools.in/c-tutorial/format-specifiers/">O formato</a></h3>
+
+<p>Basicamente se trata de uma <a href="https://www.w3schools.in/c-tutorial/strings/">cadeia de caracteres</a> (<em>string</em>) que possui uma mensagem a ser enviada à saída padrão, ou como devem ser lidos da entrada padrão.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"Mensagem de exibicao"</span>
+</code></pre></div></div>
+<p>Podendo ser incluida a indicação de variável na posição que ela deve aparecer utilizando o <code class="language-plaintext highlighter-rouge">%</code> e o seu tipo.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"Exibe a variavel %d "</span>
+</code></pre></div></div>
+<p>Após o formato são incluidas as variáveis que substituem as marcações na string, na ordem em que elas aparecem.</p>
+
+<h3 id="scanf"><a href="https://en.cppreference.com/w/c/io/fscanf">scanf()</a></h3>
+
+<p>Leitura de um dado que é armazenado na <a href="https://www.w3schools.in/c-tutorial/variables/">variável</a> num.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span> <span class="p">);</span>
+</code></pre></div></div>
+<p>Leitura de dois dados que são armazenado nas variáveis A e B.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span> <span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>Ou ainda:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>Os argumentos seguintes ao formato devem ser os endereços das variáveis que vão receber os dados lidos da entrada padrão conforme o formato do primeiro argumento.</p>
+
+<h3 id="print"><a href="https://en.cppreference.com/w/c/io/fprintf">print()</a></h3>
+<p>Exibição de dados da variável soma.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"X = %d"</span><span class="p">,</span> <span class="n">soma</span> <span class="p">);</span>
+</code></pre></div></div>
+<p>No lugar da marcação <code class="language-plaintext highlighter-rouge">%d</code> deve ser inserido o conteúdo da variável soma.</p>
+
+<p>Todo apresentação de dados na plataforma URI devem possuir um fim de linha, denotado pelo caractere <code class="language-plaintext highlighter-rouge">\n</code>, equivalente à tecla Enter.</p>
+
+<h2 id="resolução">Resolução</h2>
+<p>O resultado completo para o desafio
+<a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001?_blanck">URI 1001 Extremamente Básico</a> na minha formulação é:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">xis</span><span class="p">;</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span> <span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span> <span class="p">);</span>
+  <span class="n">xis</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"X = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">xis</span> <span class="p">);</span>
+  <span class="k">return</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET
