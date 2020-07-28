@@ -20,19 +20,22 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Projetos com microcontrolador PIC</title>
-<meta property="og:title" content="Projetos com microcontrolador PIC" />
-<meta property="og:description" content="Resoluções de problemas baseadas em projetos." />
+<title>P0102 - Botão LED</title>
+<meta property="og:title" content="P0102 - Botão LED" />
+<meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Projetos com microcontrolador PIC">
-<meta itemprop="description" content="Resoluções de problemas baseadas em projetos.">
+<meta itemprop="name" content="P0102 - Botão LED">
+<meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Projetos com microcontrolador PIC"/>
-<meta name="twitter:description" content="Resoluções de problemas baseadas em projetos."/>
+<meta name="twitter:title" content="P0102 - Botão LED"/>
+<meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+"/>
 
 <link rel="stylesheet" href="/ddp/assets/css/main.css">
 <link rel="stylesheet" href="/ddp/assets/css/palette.css">
@@ -279,8 +282,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_docs/tecnology/ucPIC.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_docs/tecnology/ucPIC.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2020-07-27-P0102-botaoLED.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2020-07-27-P0102-botaoLED.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -297,26 +300,137 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
+                <a href="http://localhost:4000/ddp/2020/P0102-botaoLED/">P0102 - Botão LED</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="aprendendo-com-desafios">Aprendendo com desafios</h1>
+            <h1 style="margin-bottom:0px">P0102 - Botão LED</h1>
+<span class="badge badge-danger">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span>
+<span class="post-date" style="font-style: italic;">2020-07-27</span>
+<h1 id="botão-led">Botão LED</h1>
 
-<p>A resolução de problemas está contida das competências gerais da <a href="/ddp/docs/#2-pensamento-científico-criativo-e-crítico">BNCC</a> e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.</p>
+<h2 id="objetivo">Objetivo</h2>
 
-<p>Para alcançar um bom nível ou excelência em uma habilidade, ela precisa ser lapidada de forma prática, pela repetição, análise e avaliação crítica dos resultados obtidos e também do processo de resolução.</p>
+<p>Acionar um LED copiando o estado lógico de um botão.</p>
 
-<p>O <strong>objetivo é resolver os problemas</strong>, mas no caminho, <strong>apreciar o aprendizado</strong> de linguagens de programação e da interface com o mundo físico.</p>
+<!--more-->
 
-<h2 id="c">C</h2>
+<h2 id="circuito-hardware">Circuito (<em>Hardware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1(a): Ligação de pino como fonte (<em>source</em>)</th>
+      <th style="text-align: center">Figura 1(b): Ligação de pino como dreno (<em>sink</em>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pullupres.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="programa-firmware">Programa (<em>Firmware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/projectTree.jpg?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Segue o código fonte para o projeto Pisca LED.</p>
+
+<pre><code class="language-C">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 23 de Setembro de 2019, 13:03
+ * 
+ * IDE:         MPLAB X IDE v3.15
+ * Compiler:    XC8 v1.45
+ * OS:          Deepin 15.11 X86_64
+ * Kernel:      4.15.0-30deepin-generic
+ * 
+ * Objetivo: 
+ *      Acionar um LED através do estado lógico de um botão
+ * 
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD0     |19     |LED (source)
+ *  RD3     |22     |Botão
+ */
+
+
+#include &lt;xc.h&gt;                 // Inclui biblioteca padrão do compilador XC8 
+                                // para microcontroladores Microchip.
+#include "config.h"             // Inclui arq. de config. (biblioteca) local.
+
+void main(void)                 // Função principal = main.
+{                               // Início do bloco da função main.
+    PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
+    TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
+    TRISDbits.TRISD3 = 1;       // Configura RD3 como Entrada;
+                                // Não precisa inicialização do valor do pino.
+    
+    while( 1 )                  // Laço de repetição infinito.
+    {                           // Inicio do laço de repetição.
+        if( PORTDbits.RD3 == 1 )// Condição: Se o botão estiver pressionado.
+            PORTDbits.RD0 = 1;  // Liga RD0.
+        else                    // Senão.
+            PORTDbits.RD0 = 0;  // Desliga RD0.
+    }                           // Fim do laço de repetição.
+    return;                     // Caracteriza main como uma função sem retorno.
+}                               // Fim do bloco da função main.
+
+</code></pre>
+
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
+
+<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
 <ul>
-  <li><a href="/ddp/2020/P0101-piscaLED">P0101 - Pisca LED</a></li>
-  <li><a href="/ddp/2020/P0102-botaoLED">P0102 - Botão LED</a></li>
+  <li>Comentários;</li>
+  <li>Inclusão de bibliotecas;</li>
+  <li>Diretivas de compilação;</li>
+  <li>Definições úteis ao programa;</li>
+  <li>Programa principal.</li>
 </ul>
 
-<p><a href="/ddp/docs/tecnologia">Voltar</a></p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Botão com resistor de <em>pull-down</em></th>
+      <th style="text-align: center">Botão com resistor de <em>pull-up</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -368,7 +482,7 @@ $.each(headers, function(i, header){
 </script>
 
 <script>
-$('h1').first().append('<div><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ddp/tags#Microcontrolador ">Microcontrolador</a></span><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ddp/tags#PIC ">PIC</a></span><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ddp/tags#Linguagem C ">Linguagem C</a></span><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/ddp/tags#SELDI ">SELDI</a></span></div>')</script>
+$('h1').first().append('<div></div>')</script>
 
 
             
