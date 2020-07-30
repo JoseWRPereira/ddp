@@ -1,5 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-27T21:11:04-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0102 - Botão LED</title><link href="http://localhost:4000/ddp/2020/P0102-botaoLED/" rel="alternate" type="text/html" title="P0102 - Botão LED" /><published>2020-07-27T20:45:21-03:00</published><updated>2020-07-27T20:45:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0102-botaoLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0102-botaoLED/">&lt;h1 id=&quot;botão-led&quot;&gt;Botão LED&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-07-29T21:29:22-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0102 - Botão LED</title><link href="http://localhost:4000/ddp/2020/P0102-botaoLED/" rel="alternate" type="text/html" title="P0102 - Botão LED" /><published>2020-07-29T21:13:21-03:00</published><updated>2020-07-29T21:13:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0102-botaoLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0102-botaoLED/">&lt;h1 id=&quot;botão-led&quot;&gt;Botão LED&lt;/h1&gt;
+
+&lt;p&gt;Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (&lt;em&gt;push button&lt;/em&gt;) para ligar um LED.&lt;/p&gt;
+
+&lt;p&gt;Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.&lt;/p&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
 
@@ -9,11 +13,21 @@
 
 &lt;h2 id=&quot;circuito-hardware&quot;&gt;Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
 
+&lt;p&gt;O circuito para atender o objetivo possui um LED como elemento de saída e um botão pulsador como elemento de entrada.&lt;/p&gt;
+
+&lt;p&gt;Na saída temos uma saída configurada como fonte (&lt;em&gt;source&lt;/em&gt;), como tratado em &lt;a href=&quot;/ddp/2020/P0101-piscaLED&quot;&gt;P0101 - Pisca LED&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A entrada deve possuir um estado lógico bem definido, mas um botão pulsador não garante esse estado lógico, pois possui apenas dois contatos, podendo sua configuração ser normalmente aberto (NA) ou normalmente fechado(NF). Na Figura 1 é utilizado um botão pulsador NA, que é a configuração mais comum.&lt;/p&gt;
+
+&lt;p&gt;Para garantir o tal estado lógico bem definido, é montado um ramo com o botão e um resistor, geralmente com 10kΩ, ligados em série, entre o Vcc e o GND. No ponto de conexão entre esses dois componentes temos, em relação ao terra (&lt;em&gt;GND&lt;/em&gt;), uma tensão que é a tensão do componente conectado ao terra. Este ponto é conectado ao pino do uC, assim a tensão no pino é a mesma tensão sobre o componente ligado ao terra.&lt;/p&gt;
+
+&lt;p&gt;As duas configurações possíves são mostradas na Figura 1(a) e 1(b), em que o botão está conectado ao Vcc e a outra em que o botão está conectado ao terra.&lt;/p&gt;
+
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(a): Ligação de pino como fonte (&lt;em&gt;source&lt;/em&gt;)&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(b): Ligação de pino como dreno (&lt;em&gt;sink&lt;/em&gt;)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(a): Resistor de &lt;em&gt;Pull-down&lt;/em&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(b): Resistor de &lt;em&gt;Pull-up&lt;/em&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -24,7 +38,19 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;p&gt;Na configuração &lt;em&gt;pull-down&lt;/em&gt; o resistor está conectado ao terra, o que garante, quando o botão estiver aberto, o nível lógico 0 (terra/GND).&lt;/p&gt;
+
+&lt;p&gt;Ao pressionar o botão, ele fecha e conecta o ponto de conexão com o pino ao Vcc, aplicando o nível lógico 1 a ele.&lt;/p&gt;
+
+&lt;p&gt;Na configuração &lt;em&gt;pull-up&lt;/em&gt; o resistor está conectado ao positivo da fonte, Vcc. O botão na condição de não acionado está com contato aberto, assim a tensão sobre ele é a tensão da fonte, nesse caso 5V, conforme a 2ª lei de Kirchhoff, garantindo o nível lógico 1.&lt;/p&gt;
+
+&lt;p&gt;Ao pressionar o botão, ele fecha, ligando o ponto de conexão com o pino do uC ao GND, aplicando o nível lógico 0 a ele.&lt;/p&gt;
+
+&lt;p&gt;A configuração com o resistor de &lt;em&gt;pull-down&lt;/em&gt; é a que proporciona uma lógica direta a entrada do dado: botão pressionado.&lt;/p&gt;
+
 &lt;h2 id=&quot;programa-firmware&quot;&gt;Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;A Figura 2 mostra a árvore de diretórios do projeto em que são utilizados dois arquivos, sendo que o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; possui o programa e o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.h&lt;/code&gt; as diretivas de configuração.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -39,9 +65,26 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Segue o código fonte para o projeto Pisca LED.&lt;/p&gt;
+&lt;p&gt;O arquivo de configuração deve ser incluído no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; com o comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &quot;config.h&quot;&lt;/code&gt; logo no início do código.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;/*
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef CONFIG_H
+#define CONFIG_H
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma config FOSC  = INTRC_NOCLKOUT   // Fonte de clock: oscilador interno
+#pragma config WDTE  = OFF              // Desabilita WatchDog Timer 
+#pragma config MCLRE = OFF              // Desab. Master Clear via pino
+#pragma config LVP   = OFF              // Desab. gravação em baixa tensão
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define _XTAL_FREQ     4000000          // Freq. clock interno: 4MHz(padrão)
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A separação das diretivas de compilação é interessante por facilitar o tratamento dessas configurações, no caso de mudanças ou mesmo na inclusão de outras diretivas. Esse arquivo pode ser copiado para os demais projetos.&lt;/p&gt;
+
+&lt;p&gt;Segue o código fonte do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
  * File:   main.c
  * Author: josewrpereira
  *
@@ -60,31 +103,31 @@
  *  VSS     |12,31  | Alimentação (GND/0V)
  *  RD0     |19     |LED (source)
  *  RD3     |22     |Botão
- */
+ */&lt;/span&gt;
 
 
-#include &amp;lt;xc.h&amp;gt;                 // Inclui biblioteca padrão do compilador XC8 
-                                // para microcontroladores Microchip.
-#include &quot;config.h&quot;             // Inclui arq. de config. (biblioteca) local.
-
-void main(void)                 // Função principal = main.
-{                               // Início do bloco da função main.
-    PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
-    TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
-    TRISDbits.TRISD3 = 1;       // Configura RD3 como Entrada;
-                                // Não precisa inicialização do valor do pino.
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;                 // Inclui biblioteca padrão do compilador XC8 
+&lt;/span&gt;                                &lt;span class=&quot;c1&quot;&gt;// para microcontroladores Microchip.&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &quot;config.h&quot;             // Inclui arq. de config. (biblioteca) local.
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                 &lt;span class=&quot;c1&quot;&gt;// Função principal = main.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                               &lt;span class=&quot;c1&quot;&gt;// Início do bloco da função main.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;// Inicia RD0 com o valor 0.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// Configura RD0 como Saída.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// Configura RD3 como Entrada;&lt;/span&gt;
+                                &lt;span class=&quot;c1&quot;&gt;// Não precisa inicialização do valor do pino.&lt;/span&gt;
     
-    while( 1 )                  // Laço de repetição infinito.
-    {                           // Inicio do laço de repetição.
-        if( PORTDbits.RD3 == 1 )// Condição: Se o botão estiver pressionado.
-            PORTDbits.RD0 = 1;  // Liga RD0.
-        else                    // Senão.
-            PORTDbits.RD0 = 0;  // Desliga RD0.
-    }                           // Fim do laço de repetição.
-    return;                     // Caracteriza main como uma função sem retorno.
-}                               // Fim do bloco da função main.
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                  &lt;span class=&quot;c1&quot;&gt;// Laço de repetição infinito.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;// Inicio do laço de repetição.&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Condição: Se o botão estiver pressionado.&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Liga RD0.&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;                    &lt;span class=&quot;c1&quot;&gt;// Senão.&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Desliga RD0.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;// Fim do laço de repetição.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                     &lt;span class=&quot;c1&quot;&gt;// Caracteriza main como uma função sem retorno.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                               &lt;span class=&quot;c1&quot;&gt;// Fim do bloco da função main.&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
 
@@ -92,29 +135,217 @@ void main(void)                 // Função principal = main.
 &lt;ul&gt;
   &lt;li&gt;Comentários;&lt;/li&gt;
   &lt;li&gt;Inclusão de bibliotecas;&lt;/li&gt;
-  &lt;li&gt;Diretivas de compilação;&lt;/li&gt;
-  &lt;li&gt;Definições úteis ao programa;&lt;/li&gt;
   &lt;li&gt;Programa principal.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;comentários&quot;&gt;Comentários&lt;/h3&gt;
+&lt;p&gt;Os comentários estão descritos em &lt;a href=&quot;/ddp/2020/P0101-piscaLED&quot;&gt;P0101 - Pisca LED&lt;/a&gt; e são semelhantes em todos os projetos aqui apresentados, assim serão omitidos para simplificar e focar no código que resolve o objetivo apresentado, mas é importante que você faça os comentários em todos os seus projetos.&lt;/p&gt;
+
+&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
+&lt;p&gt;Note que além da biblioteca padrão &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xc.h&lt;/code&gt;, agora está incluído o arquivo de cabeçalho &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.h&lt;/code&gt;, como já citado anteriormente.&lt;/p&gt;
+
+&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
+
+&lt;p&gt;O programa principal pode ser dividido em duas partes: configuração e laço de repetição.&lt;/p&gt;
+
+&lt;p&gt;O trecho de configuração no código inicializa o pino RD0 do PORTD com o valor zero, que é para iniciar com o LED desligado.&lt;/p&gt;
+
+&lt;p&gt;A linha seguinte configura o RD0 como saída, porque é o pino que aciona o LED.&lt;/p&gt;
+
+&lt;p&gt;Em seguida é configurado como entrada o pino RD3.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;// Inicia RD0 com o valor 0.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// Configura RD0 como Saída.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// Configura RD3 como Entrada;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note que o RD3 não é inicializado porque o dado vem de fora do uC, assim não faz sentido inicializá-lo pois não é um dado de saída.&lt;/p&gt;
+
+&lt;p&gt;O loop infinito possui o ciclo de execução que atende o objetivo proposto sendo estruturado da seguinte forma:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;leitura do estado lógico no pino de entrada;&lt;/li&gt;
+  &lt;li&gt;ligar o LED se o estado lógico do pino é 1;&lt;/li&gt;
+  &lt;li&gt;desligar o LED se o estado lógico do pino é 0;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Segue a codificação da estrutura do laço de repetição.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                  &lt;span class=&quot;c1&quot;&gt;// Laço de repetição infinito.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;// Inicio do laço de repetição.&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Condição: Se o botão estiver pressionado.&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Liga RD0.&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;                    &lt;span class=&quot;c1&quot;&gt;// Senão.&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Desliga RD0.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;// Fim do laço de repetição.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;utilizando-defines&quot;&gt;Utilizando defines&lt;/h2&gt;
+
+&lt;p&gt;Uma das ferramentas mais interessantes de trabalhar é utilizando os &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;defines&lt;/code&gt; pois facilitam muito a interpretação e leitura do código, pois pode-se utilizar um termo que faça sentido com a aplicação.&lt;/p&gt;
+
+&lt;p&gt;Sendo assim, pode-se definir os pinos utilizados com um termo mais coerente com as suas funções.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define LED     PORTDbits.RD0
+#define BOTAO   PORTDbits.RD3
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BOTAO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Observando a estrutura condicional dentro do laço de repetição, pode-se ver que a leitura e interpretação do funcionamento do programa está mais evidente.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Se o BOTAO estiver acionado&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ligar o LED&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;senão&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;desligar o LED&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;A estrutura condicional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; verifica se o conteúdo entre os parênteses é verdadeiro para executar o código à seguir. A condição &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BOTAO == 1&lt;/code&gt; é uma comparação que verifica a igualdade(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;==&lt;/code&gt;) entre os dois termos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BOTAO&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A condição verdadeira dentro da estrutura do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; não precisa ser uma comparação, pode ser o estado lógico de uma variável ou de um registrador. Assim pode-se utilizar a seguinte condição: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if( BOTAO )&lt;/code&gt; pois &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BOTAO&lt;/code&gt; é o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTDbits.RD3&lt;/code&gt;, que é um registrador e pode assumir os estado lógicos 1 ou 0, respectivamente verdadeiro ou falso.&lt;/p&gt;
+
+&lt;p&gt;O código abaixo utiliza a condicional sem a comparação, apenas com o estado lógico da entrada.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define LED     PORTDbits.RD0
+#define BOTAO   PORTDbits.RD3
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BOTAO&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;simplificando-o-código&quot;&gt;Simplificando o código&lt;/h2&gt;
+
+&lt;p&gt;O processo de codificação envolve muitas etapas e compromissos com um equilíbrio entre simplicidade, tamanho e velocidade de execução, sendo que o ideal seria um código o &lt;strong&gt;mais simples&lt;/strong&gt; possível, com o &lt;strong&gt;menor tamanho&lt;/strong&gt; e com a maior &lt;strong&gt;velocidade de execução&lt;/strong&gt;. Porém essa condição combinada é praticamente uma utopia. Então o programador deve escolher qual dessas características é prioritária.&lt;/p&gt;
+
+&lt;p&gt;A simplificação do codigo exposto acima, num dos raros casos, pode ser melhorado nesses três aspectos.&lt;/p&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define LED             PORTDbits.RD0
+#define BOTAO           PORTDbits.RD3
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BOTAO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Como a condição para acionar o LED é o botão estar pressionado, a lógica é direta nesse acionamento. Assim, basta atribuir o valor da entrada (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BOTAO&lt;/code&gt;) à saída (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LED&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;O código dentro do laço de repetição assim ficou mais simples de compreender, menor em extensão e por consequência com execução mais rápida.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style=&quot;text-align: center&quot;&gt;Botão com resistor de &lt;em&gt;pull-down&lt;/em&gt;&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Botão com resistor de &lt;em&gt;pull-up&lt;/em&gt;&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pulldownres.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pulldownres.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;h2 id=&quot;inversão-da-entrada&quot;&gt;Inversão da entrada&lt;/h2&gt;
+
+&lt;p&gt;Como visto no início desta postagem, existe a possibilidade de ligar o botão com um resistor de &lt;em&gt;pull-down&lt;/em&gt; ou &lt;em&gt;pull-up&lt;/em&gt;. Caso a ligação já esteja feita, é muito mais simples mudar o estado lógico do pino no programa do que mudar no circuito, seja no esquemático ou na montagem.&lt;/p&gt;
+
+&lt;p&gt;A condição do circuito abaixo utilizando o código já apresentado, mostra que o comportamento do LED está invertido em relação ao pressionar do botão. O botão pressionado apaga o LED e o botão não pressionado mantém o LED ligado.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Botão com resistor de &lt;em&gt;pull-up&lt;/em&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pullupres.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Para inverter o estado lógico da entrada, e garantir que ao pressionar o botão o LED acenda, basta inserir o operador de inversão lógica &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!&lt;/code&gt;, equivalente a uma porta lógica inversora: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LED = !BOTAO;&lt;/code&gt;. Essa instrução significa que o LED recebe o estado lógico inverso do BOTAO.&lt;/p&gt;
+
+&lt;p&gt;Segue o código com o estado lógico do botão invertido e abaixo o seu comportamento no simulador.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define LED             PORTDbits.RD0
+#define BOTAO           PORTDbits.RD3
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;LED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BOTAO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Botão com resistor de &lt;em&gt;pull-up&lt;/em&gt;  e inversão de estado lógico em código&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pullupresInv.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
 &lt;p&gt;Agora é a sua vez!&lt;/p&gt;
 
-&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
+&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
 
 &lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
 

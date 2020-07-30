@@ -5,9 +5,12 @@ permalink: /docs/tecnology/ucPIC
 tags:
  - Microcontrolador
  - PIC
+ - PIC16F887
  - Linguagem C
+ - MPLABX-XC8
+ - SimulIDE
  - SELDI
-description: Resoluções de problemas baseadas em projetos.
+Description: Resoluções de problemas baseadas em projetos.
 ---
 
 # Aprendendo com desafios
@@ -18,9 +21,21 @@ Para alcançar um bom nível ou excelência em uma habilidade, ela precisa ser l
 
 O **objetivo é resolver os problemas**, mas no caminho, **apreciar o aprendizado** de linguagens de programação e da interface com o mundo físico.
 
+Para o desenvolvimento dos projetos são utilizadas as seguintes ferramentas:
+
+* Interface de desenvolvimento integrada - IDE [MPLAB X](https://www.microchip.com/mplab/mplab-x-ide);
+* Compilador [XC8](https://www.microchip.com/mplab/compilers);
+* Simulador [SimulIDE](https://www.simulide.com/p/downloads.html)
+
+Alternativamente pode-se utilizar uma ferramenta online: 
+* IDE/compilador [MPLAB Xpress](https://www.microchip.com/mplab/mplab-xpress).
+
+<hr/>
+
 ## C
 * [P0101 - Pisca LED]({{site.baseurl}}/2020/P0101-piscaLED)
 * [P0102 - Botão LED]({{site.baseurl}}/2020/P0102-botaoLED)
 
+<hr/>
 
 [Voltar]({{site.baseurl}}/docs/tecnologia)
