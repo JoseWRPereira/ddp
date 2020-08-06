@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Diferença de Potencial - DdP</title>
-<meta property="og:title" content="Diferença de Potencial - DdP" />
+<title>P0110 - Display de 7 segmentos</title>
+<meta property="og:title" content="P0110 - Display de 7 segmentos" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Diferença de Potencial - DdP">
+<meta itemprop="name" content="P0110 - Display de 7 segmentos">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Diferença de Potencial - DdP"/>
+<meta name="twitter:title" content="P0110 - Display de 7 segmentos"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -282,8 +282,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/pages/index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/pages/index.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2020-08-05-P0110-disp7seg.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2020-08-05-P0110-disp7seg.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -300,24 +300,15 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/">Diferença de Potencial - DdP</a>
+                <a href="http://localhost:4000/ddp/2020/P0110-disp7seg/">P0110 - Display de 7 segmentos</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="postagens">Postagens</h1>
-
-<p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
-
-<br />
-<hr /><hr />
-
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0110-disp7seg/">P0110 - Display de 7 segmentos</a></h2>
-   <span class="post-date">2020-08-05</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
+            <h1 style="margin-bottom:0px">P0110 - Display de 7 segmentos</h1>
+<span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+<span class="post-date" style="font-style: italic;">2020-08-05</span>
+<h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
 
 <p>O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.</p>
 
@@ -325,238 +316,155 @@
 
 <p>Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais: <code class="language-plaintext highlighter-rouge">0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F</code>;</p>
 
+<!--more-->
 
-   
-      <a href="/ddp/2020/P0110-disp7seg/">leia mais </a>
-   
-   </div>
-   <hr />
+<h2 id="circuito-hardware">Circuito (<em>Hardware</em>)</h2>
 
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/com110-algoritmo/">COM110 - Introdução a algoritmos</a></h2>
-   <span class="post-date">2020-08-03</span><br />
-   <span class="badge badge-primary">python</span>
-   <h1 id="intrudução-a-algorítmos-e-a-python"><a href="https://cursos.univesp.br/courses/3163/pages/semana-1?module_item_id=264918">Intrudução a Algorítmos e a Python</a></h1>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1: Display de 7 segmentos catodo comum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/P0110-disp7seg0-F.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
 
+<h2 id="programa-firmware">Programa (<em>Firmware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/projectTree.jpg?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 5 de Agosto de 2020, 20:21:59
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RD0     |19     | Segmento a
+ *  RD1     |20     | Segmento b
+ *  RD2     |21     | Segmento c
+ *  RD3     |22     | Segmento d
+ *  RD4     |27     | Segmento e
+ *  RD5     |28     | Segmento f
+ *  RD6     |29     | Segmento g
+ *  RD7     |30     | Segmento p
+ * -------------------------------------------------
+ */</span>
+
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+#include "disp7seg.h"
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="n">disp7seg_init</span><span class="p">();</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">disp7seg</span><span class="p">(</span> <span class="n">cont</span> <span class="p">);</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+        <span class="n">cont</span> <span class="o">=</span> <span class="o">++</span><span class="n">cont</span> <span class="o">%</span> <span class="mi">16</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+</span>
+<span class="kt">char</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>    <span class="mh">0x3F</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x5B</span><span class="p">,</span> <span class="mh">0x4F</span><span class="p">,</span> 
+                            <span class="mh">0x66</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x7D</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> 
+                            <span class="mh">0x7F</span><span class="p">,</span> <span class="mh">0x6F</span><span class="p">,</span> <span class="mh">0x77</span><span class="p">,</span> <span class="mh">0x7C</span><span class="p">,</span> 
+                            <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0x5E</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0x71</span>  <span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">disp7seg_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">TRISD</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+
+    <span class="n">PORTD</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">PORTD</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">PORTD</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">PORTD</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">disp7seg</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">PORTD</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">?</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DISP7SEG_H
+#define	DISP7SEG_H
+</span>
+<span class="kt">void</span> <span class="nf">disp7seg_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">disp7seg</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num</span> <span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">while</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="o">--</span><span class="n">t</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DELAY_H
+#define DELAY_H
+</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div>
+
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
+
+<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
 <ul>
-  <li>Definição do problema (O que);</li>
-  <li>Desenvolvimento (Como)
-    <ul>
-      <li>Projetar a solucação (algoritmo);</li>
-      <li>Codificar a solução (Programar em linguagem de programação);</li>
-      <li>Testar o programa.</li>
-    </ul>
-  </li>
+  <li></li>
+  <li></li>
+  <li>Programa principal.</li>
 </ul>
 
-<p>Algoritmo: sequência bem definida, explícita e precisa, de passos que visam atingir um objetivo.</p>
-<ul>
-  <li>Cada passo do algorítmo deve ser uma ação realizável;</li>
-  <li>A ordem dos passos devem ser precisamente determinadas;</li>
-  <li>O algoritmo deve ter fim.</li>
-</ul>
+<hr />
 
-<p>Sequenciamento: estabelece um padrão de comportamento, em que as ações devem ser executadas linearmente.</p>
+<p>Agora é a sua vez!</p>
 
-<p>Teste seletivo</p>
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
 
-<p>Repetição: mesmo trecho é repetido até que a condição de parada seja alcançada. O número de repetições é indefinido apesar de ser finito.</p>
+<p>Ficou com alguma dúvida, entre em contato.</p>
 
-<p>Condição de parada</p>
+<p>Bom trabalho!</p>
 
-<p>Refinar o algoritmo até que as instruções possam ser codificadas.</p>
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 
-<p>O algoritmo deve ser independente da linguagem.</p>
-
-<p>As linguagens possuem:</p>
-<ul>
-  <li>um número restrito de instruções;</li>
-  <li>possuem um conjunto de instruções comuns a todas as linguagens:
-    <ul>
-      <li>Entradas e Saídas;</li>
-      <li>Testes seletivos;</li>
-      <li>Repetições; etc.</li>
-    </ul>
-  </li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/com110-algoritmo/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0102-botaoLED/">P0102 - Botão LED</a></h2>
-   <span class="post-date">2020-07-29</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="botão-led">Botão LED</h1>
-
-<p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
-
-<p>Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Acionar um LED copiando o estado lógico de um botão.</p>
-
-
-   
-      <a href="/ddp/2020/P0102-botaoLED/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0101-piscaLED/">P0101 - Pisca LED</a></h2>
-   <span class="post-date">2020-07-25</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="pisca-led">Pisca LED</h1>
-
-<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que fazer a exibição de uma mensagem na saída padrão, que geralmente é o monitor, ser o programa mínimo funcional que se pode fazer em um programa de computador.</p>
-
-<p>Em um sistema microcontrolado, o programa equivalente ao <code class="language-plaintext highlighter-rouge">"Ola mundo"</code> é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: <code class="language-plaintext highlighter-rouge">Pisca LED</code>.</p>
-
-<p>Assim, o <code class="language-plaintext highlighter-rouge">Pisca LED</code> ou <em><code class="language-plaintext highlighter-rouge">Blink LED</code></em> é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (<em>firmware</em>), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Acionar um LED de forma intermitente com frequência de 1Hz.</p>
-
-
-   
-      <a href="/ddp/2020/P0101-piscaLED/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1010/">URI1010</a></h2>
-   <span class="post-date">2020-07-23</span><br />
-   <span class="badge badge-primary">Python</span>
-   <h1 id="cálculo-simples"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1010">Cálculo Simples</a></h1>
-
-<p>O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).</p>
-
-<p>Assuntos abordados:</p>
-<ul>
-  <li>Entrada de múltiplas variáveis por linha.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/uri1010/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1009/">URI1009</a></h2>
-   <span class="post-date">2020-07-23</span><br />
-   <span class="badge badge-success">C</span>
-   <h1 id="salário-com-bônus"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1009">Salário com Bônus</a></h1>
-
-<p>O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.</p>
-
-<p>Assuntos abordados:</p>
-<ul>
-  <li>Cadeia de caracteres.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/uri1009/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1005/">URI1005</a></h2>
-   <span class="post-date">2020-07-23</span><br />
-   <span class="badge badge-success">C</span>
-   <h1 id="média-1"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1005">Média 1</a></h1>
-
-<p>O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.</p>
-
-<p>Assuntos abordados:</p>
-<ul>
-  <li>Defines.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/uri1005/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1002/">URI1002</a></h2>
-   <span class="post-date">2020-07-23</span><br />
-   <span class="badge badge-success">C</span><span class="badge badge-primary">Python</span>
-   <h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do círculo</a></h1>
-
-<p>O problema solicita que o programa calcule a área de um círculo dado o valor do raio.</p>
-
-<p>Para o cálculo da área é utilizada a seguinte equação: <code class="language-plaintext highlighter-rouge">area = n.raio²</code>.</p>
-
-<p>Assuntos abordados:</p>
-<ul>
-  <li>Variável de dupla precisão;</li>
-  <li>Formatação de casas decimais.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/uri1002/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1001/">URI1001</a></h2>
-   <span class="post-date">2020-07-23</span><br />
-   <span class="badge badge-success">C</span><span class="badge badge-primary">Python</span>
-   <h1 id="extremamente-básico"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001">Extremamente Básico</a></h1>
-
-<p>O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
-
-<p>Assuntos abordados:</p>
-<ul>
-  <li>Variáveis do tipo inteiro;</li>
-  <li>Leitura de variáveis;</li>
-  <li>Processamento das variáveis: operações aritméticas;</li>
-  <li>Exibição dos dados;</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/uri1001/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1010py/">URI1010</a></h2>
-   <span class="post-date">2020-06-23</span><br />
-   <span class="badge badge-primary">Python</span>
-   <h1 id="cálculo-simples"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1010">Cálculo Simples</a></h1>
-
-<p>O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).</p>
-
-<p>O problema aqui encontrado é <strong>como fazer a entrada desses três parâmetros por linha?</strong></p>
-
-
-   
-      <a href="/ddp/2020/uri1010py/">leia mais </a>
-   
-   </div>
-   <hr />
-
-
-Quer ver mais? Acesse <a href="/ddp/archive/">artigos</a>.
-</p>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -607,7 +515,8 @@ $.each(headers, function(i, header){
 })
 </script>
 
-
+<script>
+$('h1').first().append('<div></div>')</script>
 
 
             
