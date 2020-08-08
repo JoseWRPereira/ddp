@@ -458,6 +458,21 @@ O display possui um terminal para cada segmento do display.</p>
   </tbody>
 </table>
 
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
+
+<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
+<ul>
+  <li>Inclusão de bibliotecas;</li>
+  <li>Programa principal;
+    <ul>
+      <li>Declaração e inicializações;</li>
+      <li>Laço de repetição.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="programa-principal">Programa principal</h3>
+
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
  * File:   main.c
  * Author: josewrpereira
@@ -501,6 +516,65 @@ O display possui um terminal para cada segmento do display.</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>O laço de repetição que compõe a execução do programa possui apenas três instruçẽos:</p>
+<ul>
+  <li>Exibição da variável de contagem;</li>
+  <li>Atraso de 500ms, para que o valor da contagem permaneça em exibição por esse tempo;</li>
+  <li>Incremento seguido de uma delimitação da contagem utilizando a operação <code class="language-plaintext highlighter-rouge">mod</code> ou <code class="language-plaintext highlighter-rouge">%</code>, que é o operador que tem como resultado o resto da divisão. <code class="language-plaintext highlighter-rouge">cont</code> assume apenas valores entre 0 e 15.</li>
+</ul>
+
+<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef CONFIG_H
+#define CONFIG_H
+</span>
+<span class="cp">#pragma config FOSC  = INTRC_NOCLKOUT   // Fonte de clock: oscilador interno
+#pragma config WDTE  = OFF              // Desabilita WatchDog Timer 
+#pragma config MCLRE = OFF              // Desab. Master Clear via pino
+#pragma config LVP   = OFF              // Desab. gravaГЦo em baixa tensЦo
+</span>
+<span class="cp">#define _XTAL_FREQ     4000000          // Freq. clock interno: 4MHz(padrЦo)
+</span>
+<span class="cp">#endif
+</span></code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DELAY_H
+#define DELAY_H
+</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DISP7SEG_H
+#define	DISP7SEG_H
+</span>
+<span class="kt">void</span> <span class="nf">disp7seg_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">disp7seg</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num</span> <span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div>
+
+<h3 id="sub-rotinas">Sub-rotinas</h3>
+
+<p>Trechos de programa, que podem ser executados com parâmetros diferentes, porém que executam a mesma ação levando em conta os argumentos da função.</p>
+
+<h4 id="delay">Delay</h4>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">while</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="o">--</span><span class="n">t</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="display-7-segmentos">Display 7 segmentos</h4>
+
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
 #include "config.h"
 #include "delay.h"
@@ -525,43 +599,8 @@ O display possui um terminal para cada segmento do display.</p>
     <span class="n">PORTD</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">?</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DISP7SEG_H
-#define	DISP7SEG_H
-</span>
-<span class="kt">void</span> <span class="nf">disp7seg_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
-<span class="kt">void</span> <span class="nf">disp7seg</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num</span> <span class="p">);</span>
 
-<span class="cp">#endif
-</span></code></pre></div></div>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
-#include "config.h"
-</span>
-<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">while</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="o">--</span><span class="n">t</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DELAY_H
-#define DELAY_H
-</span>
-<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">);</span>
-
-<span class="cp">#endif
-</span></code></pre></div></div>
-
-<h2 id="estrutura-do-programa">Estrutura do programa</h2>
-
-<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
-<ul>
-  <li></li>
-  <li></li>
-  <li>Programa principal.</li>
-</ul>
+<p>O vetor <code class="language-plaintext highlighter-rouge">digitos7seg[16]</code> contém todos os valores que correspondem aos caracteres de representação hexadecimal, associados diretamente com a posição de cada valor, sendo o valor que corresponde ao dígito 0 na posição 0 do vetor, o dígito 1 na posição 1, e assim por diante, com todos os demais valores.</p>
 
 <hr />
 

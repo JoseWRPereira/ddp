@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-07T22:23:03-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-07T22:51:36-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0110 - Display de 7 segmentos</title><link href="http://localhost:4000/ddp/2020/P0110-disp7seg/" rel="alternate" type="text/html" title="P0110 - Display de 7 segmentos" /><published>2020-08-05T19:55:21-03:00</published><updated>2020-08-05T19:55:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0110-disp7seg</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0110-disp7seg/">&lt;h1 id=&quot;display-de-7-segmentos&quot;&gt;Display de 7 segmentos&lt;/h1&gt;
 
 &lt;p&gt;O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.&lt;/p&gt;
@@ -143,6 +143,21 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
+
+&lt;p&gt;O programa presente no arquivo fonte &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; possui o seguinte arranjo:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Inclusão de bibliotecas;&lt;/li&gt;
+  &lt;li&gt;Programa principal;
+    &lt;ul&gt;
+      &lt;li&gt;Declaração e inicializações;&lt;/li&gt;
+      &lt;li&gt;Laço de repetição.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
+
 &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
  * File:   main.c
  * Author: josewrpereira
@@ -186,6 +201,65 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;O laço de repetição que compõe a execução do programa possui apenas três instruçẽos:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Exibição da variável de contagem;&lt;/li&gt;
+  &lt;li&gt;Atraso de 500ms, para que o valor da contagem permaneça em exibição por esse tempo;&lt;/li&gt;
+  &lt;li&gt;Incremento seguido de uma delimitação da contagem utilizando a operação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod&lt;/code&gt; ou &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt;, que é o operador que tem como resultado o resto da divisão. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cont&lt;/code&gt; assume apenas valores entre 0 e 15.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef CONFIG_H
+#define CONFIG_H
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma config FOSC  = INTRC_NOCLKOUT   // Fonte de clock: oscilador interno
+#pragma config WDTE  = OFF              // Desabilita WatchDog Timer 
+#pragma config MCLRE = OFF              // Desab. Master Clear via pino
+#pragma config LVP   = OFF              // Desab. gravaГЦo em baixa tensЦo
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define _XTAL_FREQ     4000000          // Freq. clock interno: 4MHz(padrЦo)
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef DELAY_H
+#define DELAY_H
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef DISP7SEG_H
+#define	DISP7SEG_H
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;sub-rotinas&quot;&gt;Sub-rotinas&lt;/h3&gt;
+
+&lt;p&gt;Trechos de programa, que podem ser executados com parâmetros diferentes, porém que executam a mesma ação levando em conta os argumentos da função.&lt;/p&gt;
+
+&lt;h4 id=&quot;delay&quot;&gt;Delay&lt;/h4&gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;display-7-segmentos&quot;&gt;Display 7 segmentos&lt;/h4&gt;
+
 &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
 #include &quot;config.h&quot;
 #include &quot;delay.h&quot;
@@ -210,43 +284,8 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
     &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef DISP7SEG_H
-#define	DISP7SEG_H
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;cp&quot;&gt;#endif
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef DELAY_H
-#define DELAY_H
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#endif
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
-
-&lt;p&gt;O programa presente no arquivo fonte &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; possui o seguinte arranjo:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;Programa principal.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;O vetor &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitos7seg[16]&lt;/code&gt; contém todos os valores que correspondem aos caracteres de representação hexadecimal, associados diretamente com a posição de cada valor, sendo o valor que corresponde ao dígito 0 na posição 0 do vetor, o dígito 1 na posição 1, e assim por diante, com todos os demais valores.&lt;/p&gt;
 
 &lt;hr /&gt;
 
