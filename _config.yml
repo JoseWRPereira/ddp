@@ -75,6 +75,10 @@ permalink: /:year/:title/
 markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
+kramdown:
+  math_engine:         katex
+
+
 # Collections
 collections:
   docs:

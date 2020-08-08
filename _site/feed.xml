@@ -1,20 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-05T22:31:28-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-07T22:13:23-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0110 - Display de 7 segmentos</title><link href="http://localhost:4000/ddp/2020/P0110-disp7seg/" rel="alternate" type="text/html" title="P0110 - Display de 7 segmentos" /><published>2020-08-05T19:55:21-03:00</published><updated>2020-08-05T19:55:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0110-disp7seg</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0110-disp7seg/">&lt;h1 id=&quot;display-de-7-segmentos&quot;&gt;Display de 7 segmentos&lt;/h1&gt;
 
 &lt;p&gt;O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.&lt;/p&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
 
-&lt;p&gt;Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F&lt;/code&gt;;&lt;/p&gt;
+&lt;p&gt;Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F&lt;/code&gt;;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;circuito-hardware&quot;&gt;Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
+&lt;h2 id=&quot;1-circuito-hardware&quot;&gt;1. Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O display de 7 segmentos basicamente é um conjunto de LEDs dispostos de forma a cada um deles iluminar um segmento no encapsulamento. Existem vários modelos para diferentes necessidades, mas aqui usamos o mais comum.&lt;/p&gt;
+
+&lt;p&gt;O display, além dos sete segmentos possui ainda um ponto, que pode ser utilizado para sinalizar um ponto decimal (vírgula) ao associar vários displays para mostrar um número fracionário ou qualquer separação entre dois dígitos. Nesse projeto o ponto não será utilzado.&lt;/p&gt;
+
+&lt;p&gt;Para o acionamento do display foi utilizado o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; conforme mostrado na Figura 1.1.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Display de 7 segmentos catodo comum&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: Display de 7 segmentos catodo comum&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -24,7 +32,103 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;programa-firmware&quot;&gt;Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+&lt;p&gt;Existem dois modelos de display, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Anodo comum&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Catodo comum&lt;/code&gt;, que se referem aos terminais conectados em comum, conforme exemplo da Figura 1.2.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.2: Segmentos do display&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-segmentos.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Cada segmento recebe uma identificação em letra minúscula de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g&lt;/code&gt; e o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;. 
+O display possui um terminal para cada segmento do display.&lt;/p&gt;
+
+&lt;p&gt;Cada pino do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; está conectado a um segmento do display.&lt;/p&gt;
+
+&lt;p&gt;Note que cada segmento, composto por um LED, necessita de um resistor para limitar a corrente que percorre ele. Como cada pino do uC fornece uma tensão de 5V para acionar o segmento. A queda de tensão no LED é de \(2V\), aproximadamente. Pode-se assim calcular o valor do resistor limitador de corrente:&lt;/p&gt;
+
+&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo separator=&quot;true&quot;&gt;,&lt;/mo&gt;&lt;mn&gt;020&lt;/mn&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;150&lt;/mn&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;Ω&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;R = \frac{ V_{pino}-V_{LED}}{I_{LED}} = \frac{5-2}{0,020} = 150\Omega&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.00773em;&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:2.19633em;vertical-align:-0.8360000000000001em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:1.36033em;&quot;&gt;&lt;span style=&quot;top:-2.3139999999999996em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.07847em;&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.32833099999999993em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.05764em;&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.02778em;&quot;&gt;D&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.15em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.677em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.22222em;&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.311664em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;o&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.286108em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;−&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.22222em;&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.32833099999999993em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.05764em;&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.02778em;&quot;&gt;D&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.15em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8360000000000001em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:2.20188em;vertical-align:-0.8804400000000001em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:1.32144em;&quot;&gt;&lt;span style=&quot;top:-2.314em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mpunct&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.16666666666666666em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.677em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;−&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8804400000000001em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;Ω&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;p&gt;O circuito apresenta um conjunto de resistores em um mesmo encapsulamento, mas poderia ser um resistor individual para cada segmento.&lt;/p&gt;
+
+&lt;p&gt;O display aqui utilizado é do tipo catodo comum, assim basta acionar os pinos do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; que correspondam aos segmentos a serem acionados para formar o dígito que se deseja exibir.&lt;/p&gt;
+
+&lt;p&gt;Para mostrar o dígito 0(zero), aciona-se os segmento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a, b, c, d, e, f&lt;/code&gt;conforme mostrado na Figura 1.3.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.3: Dígito 0 (zero)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digito0.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;É importante notar a sequência de pinos do display e do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORT&lt;/code&gt; utilizado, pois uma alteração de ordem muda o que é exibido no display.&lt;/p&gt;
+
+&lt;p&gt;Para o dígito 1(um) é necessário ligar apenas os segmentos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;, mantendo os demais desligados.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.4: Dígito 1 (um)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digito1.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Para o dígito 2(dois) é mais fácil perceber os dígitos desligados, pois estão em menor quantidade, sendo o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt; e o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt; desligados e os demais ligados (exceto o ponto como já foi citado).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.5: Dígito 2 (um)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digito2.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A Figura 1.6 mostra uma tabela com todas as combinações para os dígitos decimais e seus valores correspondentes em hexadecimal. Ao atribuir ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; um dos valores em hexadecimal da tabela, o digito correspondente deve ser mostrado no display.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.6: Dígitos e equivalência em hexadecimal&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digitos.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Estão faltando os dados dos dígitos que completam o conjunto hexadecimal, que podem te servir como exercícios. Bom trabalho!&lt;/p&gt;
+
+&lt;h2 id=&quot;2-programa-firmware&quot;&gt;2. Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O programa pode ser escrito todo em um único arquivo, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt;, mas esta é uma forma não conveniente pois dificulta a manuteção e a organização do código. Assim, cada arquivo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.c&lt;/code&gt; deve possuir somente funções correlatas ao nome desse arquivo. Por exemplo: todas as funções de manipulação do display de 7 segmentos estão contidas em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg.c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para poder executar as funções do display no programa principal é necessário incluir o cabeçalho delas que está contido em&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &quot;disp7seg.h&quot;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -154,39 +258,42 @@
 
 &lt;p&gt;Bom trabalho!&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Display de 7 segmentos</summary></entry><entry><title type="html">COM110 - Introdução a algoritmos</title><link href="http://localhost:4000/ddp/2020/com110-algoritmo/" rel="alternate" type="text/html" title="COM110 - Introdução a algoritmos" /><published>2020-08-03T21:15:21-03:00</published><updated>2020-08-03T21:15:21-03:00</updated><id>http://localhost:4000/ddp/2020/com110-algoritmo</id><content type="html" xml:base="http://localhost:4000/ddp/2020/com110-algoritmo/">&lt;h1 id=&quot;intrudução-a-algorítmos-e-a-python&quot;&gt;&lt;a href=&quot;https://cursos.univesp.br/courses/3163/pages/semana-1?module_item_id=264918&quot;&gt;Intrudução a Algorítmos e a Python&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Display de 7 segmentos</summary></entry><entry><title type="html">COM110 - Introdução a algoritmos</title><link href="http://localhost:4000/ddp/2020/com110-algoritmo/" rel="alternate" type="text/html" title="COM110 - Introdução a algoritmos" /><published>2020-08-03T21:15:21-03:00</published><updated>2020-08-03T21:15:21-03:00</updated><id>http://localhost:4000/ddp/2020/com110-algoritmo</id><content type="html" xml:base="http://localhost:4000/ddp/2020/com110-algoritmo/">&lt;h1 id=&quot;algorítmos&quot;&gt;&lt;a href=&quot;https://cursos.univesp.br/courses/3163/pages/semana-1?module_item_id=264918&quot;&gt;Algorítmos&lt;/a&gt;&lt;/h1&gt;
 
+&lt;p&gt;Todo &lt;strong&gt;programa&lt;/strong&gt; visa &lt;strong&gt;solucionar um problema&lt;/strong&gt; posto, partindo da definição do problema (O que?) e seguindo para o desenvolvimento do programa (Como?), que pode ser dividido em três partes:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Definição do problema (O que);&lt;/li&gt;
-  &lt;li&gt;Desenvolvimento (Como)
-    &lt;ul&gt;
-      &lt;li&gt;Projetar a solucação (algoritmo);&lt;/li&gt;
-      &lt;li&gt;Codificar a solução (Programar em linguagem de programação);&lt;/li&gt;
-      &lt;li&gt;Testar o programa.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Projetar a solucação (algoritmo);&lt;/li&gt;
+  &lt;li&gt;Codificar a solução (Programar em linguagem de programação);&lt;/li&gt;
+  &lt;li&gt;Testar o programa.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Algoritmo: sequência bem definida, explícita e precisa, de passos que visam atingir um objetivo.&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;Um &lt;strong&gt;algoritmo&lt;/strong&gt; é uma sequência bem definida, explícita e precisa, de passos que visam atingir um objetivo.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Cada passo do algorítmo deve ser uma ação realizável;&lt;/li&gt;
   &lt;li&gt;A ordem dos passos devem ser precisamente determinadas;&lt;/li&gt;
   &lt;li&gt;O algoritmo deve ter fim.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Sequenciamento: estabelece um padrão de comportamento, em que as ações devem ser executadas linearmente.&lt;/p&gt;
+&lt;p&gt;Um algoritmo deve conter:&lt;/p&gt;
 
-&lt;p&gt;Teste seletivo&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sequenciamento: estabelece um padrão de comportamento, em que as ações devem ser executadas linearmente;&lt;/li&gt;
+  &lt;li&gt;Teste seletivo ou estrutura condicional;&lt;/li&gt;
+  &lt;li&gt;Repetição: mesmo trecho é repetido até que a condição de parada seja alcançada. O número de repetições é indefinido apesar de ser finito;&lt;/li&gt;
+  &lt;li&gt;Condição de parada.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Repetição: mesmo trecho é repetido até que a condição de parada seja alcançada. O número de repetições é indefinido apesar de ser finito.&lt;/p&gt;
+&lt;p&gt;O algoritmo deve ser:&lt;/p&gt;
 
-&lt;p&gt;Condição de parada&lt;/p&gt;
-
-&lt;p&gt;Refinar o algoritmo até que as instruções possam ser codificadas.&lt;/p&gt;
-
-&lt;p&gt;O algoritmo deve ser independente da linguagem.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;refinado de forma sucessiva até que as instruções possam ser codificadas;&lt;/li&gt;
+  &lt;li&gt;independente da linguagem.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;As linguagens possuem:&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;um número restrito de instruções;&lt;/li&gt;
   &lt;li&gt;possuem um conjunto de instruções comuns a todas as linguagens:
@@ -198,15 +305,11 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;!--more--&gt;
-
-&lt;p&gt;Fluxograma: representação esquemática de um algoritmo, feito com gráficos que ilustram transições de informações entre os elementos que o compõem. Representa a lógica interna do programa.&lt;/p&gt;
-
-&lt;p&gt;Simbologia:&lt;/p&gt;
+&lt;p&gt;Os algoritmos podem ser apresentados em forma de fluxograma, que é uma representação esquemática, feito com gráficos que ilustram transições de informações entre os elementos que o compõem. Um fluxograma representa a lógica interna do programa e possui simbologia própria.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1001&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Computação" /><summary type="html">Intrudução a Algorítmos e a Python</summary></entry><entry><title type="html">P0102 - Botão LED</title><link href="http://localhost:4000/ddp/2020/P0102-botaoLED/" rel="alternate" type="text/html" title="P0102 - Botão LED" /><published>2020-07-29T21:13:21-03:00</published><updated>2020-07-29T21:13:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0102-botaoLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0102-botaoLED/">&lt;h1 id=&quot;botão-led&quot;&gt;Botão LED&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnologia&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Computação" /><summary type="html">Algorítmos</summary></entry><entry><title type="html">P0102 - Botão LED</title><link href="http://localhost:4000/ddp/2020/P0102-botaoLED/" rel="alternate" type="text/html" title="P0102 - Botão LED" /><published>2020-07-29T21:13:21-03:00</published><updated>2020-07-29T21:13:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0102-botaoLED</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0102-botaoLED/">&lt;h1 id=&quot;botão-led&quot;&gt;Botão LED&lt;/h1&gt;
 
 &lt;p&gt;Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (&lt;em&gt;push button&lt;/em&gt;) para ligar um LED.&lt;/p&gt;
 

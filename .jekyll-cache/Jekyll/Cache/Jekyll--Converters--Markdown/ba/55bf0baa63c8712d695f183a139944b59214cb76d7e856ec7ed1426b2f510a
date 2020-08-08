@@ -1,0 +1,53 @@
+I"<h1 id="algorítmos"><a href="https://cursos.univesp.br/courses/3163/pages/semana-1?module_item_id=264918">Algorítmos</a></h1>
+
+<p>Todo <strong>programa</strong> visa <strong>solucionar um problema</strong> posto, partindo da definição do problema (O que?) e seguindo para o desenvolvimento do programa (Como?), que pode ser dividido em três partes:</p>
+<ul>
+  <li>Projetar a solucação (algoritmo);</li>
+  <li>Codificar a solução (Programar em linguagem de programação);</li>
+  <li>Testar o programa.</li>
+</ul>
+
+<!--more-->
+
+<p>Um <strong>algoritmo</strong> é uma sequência bem definida, explícita e precisa, de passos que visam atingir um objetivo.</p>
+<ul>
+  <li>Cada passo do algorítmo deve ser uma ação realizável;</li>
+  <li>A ordem dos passos devem ser precisamente determinadas;</li>
+  <li>O algoritmo deve ter fim.</li>
+</ul>
+
+<p>Um algoritmo deve conter:</p>
+
+<ul>
+  <li>Sequenciamento: estabelece um padrão de comportamento, em que as ações devem ser executadas linearmente;</li>
+  <li>Teste seletivo ou estrutura condicional;</li>
+  <li>Repetição: mesmo trecho é repetido até que a condição de parada seja alcançada. O número de repetições é indefinido apesar de ser finito;</li>
+  <li>Condição de parada.</li>
+</ul>
+
+<p>O algoritmo deve ser:</p>
+
+<ul>
+  <li>refinado de forma sucessiva até que as instruções possam ser codificadas;</li>
+  <li>independente da linguagem.</li>
+</ul>
+
+<p>As linguagens possuem:</p>
+
+<ul>
+  <li>um número restrito de instruções;</li>
+  <li>possuem um conjunto de instruções comuns a todas as linguagens:
+    <ul>
+      <li>Entradas e Saídas;</li>
+      <li>Testes seletivos;</li>
+      <li>Repetições; etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Os algoritmos podem ser apresentados em forma de fluxograma, que é uma representação esquemática, feito com gráficos que ilustram transições de informações entre os elementos que o compõem. Um fluxograma representa a lógica interna do programa e possui simbologia própria.</p>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnologia">Voltar</a></p>
+:ET

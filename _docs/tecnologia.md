@@ -21,3 +21,5 @@ As principais áreas de interesse e estudo, tanto pessoal quanto profissionalmen
 * [Desafios da plataforma URI na mediação do aprendizado de linguagens de programação]({{site.baseurl}}/docs/tecnology/progURI)
 
 * [Microcontrolador PIC]({{site.baseurl}}/docs/tecnology/ucPIC)
+
+* [UniVESP - Computação]({{site.baseurl}}/2020/com110-algoritmo)

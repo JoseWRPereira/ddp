@@ -35,6 +35,7 @@ Alternativamente pode-se utilizar uma ferramenta online:
 ## C
 * [P0101 - Pisca LED]({{site.baseurl}}/2020/P0101-piscaLED)
 * [P0102 - Botão LED]({{site.baseurl}}/2020/P0102-botaoLED)
+* [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)
 
 <hr/>
 

@@ -47,6 +47,12 @@
 
 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
 <body class="td-section">
   <header>
   <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -416,18 +422,20 @@ a intensidade da corrente que percorre o circuito varia de forma proporcional.</
 
 <p>Utilizando a relação $\frac{\Delta I}{\Delta V}$, temos o coeficiente algular da reta $G$.</p>
 
-\[\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+  \frac{\Delta…" style="color:#cc0000">\begin{eqnarray}
   \frac{\Delta I}{\Delta V} &amp; = &amp; G \nonumber \\
   \Delta I &amp; = &amp; G .\Delta V \nonumber \\
   I - I_0 &amp; = &amp; G . (V - V_0)
-\end{eqnarray}\]
+\end{eqnarray}</span>
 
 <p>Como a origem foi escolhida como um dos pontos do triângulo, o $\Delta I$ será o próprio valor no ponto $B$, ou seja, $I_0$ e $V_0$ valem $0$.</p>
 
-<p>\(\begin{eqnarray}
+<p><span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+  \label{eqn:l…" style="color:#cc0000">\begin{eqnarray}
   \label{eqn:leiOhmG}
   I &amp; = &amp; G . V
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Analogamente à <a href="https://www.todamateria.com.br/equacao-da-reta/">equação da reta</a> $f(x) = ax + b$ temos que:</p>
 
 <ul>
@@ -447,16 +455,18 @@ Analogamente à <a href="https://www.todamateria.com.br/equacao-da-reta/">equaç
 <p>O coeficiente angular <strong>G</strong> é denominado como <em>condutância</em>, e sua unidade é o <em>Siemens[S]</em>.</p>
 
 <p>A condutância é o inverso da resistência, ou seja, dois aspectos de um mesmo fenômeno.
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+  \label{eqn:G…" style="color:#cc0000">\begin{eqnarray}
   \label{eqn:GinvR}
   G &amp; = &amp; \frac{1}{R}
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <p>Substituindo ($G = \frac{1}{R}$) em ($I = G . V$), temos a <strong>Primeira Lei de OHM</strong>.
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+  \label{eqn:l…" style="color:#cc0000">\begin{eqnarray}
   \label{eqn:leiOhmR}
   I &amp; = &amp; \frac{1}{R} . V
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <h2 id="associação-de-resistores-em-série">Associação de Resistores em Série</h2>
 
@@ -482,13 +492,15 @@ Todo ramo com mais do que um resistor, pode ser substituído por um ramo equival
 
 <p>A Figura 4(a) mostra o ramo com dois resistores, que formam a resistência total do ramo, que é ilustrado na Figura 4(b) com a resistência equivalente.
 Pode-se representar a resistência equivalente em um ramo da seguinte forma:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+R_1 + R_2 = R_…" style="color:#cc0000">\begin{eqnarray}
 R_1 + R_2 = R_{eq}
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Para uma quantidade de resistores no ramo maior do que dois, a resistência equivalente é calculada da mesma forma:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+R_1 + R_2 + ..…" style="color:#cc0000">\begin{eqnarray}
 R_1 + R_2 + ... + R_n = R_{eq}
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <h2 id="associação-de-resistores-em-paralelo">Associação de Resistores em Paralelo</h2>
 
@@ -512,33 +524,38 @@ R_1 + R_2 + ... + R_n = R_{eq}
 <p>A mudança do circuito (a) para o (b), produz um novo caminho para a circulação da corrente. Pode-se dizer então que com a inclusão do novo ramo, conectado aos mesmos pontos do ramo já existente, há uma maior facilidade para a corrente fluir, pois agora são dois caminhos, aumentando a condutância entre os nós.</p>
 
 <p>Pode-se obter a condutância total do circuito paralelo somando as condutâncias dos ramos, da seguinte forma:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+  G_T &amp; = &amp; G_…" style="color:#cc0000">\begin{eqnarray}
   G_T &amp; = &amp; G_{R_1} + G_{R_2}
 \label{eqn:GT}
-\end{eqnarray}\)
+\end{eqnarray}</span>
 A forma mais comum é trabalhar com a resistência e não a condutância, então,
 substituindo a condutância pelo inverso da resistência pode-se obter a resistência total:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+  \frac{1}{R_T…" style="color:#cc0000">\begin{eqnarray}
   \frac{1}{R_T}	&amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
 	\nonumber\\
 	R_T &amp; = &amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} }
 	\label{eq:paralelo}
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <p>Da mesma forma pode-se aplicar para circuitos com varios ramos em paralelo, basta somar as condutâncias:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+	G_T &amp; = &amp; G_1…" style="color:#cc0000">\begin{eqnarray}
 	G_T &amp; = &amp; G_1 + G_2 + ... + G_n
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Analogamente para a resistência total temos:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+	\label{eq:nrp…" style="color:#cc0000">\begin{eqnarray}
 	\label{eq:nrparalelo}
 	R_T &amp; = &amp; \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n} }
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <h3 id="associação-em-paralelo---apenas-2-resistores">Associação em Paralelo - Apenas 2 resistores</h3>
 
 <p>O cálculo de resistores em paralelo pode ser realizado manipulando a Equação da associação em paralelo da seguinte forma:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+	G_{eq} &amp; = &amp; …" style="color:#cc0000">\begin{eqnarray}
 	G_{eq} &amp; = &amp; G_{R_1} + G_{R_2} \nonumber\\
 	\nonumber\\
 	\frac{1}{R_{eq}}	&amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} \nonumber\\
@@ -546,7 +563,7 @@ Analogamente para a resistência total temos:
 	\frac{1}{R_{eq}}	&amp; = &amp; \frac{R_1 + R_2}{R_1.R_2} \nonumber\\
 	\nonumber\\
 	R_{eq}	&amp; = &amp; \frac{R_1.R_2}{R_1 + R_2} \nonumber
-\end{eqnarray}\)
+\end{eqnarray}</span>
 <strong>Atenção!</strong> Essa forma só é válida para a associação de dois resistôres.</p>
 
 <h3 id="associação-resistores-em-paralelo---todos-iguais">Associação resistores em paralelo - Todos iguais</h3>
@@ -554,7 +571,8 @@ Analogamente para a resistência total temos:
 <p>Outra forma particular para calcular resistência equivalente é quanto os resistores em paralelo são <strong>todos</strong> de mesmo valor, então o cálculo pode ser realizado manipulado a Equação da condutância equivalente da seguinte forma:</p>
 
 <p><em>Dados os seguintes resistores em paralelo e nomeados sequencialmente: $R_1$ = $R_2$ = … = $R_n$.</em>
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+	G_{eq} &amp; = &amp; …" style="color:#cc0000">\begin{eqnarray}
 	G_{eq} &amp; = &amp; G_1 + G_2 + ... + G_n \nonumber\\
 	\nonumber\\
 	\frac{1}{R_{eq}} &amp; = &amp; \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\nonumber\\
@@ -566,7 +584,7 @@ Analogamente para a resistência total temos:
 	\frac{R_{eq}}{1} &amp; = &amp; \frac{R}{n} \nonumber\\
 	\nonumber\\
 	R_{eq} &amp; = &amp; \frac{R}{n}
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Atenção! Essa forma só é válida para a associação de resistôres iguais.</p>
 
 <h2 id="leis-de-kirchhoff">Leis de Kirchhoff</h2>
@@ -595,17 +613,19 @@ Atenção! Essa forma só é válida para a associação de resistôres iguais.<
 <p>Tendo um nó como referência, adota-se uma convenção para o sentido da corrente. Assim, a corrente que chega ao nó é anotada como positiva e a corrente que sai é negativa. O oposto também pode ser adotado.</p>
 
 <p>Escrevendo, pela definição, a equação para o nó $A$ temos:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+\label{eq:1kir…" style="color:#cc0000">\begin{eqnarray}
 \label{eq:1kirchhoff}
 (+I_T) + (-I_1) + (-I_2) &amp; = &amp; 0\\
 I_T - I_1 - I_2 &amp; = &amp; 0 \nonumber\\
 I_T = I_1 + I_2
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Da mesma forma para o nó $B$:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+(-I_T) + (+I_1…" style="color:#cc0000">\begin{eqnarray}
 (-I_T) + (+I_1) + (+I_2) &amp; = &amp; 0 \nonumber\\
 I_1 + I_2 &amp; = &amp; I_T \nonumber
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <h3 id="2ª-lei-de-kirchhoff">2ª Lei de Kirchhoff</h3>
 
@@ -630,34 +650,39 @@ A limitação dos ramos são os nós $A$ e $B$, cuja diferença de potencial é 
 <p>Adotando um ponto como referencia de partida, por exemplo o ponto $A$, percorre-se no sentido da corrente, por todo circuito até retornar ao ponto de partida. Ao encontrar uma indicação de tensão no mesmo sentido, adota-o como valor positivo, e no sentido contrário, adota-o como negativo.</p>
 
 <p>Assim, pode-se representar a equação da malha pela definição da seguinte forma:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+	(-V_{R1}) + (…" style="color:#cc0000">\begin{eqnarray}
 	(-V_{R1}) + (-V_{R2}) + (V_{CC})  &amp; = &amp; 0 \\
 	-V_{R1} - V_{R2} + V_{CC} &amp; = &amp; 0 \nonumber\\
 	 V_{CC} &amp; = &amp; V_{R1} + V_{R2}
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <p>Sabemos que em um ramo cada resistor apresenta uma parcela proporcional da resistência total, pois a soma dessas parcelas é a própria resistência total.
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+R_1 + R_2 = R_…" style="color:#cc0000">\begin{eqnarray}
 R_1 + R_2 = R_{T_{ramo}}
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Temos que $R_{T_{ramo}}$ é a resistência total do ramo e é formada por duas partes, $R_1$ e $R_2$, somados. Assim cada resistor é uma parte da resistência total do ramo, um parte do todo.</p>
 
 <p>Sabemos que a parte dividida pelo todo é uma relação de proporcionalidade e que a queda de tensão em cada resistor do ramo é proporcional a sua resistência em relação a resistência total, assim temos que:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+\frac{R_1}{R_2…" style="color:#cc0000">\begin{eqnarray}
 \frac{R_1}{R_2+R_1} &amp; = &amp; \frac{V_{R1}}{V_{R2}+V_{R1}}\\
 \nonumber\\
 V_{AB} &amp; = &amp; V_{R1} + V_{R2} \\
 \nonumber\\
 \frac{R_1}{R_2+R_1} &amp; = &amp; \frac{V_{R1}}{V_{AB}}
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Isolando-se $V_{R1}$  temos:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+V_{R1} &amp; = &amp; \…" style="color:#cc0000">\begin{eqnarray}
 V_{R1} &amp; = &amp; \frac{R_1}{R_2 + R_1} . V_{AB}
-\end{eqnarray}\)
+\end{eqnarray}</span>
 Iguanlmente para $V_{R2}$:
-\(\begin{eqnarray}
+<span class="katex-error" title="ParseError: KaTeX parse error: No such environment: eqnarray at position 7: \begin{̲e̲q̲n̲a̲r̲r̲a̲y̲}̲
+V_{R2} &amp; = &amp; \…" style="color:#cc0000">\begin{eqnarray}
 V_{R2} &amp; = &amp; \frac{R_2}{R_2 + R_1} . V_{AB}
-\end{eqnarray}\)</p>
+\end{eqnarray}</span></p>
 
 <h2 id="atividades">Atividades</h2>
 
