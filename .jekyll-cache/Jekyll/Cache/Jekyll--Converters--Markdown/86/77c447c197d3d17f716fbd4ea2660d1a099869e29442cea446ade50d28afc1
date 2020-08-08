@@ -1,4 +1,4 @@
-I"RW<h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
+I"�_<h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
 
 <p>O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.</p>
 
@@ -155,6 +155,8 @@ O display possui um terminal para cada segmento do display.</p>
   </li>
 </ul>
 
+<h3 id="programa-principal">Programa principal</h3>
+
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
  * File:   main.c
  * Author: josewrpereira
@@ -198,6 +200,13 @@ O display possui um terminal para cada segmento do display.</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
+<p>O laço de repetição que compõe a execução do programa possui apenas três instruçẽos:</p>
+<ul>
+  <li>Exibição da variável de contagem;</li>
+  <li>Atraso de 500ms, para que o valor da contagem permaneça em exibição por esse tempo;</li>
+  <li>Incremento seguido de uma delimitação da contagem utilizando a operação <code class="language-plaintext highlighter-rouge">mod</code> ou <code class="language-plaintext highlighter-rouge">%</code>, que é o operador que tem como resultado o resto da divisão. <code class="language-plaintext highlighter-rouge">cont</code> assume apenas valores entre 0 e 15.</li>
+</ul>
+
 <h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
 
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef CONFIG_H
@@ -230,11 +239,11 @@ O display possui um terminal para cada segmento do display.</p>
 <span class="cp">#endif
 </span></code></pre></div></div>
 
-<h3 id="programa-principal">Programa principal;</h3>
-
 <h3 id="sub-rotinas">Sub-rotinas</h3>
 
-<h4 id="delay">delay</h4>
+<p>Trechos de programa, que podem ser executados com parâmetros diferentes, porém que executam a mesma ação levando em conta os argumentos da função.</p>
+
+<h4 id="delay">Delay</h4>
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
 #include "config.h"
 </span>
@@ -274,6 +283,21 @@ O display possui um terminal para cada segmento do display.</p>
     <span class="n">PORTD</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">?</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<p>O vetor <code class="language-plaintext highlighter-rouge">digitos7seg[16]</code> contém todos os valores que correspondem aos caracteres de representação hexadecimal, associados diretamente com a posição de cada valor, sendo o valor que corresponde ao dígito 0 na posição 0 do vetor, o dígito 1 na posição 1, e assim por diante, com todos os demais valores.</p>
+
+<p>O procedimento <code class="language-plaintext highlighter-rouge">disp7seg_init</code> além de inicializar o <code class="language-plaintext highlighter-rouge">PORTD</code>, também faz um teste de diagnóstico do display, fazendo o acionamento e desligando todos os segmentos de forma alternada, possibilitando a verificação da integridade de todas as vias, segmentos e conexões envolvidas.</p>
+
+<p>A função <code class="language-plaintext highlighter-rouge">disp7seg</code> possui um argumento, que é o número correspondente ao dígito a ser exibido pelo display. Somente são exibidos dígitos hexadecimais entre os valores 0 e F. Valores fora deste intervalo o display fica apagado.</p>
+
+<ul>
+  <li><strong>Operador unário</strong></li>
+</ul>
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">(condição) **?** valor se a condição é verdadeira **:** valor se a condição é falsa **;**</h4>
+Operador Unário
+</div>
 
 <hr />
 

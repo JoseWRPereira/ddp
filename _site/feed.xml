@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-07T22:51:36-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-07T23:13:05-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0110 - Display de 7 segmentos</title><link href="http://localhost:4000/ddp/2020/P0110-disp7seg/" rel="alternate" type="text/html" title="P0110 - Display de 7 segmentos" /><published>2020-08-05T19:55:21-03:00</published><updated>2020-08-05T19:55:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0110-disp7seg</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0110-disp7seg/">&lt;h1 id=&quot;display-de-7-segmentos&quot;&gt;Display de 7 segmentos&lt;/h1&gt;
 
 &lt;p&gt;O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.&lt;/p&gt;
@@ -286,6 +286,15 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;O vetor &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitos7seg[16]&lt;/code&gt; contém todos os valores que correspondem aos caracteres de representação hexadecimal, associados diretamente com a posição de cada valor, sendo o valor que corresponde ao dígito 0 na posição 0 do vetor, o dígito 1 na posição 1, e assim por diante, com todos os demais valores.&lt;/p&gt;
+
+&lt;p&gt;O procedimento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg_init&lt;/code&gt; além de inicializar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt;, também faz um teste de diagnóstico do display, fazendo o acionamento e desligando todos os segmentos de forma alternada, possibilitando a verificação da integridade de todas as vias, segmentos e conexões envolvidas.&lt;/p&gt;
+
+&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg&lt;/code&gt; possui um argumento, que é o número correspondente ao dígito a ser exibido pelo display. Somente são exibidos dígitos hexadecimais entre os valores 0 e F. Valores fora deste intervalo o display fica apagado.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Operador Unário&lt;/h4&gt;
+(condição) ? valor se a condição é verdadeira : valor se a condição é falsa ;
+&lt;/div&gt;
 
 &lt;hr /&gt;
 

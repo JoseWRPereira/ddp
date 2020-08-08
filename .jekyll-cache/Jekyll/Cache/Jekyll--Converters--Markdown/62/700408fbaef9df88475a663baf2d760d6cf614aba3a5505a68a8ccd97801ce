@@ -1,4 +1,4 @@
-I"�[<h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
+I"�_<h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
 
 <p>O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.</p>
 
@@ -286,15 +286,30 @@ O display possui um terminal para cada segmento do display.</p>
 
 <p>O vetor <code class="language-plaintext highlighter-rouge">digitos7seg[16]</code> contém todos os valores que correspondem aos caracteres de representação hexadecimal, associados diretamente com a posição de cada valor, sendo o valor que corresponde ao dígito 0 na posição 0 do vetor, o dígito 1 na posição 1, e assim por diante, com todos os demais valores.</p>
 
+<p>O procedimento <code class="language-plaintext highlighter-rouge">disp7seg_init</code> além de inicializar o <code class="language-plaintext highlighter-rouge">PORTD</code>, também faz um teste de diagnóstico do display, fazendo o acionamento e desligando todos os segmentos de forma alternada, possibilitando a verificação da integridade de todas as vias, segmentos e conexões envolvidas.</p>
+
+<p>A função <code class="language-plaintext highlighter-rouge">disp7seg</code> possui um argumento, que é o número correspondente ao dígito a ser exibido pelo display. Somente são exibidos dígitos hexadecimais entre os valores 0 e F. Valores fora deste intervalo o display fica apagado.</p>
+
+<ul>
+  <li><strong>Operador unário</strong></li>
+</ul>
+
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">Operador Unário</h4>
+(condição) ? <valor se="" a="" condição="" é="" verdadeira=""> : <valor se="" a="" condição="" é="" falsa=""> ;
+&lt;/div&gt;
+
+
 <hr />
 
-<p>Agora é a sua vez!</p>
+Agora é a sua vez! 
 
-<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.
 
-<p>Ficou com alguma dúvida, entre em contato.</p>
+Ficou com alguma dúvida, entre em contato. 
 
-<p>Bom trabalho!</p>
+Bom trabalho! 
 
-<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+[Voltar](/ddp/docs/tecnology/ucPIC)
+</valor></valor></div>
 :ET
