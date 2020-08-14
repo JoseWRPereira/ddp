@@ -1,8 +1,6 @@
-I"/<h1 id="2-displays-de-7-segmentos">2 Displays de 7 segmentos</h1>
+I"G-<h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
 
-<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica de multiplexação, em que as linhas de dados são ligadas em paralelo a todos os dígitos do display. Para que o mesmo dígito não apareça em todos os displays, ocorre uma habilitação alternada entre os display, permitindo assim a exibição de números diferentes em cada um dos displays.</p>
-
-<p>A desvantagem é que não é possível acionar dois ou mais dígitos de uma vez. A alternância entre os dígitos então deve ser rápida o suficiente para emular um processamento em paralelo.</p>
+<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
 
 <h2 id="objetivo">Objetivo</h2>
 

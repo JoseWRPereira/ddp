@@ -1,4 +1,4 @@
-I"�2<h1 id="postagens">Postagens</h1>
+I"�&<h1 id="postagens">Postagens</h1>
 
 <p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
@@ -10,11 +10,9 @@
    <h2><a href="/ddp/2020/P0111-disp7segX2/">P0111 - 2 Displays de 7 segmentos</a></h2>
    <span class="post-date">2020-08-13</span><br />
    <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="2-displays-de-7-segmentos">2 Displays de 7 segmentos</h1>
+   <h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
 
-<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica de multiplexação, em que as linhas de dados são ligadas em paralelo a todos os dígitos do display. Para que o mesmo dígito não apareça em todos os displays, ocorre uma habilitação alternada entre os display, permitindo assim a exibição de números diferentes em cada um dos displays.</p>
-
-<p>A desvantagem é que não é possível acionar dois ou mais dígitos de uma vez. A alternância entre os dígitos então deve ser rápida o suficiente para emular um processamento em paralelo.</p>
+<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
 
 <h2 id="objetivo">Objetivo</h2>
 
@@ -23,97 +21,6 @@
 
    
       <a href="/ddp/2020/P0111-disp7segX2/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/com140-computacao/">COM140 - Introdução a computação</a></h2>
-   <span class="post-date">2020-08-12</span><br />
-   <span class="badge badge-primary">UniVESP</span><span class="badge badge-secondary">Computação</span>
-   <h1 id="computação"><a href="https://cursos.univesp.br/courses/3164/pages/videoaula-do-professor-representacao-de-dados?module_item_id=266221">Computação</a></h1>
-
-<h1 id="representação-de-dados">Representação de dados</h1>
-
-<h2 id="dadoinformaçãoconhecimento">Dado/Informação/Conhecimento</h2>
-
-<h3 id="dados">Dados</h3>
-<ul>
-  <li>são <strong>elementos</strong> conhecidos de um problema;</li>
-  <li>e são desprovidos de significado, se considerados isolados.</li>
-</ul>
-
-<h3 id="informação">Informação</h3>
-<ul>
-  <li>Conjunto estruturado de dados;</li>
-  <li>Possuem utilidade e podem gerar ações.</li>
-</ul>
-
-<p>### Conhecimento</p>
-<ul>
-  <li><strong>Síntese</strong> de múltiplas fontes de informações;</li>
-  <li>Possui elevado significado e utilidade para o suporte à tomada de decisões.</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Dados</th>
-      <th style="text-align: center">Informação</th>
-      <th style="text-align: center">Conhecimento</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">Observação</td>
-      <td style="text-align: center">Análise e organização</td>
-      <td style="text-align: center">Síntese</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="dados-analógicos-e-digitais">Dados analógicos e digitais</h2>
-
-<p>Dados analógicos:</p>
-<ul>
-  <li>utilizam representação contínua;</li>
-  <li>infinitos valores entre quaisquer dois pontos (conjunto dos Reais).
-Dados digitais:</li>
-  <li>utilizam representação discreta;</li>
-  <li>valores bem definidos e um conjunto limitado de valores (conjunto dos Inteiros).</li>
-  <li>Dois estados lógicos bem definidos (<strong>Bi</strong>nary digi<strong>t</strong> : Bit).</li>
-</ul>
-
-<h3 id="byte">Byte</h3>
-<p><strong>B</strong>inar<strong>y</strong> <strong>te</strong>rm : unidade básica de armazenamento em memória, formada por 8 bits.</p>
-
-<h3 id="word">Word</h3>
-<p>Palavra: dimensão do barramento de processamento que pode ser 2, 4, 6, 8 bytes (64 bits), ou outro valor a depender da arquitetura do processador.</p>
-
-<h2 id="sistema-de-numeração">Sistema de numeração</h2>
-
-<p>Representação estruturada e dentro de um contexto de uma coleção de números através de numerais.</p>
-
-<p>Em computação são utilizados os seguintes sistemas de numeração:</p>
-<ul>
-  <li>Binário (base 2);</li>
-  <li>Octal (base 8);</li>
-  <li>Decimal (base 10);</li>
-  <li>Hexadecimal (base 16).</li>
-</ul>
-
-<p><a href="https://www.youtube.com/watch?v=8Nev_5ISYOY&amp;feature=youtu.be">Representação por ponto fixo</a></p>
-
-<p>Todo <strong>programa</strong> visa <strong>solucionar um problema</strong> posto, partindo da definição do problema (O que?) e seguindo para o desenvolvimento do programa (Como?), que pode ser dividido em três partes:</p>
-<ul>
-  <li>Projetar a solucação (algoritmo);</li>
-  <li>Codificar a solução (Programar em linguagem de programação);</li>
-  <li>Testar o programa.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/com140-computacao/">leia mais </a>
    
    </div>
    <hr />
@@ -282,6 +189,29 @@ Dados digitais:</li>
 
    
       <a href="/ddp/2020/uri1002/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/uri1001/">URI1001</a></h2>
+   <span class="post-date">2020-07-23</span><br />
+   <span class="badge badge-success">C</span><span class="badge badge-primary">Python</span>
+   <h1 id="extremamente-básico"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1001">Extremamente Básico</a></h1>
+
+<p>O desafio inicial solicita que o programa faça a leitura de dois valores do tipo inteiro, some-os, e exiba uma mensagem com esse resultado.</p>
+
+<p>Assuntos abordados:</p>
+<ul>
+  <li>Variáveis do tipo inteiro;</li>
+  <li>Leitura de variáveis;</li>
+  <li>Processamento das variáveis: operações aritméticas;</li>
+  <li>Exibição dos dados;</li>
+</ul>
+
+
+   
+      <a href="/ddp/2020/uri1001/">leia mais </a>
    
    </div>
    <hr />
