@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Índice de Tags</title>
-<meta property="og:title" content="Índice de Tags" />
+<title>P0111 - 2 Displays de 7 segmentos</title>
+<meta property="og:title" content="P0111 - 2 Displays de 7 segmentos" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Índice de Tags">
+<meta itemprop="name" content="P0111 - 2 Displays de 7 segmentos">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Índice de Tags"/>
+<meta name="twitter:title" content="P0111 - 2 Displays de 7 segmentos"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -288,8 +288,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/pages/tags.html" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/pages/tags.html" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2020-08-13-P0111-disp7segX2.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2020-08-13-P0111-disp7segX2.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -306,234 +306,211 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/tags/">Índice de Tags</a>
+                <a href="http://localhost:4000/ddp/2020/P0111-disp7segX2/">P0111 - 2 Displays de 7 segmentos</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="tags-index">Índice de Tags</h1>
+            <h1 style="margin-bottom:0px">P0111 - 2 Displays de 7 segmentos</h1>
+<span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+<span class="post-date" style="font-style: italic;">2020-08-13</span>
+<h1 id="2-displays-de-7-segmentos">2 Displays de 7 segmentos</h1>
+
+<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.</p>
+
+<!--more-->
+
+<h2 id="1-circuito-hardware">1. Circuito (<em>Hardware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.1: 2 Displays de 7 segmentos catodo comum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0111/disp7segX2.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-programa-firmware">2. Programa (<em>Firmware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0111/projectTree.jpg?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
+
+<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
+<ul>
+  <li>Inclusão de bibliotecas;</li>
+  <li>Programa principal;
+    <ul>
+      <li>Declaração e inicializações;</li>
+      <li>Laço de repetição.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="programa-principal">Programa principal</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 13 de Agosto de 2020, 17:31:21
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Segmento a
+ *  RB1     |34     | Segmento b
+ *  RB2     |35     | Segmento c
+ *  RB3     |36     | Segmento d
+ *  RB4     |37     | Segmento e
+ *  RB5     |38     | Segmento f
+ *  RB6     |39     | Segmento g
+ *  RB7     |40     | Segmento p
+ *  RD7     |30     | Hab. Dezena (Catodo comum)
+ *  RD6     |29     | Hab. Unidade (Catodo comum)
+ * -------------------------------------------------
+ */</span>
+
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+#include "disp7seg.h"
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">nScan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="n">disp7segX2_init</span><span class="p">();</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">disp7segX2</span><span class="p">(</span> <span class="n">num</span> <span class="p">);</span>
+        
+        <span class="k">if</span><span class="p">(</span> <span class="o">++</span><span class="n">nScan</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">nScan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="o">++</span><span class="n">num</span> <span class="o">%</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   delay.c
+ * Author: josewrpereira
+ *
+ * Created on 13 de Agosto de 2020, 17:32
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Segmento a
+ *  RB1     |34     | Segmento b
+ *  RB2     |35     | Segmento c
+ *  RB3     |36     | Segmento d
+ *  RB4     |37     | Segmento e
+ *  RB5     |38     | Segmento f
+ *  RB6     |39     | Segmento g
+ *  RB7     |40     | Segmento p
+ *  RD7     |30     | Hab. Dezena (Catodo comum)
+ *  RD6     |29     | Hab. Unidade (Catodo comum)
+ * ------------------------------------------------- 
+ */</span>
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+</span>
+<span class="cp">#define QTD_DIGITOS         2
+#define BASE                10
+</span>
+<span class="cp">#define DISP7SEG_BUS( x )   PORTB = x
+#define HAB_DEZENA( x )     PORTDbits.RD7 = x
+#define HAB_UNIDADE( x )    PORTDbits.RD6 = x
+</span>
+
+<span class="kt">char</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>    <span class="mh">0x3F</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x5B</span><span class="p">,</span> <span class="mh">0x4F</span><span class="p">,</span> 
+                            <span class="mh">0x66</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x7D</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> 
+                            <span class="mh">0x7F</span><span class="p">,</span> <span class="mh">0x6F</span><span class="p">,</span> <span class="mh">0x77</span><span class="p">,</span> <span class="mh">0x7C</span><span class="p">,</span> 
+                            <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0x5E</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0x71</span>  <span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">disp7segX2_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ANSELH</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISB</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+    <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">posicao</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">disp7segX2</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span><span class="p">(</span> <span class="n">posicao</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">// Unidade</span>
+                <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+                <span class="n">DISP7SEG_BUS</span><span class="p">(</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="n">num</span> <span class="o">%</span> <span class="n">BASE</span><span class="p">]</span> <span class="p">);</span>
+                <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">// Dezena</span>
+                <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+                <span class="n">DISP7SEG_BUS</span><span class="p">(</span> <span class="n">digitos7seg</span><span class="p">[(</span><span class="n">num</span> <span class="o">/</span> <span class="n">BASE</span><span class="p">)</span> <span class="o">%</span> <span class="n">BASE</span><span class="p">]</span> <span class="p">);</span>
+                <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">posicao</span> <span class="o">=</span> <span class="o">++</span><span class="n">posicao</span> <span class="o">%</span> <span class="n">QTD_DIGITOS</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 
 
-
-<h3 id="Análise Crítica" class="linked-section">Análise Crítica</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnologia">Tecnologia</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="BNCC" class="linked-section">BNCC</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/norteador">Norteador de competências</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="C" class="linked-section">C</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/progURI">Desafios de Programação - URI</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Competências" class="linked-section">Competências</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/norteador">Norteador de competências</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Contextualização" class="linked-section">Contextualização</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnologia">Tecnologia</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Contos" class="linked-section">Contos</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/humanidades">Humanidades</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="ELE" class="linked-section">ELE</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/science/ele">Eletricidade</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Educação" class="linked-section">Educação</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/educacao">Educação</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Eletricidade" class="linked-section">Eletricidade</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/ciencias">Ciências</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Física" class="linked-section">Física</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/ciencias">Ciências</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Humanidades" class="linked-section">Humanidades</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/humanidades">Humanidades</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Interdisciplinaridade" class="linked-section">Interdisciplinaridade</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnologia">Tecnologia</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Linguagem C" class="linked-section">Linguagem C</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Linguagens de Programação" class="linked-section">Linguagens de Programação</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/progURI">Desafios de Programação - URI</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Livros" class="linked-section">Livros</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/humanidades">Humanidades</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="MPLABX-XC8" class="linked-section">MPLABX-XC8</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Matemática" class="linked-section">Matemática</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/science/matematica">Matemática</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Microcontrolador" class="linked-section">Microcontrolador</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Norteador" class="linked-section">Norteador</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/norteador">Norteador de competências</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="PIC" class="linked-section">PIC</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="PIC16F887" class="linked-section">PIC16F887</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Pensamento computacional" class="linked-section">Pensamento computacional</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnologia">Tecnologia</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="ProgC" class="linked-section">ProgC</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/aulas/progc">Programação em Linguagem C</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Python" class="linked-section">Python</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/progURI">Desafios de Programação - URI</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Resolução de problemas" class="linked-section">Resolução de problemas</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnologia">Tecnologia</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="SELDI" class="linked-section">SELDI</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/aulas/progc">Programação em Linguagem C</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="SENAI" class="linked-section">SENAI</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/aulas/progc">Programação em Linguagem C</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-<div class="tag-entry">
-    <a href="/ddp/docs/science/ele">Eletricidade</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="SimulIDE" class="linked-section">SimulIDE</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/tecnology/ucPIC">Projetos com microcontrolador PIC</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="UniVESP" class="linked-section">UniVESP</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/science/matematica">Matemática</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div><h3 id="Versos" class="linked-section">Versos</h3>
-<div class="post-list" style="margin-bottom:40px">
-    
-<div class="tag-entry">
-    <a href="/ddp/docs/humanidades">Humanidades</a>
-        <time style="font-style:italic; float:right" datetime="2020-08-13T21:09:36-03:00">August 13, 2020</time>
-    </div>
-</div>
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -583,7 +560,8 @@ $.each(headers, function(i, header){
 })
 </script>
 
-
+<script>
+$('h1').first().append('<div></div>')</script>
 
 
             
