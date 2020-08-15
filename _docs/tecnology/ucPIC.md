@@ -38,6 +38,8 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)
 * [P0111 - 2 Displays de 7 segmentos]({{site.baseurl}}/2020/P0111-disp7segX2)
 * [P0112 - Detecção de borda]({{site.baseurl}}/2020/P0112-bordaBotaoPulsador)
+* [P0120 - Display LCD 8 vias]({{site.baseurl}}/2020/P0120-dispLCD8vias)
+* [P0122 - Display LCD 4 vias]({{site.baseurl}}/2020/P0122-dispLCD4vias)
 
 <hr/>
 
