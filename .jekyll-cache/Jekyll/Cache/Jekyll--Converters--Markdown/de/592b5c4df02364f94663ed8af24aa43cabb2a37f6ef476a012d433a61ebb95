@@ -1,9 +1,19 @@
-I"�<h1 id="índice-de-artigos">Índice de Artigos</h1>
+I"�<h1 id="índice-de-artigos">Índice de Artigos</h1>
 
 <h2 class="c-archives__year" id="2020-ref">2020</h2>
 <ul class="c-archives__list">
 <li class="c-archives__item">
-  20-08-13: <a href="/ddp/2020/P0112-bordaBotaoPulsador/">P0111 - 2 Displays de 7 segmentos</a>
+  20-08-15: <a href="/ddp/2020/P0122-dispLCD4vias/">P0122 - Display LCD com 4 vias de barramento</a>
+  </li>
+
+
+<li class="c-archives__item">
+  20-08-15: <a href="/ddp/2020/P0120-dispLCD8vias/">P0120 - Display LCD com 8 vias de barramento</a>
+  </li>
+
+
+<li class="c-archives__item">
+  20-08-13: <a href="/ddp/2020/P0112-bordaBotaoPulsador/">P0112 - Borda Botão Pulsador</a>
   </li>
 
 

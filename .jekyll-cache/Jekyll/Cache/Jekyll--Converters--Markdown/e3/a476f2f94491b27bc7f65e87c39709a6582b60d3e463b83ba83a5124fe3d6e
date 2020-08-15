@@ -1,4 +1,4 @@
-I"�(<h1 id="postagens">Postagens</h1>
+I"�)<h1 id="postagens">Postagens</h1>
 
 <p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
@@ -7,16 +7,54 @@
 
 
    <div class="post-preview">
-   <h2><a href="/ddp/2020/P0112-bordaBotaoPulsador/">P0111 - 2 Displays de 7 segmentos</a></h2>
-   <span class="post-date">2020-08-13</span><br />
+   <h2><a href="/ddp/2020/P0122-dispLCD4vias/">P0122 - Display LCD com 4 vias de barramento</a></h2>
+   <span class="post-date">2020-08-15</span><br />
    <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
+   <h1 id="display-lcd">Display LCD</h1>
 
-<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
+<p>O LCD permite uma transferência de dados por um barramento de 8 ou 4 vias, economizando assim quatro bits que podem ser utilizados para outros fins.</p>
 
 <h2 id="objetivo">Objetivo</h2>
 
-<p>Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.</p>
+<p>Adaptar a biblioteca dispLCD8vias para trabalhar com um barramento de 4 vias de dados.</p>
+
+
+   
+      <a href="/ddp/2020/P0122-dispLCD4vias/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/P0120-dispLCD8vias/">P0120 - Display LCD com 8 vias de barramento</a></h2>
+   <span class="post-date">2020-08-15</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-lcd">Display LCD</h1>
+
+<p>O dispositivo mais comum para a exibição de cadeia de caracteres (<em>strings</em>) e variáveis numéricas é o display de cristal líquido (<em>Liquid Crystal Display</em> - LCD). 
+Assim faz-se necessária uma biblioteca mínima para seu uso.</p>
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Exibir uma mensagem de texto e uma variável no display LCD.</p>
+
+
+   
+      <a href="/ddp/2020/P0120-dispLCD8vias/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2020/P0112-bordaBotaoPulsador/">P0112 - Borda Botão Pulsador</a></h2>
+   <span class="post-date">2020-08-13</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="detecção-de-borda-em-botão-pulsador">Detecção de borda em botão pulsador</h1>
+
+<p>A leitura simples de um botão implica em alguns comportamentos não desejados como um incremento maior do que a quantidade de vezes que um botão é pressionado. Para solucionar esse problema pode-se utilizar não o estado lógico do botão, mas sim o evendo associado a mudança de estado, evento único dentro de um ciclo de operação.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Detectar as bordas de subida e descida em botão pulsador.</p>
 
 
    
@@ -165,49 +203,6 @@
 
    
       <a href="/ddp/2020/uri1009/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1005/">URI1005</a></h2>
-   <span class="post-date">2020-07-23</span><br />
-   <span class="badge badge-success">C</span>
-   <h1 id="média-1"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1005">Média 1</a></h1>
-
-<p>O problema inicial solicita que o programa calcule a média ponderada de duas notas. Os dados de entrada são as duas notas do tipo dupla precisão.</p>
-
-<p>Assuntos abordados:</p>
-<ul>
-  <li>Defines.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/uri1005/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/uri1002/">URI1002</a></h2>
-   <span class="post-date">2020-07-23</span><br />
-   <span class="badge badge-success">C</span><span class="badge badge-primary">Python</span>
-   <h1 id="área-do-círculo"><a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1002">Área do círculo</a></h1>
-
-<p>O problema solicita que o programa calcule a área de um círculo dado o valor do raio.</p>
-
-<p>Para o cálculo da área é utilizada a seguinte equação: <code class="language-plaintext highlighter-rouge">area = n.raio²</code>.</p>
-
-<p>Assuntos abordados:</p>
-<ul>
-  <li>Variável de dupla precisão;</li>
-  <li>Formatação de casas decimais.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2020/uri1002/">leia mais </a>
    
    </div>
    <hr />
