@@ -1,5 +1,179 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-15T18:23:45-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0122 - Display LCD com 4 vias de barramento</title><link href="http://localhost:4000/ddp/2020/P0122-dispLCD4vias/" rel="alternate" type="text/html" title="P0122 - Display LCD com 4 vias de barramento" /><published>2020-08-15T17:58:21-03:00</published><updated>2020-08-15T17:58:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0122-dispLCD4vias</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0122-dispLCD4vias/">&lt;h1 id=&quot;display-lcd&quot;&gt;Display LCD&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-16T18:37:18-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0130 - Teclado Matricial</title><link href="http://localhost:4000/ddp/2020/P0130-teclado4x4/" rel="alternate" type="text/html" title="P0130 - Teclado Matricial" /><published>2020-08-16T18:31:21-03:00</published><updated>2020-08-16T18:31:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0130-teclado4x4</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0130-teclado4x4/">&lt;h1 id=&quot;teclado-4x4&quot;&gt;Teclado 4x4&lt;/h1&gt;
+
+&lt;p&gt;A interface com o operador dos equipamentos microcontrolados geralmente são feitas com a dula diplay LCD e teclado matricial.&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Implementar a interface de leitura de um teclado matricial 4x4.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;1-circuito-hardware&quot;&gt;1. Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: Teclado Matricial 4x4&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0130/teclado4x4.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;2-programa-firmware&quot;&gt;2. Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0130/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
+
+&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 15 de Agosto de 2020, 21:18:21
+ *
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     | Conexão
+ * ---------|-------|-------------------------------
+ *  RD2     |21     | LCD_RS
+ *  RD3     |22     | LCD_EN
+ *  RD4     |27     | LCD_D4
+ *  RD5     |28     | LCD_D5
+ *  RD6     |29     | LCD_D6
+ *  RD7     |30     | LCD_D7
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Teclado Saída   L0
+ *  RB1     |34     | Teclado Saída   L1
+ *  RB2     |35     | Teclado Saída   L2
+ *  RB3     |36     | Teclado Saída   L3
+ *  RB4     |37     | Teclado Entrada C0
+ *  RB5     |38     | Teclado Entrada C1
+ *  RB6     |39     | Teclado Entrada C2
+ *  RB7     |40     | Teclado Entrada C3
+ * -------------------------------------------------
+ * -------------------------------------------------
+ */&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+#include &quot;delay.h&quot;
+#include &quot;dispLCD4vias.h&quot;
+#include &quot;teclado.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Tecla   &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;dispLCD_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;teclado_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;teclado_scan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
+ * File:   teclado.c
+ * Author: josewrpereira
+ *
+ * Created on 15 de Agosto de 2020, 21:21
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     | Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Teclado Saída   L0
+ *  RB1     |34     | Teclado Saída   L1
+ *  RB2     |35     | Teclado Saída   L2
+ *  RB3     |36     | Teclado Saída   L3
+ *  RB4     |37     | Teclado Entrada C0
+ *  RB5     |38     | Teclado Entrada C1
+ *  RB6     |39     | Teclado Entrada C2
+ *  RB7     |40     | Teclado Entrada C3
+ * -------------------------------------------------
+ */&lt;/span&gt;
+
+
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;delay.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define NUM_COL         4
+#define NUM_LIN         4
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define L0_MASK         0x01
+#define C0_MASK         0x10
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;teclado_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xF0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ANSELH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;OPTION_REGbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nRBPU&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;WPUB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tecladoMatriz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'3'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'5'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'6'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'7'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'9'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'#'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;teclado_scan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NUM_LIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PORTB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;L0_MASK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NUM_COL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PORTB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;C0_MASK&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tecladoMatriz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;   
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
+
+&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
+
+&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
+
+&lt;p&gt;Bom trabalho!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Teclado 4x4</summary></entry><entry><title type="html">P0122 - Display LCD com 4 vias de barramento</title><link href="http://localhost:4000/ddp/2020/P0122-dispLCD4vias/" rel="alternate" type="text/html" title="P0122 - Display LCD com 4 vias de barramento" /><published>2020-08-15T17:58:21-03:00</published><updated>2020-08-15T17:58:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0122-dispLCD4vias</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0122-dispLCD4vias/">&lt;h1 id=&quot;display-lcd&quot;&gt;Display LCD&lt;/h1&gt;
 
 &lt;p&gt;O LCD permite uma transferência de dados por um barramento de 8 ou 4 vias, economizando assim quatro bits que podem ser utilizados para outros fins.&lt;/p&gt;
 
@@ -2308,42 +2482,4 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Cálculo Simples</summary></entry><entry><title type="html">URI1009</title><link href="http://localhost:4000/ddp/2020/uri1009/" rel="alternate" type="text/html" title="URI1009" /><published>2020-07-23T19:25:21-03:00</published><updated>2020-07-23T19:25:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1009</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1009/">&lt;h1 id=&quot;salário-com-bônus&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1009&quot;&gt;Salário com Bônus&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;O problema pede que o programa leia o nome do vendedor, seu salário e o valor de suas vendas no mês, calcule e exiba o salário a receber já acrescido com o bônus.&lt;/p&gt;
-
-&lt;p&gt;Assuntos abordados:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Cadeia de caracteres.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;C&lt;/h4&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nomeVendedor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%lf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TOTAL = R$ %.2f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;salarioFixo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;montanteVendas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1009c&quot;&gt;Código detalhado C&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Salário com Bônus</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Cálculo Simples</summary></entry></feed>

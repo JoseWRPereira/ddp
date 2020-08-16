@@ -40,6 +40,7 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [P0112 - Detecção de borda]({{site.baseurl}}/2020/P0112-bordaBotaoPulsador)
 * [P0120 - Display LCD 8 vias]({{site.baseurl}}/2020/P0120-dispLCD8vias)
 * [P0122 - Display LCD 4 vias]({{site.baseurl}}/2020/P0122-dispLCD4vias)
+* [P0130 - Teclado Matricial 4x4]({{site.baseurl}}/2020/P0130-teclado4x4)
 
 <hr/>
 
