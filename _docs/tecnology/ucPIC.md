@@ -23,7 +23,7 @@ O **objetivo é resolver os problemas**, mas no caminho, **apreciar o aprendizad
 
 Para o desenvolvimento dos projetos são utilizadas as seguintes ferramentas:
 
-* Interface de desenvolvimento integrada - IDE [MPLAB X](https://www.microchip.com/mplab/mplab-x-ide);
+* Ambiente de desenvolvimento integrada - IDE [MPLAB X](https://www.microchip.com/mplab/mplab-x-ide);
 * Compilador [XC8](https://www.microchip.com/mplab/compilers);
 * Simulador [SimulIDE](https://www.simulide.com/p/downloads.html)
 
@@ -32,7 +32,11 @@ Alternativamente pode-se utilizar uma ferramenta online:
 
 <hr/>
 
-## C
+## Antes de Programar...
+* [P0020 - Novo Projeto]({{site.baseurl}}/2020/P0020-novoProjeto)
+
+
+## Programas Básicos
 * [P0101 - Pisca LED]({{site.baseurl}}/2020/P0101-piscaLED)
 * [P0102 - Botão LED]({{site.baseurl}}/2020/P0102-botaoLED)
 * [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)

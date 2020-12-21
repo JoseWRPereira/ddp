@@ -1,0 +1,82 @@
+I"<h1 id="projeto">Projeto</h1>
+
+<p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
+
+<p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
+
+<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos de suporte e por fim o arquivo executável (<strong>.hex</strong>).</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Criar um novo projeto utilizando a plataforma MPLAB-X.</p>
+
+<!--more-->
+
+<h2 id="mplab-x">MPLAB-X</h2>
+
+<p>O ambiente de desenvolvimento integrada (<em>Integrated Development Environment</em> - IDE) é uma ferramenta que reúne (integra) diversas funcionalidades de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, entre outras funções.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.1: IDE Microchip MPLAB-X</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B02-IDE.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Novo Projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B03-fileNewProject.png?raw=true" alt="Novo Projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 3: Tipo de Projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B04-chooseProject.png?raw=true" alt="Tipo do Projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 4: Seleção do dispositivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B05-selectDevice.png?raw=true" alt="Seleção do Dispositivo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET

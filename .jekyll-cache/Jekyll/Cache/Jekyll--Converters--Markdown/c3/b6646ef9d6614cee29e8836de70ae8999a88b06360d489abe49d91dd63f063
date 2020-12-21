@@ -1,0 +1,182 @@
+I"y*<h1 id="projeto">Projeto</h1>
+
+<p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
+
+<p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
+
+<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos de suporte e por fim o arquivo executável (<strong>.hex</strong>).</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Criar um novo projeto utilizando a plataforma MPLAB-X.</p>
+
+<!--more-->
+
+<h2 id="mplab-x">MPLAB-X</h2>
+
+<p>O ambiente de desenvolvimento integrada (<em>Integrated Development Environment</em> - IDE) é uma ferramenta que reúne (integra) diversas funcionalidade de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, entre outras funções.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.1: IDE Microchip MPLAB-X</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B02-IDE.png?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-programa-firmware">2. Programa (<em>Firmware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0130/projectTree.jpg?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
+
+<h3 id="programa-principal">Programa principal</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 15 de Agosto de 2020, 21:18:21
+ *
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     | Conexão
+ * ---------|-------|-------------------------------
+ *  RD2     |21     | LCD_RS
+ *  RD3     |22     | LCD_EN
+ *  RD4     |27     | LCD_D4
+ *  RD5     |28     | LCD_D5
+ *  RD6     |29     | LCD_D6
+ *  RD7     |30     | LCD_D7
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Teclado Saída   L0
+ *  RB1     |34     | Teclado Saída   L1
+ *  RB2     |35     | Teclado Saída   L2
+ *  RB3     |36     | Teclado Saída   L3
+ *  RB4     |37     | Teclado Entrada C0
+ *  RB5     |38     | Teclado Entrada C1
+ *  RB6     |39     | Teclado Entrada C2
+ *  RB7     |40     | Teclado Entrada C3
+ * -------------------------------------------------
+ * -------------------------------------------------
+ */</span>
+
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+#include "dispLCD4vias.h"
+#include "teclado.h"
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">str</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"Tecla   "</span><span class="p">;</span>
+  
+    <span class="n">dispLCD_init</span><span class="p">();</span>
+    <span class="n">teclado_init</span><span class="p">();</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">str</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">teclado_scan</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">str</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="sc">' '</span><span class="p">;</span>
+        <span class="n">dispLCD</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">str</span> <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   teclado.c
+ * Author: josewrpereira
+ *
+ * Created on 15 de Agosto de 2020, 21:21
+ *
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     | Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Teclado Saída   L0
+ *  RB1     |34     | Teclado Saída   L1
+ *  RB2     |35     | Teclado Saída   L2
+ *  RB3     |36     | Teclado Saída   L3
+ *  RB4     |37     | Teclado Entrada C0
+ *  RB5     |38     | Teclado Entrada C1
+ *  RB6     |39     | Teclado Entrada C2
+ *  RB7     |40     | Teclado Entrada C3
+ * -------------------------------------------------
+ */</span>
+
+
+<span class="cp">#include &lt;xc.h&gt;
+#include "delay.h"
+</span>
+<span class="cp">#define NUM_COL         4
+#define NUM_LIN         4
+</span>
+<span class="cp">#define L0_MASK         0x01
+#define C0_MASK         0x10
+</span>
+<span class="kt">void</span> <span class="nf">teclado_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">TRISB</span> <span class="o">=</span> <span class="mh">0xF0</span><span class="p">;</span>
+    <span class="n">ANSELH</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+    <span class="n">OPTION_REGbits</span><span class="p">.</span><span class="n">nRBPU</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">WPUB</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span>
+    <span class="n">PORTB</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">const</span> <span class="kt">char</span> <span class="n">tecladoMatriz</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>  <span class="p">{</span><span class="sc">'1'</span><span class="p">,</span><span class="sc">'2'</span><span class="p">,</span><span class="sc">'3'</span><span class="p">,</span><span class="sc">'A'</span><span class="p">},</span>
+                                    <span class="p">{</span><span class="sc">'4'</span><span class="p">,</span><span class="sc">'5'</span><span class="p">,</span><span class="sc">'6'</span><span class="p">,</span><span class="sc">'B'</span><span class="p">},</span>
+                                    <span class="p">{</span><span class="sc">'7'</span><span class="p">,</span><span class="sc">'8'</span><span class="p">,</span><span class="sc">'9'</span><span class="p">,</span><span class="sc">'C'</span><span class="p">},</span>
+                                    <span class="p">{</span><span class="sc">'*'</span><span class="p">,</span><span class="sc">'0'</span><span class="p">,</span><span class="sc">'#'</span><span class="p">,</span><span class="sc">'D'</span><span class="p">}</span> <span class="p">};</span>
+
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="nf">teclado_scan</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">aux</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">l</span><span class="p">,</span><span class="n">c</span><span class="p">;</span>
+  
+    <span class="k">for</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">l</span><span class="o">&lt;</span><span class="n">NUM_LIN</span><span class="p">;</span> <span class="n">l</span><span class="o">++</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">PORTB</span> <span class="o">=</span> <span class="o">~</span><span class="p">(</span><span class="n">L0_MASK</span> <span class="o">&lt;&lt;</span> <span class="n">l</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">c</span><span class="o">&lt;</span><span class="n">NUM_COL</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span> <span class="o">~</span><span class="n">PORTB</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">C0_MASK</span><span class="o">&lt;&lt;</span><span class="n">c</span><span class="p">)</span> <span class="p">)</span>
+                <span class="n">aux</span> <span class="o">=</span> <span class="n">tecladoMatriz</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">c</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>  
+    <span class="k">return</span><span class="p">(</span> <span class="n">aux</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET

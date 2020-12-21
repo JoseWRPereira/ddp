@@ -1,11 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-08-16T18:37:18-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0130 - Teclado Matricial</title><link href="http://localhost:4000/ddp/2020/P0130-teclado4x4/" rel="alternate" type="text/html" title="P0130 - Teclado Matricial" /><published>2020-08-16T18:31:21-03:00</published><updated>2020-08-16T18:31:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0130-teclado4x4</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0130-teclado4x4/">&lt;h1 id=&quot;teclado-4x4&quot;&gt;Teclado 4x4&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2020-12-20T22:04:54-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0020 - Novo Projeto</title><link href="http://localhost:4000/ddp/2020/P0020-novoProjeto/" rel="alternate" type="text/html" title="P0020 - Novo Projeto" /><published>2020-12-19T16:24:21-03:00</published><updated>2020-12-19T16:24:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0020-novoProjeto</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0020-novoProjeto/">&lt;h1 id=&quot;projeto&quot;&gt;Projeto&lt;/h1&gt;
 
-&lt;p&gt;A interface com o operador dos equipamentos microcontrolados geralmente são feitas com a dula diplay LCD e teclado matricial.&lt;/p&gt;
+&lt;p&gt;Um &lt;strong&gt;programa para o microcontrolador&lt;/strong&gt; é composto por &lt;strong&gt;diversos arquivos fontes, escritos em&lt;/strong&gt; alguma linguagem de programação, costumeiramente a &lt;strong&gt;linguagem C&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esses &lt;strong&gt;arquivos são agrupados, organizados&lt;/strong&gt; e acompanhados de outros arquivos necessários para a construção de &lt;strong&gt;um projeto&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Um projeto é composto por arquivos fonte e de cabeçalho(&lt;strong&gt;.c e .h&lt;/strong&gt;), arquivos para sua construção (&lt;strong&gt;&lt;em&gt;makefile&lt;/em&gt;&lt;/strong&gt;) no processo de compilação, arquivos de montagem (&lt;strong&gt;&lt;em&gt;assembly&lt;/em&gt;&lt;/strong&gt;), diversos arquivos de suporte e por fim o arquivo executável (&lt;strong&gt;.hex&lt;/strong&gt;).&lt;/p&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
 
-&lt;p&gt;Implementar a interface de leitura de um teclado matricial 4x4.&lt;/p&gt;
+&lt;p&gt;Criar um novo projeto utilizando a plataforma MPLAB-X.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;mplab-x&quot;&gt;MPLAB-X&lt;/h2&gt;
+
+&lt;p&gt;O ambiente de desenvolvimento integrada (&lt;em&gt;Integrated Development Environment&lt;/em&gt; - IDE) é uma ferramenta que reúne (integra) diversas funcionalidades de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, entre outras funções.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: IDE Microchip MPLAB-X&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B02-IDE.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Novo Projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B03-fileNewProject.png?raw=true&quot; alt=&quot;Novo Projeto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Tipo de Projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B04-chooseProject.png?raw=true&quot; alt=&quot;Tipo do Projeto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Seleção do dispositivo&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B05-selectDevice.png?raw=true&quot; alt=&quot;Seleção do Dispositivo&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
+
+&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
+
+&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
+
+&lt;p&gt;Bom trabalho!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Projeto</summary></entry><entry><title type="html">P0130 - Teclado Matricial</title><link href="http://localhost:4000/ddp/2020/P0130-teclado4x4/" rel="alternate" type="text/html" title="P0130 - Teclado Matricial" /><published>2020-08-16T18:31:21-03:00</published><updated>2020-08-16T18:31:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0130-teclado4x4</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0130-teclado4x4/">&lt;h1 id=&quot;teclado-4x4&quot;&gt;Teclado 4x4&lt;/h1&gt;
+
+&lt;p&gt;A interface com o operador popularmente denominada Interface Homem Máquina(IHM), costumeiramente possui a dupla display LCD e teclado matricial.&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Implementar uma interface com um teclado matricial 4x4 para entrada de dados.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -19,7 +99,7 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0130/teclado4x4.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0130/P0130-teclado4x4.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2446,40 +2526,4 @@ O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code
 
 &lt;p&gt;Bom trabalho!&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Pisca LED</summary></entry><entry><title type="html">URI1010</title><link href="http://localhost:4000/ddp/2020/uri1010/" rel="alternate" type="text/html" title="URI1010" /><published>2020-07-23T19:28:21-03:00</published><updated>2020-07-23T19:28:21-03:00</updated><id>http://localhost:4000/ddp/2020/uri1010</id><content type="html" xml:base="http://localhost:4000/ddp/2020/uri1010/">&lt;h1 id=&quot;cálculo-simples&quot;&gt;&lt;a href=&quot;https://www.urionlinejudge.com.br/judge/pt/problems/view/1010&quot;&gt;Cálculo Simples&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;O problema solicita que o programa leia três números referentes a primeira peça e outros três números na linha seguinte referentes a segunda peça. Os números de cada uma das peças são: seu código (inteiro), sua quantidade (inteiro) e seu valor unitário (float).&lt;/p&gt;
-
-&lt;p&gt;Assuntos abordados:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entrada de múltiplas variáveis por linha.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;hr /&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;Python&lt;/h4&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codigo2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;VALOR A PAGAR: R$ {:.2f}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qtd2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valor2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/2020/uri1010py&quot;&gt;Código detalhado Python&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/progURI&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Prog" /><summary type="html">Cálculo Simples</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Pisca LED</summary></entry></feed>

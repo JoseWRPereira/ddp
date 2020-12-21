@@ -1,10 +1,14 @@
-I"�&<h1 id="teclado-4x4">Teclado 4x4</h1>
+I"&)<h1 id="novo-projeto">Novo Projeto</h1>
 
-<p>A interface com o operador dos equipamentos microcontrolados geralmente são feitas com a dula diplay LCD e teclado matricial.</p>
+<p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
+
+<p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
+
+<p>Um projeto é composto por arquivos fontes (<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos de suporte e por fim o arquivo executável (<strong>.hex</strong>).</p>
 
 <h2 id="objetivo">Objetivo</h2>
 
-<p>Implementar a interface de leitura de um teclado matricial 4x4.</p>
+<p>Criar um novo projeto utilizando a plataforma MPLAB-X.</p>
 
 <!--more-->
 
@@ -18,7 +22,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0130/teclado4x4.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0130/P0130-teclado4x4.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -81,7 +85,7 @@
 <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">char</span> <span class="n">str</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"Tecla   "</span><span class="p">;</span>
-    
+  
     <span class="n">dispLCD_init</span><span class="p">();</span>
     <span class="n">teclado_init</span><span class="p">();</span>
 
@@ -103,7 +107,7 @@
  * Author: josewrpereira
  *
  * Created on 15 de Agosto de 2020, 21:21
- * 
+ *
  * -------------------------------------------------
  *          MAPA DE ENTRADAS E SAIDAS
  * -------------------------------------------------
@@ -144,13 +148,11 @@
                                     <span class="p">{</span><span class="sc">'7'</span><span class="p">,</span><span class="sc">'8'</span><span class="p">,</span><span class="sc">'9'</span><span class="p">,</span><span class="sc">'C'</span><span class="p">},</span>
                                     <span class="p">{</span><span class="sc">'*'</span><span class="p">,</span><span class="sc">'0'</span><span class="p">,</span><span class="sc">'#'</span><span class="p">,</span><span class="sc">'D'</span><span class="p">}</span> <span class="p">};</span>
 
-
-
 <span class="kt">unsigned</span> <span class="kt">char</span> <span class="nf">teclado_scan</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">aux</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">l</span><span class="p">,</span><span class="n">c</span><span class="p">;</span>
-    
+  
     <span class="k">for</span><span class="p">(</span> <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">l</span><span class="o">&lt;</span><span class="n">NUM_LIN</span><span class="p">;</span> <span class="n">l</span><span class="o">++</span> <span class="p">)</span>
     <span class="p">{</span>
         <span class="n">PORTB</span> <span class="o">=</span> <span class="o">~</span><span class="p">(</span><span class="n">L0_MASK</span> <span class="o">&lt;&lt;</span> <span class="n">l</span><span class="p">);</span>
@@ -159,7 +161,7 @@
             <span class="k">if</span><span class="p">(</span> <span class="o">~</span><span class="n">PORTB</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">C0_MASK</span><span class="o">&lt;&lt;</span><span class="n">c</span><span class="p">)</span> <span class="p">)</span>
                 <span class="n">aux</span> <span class="o">=</span> <span class="n">tecladoMatriz</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">c</span><span class="p">];</span>
         <span class="p">}</span>
-    <span class="p">}</span>   
+    <span class="p">}</span>  
     <span class="k">return</span><span class="p">(</span> <span class="n">aux</span> <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
