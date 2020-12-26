@@ -1,0 +1,81 @@
+---
+layout: post
+title: "P0021 - Arquivos no Projeto"
+date: 2020-12-26 17:48:21 -0300
+author: José W. R. Pereira
+categories: ucPIC
+badges:
+ - type: warning
+   tag: Microcontrolador
+ - type: secondary
+   tag: PIC
+ - type: secondary
+   tag: PIC16F887
+ - type: danger
+   tag: MPLABX-XC8
+   mathjax: true
+---
+
+
+
+# Arquivos do Projeto
+
+Dentro de um projeto para microcontrolador, serão criados basicamente arquivos fonte e de cabeçalho. 
+
+Os arquivos fonte são aqueles com extensão **.c** e são escritos seguindo a sintaxe da linguagem de programação C, a mais utilizada para este tipo de aplicação.
+
+Os arquivos de cabeçalho são aqueles com a extensão **.h** e são utilizados como apresentação de funções em arquivos fontes diferentes de onde estão declaradas, permitindo assim que sejam invocadas (chamadas). 
+
+## Objetivo
+
+Manipular arquivos fonte e de cabeçalho no projeto utilizando a plataforma MPLAB-X.
+
+<!--more-->
+
+## Criar um arquivo fonte
+
+Um projeto geralmente possui vários arquivos fonte, apesar de ser possível criar todo o código em um único arquivo, mas não é uma boa prática. 
+
+A divisão de funções e procedimentos em diversos arquivos é interessante pelo fato de agrupar códigos de uma mesma família, ou seja, funções e procedimentos que fazem parte da manipulação de uma mesma estrutura ou periférico. 
+
+### Exemplo:
+Para fazer a leitura de um parâmetro analógico, é possível configurar um dos periféricos disponíveis no PIC16F887, o conversor Analógico Digital. 
+Então, é necessário criar uma rotina de inicialização desse periférico e funções de acesso, sendo que todos esses códigos devem estar escritos dentro de um arquivo cujo nome se refira diretamente às funções ali presentes, como aqui por exemplo, **adc.c**. 
+Sendo assim, somente códigos pertinentes à menipulação de dados do conversor A/D devem estar contidos nesse arquivo, cada outro periférico ou estrutura utilizados devem ter os seus respectivos arquivos **.c**.
+
+Para criar um novo arquivo, seja ele o primeiro arquivo fonte, ou qualquer um dos demais, o caminho mais prático é:
+
+* Selecionando o diretório ***Source Files*** (Arquivos Fonte) e clicando com o botão direitor do *mouse*;
+* Selecionando a opção ***New*** e em seguida **main.c**. 
+
+Obs.: No último passo, basta escolher qualquer opção de arquivos **.c**, pois o conteúdo que já vem previamente inserido não é necessário, apesar de que em alguns casos facilita a inserção dos primeiros dados do código.
+
+| Figura 1.1: Seleção de novo arquivo |
+|:---------------------------------------------:|
+| ![IDE MPLAB-X]({{site.baseurlimg}}/_posts/tUcPIC/imgP0021/A01-novoArquivoC.png{{site.rawimg}}) |
+
+| Figura 1.2: Nome do arquivo |
+|:---------------------------------------------:|
+| ![IDE MPLAB-X]({{site.baseurlimg}}/_posts/tUcPIC/imgP0021/A02-nomeArquivoC.png{{site.rawimg}}) |
+
+| Figura 1.3: Novo Arquivo |
+|:---------------------------------------------:|
+| ![IDE MPLAB-X]({{site.baseurlimg}}/_posts/tUcPIC/imgP0021/A03-*.png{{site.rawimg}}) |
+
+
+
+
+
+
+
+<hr/>
+
+Agora é a sua vez!
+
+Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.
+
+Ficou com alguma dúvida, entre em contato.
+
+Bom trabalho!
+
+[Voltar]({{site.baseurl}}/docs/tecnology/ucPIC)
