@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Diferença de Potencial - DdP</title>
-<meta property="og:title" content="Diferença de Potencial - DdP" />
+<title>P0021 - Novo Arquivo</title>
+<meta property="og:title" content="P0021 - Novo Arquivo" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Diferença de Potencial - DdP">
+<meta itemprop="name" content="P0021 - Novo Arquivo">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Diferença de Potencial - DdP"/>
+<meta name="twitter:title" content="P0021 - Novo Arquivo"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -288,8 +288,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/pages/index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/pages/index.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2020-12-26-P0021-novoArquivo.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2020-12-26-P0021-novoArquivo.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -306,24 +306,15 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/">Diferença de Potencial - DdP</a>
+                <a href="http://localhost:4000/ddp/2020/P0021-novoArquivo/">P0021 - Novo Arquivo</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="postagens">Postagens</h1>
-
-<p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
-
-<br />
-<hr /><hr />
-
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0021-novoArquivo/">P0021 - Novo Arquivo</a></h2>
-   <span class="post-date">2020-12-26</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
-   <h1 id="novo-arquivo">Novo Arquivo</h1>
+            <h1 style="margin-bottom:0px">P0021 - Novo Arquivo</h1>
+<span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
+<span class="post-date" style="font-style: italic;">2020-12-26</span>
+<h1 id="novo-arquivo">Novo Arquivo</h1>
 
 <p>Dentro de um projeto para microcontrolador, são criados basicamente arquivos fonte e de cabeçalho.</p>
 
@@ -335,196 +326,118 @@
 
 <p>Manipular arquivos fonte e de cabeçalho no projeto utilizando a plataforma MPLAB-X.</p>
 
+<!--more-->
 
-   
-      <a href="/ddp/2020/P0021-novoArquivo/">leia mais </a>
-   
-   </div>
-   <hr />
+<h2 id="criar-um-arquivo-fonte">Criar um arquivo fonte</h2>
 
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0020-novoProjeto/">P0020 - Novo Projeto</a></h2>
-   <span class="post-date">2020-12-19</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
-   <h1 id="projeto">Projeto</h1>
+<p>Um projeto geralmente possui vários arquivos fonte, apesar de ser possível criar todo o código em um único arquivo, mas não é uma boa prática.</p>
 
-<p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
+<p>A divisão de funções e procedimentos em diversos arquivos é interessante pelo fato de agrupar códigos de uma mesma família, ou seja, funções e procedimentos que fazem parte da manipulação de uma mesma estrutura ou periférico.</p>
 
-<p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
+<h3 id="exemplo">Exemplo:</h3>
+<p>Para fazer a leitura de um parâmetro analógico, é possível configurar um dos periféricos disponíveis no PIC16F887, o conversor Analógico Digital. 
+Então, é necessário criar uma rotina de inicialização desse periférico e funções de acesso, sendo que todos esses códigos devem estar escritos dentro de um arquivo cujo nome se refira diretamente às funções ali presentes, como aqui por exemplo, <strong>adc.c</strong>. 
+Sendo assim, somente códigos pertinentes à menipulação de dados do conversor A/D devem estar contidos nesse arquivo, cada outro periférico ou estrutura utilizados devem ter os seus respectivos arquivos <strong>.c</strong>.</p>
 
-<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos intermediários e por fim o arquivo executável (<strong>.hex</strong>).</p>
+<p>Para criar um novo arquivo, seja ele o primeiro arquivo fonte, ou qualquer um dos demais, o caminho mais prático é:</p>
 
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Criar um novo projeto utilizando a plataforma MPLAB-X.</p>
-
-
-   
-      <a href="/ddp/2020/P0020-novoProjeto/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0130-teclado4x4/">P0130 - Teclado Matricial</a></h2>
-   <span class="post-date">2020-08-16</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="teclado-4x4">Teclado 4x4</h1>
-
-<p>A interface com o operador popularmente denominada Interface Homem Máquina(IHM), costumeiramente possui a dupla display LCD e teclado matricial.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Implementar uma interface com um teclado matricial 4x4 para entrada de dados.</p>
-
-
-   
-      <a href="/ddp/2020/P0130-teclado4x4/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0122-dispLCD4vias/">P0122 - Display LCD com 4 vias de barramento</a></h2>
-   <span class="post-date">2020-08-15</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-lcd">Display LCD</h1>
-
-<p>O LCD permite uma transferência de dados por um barramento de 8 ou 4 vias, economizando assim quatro bits que podem ser utilizados para outros fins.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Adaptar a biblioteca dispLCD8vias para trabalhar com um barramento de 4 vias de dados.</p>
-
-
-   
-      <a href="/ddp/2020/P0122-dispLCD4vias/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0120-dispLCD8vias/">P0120 - Display LCD com 8 vias de barramento</a></h2>
-   <span class="post-date">2020-08-15</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-lcd">Display LCD</h1>
-
-<p>O dispositivo mais comum para a exibição de cadeia de caracteres (<em>strings</em>) e variáveis numéricas é o display de cristal líquido (<em>Liquid Crystal Display</em> - LCD). 
-Assim faz-se necessária uma biblioteca mínima para seu uso.</p>
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Exibir uma mensagem de texto e uma variável no display LCD.</p>
-
-
-   
-      <a href="/ddp/2020/P0120-dispLCD8vias/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0112-bordaBotaoPulsador/">P0112 - Borda Botão Pulsador</a></h2>
-   <span class="post-date">2020-08-13</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="detecção-de-borda-em-botão-pulsador">Detecção de borda em botão pulsador</h1>
-
-<p>A leitura simples de um botão implica em alguns comportamentos não desejados como um incremento maior do que a quantidade de vezes que um botão é pressionado. Para solucionar esse problema pode-se utilizar não o estado lógico do botão, mas sim o evendo associado a mudança de estado, evento único dentro de um ciclo de operação.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Detectar as bordas de subida e descida em botão pulsador.</p>
-
-
-   
-      <a href="/ddp/2020/P0112-bordaBotaoPulsador/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0111-disp7segX2/">P0111 - 2 Displays de 7 segmentos</a></h2>
-   <span class="post-date">2020-08-13</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
-
-<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.</p>
-
-
-   
-      <a href="/ddp/2020/P0111-disp7segX2/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0110-disp7seg/">P0110 - Display de 7 segmentos</a></h2>
-   <span class="post-date">2020-08-05</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
-
-<p>O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais:</p>
-
-<p><code class="language-plaintext highlighter-rouge">0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F</code>;</p>
-
-
-   
-      <a href="/ddp/2020/P0110-disp7seg/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/com110-algoritmo/">COM110 - Introdução a algoritmos</a></h2>
-   <span class="post-date">2020-08-03</span><br />
-   <span class="badge badge-primary">UniVESP</span><span class="badge badge-secondary">Computação</span>
-   <h1 id="algorítmos"><a href="https://cursos.univesp.br/courses/3163/pages/semana-1?module_item_id=264918">Algorítmos</a></h1>
-
-<p>Todo <strong>programa</strong> visa <strong>solucionar um problema</strong> posto, partindo da definição do problema (O que?) e seguindo para o desenvolvimento do programa (Como?), que pode ser dividido em três partes:</p>
 <ul>
-  <li>Projetar a solucação (algoritmo);</li>
-  <li>Codificar a solução (Programar em linguagem de programação);</li>
-  <li>Testar o programa.</li>
+  <li>Selecionando o diretório <strong><em>Source Files</em></strong> (Arquivos Fonte) e clicando com o botão direitor do <em>mouse</em>;</li>
+  <li>Selecionando a opção <strong><em>New</em></strong> e em seguida <strong>main.c</strong>.</li>
 </ul>
 
+<p>Obs.: No último passo, basta escolher qualquer opção de arquivos <strong>.c</strong>, pois o conteúdo que vem previamente inserido não é necessário, apesar de que em alguns casos facilita a inserção dos primeiros dados do código.</p>
 
-   
-      <a href="/ddp/2020/com110-algoritmo/">leia mais </a>
-   
-   </div>
-   <hr />
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.1: Seleção de novo arquivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0021/A01-novoArquivoC.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
 
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0102-botaoLED/">P0102 - Botão LED</a></h2>
-   <span class="post-date">2020-07-29</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="botão-led">Botão LED</h1>
+<p>Selecione o nome do arquivo no campo <strong><em>File Name</em></strong>.</p>
 
-<p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
+<p>Atente-se para as recomendações:</p>
+<ul>
+  <li>O nome deve ser coerente com as funções e procedimentos que vão ali ser inseridos;</li>
+  <li>O nome deve conter apenas uma palavra. Caso queira utilizar mais do que uma palavra, use o ‘_’ (<em>underline</em>) para ligar as palavras;</li>
+  <li>Não utilize acentos, cedilha ou caracteres diferentes do alfabeto ou números. Exceto o ‘_’.</li>
+</ul>
 
-<p>Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.</p>
+<p>Não é necessário inserir a extensão no nome do arquivo, que pode ser confirmada no campo abaixo: <strong><em>Extension</em></strong>.</p>
 
-<h2 id="objetivo">Objetivo</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.2: Nome do arquivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0021/A02-nomeArquivoC.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Acionar um LED copiando o estado lógico de um botão.</p>
+<p>Após o nome estar inserido, clique em <strong><em>Finish</em></strong>.</p>
 
+<p>Perceba que no diretório <strong><em>Source Files</em></strong> foi inlcuído o arquivo <strong>main.c</strong>, e este arquivo está aberto no editor.</p>
 
-   
-      <a href="/ddp/2020/P0102-botaoLED/">leia mais </a>
-   
-   </div>
-   <hr />
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.3: Novo Arquivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0021/A03-*.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
 
+<p>O arquivo recém criado possui um cabeçalho como comentário, que contém o nome do arquivo e do autor, além da data de criação do arquivo.
+Em seguida, uma estrutura básica com a inclusão da biblioteca padrão do compilador XC8 e a função principal.</p>
 
-Quer ver mais? Acesse <a href="/ddp/archive/">artigos</a>.
-</p>
+<p>Em linguagem C apenas uma função é obrigatória, a função <strong>main</strong>, que recomenda-se declará-la no arquivo de mesmo nome.</p>
+
+<p>Para todos os demais arquivos <strong>.c</strong>, o código pré-inserido pode ser excluído, inclusive porque não pode haver duas funções com o mesmo nome.</p>
+
+<h3 id="o-comentário-em-bloco">O comentário em bloco:</h3>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+  O comentário em bloco possui um delimitador de inicio (barra asterisco) 
+  e um de fim (asterisco barra), sendo que tudo entre eles não é interpretado 
+  pelo compilador, ou seja, não vai produzir uma ação no programa executável.
+
+  Assim é altamente recomendado que seja utilizado este recurso para 
+  descrever quais pinos são utilizados, como uma determinada função 
+  mais complexa se comporta ou como utilizá-la, sempre que o código 
+  não estiver simples e facilmente compreensível, insira comentários. 
+  São sempre bem vindos. 
+
+  Lembre-se: é bem provável que daqui alguns dias nem você lembre o que 
+  você quis fazer, imagina outro programador tentando entender o seu raciocínio. 
+ */</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -575,7 +488,8 @@ $.each(headers, function(i, header){
 })
 </script>
 
-
+<script>
+$('h1').first().append('<div></div>')</script>
 
 
             

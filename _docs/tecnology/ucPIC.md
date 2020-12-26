@@ -34,6 +34,7 @@ Alternativamente pode-se utilizar uma ferramenta online:
 
 ## Antes de Programar...
 * [P0020 - Novo Projeto]({{site.baseurl}}/2020/P0020-novoProjeto)
+* [P0021 - Novo Arquivo]({{site.baseurl}}/2020/P0021-novoArquivo)
 
 
 ## Programas Básicos
