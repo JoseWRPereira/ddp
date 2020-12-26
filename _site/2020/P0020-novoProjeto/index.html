@@ -320,7 +320,7 @@
 
 <p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
 
-<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos de suporte e por fim o arquivo executável (<strong>.hex</strong>).</p>
+<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos intermediários e por fim o arquivo executável (<strong>.hex</strong>).</p>
 
 <h2 id="objetivo">Objetivo</h2>
 
@@ -345,6 +345,16 @@
   </tbody>
 </table>
 
+<p>Para a criação de um novo projeto, é possível acessar o assistente através de três formas possíveis:</p>
+<ul>
+  <li>menu superior;</li>
+  <li>ícones; e,</li>
+  <li>teclas de atalho.</li>
+</ul>
+
+<h3 id="criando-um-novo-projeto">Criando um novo projeto:</h3>
+<p>No menu superior clique em <strong><em>File</em></strong> e em seguida selecione e clique em <strong><em>New Project</em></strong>.</p>
+
 <table>
   <thead>
     <tr>
@@ -357,6 +367,15 @@
     </tr>
   </tbody>
 </table>
+
+<p>A tela do assistente de criação do projeto é executada, então, basta seguir fazendo as seleções apropriadas nos passos e clicando em <strong><em>Next &gt;</em></strong> ao finalizar as escolhas.</p>
+
+<p>Para a criação de um projeto básico siga as seguintes instruções:</p>
+
+<ul>
+  <li>em <strong><em>Categories:</em></strong> escolha <strong><em>Microchip Embedded</em></strong></li>
+  <li>em <strong><em>Projects:</em></strong> escolha <strong><em>Standalone Project</em></strong></li>
+</ul>
 
 <table>
   <thead>
@@ -371,6 +390,15 @@
   </tbody>
 </table>
 
+<p>A tela seguinte permite escolher o dispositivo que receberá o executável do projeto.</p>
+
+<ul>
+  <li>em <strong><em>Family:</em></strong> escolha no menu suspenso a família do <em>chip</em> utilizado <strong><em>Mid-Range 8-bit MCUs (PIC10/12/16/MCP)</em></strong></li>
+  <li>em <strong><em>Device:</em></strong> escolha/pesquise o <em>chip</em> que será utilizado no projeto <strong>PIC16F887</strong></li>
+</ul>
+
+<p>Obs.: É possível suprimir a escolha da família do microcontrolador digitando diretamente a pesquisa do dispositivo alvo.</p>
+
 <table>
   <thead>
     <tr>
@@ -383,6 +411,82 @@
     </tr>
   </tbody>
 </table>
+
+<p>Caso um dispositivo de gravação esteja conectado ao computador, é possível escolher a ferramenta de gravação, caso contrário, escolha a opção <strong><em>Simulator</em></strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 5: Seleção do gravador/simulador</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B06-selectTool.png?raw=true" alt="Seleção do Gravador/Simulador" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Selecione a versão do compilador em <strong>XC8</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 6: Seleção do compilador</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B07-selectCompiler.png?raw=true" alt="Seleção do Compilador" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Insira o nome do projeto.</p>
+
+<p>Nomes são sempre complicados…. Sugiro que adote algumas boas práticas:</p>
+<ul>
+  <li>O nome do arquivo/diretório/projeto tenha uma relação direta com o objetivo proposto;</li>
+  <li>Não utilize nomes com mais de uma palavra; Caso precise, utilize ‘_’ para conectar as palavras. Não deixe espaços em branco nos nomes;</li>
+  <li>Não usar um nome de projeto já existente.</li>
+</ul>
+
+<p>Geralmente, a IDE aloca os projetos na pasta padrão criada ao instalar o programa. Sugiro manter os projetos neste local, apesar de ser possível salvar o projeto em qualquer outro local que você tenha acesso.</p>
+
+<p>Por fim, clique em <strong><em>Finish</em></strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 7: Nome e local do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B08-nomeLocalProjeto.png?raw=true" alt="Seleção do Nome e Local" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Após este processo, o projeto foi criado.
+Perceba que na aba <strong><em>Projects</em></strong> o projeto criado está em negrito e foram criados alguns diretórios: <strong><em>Header Files</em></strong>, <strong><em>Important Files</em></strong>, <strong><em>Linker Files</em></strong>, <strong><em>Source Files</em></strong>,<strong><em>Libraries</em></strong> e <strong><em>Loadables</em></strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 8: Novo Projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0020/B09-novoProjeto.png?raw=true" alt="Novo Projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note que apenas o diretório <strong><em>Important Files</em></strong> possui um arquivo, o <strong><em>Makefile</em></strong>.</p>
+
+<p><strong>Importante</strong>: Enquanto não souber usar o <strong><em>Makefile</em></strong>, não mexa nele!!!</p>
 
 <hr />
 

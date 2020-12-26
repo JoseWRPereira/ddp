@@ -1,10 +1,10 @@
-I"<h1 id="projeto">Projeto</h1>
+I"�<h1 id="projeto">Projeto</h1>
 
 <p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
 
 <p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
 
-<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos de suporte e por fim o arquivo executável (<strong>.hex</strong>).</p>
+<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos intermediários e por fim o arquivo executável (<strong>.hex</strong>).</p>
 
 <h2 id="objetivo">Objetivo</h2>
 
@@ -14,7 +14,7 @@
 
 <h2 id="mplab-x">MPLAB-X</h2>
 
-<p>O ambiente de desenvolvimento integrada (<em>Integrated Development Environment</em> - IDE) é uma ferramenta que reúne (integra) diversas funcionalidade de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, entre outras funções.</p>
+<p>O ambiente de desenvolvimento integrada (<em>Integrated Development Environment</em> - IDE) é uma ferramenta que reúne (integra) diversas funcionalidades de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, entre outras funções.</p>
 
 <table>
   <thead>
@@ -28,6 +28,13 @@
     </tr>
   </tbody>
 </table>
+
+<p>Para a criação de um novo projeto, três formas são possíveis, e são elas através:</p>
+<ul>
+  <li>do menu superior;</li>
+  <li>dos ícones; e,</li>
+  <li>das teclas de atalho.</li>
+</ul>
 
 <table>
   <thead>
