@@ -48,21 +48,59 @@ Para criar um novo arquivo, seja ele o primeiro arquivo fonte, ou qualquer um do
 * Selecionando o diretório ***Source Files*** (Arquivos Fonte) e clicando com o botão direitor do *mouse*;
 * Selecionando a opção ***New*** e em seguida **main.c**. 
 
-Obs.: No último passo, basta escolher qualquer opção de arquivos **.c**, pois o conteúdo que já vem previamente inserido não é necessário, apesar de que em alguns casos facilita a inserção dos primeiros dados do código.
+Obs.: No último passo, basta escolher qualquer opção de arquivos **.c**, pois o conteúdo que vem previamente inserido não é necessário, apesar de que em alguns casos facilita a inserção dos primeiros dados do código.
 
 | Figura 1.1: Seleção de novo arquivo |
 |:---------------------------------------------:|
 | ![IDE MPLAB-X]({{site.baseurlimg}}/_posts/tUcPIC/imgP0021/A01-novoArquivoC.png{{site.rawimg}}) |
 
+Selecione o nome do arquivo no campo ***File Name:***. Atente-se para as recomendações:
+* O nome deve ser coerente com as funções e procedimentos que vão ali ser inseridos;
+* O nome deve conter apenas uma palavra. Caso queira utilizar mais do que uma palavra, use o '_' para ligar as palavras;
+* Não utilize acentos, cedilha ou caracteres diferentes do alfabelo ou números. Exceto o '_'.
+
+Não é necessário inserir a extensão no nome do arquivo, que pode ser confirmado no campo abaixo: ***Extension:***.
+
 | Figura 1.2: Nome do arquivo |
 |:---------------------------------------------:|
 | ![IDE MPLAB-X]({{site.baseurlimg}}/_posts/tUcPIC/imgP0021/A02-nomeArquivoC.png{{site.rawimg}}) |
+
+Após o nome estar inserido, clique em ***Finish***.
+
+Perceba que no diretório ***Source Files*** foi inlcuído o arquivo **main.c**, e este arquivo está aberto no editor. 
 
 | Figura 1.3: Novo Arquivo |
 |:---------------------------------------------:|
 | ![IDE MPLAB-X]({{site.baseurlimg}}/_posts/tUcPIC/imgP0021/A03-*.png{{site.rawimg}}) |
 
 
+O arquivo recém criado possui um cabeçalho como comentário, que contém o nome do arquivo e do autor, além da data de criação do arquivo.
+
+```c
+/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 26 de Dezembro de 2020, 19:29
+ */
+```
+
+Este trecho de código não produz ação no projeto, serve apenas como documentação, apoio ou orientação ao programador.
+
+### O comentário em bloco:
+```c
+/*
+  O comentário em bloco possui um delimitador de inicio (barra asterisco) e um de fim (asterisco barra), sendo que tudo entre eles não é interpretado pelo compilador, ou seja, não vai produzir uma ação no programa executável.
+
+  Assim é altamente recomendado que seja utilizado este recurso para descrever quais pinos são utilizados, como uma determinada função mais complexa se comporta ou como utilizá-la, sempre que o código não estiver simples e facilmente compreensível, insira comentários. São sempre bem vindos. 
+
+  Lembre-se: é bem provável que daqui alguns dias nem você lembre o que você quis fazer, imagina outro programador tentando entender o seu raciocínio. 
+ */
+```
+
+
+
+Em seguida, uma estrutura básica com a inclusão da biblioteca **<xc.h>**, e a função **main**.
 
 
 
