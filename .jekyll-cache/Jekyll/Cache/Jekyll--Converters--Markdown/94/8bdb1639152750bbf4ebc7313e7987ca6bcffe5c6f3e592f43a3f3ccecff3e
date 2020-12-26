@@ -1,4 +1,4 @@
-I"�<h1 id="arquivos">Arquivos</h1>
+I"_<h1 id="novo-arquivo">Novo Arquivo</h1>
 
 <p>Dentro de um projeto para microcontrolador, são criados basicamente arquivos fonte e de cabeçalho.</p>
 
@@ -8,7 +8,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-<p>Manipular arquivos fonte e de cabeçalho no projeto utilizando a plataforma MPLAB-X.</p>
+<p>Criar um arquivo fonte no projeto utilizando a plataforma MPLAB-X.</p>
 
 <!--more-->
 
@@ -45,14 +45,16 @@ Sendo assim, somente códigos pertinentes à menipulação de dados do conversor
   </tbody>
 </table>
 
-<p>Selecione o nome do arquivo no campo <strong><em>File Name</em></strong>. Atente-se para as recomendações:</p>
+<p>Selecione o nome do arquivo no campo <strong><em>File Name</em></strong>.</p>
+
+<p>Atente-se para as recomendações:</p>
 <ul>
   <li>O nome deve ser coerente com as funções e procedimentos que vão ali ser inseridos;</li>
-  <li>O nome deve conter apenas uma palavra. Caso queira utilizar mais do que uma palavra, use o ‘_’ para ligar as palavras;</li>
-  <li>Não utilize acentos, cedilha ou caracteres diferentes do alfabelo ou números. Exceto o ‘_’.</li>
+  <li>O nome deve conter apenas uma palavra. Caso queira utilizar mais do que uma palavra, use o ‘_’ (<em>underline</em>) para ligar as palavras;</li>
+  <li>Não utilize acentos, cedilha ou caracteres diferentes do alfabeto ou números. Exceto o ‘_’.</li>
 </ul>
 
-<p>Não é necessário inserir a extensão no nome do arquivo, que pode ser confirmado no campo abaixo: <strong><em>Extension:</em></strong>.</p>
+<p>Não é necessário inserir a extensão no nome do arquivo, que pode ser confirmada no campo abaixo: <strong><em>Extension</em></strong>.</p>
 
 <table>
   <thead>
@@ -84,44 +86,12 @@ Sendo assim, somente códigos pertinentes à menipulação de dados do conversor
   </tbody>
 </table>
 
-<p>O arquivo recém criado possui um cabeçalho como comentário, que contém o nome do arquivo e do autor, além da data de criação do arquivo.</p>
+<p>O arquivo recém criado possui um cabeçalho como comentário, que contém o nome do arquivo e do autor, além da data de criação do arquivo.
+Em seguida, uma estrutura básica com a inclusão da biblioteca padrão do compilador XC8 e a função principal.</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
- * File:   main.c
- * Author: josewrpereira
- *
- * Created on 26 de Dezembro de 2020, 19:29
- */</span>
-</code></pre></div></div>
+<p>Em linguagem C apenas uma função é obrigatória, a função <strong>main</strong>, que recomenda-se declará-la no arquivo de mesmo nome.</p>
 
-<p>Este trecho de código não produz ação no projeto, serve apenas como documentação, apoio ou orientação ao programador.</p>
-
-<p>Em seguida, uma estrutura básica com a inclusão da biblioteca padrão do compilador XC8 e a função principal.</p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
-</span>
-<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
-<span class="p">{</span>
-    <span class="k">return</span><span class="p">;</span>
-<span class="p">}</span>
-
-</code></pre></div></div>
-
-<h3 id="o-comentário-em-bloco">O comentário em bloco:</h3>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
-  O comentário em bloco possui um delimitador de inicio (barra asterisco) 
-  e um de fim (asterisco barra), sendo que tudo entre eles não é interpretado 
-  pelo compilador, ou seja, não vai produzir uma ação no programa executável.
-
-  Assim é altamente recomendado que seja utilizado este recurso para 
-  descrever quais pinos são utilizados, como uma determinada função 
-  mais complexa se comporta ou como utilizá-la, sempre que o código 
-  não estiver simples e facilmente compreensível, insira comentários. 
-  São sempre bem vindos. 
-
-  Lembre-se: é bem provável que daqui alguns dias nem você lembre o que 
-  você quis fazer, imagina outro programador tentando entender o seu raciocínio. 
- */</span>
-</code></pre></div></div>
+<p>Para todos os demais arquivos <strong>.c</strong>, o código pré-inserido pode ser excluído, inclusive porque não pode haver duas funções com o mesmo nome.</p>
 
 <hr />
 
