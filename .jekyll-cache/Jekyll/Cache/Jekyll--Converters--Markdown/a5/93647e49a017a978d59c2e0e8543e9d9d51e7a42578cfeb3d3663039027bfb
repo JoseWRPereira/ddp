@@ -1,10 +1,10 @@
-I"<h1 id="projeto">Projeto</h1>
+I"<h1 id="projeto">Projeto</h1>
 
 <p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
 
 <p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
 
-<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos de suporte e por fim o arquivo executável (<strong>.hex</strong>).</p>
+<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos intermediários e por fim o arquivo executável (<strong>.hex</strong>).</p>
 
 <h2 id="objetivo">Objetivo</h2>
 
@@ -28,6 +28,15 @@
     </tr>
   </tbody>
 </table>
+
+<p>Para a criação de um novo projeto, é possível acessar o assistente através de três formas possíveis:</p>
+<ul>
+  <li>menu superior;</li>
+  <li>ícones; e,</li>
+  <li>teclas de atalho.</li>
+</ul>
+
+<h3 id="criando-um-novo-projeto">Criando um novo projeto:</h3>
 
 <table>
   <thead>
