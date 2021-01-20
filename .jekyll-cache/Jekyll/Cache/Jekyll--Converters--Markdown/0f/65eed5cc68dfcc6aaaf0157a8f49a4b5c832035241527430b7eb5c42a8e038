@@ -1,4 +1,4 @@
-I"b<h1 id="indicações">Indicações</h1>
+I"�<h1 id="indicações">Indicações</h1>
 
 <h2 id="legendas">Legendas</h2>
 
@@ -6,8 +6,8 @@
 <span class="badge badge-info">.</span>
 <span class="badge badge-secondary">.</span>
 <span class="badge badge-success">Eletrônica</span>
-<span class="badge badge-danger">LaTeX</span>
 <span class="badge badge-warning">Artes</span>
+<span class="badge badge-danger">LaTeX</span>
 <span class="badge badge-secondary">.</span>
 <span class="badge badge-info">.</span>
 <span class="badge badge-primary">.</span></p>
@@ -62,6 +62,36 @@
   </a> 
 </div>
 
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">includemicro - Eder Andrade</h4>
+
+  <a href="https://includemicro.com/" target="_blank">
+    <i class="fas fa-globe-americas"></i> Site
+  </a>
+  |
+  <a href="https://www.linkedin.com/company/includemicro/" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a> 
+</div>
+
+<h2 id="artes">Artes</h2>
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Cafés e blablablás - Fernando Medeiros</h4>
+
+  <a href="http://cafeseblablablas.blogspot.com/" target="_blank">
+    <i class="fas fa-atlas"></i> Blog
+  </a>
+</div>
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Ana Teixeira</h4>
+
+  <a href="https://anadelourdes.wordpress.com/" target="_blank">
+    <i class="fas fa-atlas"></i> Blog
+  </a>
+</div>
+
 <h2 id="latex">LaTeX</h2>
 
 <div class="alert alert-danger" role="alert">
@@ -74,24 +104,6 @@
   <a href="https://www.youtube.com/user/anteroneves/" target="_blank">
     <i class="fab fa-youtube"></i> Youtube
   </a> 
-</div>
-
-<h2 id="artes">Artes</h2>
-
-<div class="alert alert-warning" role="alert">
-<h4 class="alert-heading">Cafés e blablablás - Fernando Medeiros</h4>
-
-  <a href="https://anadelourdes.wordpress.com/" target="_blank">
-    <i class="fas fa-atlas"></i> Blog
-  </a>
-</div>
-
-<div class="alert alert-warning" role="alert">
-<h4 class="alert-heading">Ana Teixeira</h4>
-
-  <a href="https://anadelourdes.wordpress.com/" target="_blank">
-    <i class="fas fa-atlas"></i> Blog
-  </a>
 </div>
 
 :ET
