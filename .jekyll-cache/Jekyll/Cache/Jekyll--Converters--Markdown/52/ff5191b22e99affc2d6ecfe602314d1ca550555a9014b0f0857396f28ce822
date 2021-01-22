@@ -1,0 +1,125 @@
+I"	<h1 id="novo-arquivo---mainc">Novo Arquivo - main.c</h1>
+
+<p>Dentro de um projeto para microcontrolador, são criados basicamente arquivos fonte e de cabeçalho.</p>
+
+<p>Os arquivos <strong>fontes</strong> são aqueles com extensão <strong>.c</strong> e são escritos seguindo a sintaxe da linguagem de programação C, a mais utilizada para este tipo de aplicação.</p>
+
+<p>Os arquivos de <strong>cabeçalho</strong> (<em>header</em>) são aqueles com a extensão <strong>.h</strong> e são utilizados como apresentação de funções em arquivos fontes diferentes de onde estão declaradas, permitindo assim que elas sejam invocadas (chamadas).</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Criar o arquivo fonte <strong>main.c</strong> no projeto utilizando a plataforma MPLAB-X.</p>
+
+<!--more-->
+
+<h2 id="criar-um-arquivo-fonte">Criar um arquivo fonte</h2>
+
+<p>Um projeto geralmente possui vários arquivos fonte, apesar de ser possível criar todo o código em um único arquivo, mas não é uma boa prática.</p>
+
+<p>A divisão de funções e procedimentos em diversos arquivos é interessante pelo fato de agrupar códigos de uma mesma família, ou seja, funções e procedimentos que fazem parte da manipulação de uma mesma estrutura ou periférico.</p>
+
+<h3 id="exemplo">Exemplo:</h3>
+<p>Para fazer a leitura de um parâmetro analógico, é possível configurar um dos periféricos disponíveis no PIC16F887, o conversor Analógico Digital. 
+Então, é necessário criar uma rotina de inicialização desse periférico e funções de acesso, sendo que todos esses códigos devem estar escritos dentro de um arquivo cujo nome se refira diretamente às funções ali presentes, como aqui por exemplo, <strong>adc.c</strong>. 
+Sendo assim, somente códigos pertinentes à menipulação de dados do conversor A/D devem estar contidos nesse arquivo, cada outro periférico ou estrutura utilizados devem ter os seus respectivos arquivos <strong>.c</strong>.</p>
+
+<p>Para criar um novo arquivo, seja ele o primeiro arquivo fonte, ou qualquer um dos demais, o caminho mais prático é:</p>
+
+<ul>
+  <li>Selecionando o diretório <strong><em>Source Files</em></strong> (Arquivos Fonte) e clicando com o botão direitor do <em>mouse</em>;</li>
+  <li>Selecionando a opção <strong><em>New</em></strong> e em seguida <strong>main.c</strong>.</li>
+</ul>
+
+<p>Obs.: No último passo, basta escolher qualquer opção de arquivos <strong>.c</strong>, pois o conteúdo que vem previamente inserido não é necessário, apesar de que em alguns casos facilita a inserção dos primeiros dados do código.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1: Seleção de novo arquivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0021/A01-novoArquivoC.png?raw=true" alt="Selecao novo arquivo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Selecione o nome do arquivo no campo <strong><em>File Name</em></strong>.</p>
+
+<p>Atente-se para as recomendações:</p>
+<ul>
+  <li>O nome deve ser coerente com as funções e procedimentos que vão ali ser inseridos;</li>
+  <li>O nome deve conter apenas uma palavra. Caso queira utilizar mais do que uma palavra, use o ‘_’ (<em>underline</em>) para ligar as palavras;</li>
+  <li>Não utilize acentos, cedilha ou caracteres diferentes do alfabeto ou números. Exceto o ‘_’.</li>
+</ul>
+
+<p>Não é necessário inserir a extensão no nome do arquivo, que pode ser confirmada no campo abaixo: <strong><em>Extension</em></strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Nome do arquivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0021/A02-nomeArquivoC.png?raw=true" alt="Nome do arquivo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Após o nome estar inserido, clique em <strong><em>Finish</em></strong>.</p>
+
+<p>Perceba que no diretório <strong><em>Source Files</em></strong> foi inlcuído o arquivo <strong>main.c</strong>, e este arquivo está aberto no editor.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 3: Novo Arquivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0021/A03-mainC.png?raw=true" alt="Novo arquivo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O arquivo recém criado possui um cabeçalho como comentário, que contém o nome do arquivo e do autor, além da data de criação do arquivo.
+Em seguida, uma estrutura básica com a inclusão da biblioteca padrão do compilador XC8 e a função principal.</p>
+
+<p>Em linguagem C apenas uma função é obrigatória, a função <strong>main</strong>, que recomenda-se declará-la no arquivo de mesmo nome.</p>
+
+<p>Para todos os demais arquivos <strong>.c</strong>, o código pré-inserido pode ser excluído, inclusive porque não pode haver duas funções com o mesmo nome.</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2020/P0020-novoProjeto">« P0020 - Novo Projeto</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/P0022-config">» P0022 - Arquivo de Configuração (config.h)</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET
