@@ -324,6 +324,9 @@
    <span class="post-date">2021-01-22</span><br />
    <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
    <h1 id="configurações-do-uc">Configurações do uC</h1>
+<p>Existem configurações de periféricos que modificam o comportamento do microcontrolador e por isso são realizadas apenas no momento da gravação, não podendo ser realizadas durante a execução do código, como por exemplo a habilitação do <em>Watchdog timer</em>, a proteção da memória de código, a disponibilização de um determinado pino para <em>Master clear</em> ou I/O, etc.</p>
+
+<p>A plataforma MPLAB-X proporciona uma aba para realizar tais configuraçãos de forma fácil, inclusive gerando o respectivo código a ser inserido no programa. Este código é aqui gerado e inserido em um arquivo de cabeçalho (.h) com o nome de <strong>config</strong>, modularizando e concentrando os comandos de configuração do microcontrolador.</p>
 
 <h2 id="objetivo">Objetivo</h2>
 
