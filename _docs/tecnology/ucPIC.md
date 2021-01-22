@@ -34,7 +34,8 @@ Alternativamente pode-se utilizar uma ferramenta online:
 
 ## Antes de Programar...
 * [P0020 - Novo Projeto]({{site.baseurl}}/2020/P0020-novoProjeto)
-* [P0021 - Novo Arquivo]({{site.baseurl}}/2020/P0021-novoArquivo)
+* [P0021 - Novo arquivo (main.c)]({{site.baseurl}}/2020/P0021-novoArquivo)
+* [P0022 - Arquivo de Configuração (config.h)]({{site.baseurl}}/2021/P0022-config)
 
 
 ## Programas Básicos
