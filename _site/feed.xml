@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-01-22T12:28:33-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-02-09T23:59:02-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0022 - Config</title><link href="http://localhost:4000/ddp/2021/P0022-config/" rel="alternate" type="text/html" title="P0022 - Config" /><published>2021-01-22T12:28:21-03:00</published><updated>2021-01-22T12:28:21-03:00</updated><id>http://localhost:4000/ddp/2021/P0022-config</id><content type="html" xml:base="http://localhost:4000/ddp/2021/P0022-config/">&lt;h1 id=&quot;configurações-do-uc&quot;&gt;Configurações do uC&lt;/h1&gt;
 &lt;p&gt;Existem configurações de periféricos que modificam o comportamento do microcontrolador e por isso são realizadas apenas no momento da gravação, não podendo ser realizadas durante a execução do código, como por exemplo a habilitação do &lt;em&gt;Watchdog timer&lt;/em&gt;, a proteção da memória de código, a disponibilização de um determinado pino para &lt;em&gt;Master clear&lt;/em&gt; ou I/O, etc.&lt;/p&gt;
 
@@ -68,7 +68,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Em uma tradução direta no Google Translate temos:&lt;/p&gt;
+&lt;p&gt;Em uma tradução direta no Google Tradutor temos:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Microchip Technology Inc. e suas subsidiárias. Você pode usar este software 
 e quaisquer derivados exclusivamente com produtos Microchip.
 

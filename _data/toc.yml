@@ -6,7 +6,7 @@
       children:
         - title: "Desafios URI"
           url: "docs/tecnology/progURI"
-        - title: "uC PIC"
+        - title: "Curta Eletrônica"
           url: "docs/tecnology/ucPIC"
     - title: "Educação"
       url: "docs/educacao"

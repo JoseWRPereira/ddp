@@ -13,7 +13,8 @@ tags:
 Description: Resoluções de problemas baseadas em projetos.
 ---
 
-# Aprendendo com desafios
+# Curta Eletrônica
+## Aprendendo com Desafios
 
 A resolução de problemas está contida das competências gerais da [BNCC]({{site.baseurl}}/docs/#2-pensamento-científico-criativo-e-crítico) e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.
 

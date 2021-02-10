@@ -76,7 +76,7 @@ markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
 kramdown:
-  math_engine:         katex
+  math_engine: katex
 
 
 # Collections
