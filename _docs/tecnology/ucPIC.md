@@ -34,12 +34,14 @@ Alternativamente pode-se utilizar uma ferramenta online:
 <hr/>
 
 ## Antes de Programar...
-* [P0020 - Novo Projeto]({{site.baseurl}}/2020/P0020-novoProjeto)
-* [P0021 - Novo arquivo (main.c)]({{site.baseurl}}/2020/P0021-novoArquivo)
-* [P0022 - Arquivo de Configuração (config.h)]({{site.baseurl}}/2021/P0022-config)
+* [Anexo A - Instalação]({{site.baseurl}}/2021/capA-instalacao)
+* [Anexo B - Novo Projeto]({{site.baseurl}}/2021/capB-novoProjeto)
+* [Anexo C - Novos Arquivos]({{site.baseurl}}/2021/capC-novosArquivos)
+* [Anexo D - Controle de Versão]({{site.baseurl}}/2021/capD-versionamento)
 
 
 ## Programas Básicos
+* [Arquivo de Configuração (config.h)]({{site.baseurl}}/2021/config)
 * [P0101 - Pisca LED]({{site.baseurl}}/2020/P0101-piscaLED)
 * [P0102 - Botão LED]({{site.baseurl}}/2020/P0102-botaoLED)
 * [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)
