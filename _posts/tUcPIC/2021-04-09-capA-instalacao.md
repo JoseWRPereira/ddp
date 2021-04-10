@@ -50,7 +50,7 @@ Serão baixados apenas os dois programas mostrados na Figura 1.
 
 | Figura 1: MPLAB X IDE e XC Compiler |
 |:---------------------------------------------:|
-| ![logos-IDE-XC]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/logos-IDE-XC.png{{site.rawimg}}) |
+| ![logos-IDE-XC]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/logos-IDE-XC.png{{site.rawimg}}) |
 
 
 A IDE pode ser baixada diretamente do *site* onde pode-se escolher a versão adequada para o sistema operacional em que será realizada a instalação, Windows, **Linux** ou Mac.
@@ -139,7 +139,7 @@ Para prosseguir, basta clicar em ***Forward***.
 
 | Figura 2: Setup |
 |:---------------------------------------------:|
-| ![mp00-setup]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/ide-01-setup.png{{site.rawimg}}) |
+| ![mp00-setup]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/ide-01-setup.png{{site.rawimg}}) |
 
 
 A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acordo:
@@ -148,7 +148,7 @@ A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acor
 
 | Figura 3: Licensa |
 |:---------------------------------------------:|
-| ![Licensa]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/ide-02-license.png{{site.rawimg}}) |
+| ![Licensa]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/ide-02-license.png{{site.rawimg}}) |
 
 
 * Escolha o diretório de instalação. 
@@ -158,7 +158,7 @@ A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acor
 
 | Figura 4: Diretório de Instalação |
 |:---------------------------------------------:|
-| ![Diretório de Instalação]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/ide-03-instOptions{{site.rawimg}}) |
+| ![Diretório de Instalação]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/ide-03-instOptions.png{{site.rawimg}}) |
 
 
 A tela a seguir apresenta a opção de instalação das aplicações de desenvolvimento e de programação, respectivamente IDE e IPE e logo abaixo as opções de compiladores para as arquiteturas de 8, 16 ou 32 bits, além de outras arquiteturas suportadas.
@@ -170,7 +170,7 @@ pois as demais opções não são necessárias.
 
 | Figura 5: Seleção de Ferramentas/Aplicações |
 |:---------------------------------------------:|
-| ![Seleção de Ferramentas/Aplicações ]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/ide-04-selectApp{{site.rawimg}}) |
+| ![Seleção de Ferramentas/Aplicações ]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/ide-04-selectApp.png{{site.rawimg}}) |
 
 
 O sistema está pronto para iniciar a instalação. 
@@ -179,7 +179,7 @@ O sistema está pronto para iniciar a instalação.
 
 | Figura 6: Resumo da Instalação |
 |:---------------------------------------------:|
-| ![Resumo da Instalação]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/ide-05-readyToInstall{{site.rawimg}}) |
+| ![Resumo da Instalação]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/ide-05-readyToInstall.png{{site.rawimg}}) |
 
 
 A instalação segue em progresso, e o tempo depende do poder de processamento do 
@@ -191,7 +191,7 @@ Após o compilador ter sido baixado e receber o privilégio de execução, basta
 
 | Figura 7: Instalação do XC8 |
 |:---------------------------------------------:|
-| ![Instalação do XC8]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-01-setup{{site.rawimg}}) |
+| ![Instalação do XC8]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-01-setup.png{{site.rawimg}}) |
 
 
 A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acordo: 
@@ -200,14 +200,14 @@ A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acor
 
 | Figura 8: Licensa da instalação |
 |:---------------------------------------------:|
-| ![Licensa da instalação]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-02-license{{site.rawimg}}) |
+| ![Licensa da instalação]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-02-license.png{{site.rawimg}}) |
 
 
 No tipo de licensa usamos a versão ***free***.
 
 | Figura 9: Tipo de instalação |
 |:---------------------------------------------:|
-| ![Tipo de instalação]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-03-licenseType{{site.rawimg}}) |
+| ![Tipo de instalação]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-03-licenseType.png{{site.rawimg}}) |
 
 
 É possível escolher o local da instalação do compilador, 
@@ -215,42 +215,42 @@ mas a recomendação é usar o diretório padrão, já indicado na instalação.
 
 | Figura 10: Diretório de instalação |
 |:---------------------------------------------:|
-| ![Diretório de instalação]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-04-instDirectory{{site.rawimg}}) |
+| ![Diretório de instalação]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-04-instDirectory.png{{site.rawimg}}) |
 
 
 Selecione as opções conforme segue, para que as configurações sejam atribuidos a todos os usuários da máquina (computador) além de compartilhar o caminho do xc8 na variável de ambiente.
 
 | Figura 11: Parâmetros do compilador |
 |:---------------------------------------------:|
-| ![Parâmetros do compilador]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-05-compilerSettings{{site.rawimg}}) |
+| ![Parâmetros do compilador]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-05-compilerSettings.png{{site.rawimg}}) |
 
 
 Última tela antes do início da instalação, caso queira realizar alguma alteração, a hora é agora.
 
 | Figura 12: Pronto para instalar |
 |:---------------------------------------------:|
-| ![Pronto para instalar]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-06-ready{{site.rawimg}}) |
+| ![Pronto para instalar]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-06-ready.png{{site.rawimg}}) |
 
 
 Instalação em progresso.
 
 | Figura 13: Progresso da instalação |
 |:---------------------------------------------:|
-| ![Progresso da instalação]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-07-installing{{site.rawimg}}) |
+| ![Progresso da instalação]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-07-installing.png{{site.rawimg}}) |
 
 
 Informações da licensa. Apenas prossiga.
 
 | Figura 14: Instalação completa |
 |:---------------------------------------------:|
-| ![Instalação completa]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-08-complete{{site.rawimg}}) |
+| ![Instalação completa]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-08-complete.png{{site.rawimg}}) |
 
 
 Fim da instalação. 
 
 | Figura 15: Fim da instalação |
 |:---------------------------------------------:|
-| ![Fim da instalação]({{site.baseurlimg}}/_posts/tUcPIC/capA-instalacao/xc8-09-complete{{site.rawimg}}) |
+| ![Fim da instalação]({{site.baseurlimg}}_posts/tUcPIC/capA-instalacao/xc8-09-complete.png{{site.rawimg}}) |
 
 
 <hr/>

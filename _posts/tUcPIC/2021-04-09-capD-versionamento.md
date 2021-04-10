@@ -34,14 +34,14 @@ Utilizar o Git e o GitHub, através do MPLAB-X, para fazer o controle de versão
 
 | Figura 1: Plataforma GitHub |
 |:---------------------------------------------:|
-| ![Plataforma GitHub]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/01{{site.rawimg}}) |
+| ![Plataforma GitHub]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/01.png{{site.rawimg}}) |
 
 * Se ainda não possuir uma conta, clique em ***Sign up***
 * Se já possuir uma conta, clique em ***Sign in***
 
 | Figura 2: Criar uma conta |
 |:---------------------------------------------:|
-| ![Criar uma conta]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/02{{site.rawimg}}) |
+| ![Criar uma conta]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/02.png{{site.rawimg}}) |
 
 
 Preencha os campos indicados:
@@ -58,7 +58,7 @@ Preencha os campos indicados:
 
 | Figura 3: Campos de acesso |
 |:---------------------------------------------:|
-| ![Campos de acesso]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/03{{site.rawimg}}) |
+| ![Campos de acesso]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/03.png{{site.rawimg}}) |
 
 *	Insira o seu nome de usuário ou o endereço de e-mail;
 *	Insira a sua senha;
@@ -69,14 +69,14 @@ Ao acessar a plataforma do GitHub, uma tela semelhante a Figura 4 é exibida.
 
 | Figura 4: Tela principal do GitHub |
 |:---------------------------------------------:|
-| ![Tela principal do GitHub]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/05{{site.rawimg}}) |
+| ![Tela principal do GitHub]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/05.png{{site.rawimg}}) |
 
 *	Clique na identificação do usuário, no canto superior direito; 
 *	Clique em ***Your repositories***.
 
 | Figura 5: Repositórios de projetos |
 |:---------------------------------------------:|
-| ![Repositórios de projetos]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/06{{site.rawimg}}) |
+| ![Repositórios de projetos]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/06.png{{site.rawimg}}) |
 
 * Selecione a aba ***Repositories***.
 
@@ -87,14 +87,14 @@ Ao acessar a plataforma do GitHub, uma tela semelhante a Figura 4 é exibida.
 
 | Figura 6: Criando um novo repositório |
 |:---------------------------------------------:|
-| ![Criando um novo repositório]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/07{{site.rawimg}}) |
+| ![Criando um novo repositório]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/07.png{{site.rawimg}}) |
 
 * Inclua o nome do repositório do projeto em ***Repository name***;
 * Clique em ***Create repository***.
 
 | Figura 7: Configuração do repositório |
 |:---------------------------------------------:|
-| ![Configuração do repositório]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/08{{site.rawimg}}) |
+| ![Configuração do repositório]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/08.png{{site.rawimg}}) |
 
 Note que foi inserido um nome com erro de grafia.
 Vamos corrigir a grafia do nome do repositório:
@@ -103,7 +103,7 @@ Vamos corrigir a grafia do nome do repositório:
 
 | Figura 8: Arquivo de cabeçalho |
 |:---------------------------------------------:|
-| ![Arquivo de cabeçalho]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/09{{site.rawimg}}) |
+| ![Arquivo de cabeçalho]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/09.png{{site.rawimg}}) |
 
 * Modifique a grafia em ***Repository name***;
 * Clique em ***Rename***.
@@ -116,7 +116,7 @@ inclusive o arquivamento, a transferência ou a exclusão do projeto.
 
 | Figura 9: Link de acesso ao repositório |
 |:---------------------------------------------:|
-| ![Link de acesso ao repositório]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/10{{site.rawimg}}) |
+| ![Link de acesso ao repositório]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/10.png{{site.rawimg}}) |
 
 * Copie o link que está em destaque, ele será usado posteriormente.
 
@@ -133,19 +133,19 @@ inclusive o arquivamento, a transferência ou a exclusão do projeto.
 
 | Figura 10: Caminho de inicialização do respositório no GitHub |
 |:---------------------------------------------:|
-| ![Caminho de inicialização do respositório no GitHub]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/11.png{{site.rawimg}}) |
+| ![Caminho de inicialização do respositório no GitHub]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/11.png{{site.rawimg}}) |
 
 * Verifique o caminho do projeto que será conectado ao repositório.
 
 | Figura 11: Caminho do projeto |
 |:---------------------------------------------:|
-| ![Caminho do projeto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/12.png{{site.rawimg}}) |
+| ![Caminho do projeto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/12.png{{site.rawimg}}) |
 
 Ao clicar em ***OK***, note que a árvore do projeto ficou com alguns arquivos na cor verde e apareceu uma pequena marca junto ao ícone do nome do projeto.
 
 | Figura 12: Árvore do projeto |
 |:---------------------------------------------:|
-| ![Árvore do projeto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/13.png{{site.rawimg}}) |
+| ![Árvore do projeto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/13.png{{site.rawimg}}) |
 
 A cor verde dos arquivos, indica que são novos, ainda não incluídos ao controle de versão, definido conforme a Figura 13 como ***untracked***.
 
@@ -156,7 +156,7 @@ A Figura 13 mostra uma simplificação do fluxo de trabalho com o Git e com o Gi
 
 | Figura 13: Ciclo básico Git e GitHub |
 |:---------------------------------------------:|
-| ![Ciclo básico Git e GitHub]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/basico-GitGithub.png{{site.rawimg}}) |
+| ![Ciclo básico Git e GitHub]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/basico-GitGithub.png{{site.rawimg}}) |
 
 
 Ainda com o projeto selecionado, vamos incluir os arquivos sob o controle do Git. 
@@ -165,7 +165,7 @@ Ainda com o projeto selecionado, vamos incluir os arquivos sob o controle do Git
 
 | Figura 14: Inclusão de arquivos |
 |:---------------------------------------------:|
-| ![Inclusão de arquivos]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/14.png{{site.rawimg}}) |
+| ![Inclusão de arquivos]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/14.png{{site.rawimg}}) |
 
 Com os arquivos presentes no Git (***staged***), é necessário agora vinculá-los (***commit***), ou seja, produzir uma versão com as modificações adicionadas (***Unmodified***).
 
@@ -173,13 +173,13 @@ Com os arquivos presentes no Git (***staged***), é necessário agora vinculá-l
 
 | Figura 15: Comentário para o vínculo |
 |:---------------------------------------------:|
-| ![Comentário para o vínculo]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/15.png{{site.rawimg}}) |
+| ![Comentário para o vínculo]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/15.png{{site.rawimg}}) |
 
 Escreva na caixa de mensagem um texto que deixe claro o que foi alterado ou adicionado ao projeto. 
 
 | Figura 16: Caixa de mensagem de vínculo, *commit* |
 |:---------------------------------------------:|
-| ![Caixa de mensagem de vínculo, commit]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/16.png{{site.rawimg}}) |
+| ![Caixa de mensagem de vínculo, commit]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/16.png{{site.rawimg}}) |
 
 Essa descrição é fundamental para a construção do histórico de desenvolvimento do projeto, pois entre outras coisas, permite o resgate de uma versão num ponto determinado se bem documentado.
 
@@ -190,7 +190,7 @@ Na árvore de projetos, note que todos os arquivos ficaram pretos, indicando que
 
 | Figura 17: Árvore do projeto |
 |:---------------------------------------------:|
-| ![Árvore do projeto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/17.png{{site.rawimg}}) |
+| ![Árvore do projeto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/17.png{{site.rawimg}}) |
 
 A partir desse ponto, ao editar um arquivo, com novas inserções, novas funcionalidades, comentários, etc, ele se torna ***modified*** e precisa ser adicionado (***add***), e vinculado (***commit***). 
 
@@ -200,14 +200,14 @@ Os arquivos e subdiretórios na condição ***unmodified*** são copiados para o
 
 | Figura 18: Caminho para acesso remoto ao GitHub |
 |:---------------------------------------------:|
-| ![Caminho para acesso remoto ao GitHub]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/18.png{{site.rawimg}}) |
+| ![Caminho para acesso remoto ao GitHub]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/18.png{{site.rawimg}}) |
 
 
 A tela de identificação do repositório remoto é aberta.
 
 | Figura 19: Repositório remoto |
 |:---------------------------------------------:|
-| ![Repositório remoto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/20.png{{site.rawimg}}) |
+| ![Repositório remoto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/20.png{{site.rawimg}}) |
 
 *	Selecione *Specify Git Repository Location:*;
 *	Selecione em *Remote Name*: **origin**;
@@ -218,7 +218,7 @@ A tela de identificação do repositório remoto é aberta.
 
 | Figura 20: Ramo local |
 |:---------------------------------------------:|
-| ![Ramo local]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/21.png{{site.rawimg}}) |
+| ![Ramo local]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/21.png{{site.rawimg}}) |
 
 
 *	Selecione a caixa de marcação ***master -> master[A]***;
@@ -228,7 +228,7 @@ Selecione o ramo remoto que vai receber as atualizações.
 
 | Figura 21 Local de atualização remoto |
 |:---------------------------------------------:|
-| ![Local de atualização remoto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/22.png{{site.rawimg}}) |
+| ![Local de atualização remoto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/22.png{{site.rawimg}}) |
 
 *	Selecione a caixa de marcação ***master -> origin/master[A]***;
 *	Quando o projeto possui outros "ramos" (*branches*), eles vão aparecer aqui.
@@ -237,7 +237,7 @@ Volte ao repositório do projeto no GitHub.
 
 | Figura 22: Repositório do projeto |
 |:---------------------------------------------:|
-| ![Repositório do projeto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/23.png{{site.rawimg}}) |
+| ![Repositório do projeto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/23.png{{site.rawimg}}) |
 
 Os arquivos pertencentes ao projeto do MPLAB-X foram incluídos no repositório do GitHub. 
 Note que a descrição de cada arquivo é o início da mensagem de vínculo, 
@@ -260,14 +260,14 @@ Para criar o arquivo de README.md:
 
 | Figura 23: Novo arquivo vazio |
 |:---------------------------------------------:|
-| ![Novo arquivo vazio]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/24.png{{site.rawimg}}) |
+| ![Novo arquivo vazio]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/24.png{{site.rawimg}}) |
 
 *	Clique com o botão direito do *mouse* em: ***Header Files*** 
 * Selecione: ***New*** -> ***Empty File...***
 
 | Figura 24: Novo arquivo vazio |
 |:---------------------------------------------:|
-| ![Novo arquivo vazio]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/25.png{{site.rawimg}}) |
+| ![Novo arquivo vazio]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/25.png{{site.rawimg}}) |
 
 *	Insira o nome do arquivo: **README.md**;
 *	Verifique o nome do projeto;
@@ -278,9 +278,9 @@ insira as informações relevantes sobre o projeto,
 e utilize as marcações do *markdown*
 para obter um arquivo de boa legibilidade.
 
-| Figura 25:  |
+| Figura 25: Arquivo README.md  |
 |:---------------------------------------------:|
-| ![Árvore do projeto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/26.png{{site.rawimg}}) |
+| ![Árvore do projeto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/26.png{{site.rawimg}}) |
 
 Note que o **README.md** está como uma arquivo ***untracked***.
 Então, inclua ele no controle de versão (GIT).
@@ -288,7 +288,7 @@ Então, inclua ele no controle de versão (GIT).
 
 | Figura 26: Adição do arquivo README.md ao controle de versão |
 |:---------------------------------------------:|
-| ![Adição do arquivo README.md ao controle de versão]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/28.png{{site.rawimg}}) |
+| ![Adição do arquivo README.md ao controle de versão]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/28.png{{site.rawimg}}) |
 
 Para adicioná-lo é possível fazer o seguinte:
 
@@ -298,7 +298,7 @@ Para adicioná-lo é possível fazer o seguinte:
 
 | Figura 27: Caixa de mensagem de vínculo, *commit* |
 |:---------------------------------------------:|
-| ![Figura 27: Caixa de mensagem de vínculo, *commit*]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/29.png{{site.rawimg}}) |
+| ![Figura 27: Caixa de mensagem de vínculo, *commit*]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/29.png{{site.rawimg}}) |
 
 *	Insira uma mensagem de vículo para o README.md;
 *	Clique no botão ***Commit***.
@@ -310,7 +310,7 @@ Como o repositório remoto está vinculado ao projeto local,
 
 | Figura 28: Inclusão do README.md no repositório remoto|
 |:---------------------------------------------:|
-| ![Inclusão do README.md no repositório remoto]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/30.png{{site.rawimg}}) |
+| ![Inclusão do README.md no repositório remoto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/30.png{{site.rawimg}}) |
 
 *	Clique em:
 *	***Team*** -> ***Remote*** -> ***Push to upstream***;
@@ -319,7 +319,7 @@ A atualização do arquivo no repositório remoto é feita de forma direta, sem 
 
 | Figura 29: Repositório do projeto no GitHub |
 |:---------------------------------------------:|
-| ![Repositório do projeto no GitHub]({{site.baseurlimg}}/_posts/tUcPIC/capD-versionamento/31.png{{site.rawimg}}) |
+| ![Repositório do projeto no GitHub]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/31.png{{site.rawimg}}) |
 
 O arquivo **README.md** é renderizado na tela principal do GitHub,
 abaixo da lista de arquivos, facilitanto o seu acesso e visualização. 
