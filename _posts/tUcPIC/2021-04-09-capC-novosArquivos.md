@@ -46,7 +46,7 @@ A seguir a sequência para a criação de um arquivo **.c**.
 
 | Figura 1: Novo arquivo fonte |
 |:---------------------------------------------:|
-| ![Novo arquivo fonte]({{site.baseurlimg}}/_posts/tUcPIC/capC-novosArquivos/01{{site.rawimg}}) |
+| ![Novo arquivo fonte]({{site.baseurlimg}}_posts/tUcPIC/capC-novosArquivos/01.png{{site.rawimg}}) |
 
 
 
@@ -54,14 +54,14 @@ A seguir a sequência para a criação de um arquivo **.c**.
 
 | Figura 2: Nome do arquivo |
 |:---------------------------------------------:|
-| ![Nome do arquivo]({{site.baseurlimg}}/_posts/tUcPIC/capC-novosArquivos/02{{site.rawimg}}) |
+| ![Nome do arquivo]({{site.baseurlimg}}_posts/tUcPIC/capC-novosArquivos/02.png{{site.rawimg}}) |
 
 Ao finalizar o arquivo fonte é aberto com algumas linhas inicializadas. 
 Note que ele foi criado dentro do diretório de arquivos fonte, ***Source Files***.
 
 | Figura 3: Arquivo fonte |
 |:---------------------------------------------:|
-| ![Arquivo fonte]({{site.baseurlimg}}/_posts/tUcPIC/capC-novosArquivos/03{{site.rawimg}}) |
+| ![Arquivo fonte]({{site.baseurlimg}}_posts/tUcPIC/capC-novosArquivos/03.png{{site.rawimg}}) |
 
 O arquivo fonte criado pela IDE já possui algumas linhas inicializadas, e neste caso com um bloco de comentário no início do arquivo com algumas informações como o nome do arquivo, seu autor e data de sua criação.
 
@@ -83,7 +83,7 @@ Normalmente para cada arquivo **.c**, vai existir um arquivo correspondente **.h
 
 | Figura 4: Novo cabeçalho |
 |:---------------------------------------------:|
-| ![Arquivo fonte]({{site.baseurlimg}}/_posts/tUcPIC/capC-novosArquivos/04{{site.rawimg}}) |
+| ![Arquivo fonte]({{site.baseurlimg}}_posts/tUcPIC/capC-novosArquivos/04.png{{site.rawimg}}) |
 
 
 O passo seguinte é inserir no campo *File Name* o nome do arquivo.
@@ -97,7 +97,7 @@ Estando tudo correto:
 
 | Figura 5: Nome e local do arquivo de cabeçalho |
 |:---------------------------------------------:|
-| ![Nome e local do arquivo de cabeçalho]({{site.baseurlimg}}/_posts/tUcPIC/capC-novosArquivos/05{{site.rawimg}}) |
+| ![Nome e local do arquivo de cabeçalho]({{site.baseurlimg}}_posts/tUcPIC/capC-novosArquivos/05.png{{site.rawimg}}) |
 
 
 O arquivo de cabeçalho é criado e vem com as condições de uso do software, 
@@ -105,7 +105,7 @@ produzidos pela Microchip.
 
 | Figura 6: Condições de uso do software |
 |:---------------------------------------------:|
-| ![Condições de uso do software]({{site.baseurlimg}}/_posts/tUcPIC/capC-novosArquivos/06{{site.rawimg}}) |
+| ![Condições de uso do software]({{site.baseurlimg}}_posts/tUcPIC/capC-novosArquivos/06.png{{site.rawimg}}) |
 
 
 * Delete todo o conteudo do arquivo. 
@@ -125,7 +125,7 @@ Agora é só inserir os protótipos de funções, definições de tipos, de acor
 
 | Figura 7: Arquivo de cabeçalho |
 |:---------------------------------------------:|
-| ![Arquivo de cabeçalho]({{site.baseurlimg}}/_posts/tUcPIC/capC-novosArquivos/07{{site.rawimg}}) |
+| ![Arquivo de cabeçalho]({{site.baseurlimg}}_posts/tUcPIC/capC-novosArquivos/07.png{{site.rawimg}}) |
 
 <hr/>
 
