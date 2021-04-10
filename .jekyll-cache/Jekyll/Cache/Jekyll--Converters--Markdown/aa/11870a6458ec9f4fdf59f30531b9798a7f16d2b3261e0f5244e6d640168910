@@ -1,0 +1,160 @@
+I"�<h1 id="projeto">Projeto</h1>
+
+<p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
+
+<p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
+
+<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos intermediários e por fim o arquivo executável (<strong>.hex</strong>).</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Criar um novo projeto utilizando a plataforma MPLAB-X.</p>
+
+<!--more-->
+
+<h2 id="mplab-x">MPLAB-X</h2>
+
+<p>O ambiente de desenvolvimento integrada (<em>Integrated Development Environment</em> - IDE) é uma ferramenta que reúne (integra) diversas funcionalidades de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, entre outras funções.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1: IDE Microchip MPLAB-X</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/01.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Para a criação de um novo projeto, basta seguir os passos apresentados pelo assistente de configuração do projeto, acessando-o conforme ilustração da Figura 2.</p>
+
+<p>Clique em: <strong><em>File</em></strong> -&gt; <strong><em>New Project</em></strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Novo projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/02.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Na etapa seguinte é necessário escolher o tipo de projeto que será criado.</p>
+
+<p>Utilizaremos a opção <strong><em>Standalone Project</em></strong>, que geralmente já vem selecionada, bastando clicar em <strong><em>Next</em></strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 3: Escolha do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/03.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Na próxima etapa são escolhidos a <strong>família</strong> do microcontrolador, dentro dela o \textbf{dispositivo} e por fim a <strong>ferramenta</strong> de gravação do dispositivo físico se for o caso, não sendo, pode-se usar a opção do simulador.</p>
+
+<ul>
+  <li><em>Family</em>: <strong>Mid-Range 8-bit MCUs</strong>;</li>
+  <li><em>Device</em>: <strong>PIC16F887</strong>;</li>
+  <li><em>Tool</em>: <strong>Simulator</strong>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 4: Seleção do dispositivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/04.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Obs.: No casso do campo <em>Device</em>, a digitação do código do microcontrolador é mais prática e rápida do que sua escolha na caixa de opções.</p>
+
+<p>Selecione agora o compilador, que neste caso é o <strong>XC8</strong>, conforme a instalação.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 5: Seleção do compilador</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/05.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Insira agora o nome do projeto e atente-se para o local em que ele será salvo.</p>
+
+<p>O nome do projeto deve ter relação direta com a sua funcionalidade.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 6: Nome do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/06.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao final a Figura 7 mostra a árvore do projeto criada, sendo que todas as pastas criadas devem estar vázias, exceto pelo arquivo <em>Makefile</em>, que não deve ser modificado ou alterado.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 7: Projeto criado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/07.png?raw=true" alt="IDE MPLAB-X" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O projeto foi criado com sucesso, agora é preciso criar os arquivos fontes e de cabeçalho.</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="/ddp/2021/capA-instalacao">Instalação</a></td>
+      <td><a href="/ddp/2021/capA-instalacao">»Novos arquivos</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/capC-novosArquivos">»Novos arquivos</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET

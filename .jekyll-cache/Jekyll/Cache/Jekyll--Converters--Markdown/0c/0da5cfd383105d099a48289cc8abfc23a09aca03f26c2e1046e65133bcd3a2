@@ -1,0 +1,616 @@
+I"P<h1 id="git-e-github">Git e GitHub</h1>
+
+<p>Com o MPLAB-X é possível realizar o controle de versão dos projetos com algumas ferramentas específicas, entre elas o Git, e fazer a conexão com um repositório remoto, como o GitHub.</p>
+
+<p>O Git é uma ferramenta de controle de versão que será aqui utilizada num recorte bem simples e básica, não sendo o intuito ensinar seu uso amplo ou profundo.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Utilizar o Git e o GitHub, através do MPLAB-X, para fazer o controle de versão de um projeto.</p>
+
+<!--more-->
+
+<h2 id="criando-a-conta-no-github">Criando a conta no GitHub</h2>
+
+<ul>
+  <li>Acesse o site: <a href="https://github.com/">https://github.com/</a></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1: Plataforma GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/01?raw=true" alt="Plataforma GitHub" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Se ainda não possuir uma conta, clique em <strong><em>Sign up</em></strong></li>
+  <li>Se já possuir uma conta, clique em <strong><em>Sign in</em></strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Criar uma conta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/02?raw=true" alt="Criar uma conta" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Preencha os campos indicados:</p>
+<ul>
+  <li><strong><em>Username</em></strong> : Nome de usuário. O nome que vai te identificar na plataforma;</li>
+  <li><strong><em>Email address</em></strong>: Inserir o endereço do seu e-mail para realizar a validação de usuário;</li>
+  <li><strong><em>Password</em></strong>: Criar uma senha para acessar a plataforma;</li>
+  <li>Faça o teste que verifica que você não é um robô;</li>
+  <li>Se você passou do teste anterior, clique em <strong><em>Create account</em></strong>.</li>
+</ul>
+
+<h2 id="acessando-a-sua-conta">Acessando a sua conta</h2>
+
+<ul>
+  <li>Acesse: <a href="https://github.com/login">https://github.com/login</a></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 3: Campos de acesso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/03?raw=true" alt="Campos de acesso" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Insira o seu nome de usuário ou o endereço de e-mail;</li>
+  <li>Insira a sua senha;</li>
+  <li>Clique em <strong><em>Sign in</em></strong>.</li>
+</ul>
+
+<p>Ao acessar a plataforma do GitHub, uma tela semelhante a Figura 4 é exibida.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 4: Tela principal do GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/05?raw=true" alt="Tela principal do GitHub" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Clique na identificação do usuário, no canto superior direito;</li>
+  <li>Clique em <strong><em>Your repositories</em></strong>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 5: Repositórios de projetos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/06?raw=true" alt="Repositórios de projetos" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Selecione a aba <strong><em>Repositories</em></strong>.</li>
+</ul>
+
+<h2 id="criando-um-novo-repositório">Criando um novo repositório</h2>
+
+<ul>
+  <li>Clique em <strong><em>New</em></strong> para criar um novo repositório.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 6: Criando um novo repositório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/07?raw=true" alt="Criando um novo repositório" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Inclua o nome do repositório do projeto em <strong><em>Repository name</em></strong>;</li>
+  <li>Clique em <strong><em>Create repository</em></strong>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 7: Configuração do repositório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/08?raw=true" alt="Configuração do repositório" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note que foi inserido um nome com erro de grafia.
+Vamos corrigir a grafia do nome do repositório:</p>
+
+<ul>
+  <li>Clique na aba <strong><em>Settings</em></strong>;</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 8: Arquivo de cabeçalho</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/09?raw=true" alt="Arquivo de cabeçalho" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Modifique a grafia em <strong><em>Repository name</em></strong>;</li>
+  <li>Clique em <strong><em>Rename</em></strong>.</li>
+</ul>
+
+<p>Outras configurações referentes ao projeto podem ser realizadas nessa aba, 
+inclusive o arquivamento, a transferência ou a exclusão do projeto.</p>
+
+<ul>
+  <li>Volte para a aba <strong><em>Code</em></strong>;</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 9: Link de acesso ao repositório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/10?raw=true" alt="Link de acesso ao repositório" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Copie o link que está em destaque, ele será usado posteriormente.</li>
+</ul>
+
+<h2 id="inicializando-o-repositório-com-o-projeto">Inicializando o repositório com o projeto</h2>
+
+<ul>
+  <li>Abra o MPLAB-X com o projeto que deve ser incluído no repositório remoto (GitHub);</li>
+  <li>Selecione o projeto;</li>
+  <li>Clique em: <strong><em>Team</em></strong> -&gt; <strong><em>Git</em></strong> -&gt; <strong><em>Initialize Repository</em></strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 10: Caminho de inicialização do respositório no GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/11.png?raw=true" alt="Caminho de inicialização do respositório no GitHub" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Verifique o caminho do projeto que será conectado ao repositório.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 11: Caminho do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/12.png?raw=true" alt="Caminho do projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao clicar em <strong><em>OK</em></strong>, note que a árvore do projeto ficou com alguns arquivos na cor verde e apareceu uma pequena marca junto ao ícone do nome do projeto.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 12: Árvore do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/13.png?raw=true" alt="Árvore do projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A cor verde dos arquivos, indica que são novos, ainda não incluídos ao controle de versão, definido conforme a Figura 13 como <strong><em>untracked</em></strong>.</p>
+
+<p>Obs.: O <em>set</em> de cores depende das configurações do MPLAB-X.</p>
+
+<p>A Figura 13 mostra uma simplificação do fluxo de trabalho com o Git e com o GitHub.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 13: Ciclo básico Git e GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/basico-GitGithub.png?raw=true" alt="Ciclo básico Git e GitHub" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ainda com o projeto selecionado, vamos incluir os arquivos sob o controle do Git.</p>
+
+<ul>
+  <li>Clique em: <strong><em>Team</em></strong> -&gt; <strong><em>Add</em></strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 14: Inclusão de arquivos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/14.png?raw=true" alt="Inclusão de arquivos" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Com os arquivos presentes no Git (<strong><em>staged</em></strong>), é necessário agora vinculá-los (<strong><em>commit</em></strong>), ou seja, produzir uma versão com as modificações adicionadas (<strong><em>Unmodified</em></strong>).</p>
+
+<ul>
+  <li>Clique em: <strong><em>Team</em></strong> -&gt; <strong><em>Commit</em></strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 15: Comentário para o vínculo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/15.png?raw=true" alt="Comentário para o vínculo" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Escreva na caixa de mensagem um texto que deixe claro o que foi alterado ou adicionado ao projeto.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 16: Caixa de mensagem de vínculo, <em>commit</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/16.png?raw=true" alt="Caixa de mensagem de vínculo, commit" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Essa descrição é fundamental para a construção do histórico de desenvolvimento do projeto, pois entre outras coisas, permite o resgate de uma versão num ponto determinado se bem documentado.</p>
+
+<ul>
+  <li>Clique em: <strong><em>Commit</em></strong>.</li>
+</ul>
+
+<p>Na árvore de projetos, note que todos os arquivos ficaram pretos, indicando que estão salvos e vinculados pelo Git, na condição <strong><em>unmodified</em></strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 17: Árvore do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/17.png?raw=true" alt="Árvore do projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A partir desse ponto, ao editar um arquivo, com novas inserções, novas funcionalidades, comentários, etc, ele se torna <strong><em>modified</em></strong> e precisa ser adicionado (<strong><em>add</em></strong>), e vinculado (<strong><em>commit</em></strong>).</p>
+
+<p>Os arquivos e subdiretórios na condição <strong><em>unmodified</em></strong> são copiados para o repositório remoto, que nesse caso é o GitHub.</p>
+
+<ul>
+  <li>Clique em: <strong><em>Team</em></strong> -&gt; <strong><em>Remote</em></strong> -&gt; <strong><em>Push</em></strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 18: Caminho para acesso remoto ao GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/18.png?raw=true" alt="Caminho para acesso remoto ao GitHub" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A tela de identificação do repositório remoto é aberta.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 19: Repositório remoto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/20.png?raw=true" alt="Repositório remoto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Selecione <em>Specify Git Repository Location:</em>;</li>
+  <li>Selecione em <em>Remote Name</em>: <strong>origin</strong>;</li>
+  <li>Insira o endereço do repositorio, copiado na Figura 10, em <em>Repository URL:</em>;</li>
+  <li>Insira o nome de usuário em <em>User:</em>;</li>
+  <li>Insira a senha do GitHub em <em>Password:</em>;</li>
+  <li>Clique em <strong>Next</strong>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 20: Ramo local</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/21.png?raw=true" alt="Ramo local" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Selecione a caixa de marcação <strong><em>master -&gt; master[A]</em></strong>;</li>
+  <li>Quando o projeto possui outros “ramos” (<em>branches</em>), eles vão aparecer aqui.</li>
+</ul>
+
+<p>Selecione o ramo remoto que vai receber as atualizações.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 21 Local de atualização remoto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/22.png?raw=true" alt="Local de atualização remoto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Selecione a caixa de marcação <strong><em>master -&gt; origin/master[A]</em></strong>;</li>
+  <li>Quando o projeto possui outros “ramos” (<em>branches</em>), eles vão aparecer aqui.</li>
+</ul>
+
+<p>Volte ao repositório do projeto no GitHub.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 22: Repositório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/23.png?raw=true" alt="Repositório do projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Os arquivos pertencentes ao projeto do MPLAB-X foram incluídos no repositório do GitHub. 
+Note que a descrição de cada arquivo é o início da mensagem de vínculo, 
+<em>commit message</em>.</p>
+
+<h2 id="leia-me--readme">LEIA-ME / README</h2>
+
+<p>Uma parte fundamental ao se trabalhar com o GitHub é manter um arquivo de Leia-me (<em>README</em>) bem feito e atualizado.</p>
+
+<p>Sua função é descrever o projeto, dando uma visão completa ao leitor que venha visitá-lo através da plataforma GitHub.</p>
+
+<p>O arquivo README pode ser escrito com o extensão <strong>.md</strong>, arquivo no formato <strong>Markdown</strong>, que é suportado pelo GitHub e facilita a criação de um arquivo de boa legibilidade.</p>
+
+<p>Muito material ensinando a utilizar o markdown pode ser encontrado na internet, 
+mas segue um <a href="https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open">Guia básico de markdown</a> para começar.</p>
+
+<p>Para criar o arquivo de README.md:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 23: Novo arquivo vazio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/24.png?raw=true" alt="Novo arquivo vazio" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Clique com o botão direito do <em>mouse</em> em: <strong><em>Header Files</em></strong></li>
+  <li>Selecione: <strong><em>New</em></strong> -&gt; <strong><em>Empty File…</em></strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 24: Novo arquivo vazio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/25.png?raw=true" alt="Novo arquivo vazio" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Insira o nome do arquivo: <strong>README.md</strong>;</li>
+  <li>Verifique o nome do projeto;</li>
+  <li>Clique em <strong><em>Finish</em></strong>.</li>
+</ul>
+
+<p>O arquivo <strong>README.md</strong> está vazio, 
+insira as informações relevantes sobre o projeto, 
+e utilize as marcações do <em>markdown</em>
+para obter um arquivo de boa legibilidade.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 25:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/26.png?raw=true" alt="Árvore do projeto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note que o <strong>README.md</strong> está como uma arquivo <strong><em>untracked</em></strong>.
+Então, inclua ele no controle de versão (GIT).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 26: Adição do arquivo README.md ao controle de versão</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/28.png?raw=true" alt="Adição do arquivo README.md ao controle de versão" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Para adicioná-lo é possível fazer o seguinte:</p>
+
+<ul>
+  <li>Clique com o botão direito do <em>mouse</em> em: <strong><em>README.md</em></strong></li>
+  <li>Selecione: <strong><em>Git</em></strong> -&gt; <strong><em>Add</em></strong></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 27: Caixa de mensagem de vínculo, <em>commit</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/29.png?raw=true" alt="Figura 27: Caixa de mensagem de vínculo, *commit*" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Insira uma mensagem de vículo para o README.md;</li>
+  <li>Clique no botão <strong><em>Commit</em></strong>.</li>
+</ul>
+
+<p>Como o repositório remoto está vinculado ao projeto local, 
+é possível fazer o <em>upload</em> (<em>push</em>) de forma simplificada.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 28: Inclusão do README.md no repositório remoto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/30.png?raw=true" alt="Inclusão do README.md no repositório remoto" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Clique em:</li>
+  <li><strong><em>Team</em></strong> -&gt; <strong><em>Remote</em></strong> -&gt; <strong><em>Push to upstream</em></strong>;</li>
+</ul>
+
+<p>A atualização do arquivo no repositório remoto é feita de forma direta, sem a solicitação de identificação de acesso, pois já foi realizada, como pode-se ver no repositório do projeto no GitHub.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 29: Repositório do projeto no GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/31.png?raw=true" alt="Repositório do projeto no GitHub" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O arquivo <strong>README.md</strong> é renderizado na tela principal do GitHub,
+abaixo da lista de arquivos, facilitanto o seu acesso e visualização.</p>
+
+<hr />
+
+<blockquote>
+  <p><a href="/ddp/2020/P0020-novoProjeto">« P0020 - Novo Projeto</a></p>
+</blockquote>
+
+<blockquote>
+  <p><a href="/ddp/2021/P0022-config">» P0022 - Arquivo de Configuração (config.h)</a></p>
+</blockquote>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET

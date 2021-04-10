@@ -1,5 +1,1324 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-02-09T23:59:02-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">P0022 - Config</title><link href="http://localhost:4000/ddp/2021/P0022-config/" rel="alternate" type="text/html" title="P0022 - Config" /><published>2021-01-22T12:28:21-03:00</published><updated>2021-01-22T12:28:21-03:00</updated><id>http://localhost:4000/ddp/2021/P0022-config</id><content type="html" xml:base="http://localhost:4000/ddp/2021/P0022-config/">&lt;h1 id=&quot;configurações-do-uc&quot;&gt;Configurações do uC&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-10T19:43:13-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">Anexo D - Controle de Versão</title><link href="http://localhost:4000/ddp/2021/capD-versionamento/" rel="alternate" type="text/html" title="Anexo D - Controle de Versão" /><published>2021-04-10T18:14:21-03:00</published><updated>2021-04-10T18:14:21-03:00</updated><id>http://localhost:4000/ddp/2021/capD-versionamento</id><content type="html" xml:base="http://localhost:4000/ddp/2021/capD-versionamento/">&lt;h1 id=&quot;git-e-github&quot;&gt;Git e GitHub&lt;/h1&gt;
+
+&lt;p&gt;Com o MPLAB-X é possível realizar o controle de versão dos projetos com algumas ferramentas específicas, entre elas o Git, e fazer a conexão com um repositório remoto, como o GitHub.&lt;/p&gt;
+
+&lt;p&gt;O Git é uma ferramenta de controle de versão que será aqui utilizada num recorte bem simples e básica, não sendo o intuito ensinar seu uso amplo ou profundo.&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Utilizar o Git e o GitHub, através do MPLAB-X, para fazer o controle de versão de um projeto.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;criando-a-conta-no-github&quot;&gt;Criando a conta no GitHub&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Acesse o site: &lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Plataforma GitHub&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/01?raw=true&quot; alt=&quot;Plataforma GitHub&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Se ainda não possuir uma conta, clique em &lt;strong&gt;&lt;em&gt;Sign up&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Se já possuir uma conta, clique em &lt;strong&gt;&lt;em&gt;Sign in&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Criar uma conta&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/02?raw=true&quot; alt=&quot;Criar uma conta&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Preencha os campos indicados:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Username&lt;/em&gt;&lt;/strong&gt; : Nome de usuário. O nome que vai te identificar na plataforma;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Email address&lt;/em&gt;&lt;/strong&gt;: Inserir o endereço do seu e-mail para realizar a validação de usuário;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Password&lt;/em&gt;&lt;/strong&gt;: Criar uma senha para acessar a plataforma;&lt;/li&gt;
+  &lt;li&gt;Faça o teste que verifica que você não é um robô;&lt;/li&gt;
+  &lt;li&gt;Se você passou do teste anterior, clique em &lt;strong&gt;&lt;em&gt;Create account&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;acessando-a-sua-conta&quot;&gt;Acessando a sua conta&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Acesse: &lt;a href=&quot;https://github.com/login&quot;&gt;https://github.com/login&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Campos de acesso&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/03?raw=true&quot; alt=&quot;Campos de acesso&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Insira o seu nome de usuário ou o endereço de e-mail;&lt;/li&gt;
+  &lt;li&gt;Insira a sua senha;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Sign in&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ao acessar a plataforma do GitHub, uma tela semelhante a Figura 4 é exibida.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Tela principal do GitHub&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/05?raw=true&quot; alt=&quot;Tela principal do GitHub&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique na identificação do usuário, no canto superior direito;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Your repositories&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Repositórios de projetos&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/06?raw=true&quot; alt=&quot;Repositórios de projetos&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Selecione a aba &lt;strong&gt;&lt;em&gt;Repositories&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;criando-um-novo-repositório&quot;&gt;Criando um novo repositório&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;New&lt;/em&gt;&lt;/strong&gt; para criar um novo repositório.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Criando um novo repositório&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/07?raw=true&quot; alt=&quot;Criando um novo repositório&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inclua o nome do repositório do projeto em &lt;strong&gt;&lt;em&gt;Repository name&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Create repository&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Configuração do repositório&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/08?raw=true&quot; alt=&quot;Configuração do repositório&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Note que foi inserido um nome com erro de grafia.
+Vamos corrigir a grafia do nome do repositório:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique na aba &lt;strong&gt;&lt;em&gt;Settings&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 8: Arquivo de cabeçalho&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/09?raw=true&quot; alt=&quot;Arquivo de cabeçalho&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Modifique a grafia em &lt;strong&gt;&lt;em&gt;Repository name&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Rename&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Outras configurações referentes ao projeto podem ser realizadas nessa aba, 
+inclusive o arquivamento, a transferência ou a exclusão do projeto.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Volte para a aba &lt;strong&gt;&lt;em&gt;Code&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 9: Link de acesso ao repositório&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/10?raw=true&quot; alt=&quot;Link de acesso ao repositório&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Copie o link que está em destaque, ele será usado posteriormente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;inicializando-o-repositório-com-o-projeto&quot;&gt;Inicializando o repositório com o projeto&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Abra o MPLAB-X com o projeto que deve ser incluído no repositório remoto (GitHub);&lt;/li&gt;
+  &lt;li&gt;Selecione o projeto;&lt;/li&gt;
+  &lt;li&gt;Clique em: &lt;strong&gt;&lt;em&gt;Team&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Git&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Initialize Repository&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 10: Caminho de inicialização do respositório no GitHub&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/11.png?raw=true&quot; alt=&quot;Caminho de inicialização do respositório no GitHub&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Verifique o caminho do projeto que será conectado ao repositório.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 11: Caminho do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/12.png?raw=true&quot; alt=&quot;Caminho do projeto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Ao clicar em &lt;strong&gt;&lt;em&gt;OK&lt;/em&gt;&lt;/strong&gt;, note que a árvore do projeto ficou com alguns arquivos na cor verde e apareceu uma pequena marca junto ao ícone do nome do projeto.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 12: Árvore do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/13.png?raw=true&quot; alt=&quot;Árvore do projeto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A cor verde dos arquivos, indica que são novos, ainda não incluídos ao controle de versão, definido conforme a Figura 13 como &lt;strong&gt;&lt;em&gt;untracked&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Obs.: O &lt;em&gt;set&lt;/em&gt; de cores depende das configurações do MPLAB-X.&lt;/p&gt;
+
+&lt;p&gt;A Figura 13 mostra uma simplificação do fluxo de trabalho com o Git e com o GitHub.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 13: Ciclo básico Git e GitHub&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/basico-GitGithub.png?raw=true&quot; alt=&quot;Ciclo básico Git e GitHub&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Ainda com o projeto selecionado, vamos incluir os arquivos sob o controle do Git.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique em: &lt;strong&gt;&lt;em&gt;Team&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Add&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 14: Inclusão de arquivos&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/14.png?raw=true&quot; alt=&quot;Inclusão de arquivos&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Com os arquivos presentes no Git (&lt;strong&gt;&lt;em&gt;staged&lt;/em&gt;&lt;/strong&gt;), é necessário agora vinculá-los (&lt;strong&gt;&lt;em&gt;commit&lt;/em&gt;&lt;/strong&gt;), ou seja, produzir uma versão com as modificações adicionadas (&lt;strong&gt;&lt;em&gt;Unmodified&lt;/em&gt;&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique em: &lt;strong&gt;&lt;em&gt;Team&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Commit&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 15: Comentário para o vínculo&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/15.png?raw=true&quot; alt=&quot;Comentário para o vínculo&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Escreva na caixa de mensagem um texto que deixe claro o que foi alterado ou adicionado ao projeto.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 16: Caixa de mensagem de vínculo, &lt;em&gt;commit&lt;/em&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/16.png?raw=true&quot; alt=&quot;Caixa de mensagem de vínculo, commit&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Essa descrição é fundamental para a construção do histórico de desenvolvimento do projeto, pois entre outras coisas, permite o resgate de uma versão num ponto determinado se bem documentado.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique em: &lt;strong&gt;&lt;em&gt;Commit&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Na árvore de projetos, note que todos os arquivos ficaram pretos, indicando que estão salvos e vinculados pelo Git, na condição &lt;strong&gt;&lt;em&gt;unmodified&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 17: Árvore do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/17.png?raw=true&quot; alt=&quot;Árvore do projeto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A partir desse ponto, ao editar um arquivo, com novas inserções, novas funcionalidades, comentários, etc, ele se torna &lt;strong&gt;&lt;em&gt;modified&lt;/em&gt;&lt;/strong&gt; e precisa ser adicionado (&lt;strong&gt;&lt;em&gt;add&lt;/em&gt;&lt;/strong&gt;), e vinculado (&lt;strong&gt;&lt;em&gt;commit&lt;/em&gt;&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;Os arquivos e subdiretórios na condição &lt;strong&gt;&lt;em&gt;unmodified&lt;/em&gt;&lt;/strong&gt; são copiados para o repositório remoto, que nesse caso é o GitHub.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique em: &lt;strong&gt;&lt;em&gt;Team&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Remote&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Push&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 18: Caminho para acesso remoto ao GitHub&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/18.png?raw=true&quot; alt=&quot;Caminho para acesso remoto ao GitHub&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A tela de identificação do repositório remoto é aberta.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 19: Repositório remoto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/20.png?raw=true&quot; alt=&quot;Repositório remoto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Selecione &lt;em&gt;Specify Git Repository Location:&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;Selecione em &lt;em&gt;Remote Name&lt;/em&gt;: &lt;strong&gt;origin&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Insira o endereço do repositorio, copiado na Figura 10, em &lt;em&gt;Repository URL:&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;Insira o nome de usuário em &lt;em&gt;User:&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;Insira a senha do GitHub em &lt;em&gt;Password:&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;Next&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 20: Ramo local&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/21.png?raw=true&quot; alt=&quot;Ramo local&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Selecione a caixa de marcação &lt;strong&gt;&lt;em&gt;master -&amp;gt; master[A]&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Quando o projeto possui outros “ramos” (&lt;em&gt;branches&lt;/em&gt;), eles vão aparecer aqui.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selecione o ramo remoto que vai receber as atualizações.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 21 Local de atualização remoto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/22.png?raw=true&quot; alt=&quot;Local de atualização remoto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Selecione a caixa de marcação &lt;strong&gt;&lt;em&gt;master -&amp;gt; origin/master[A]&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Quando o projeto possui outros “ramos” (&lt;em&gt;branches&lt;/em&gt;), eles vão aparecer aqui.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Volte ao repositório do projeto no GitHub.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 22: Repositório do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/23.png?raw=true&quot; alt=&quot;Repositório do projeto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Os arquivos pertencentes ao projeto do MPLAB-X foram incluídos no repositório do GitHub. 
+Note que a descrição de cada arquivo é o início da mensagem de vínculo, 
+&lt;em&gt;commit message&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;leia-me--readme&quot;&gt;LEIA-ME / README&lt;/h2&gt;
+
+&lt;p&gt;Uma parte fundamental ao se trabalhar com o GitHub é manter um arquivo de Leia-me (&lt;em&gt;README&lt;/em&gt;) bem feito e atualizado.&lt;/p&gt;
+
+&lt;p&gt;Sua função é descrever o projeto, dando uma visão completa ao leitor que venha visitá-lo através da plataforma GitHub.&lt;/p&gt;
+
+&lt;p&gt;O arquivo README pode ser escrito com o extensão &lt;strong&gt;.md&lt;/strong&gt;, arquivo no formato &lt;strong&gt;Markdown&lt;/strong&gt;, que é suportado pelo GitHub e facilita a criação de um arquivo de boa legibilidade.&lt;/p&gt;
+
+&lt;p&gt;Muito material ensinando a utilizar o markdown pode ser encontrado na internet, 
+mas segue um &lt;a href=&quot;https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open&quot;&gt;Guia básico de markdown&lt;/a&gt; para começar.&lt;/p&gt;
+
+&lt;p&gt;Para criar o arquivo de README.md:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 23: Novo arquivo vazio&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/24.png?raw=true&quot; alt=&quot;Novo arquivo vazio&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique com o botão direito do &lt;em&gt;mouse&lt;/em&gt; em: &lt;strong&gt;&lt;em&gt;Header Files&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Selecione: &lt;strong&gt;&lt;em&gt;New&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Empty File…&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 24: Novo arquivo vazio&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/25.png?raw=true&quot; alt=&quot;Novo arquivo vazio&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Insira o nome do arquivo: &lt;strong&gt;README.md&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Verifique o nome do projeto;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Finish&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;O arquivo &lt;strong&gt;README.md&lt;/strong&gt; está vazio, 
+insira as informações relevantes sobre o projeto, 
+e utilize as marcações do &lt;em&gt;markdown&lt;/em&gt;
+para obter um arquivo de boa legibilidade.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 25:&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/26.png?raw=true&quot; alt=&quot;Árvore do projeto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Note que o &lt;strong&gt;README.md&lt;/strong&gt; está como uma arquivo &lt;strong&gt;&lt;em&gt;untracked&lt;/em&gt;&lt;/strong&gt;.
+Então, inclua ele no controle de versão (GIT).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 26: Adição do arquivo README.md ao controle de versão&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/28.png?raw=true&quot; alt=&quot;Adição do arquivo README.md ao controle de versão&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Para adicioná-lo é possível fazer o seguinte:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique com o botão direito do &lt;em&gt;mouse&lt;/em&gt; em: &lt;strong&gt;&lt;em&gt;README.md&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Selecione: &lt;strong&gt;&lt;em&gt;Git&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Add&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 27: Caixa de mensagem de vínculo, &lt;em&gt;commit&lt;/em&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/29.png?raw=true&quot; alt=&quot;Figura 27: Caixa de mensagem de vínculo, *commit*&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Insira uma mensagem de vículo para o README.md;&lt;/li&gt;
+  &lt;li&gt;Clique no botão &lt;strong&gt;&lt;em&gt;Commit&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Como o repositório remoto está vinculado ao projeto local, 
+é possível fazer o &lt;em&gt;upload&lt;/em&gt; (&lt;em&gt;push&lt;/em&gt;) de forma simplificada.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 28: Inclusão do README.md no repositório remoto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/30.png?raw=true&quot; alt=&quot;Inclusão do README.md no repositório remoto&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique em:&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Team&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Remote&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;Push to upstream&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A atualização do arquivo no repositório remoto é feita de forma direta, sem a solicitação de identificação de acesso, pois já foi realizada, como pode-se ver no repositório do projeto no GitHub.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 29: Repositório do projeto no GitHub&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capD-versionamento/31.png?raw=true&quot; alt=&quot;Repositório do projeto no GitHub&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O arquivo &lt;strong&gt;README.md&lt;/strong&gt; é renderizado na tela principal do GitHub,
+abaixo da lista de arquivos, facilitanto o seu acesso e visualização.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capC-novosArquivos&quot;&gt;« Anexo C - Novos arquivos&lt;/a&gt; « Anexo D - Controle de Versão » &lt;a href=&quot;/ddp/2021/config&quot;&gt;« Arquivo de Configuração (config.h)&lt;/a&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Git e GitHub</summary></entry><entry><title type="html">Anexo C - Novos Arquivos</title><link href="http://localhost:4000/ddp/2021/capC-novosArquivos/" rel="alternate" type="text/html" title="Anexo C - Novos Arquivos" /><published>2021-04-10T17:40:21-03:00</published><updated>2021-04-10T17:40:21-03:00</updated><id>http://localhost:4000/ddp/2021/capC-novosArquivos</id><content type="html" xml:base="http://localhost:4000/ddp/2021/capC-novosArquivos/">&lt;h1 id=&quot;arquivo-fonte-c-e-de-cabeçalho-h&quot;&gt;Arquivo fonte (.c) e de cabeçalho (.h)&lt;/h1&gt;
+
+&lt;p&gt;Dentro de um projeto para microcontrolador, são criados basicamente arquivos fonte e de cabeçalho.&lt;/p&gt;
+
+&lt;p&gt;Os arquivos &lt;strong&gt;fontes&lt;/strong&gt; são aqueles com extensão &lt;strong&gt;.c&lt;/strong&gt; e são escritos seguindo a sintaxe da linguagem de programação C, a mais utilizada para este tipo de aplicação.&lt;/p&gt;
+
+&lt;p&gt;Os arquivos de &lt;strong&gt;cabeçalho&lt;/strong&gt; (&lt;em&gt;header&lt;/em&gt;) são aqueles com a extensão &lt;strong&gt;.h&lt;/strong&gt; e são utilizados como apresentação de funções em arquivos fontes diferentes de onde estão declaradas, permitindo assim que elas sejam invocadas (chamadas).&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Criar um arquivo fonte no projeto utilizando a plataforma MPLAB-X.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;criação-de-arquivo-fonte-c&quot;&gt;Criação de arquivo fonte &lt;strong&gt;.c&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;São vários os arquivos &lt;strong&gt;.c&lt;/strong&gt; em um projeto, mas todos são criados da mesma forma.&lt;/p&gt;
+
+&lt;p&gt;A seguir a sequência para a criação de um arquivo &lt;strong&gt;.c&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique com o botão direito do &lt;em&gt;mouse&lt;/em&gt; em &lt;strong&gt;&lt;em&gt;Source Files&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Selecione &lt;strong&gt;&lt;em&gt;New&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Em seguida selecione qualquer opção de arquivo com extensão &lt;strong&gt;.c&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Novo arquivo fonte&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capC-novosArquivos/01?raw=true&quot; alt=&quot;Novo arquivo fonte&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No campo &lt;strong&gt;&lt;em&gt;File Name&lt;/em&gt;&lt;/strong&gt; digite o nome do arquivo. 	Não é necessário inserir a extensão, 	pois já está definido no campo abaixo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Nome do arquivo&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capC-novosArquivos/02?raw=true&quot; alt=&quot;Nome do arquivo&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Ao finalizar o arquivo fonte é aberto com algumas linhas inicializadas. 
+Note que ele foi criado dentro do diretório de arquivos fonte, &lt;strong&gt;&lt;em&gt;Source Files&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Arquivo fonte&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capC-novosArquivos/03?raw=true&quot; alt=&quot;Arquivo fonte&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O arquivo fonte criado pela IDE já possui algumas linhas inicializadas, e neste caso com um bloco de comentário no início do arquivo com algumas informações como o nome do arquivo, seu autor e data de sua criação.&lt;/p&gt;
+
+&lt;p&gt;Em seguida temos a inclusão de biblioteca padrão, para os microcontroladores de 8 bits da Microchip, disponibilizada na instalação do compilador &lt;strong&gt;XC8&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por fim uma função &lt;strong&gt;main&lt;/strong&gt; mínima.&lt;/p&gt;
+
+&lt;p&gt;Caso o arquivo fonte criado não contenha a função &lt;strong&gt;main&lt;/strong&gt;, o que vai ser o mais comum, simplesmente apague-a e insira as funções do seu projeto.&lt;/p&gt;
+
+&lt;h2 id=&quot;criação-de-arquivo-de-cabeçalho-h&quot;&gt;Criação de arquivo de cabeçalho &lt;strong&gt;.h&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Normalmente para cada arquivo &lt;strong&gt;.c&lt;/strong&gt;, vai existir um arquivo correspondente &lt;strong&gt;.h&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique com o botão esquerdo do &lt;em&gt;mouse&lt;/em&gt; no diretório &lt;strong&gt;&lt;em&gt;Header Files&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Selecione &lt;strong&gt;&lt;em&gt;New&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Selecione algum arquivo com extensão &lt;strong&gt;.h&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Novo cabeçalho&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capC-novosArquivos/04?raw=true&quot; alt=&quot;Arquivo fonte&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O passo seguinte é inserir no campo &lt;em&gt;File Name&lt;/em&gt; o nome do arquivo.&lt;/p&gt;
+
+&lt;p&gt;Note que a extensão deve estar com a seleção em &lt;strong&gt;.h&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Verifique se os campos &lt;em&gt;Project&lt;/em&gt; e &lt;em&gt;Created File&lt;/em&gt; estão com os valores corretos, com o nome do projeto ao qual esse arquivo que está sendo criado pertence e seu respectivo local.&lt;/p&gt;
+
+&lt;p&gt;Estando tudo correto:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Finish&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Nome e local do arquivo de cabeçalho&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capC-novosArquivos/05?raw=true&quot; alt=&quot;Nome e local do arquivo de cabeçalho&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O arquivo de cabeçalho é criado e vem com as condições de uso do software, 
+produzidos pela Microchip.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Condições de uso do software&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capC-novosArquivos/06?raw=true&quot; alt=&quot;Condições de uso do software&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Delete todo o conteudo do arquivo.
+    &lt;ul&gt;
+      &lt;li&gt;Você pode utilizar o atalho através da sequência de teclas: &lt;strong&gt;&lt;em&gt;Ctrl+A&lt;/em&gt;&lt;/strong&gt; e em seguida &lt;strong&gt;&lt;em&gt;Delete&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Insira o &lt;strong&gt;#ifndef&lt;/strong&gt; com o respectivo nome do arquivo, em letras maiúsculas, e finalizado com &lt;strong&gt;_H&lt;/strong&gt; no lugar do &lt;strong&gt;.h&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef ARQUIVOCABECALHO_H
+#define ARQUIVOCABECALHO_H
+&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/* Inserir aqui os cabecalhos */&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#endif
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Agora é só inserir os protótipos de funções, definições de tipos, de acordo com a sua necessidade como programador.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Arquivo de cabeçalho&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capC-novosArquivos/07?raw=true&quot; alt=&quot;Arquivo de cabeçalho&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capB-novoProjeto&quot;&gt;« Anexo B - Novo Projeto&lt;/a&gt; « Anexo C - Novos Arquivos » &lt;a href=&quot;/ddp/2021/capD-versionamento&quot;&gt;Anexo D - Controle de Versão »&lt;/a&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Arquivo fonte (.c) e de cabeçalho (.h)</summary></entry><entry><title type="html">Anexo B - Novo Projeto</title><link href="http://localhost:4000/ddp/2021/capB-novoProjeto/" rel="alternate" type="text/html" title="Anexo B - Novo Projeto" /><published>2021-04-10T17:27:21-03:00</published><updated>2021-04-10T17:27:21-03:00</updated><id>http://localhost:4000/ddp/2021/capB-novoProjeto</id><content type="html" xml:base="http://localhost:4000/ddp/2021/capB-novoProjeto/">&lt;h1 id=&quot;projeto&quot;&gt;Projeto&lt;/h1&gt;
+
+&lt;p&gt;Um &lt;strong&gt;programa para o microcontrolador&lt;/strong&gt; é composto por &lt;strong&gt;diversos arquivos fontes, escritos em&lt;/strong&gt; alguma linguagem de programação, costumeiramente a &lt;strong&gt;linguagem C&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esses &lt;strong&gt;arquivos são agrupados, organizados&lt;/strong&gt; e acompanhados de outros arquivos necessários para a construção de &lt;strong&gt;um projeto&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Um projeto é composto por arquivos fonte e de cabeçalho(&lt;strong&gt;.c e .h&lt;/strong&gt;), arquivos para sua construção (&lt;strong&gt;&lt;em&gt;makefile&lt;/em&gt;&lt;/strong&gt;) no processo de compilação, arquivos de montagem (&lt;strong&gt;&lt;em&gt;assembly&lt;/em&gt;&lt;/strong&gt;), diversos arquivos intermediários e por fim o arquivo executável (&lt;strong&gt;.hex&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Criar um novo projeto utilizando a plataforma MPLAB-X.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;mplab-x&quot;&gt;MPLAB-X&lt;/h2&gt;
+
+&lt;p&gt;O ambiente de desenvolvimento integrada (&lt;em&gt;Integrated Development Environment&lt;/em&gt; - IDE) é uma ferramenta que reúne (integra) diversas funcionalidades de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, entre outras funções.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: IDE Microchip MPLAB-X&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/01.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Para a criação de um novo projeto, basta seguir os passos apresentados pelo assistente de configuração do projeto, acessando-o conforme ilustração da Figura 2.&lt;/p&gt;
+
+&lt;p&gt;Clique em: &lt;strong&gt;&lt;em&gt;File&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;New Project&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Novo projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/02.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Na etapa seguinte é necessário escolher o tipo de projeto que será criado.&lt;/p&gt;
+
+&lt;p&gt;Utilizaremos a opção &lt;strong&gt;&lt;em&gt;Standalone Project&lt;/em&gt;&lt;/strong&gt;, que geralmente já vem selecionada, bastando clicar em &lt;strong&gt;&lt;em&gt;Next&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Escolha do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/03.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Na próxima etapa são escolhidos a &lt;strong&gt;família&lt;/strong&gt; do microcontrolador, dentro dela o \textbf{dispositivo} e por fim a &lt;strong&gt;ferramenta&lt;/strong&gt; de gravação do dispositivo físico se for o caso, não sendo, pode-se usar a opção do simulador.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Family&lt;/em&gt;: &lt;strong&gt;Mid-Range 8-bit MCUs&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Device&lt;/em&gt;: &lt;strong&gt;PIC16F887&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Tool&lt;/em&gt;: &lt;strong&gt;Simulator&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Seleção do dispositivo&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/04.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Obs.: No casso do campo &lt;em&gt;Device&lt;/em&gt;, a digitação do código do microcontrolador é mais prática e rápida do que sua escolha na caixa de opções.&lt;/p&gt;
+
+&lt;p&gt;Selecione agora o compilador, que neste caso é o &lt;strong&gt;XC8&lt;/strong&gt;, conforme a instalação.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Seleção do compilador&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/05.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Insira agora o nome do projeto e atente-se para o local em que ele será salvo.&lt;/p&gt;
+
+&lt;p&gt;O nome do projeto deve ter relação direta com a sua funcionalidade.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Nome do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/06.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Ao final a Figura 7 mostra a árvore do projeto criada, sendo que todas as pastas criadas devem estar vázias, exceto pelo arquivo &lt;em&gt;Makefile&lt;/em&gt;, que não deve ser modificado ou alterado.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Projeto criado&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capB-newProject/07.png?raw=true&quot; alt=&quot;IDE MPLAB-X&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O projeto foi criado com sucesso, agora é preciso criar os arquivos fontes e de cabeçalho.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capA-instalacao&quot;&gt;« Anexo A - Instalação do MPLAB-X e XC8&lt;/a&gt; « Anexo B - Novo Projeto » &lt;a href=&quot;/ddp/2021/capC-novosArquivos&quot;&gt;Anexo C - Novos arquivos »&lt;/a&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Projeto</summary></entry><entry><title type="html">Anexo A - Instalação do MPLAB-X e XC8</title><link href="http://localhost:4000/ddp/2021/capA-instalacao/" rel="alternate" type="text/html" title="Anexo A - Instalação do MPLAB-X e XC8" /><published>2021-04-10T17:17:21-03:00</published><updated>2021-04-10T17:17:21-03:00</updated><id>http://localhost:4000/ddp/2021/capA-instalacao</id><content type="html" xml:base="http://localhost:4000/ddp/2021/capA-instalacao/">&lt;h1 id=&quot;instalação-de-ide-e-compilador&quot;&gt;Instalação de IDE e Compilador&lt;/h1&gt;
+
+&lt;p&gt;Para o desenvolvimento de projetos para microcontroladores das famílias PIC e AVR, a Microchip disponibiliza o ambiente de desenvolvimento integrado (&lt;em&gt;Integrated Development Environment - IDE&lt;/em&gt;) &lt;strong&gt;MPLAB-X&lt;/strong&gt; e compiladores para as diversas arquiteturas disponíveis.&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Realizar a instalação da IDE MPLAB-X e do compilador XC8 em sistema operacional GNU/Linux (Debian).&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;O &lt;strong&gt;MPLAB-X&lt;/strong&gt; é uma ferramenta que reúne (integra) diversas funcionalidades de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, integração com ferramentas de versionamento, entre outras funções.&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;XC8&lt;/strong&gt; é o compilador para dispositivos de 8 bits, os mais simples da família. Ele é o esponsável por traduzir o código escrito pelo programador em linguagem C na linguagem de execução do microcontrolador, ou seja, um cojunto de códigos binários com a sequência de passos logicamente ordenados a serem processados e executados pelo microcontrolador.&lt;/p&gt;
+
+&lt;p&gt;A Microhip disponibiliza em seu site o &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide&quot;&gt;MPLAB-X&lt;/a&gt; e o &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers&quot;&gt;XC-8&lt;/a&gt; de forma gratuita, bem como a versão online, o &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress&quot;&gt;MPLAB Xpress Cloud Based IDE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;versões&quot;&gt;Versões&lt;/h2&gt;
+&lt;p&gt;Existem diversas versões tanto da IDE quanto do compilador, e apesar da recomendação padrão ser o uso da versão mais recente, caso você use o gravador PICkit2, como é o meu caso, use a versão do compilador XC8 v1.45 e da IDE 4.40. 
+A partir da versão da IDE 5.x não há mais suporte ao gravador citado, sendo necessária a utilização do PICkit3 ou mesmo o PICkit4.&lt;/p&gt;
+
+&lt;p&gt;Caso use apenas com simulador, a recomendação é usar as versões mais recentes de 
+compilador e IDE.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalação&quot;&gt;Instalação&lt;/h2&gt;
+
+&lt;p&gt;A Microchip fornece um conjunto de ferramentas de desenvolvimento de forma gratuita e multiplataforma para programar os seus microcontroladores.&lt;/p&gt;
+
+&lt;p&gt;Serão baixados apenas os dois programas mostrados na Figura 1.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: MPLAB X IDE e XC Compiler&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/logos-IDE-XC.png?raw=true&quot; alt=&quot;logos-IDE-XC&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A IDE pode ser baixada diretamente do &lt;em&gt;site&lt;/em&gt; onde pode-se escolher a versão adequada para o sistema operacional em que será realizada a instalação, Windows, &lt;strong&gt;Linux&lt;/strong&gt; ou Mac.&lt;/p&gt;
+
+&lt;p&gt;O compilador precisa ser baixado e instalado separadamente, pois deve ser instalado em função da família e arquitetura do microcontrolador que será utilizado, podendo ser de 8, 16 ou 32 bits.
+A compilação para os microcontroladores de 8 bits é realizada com o compilador XC8, 
+que também pode ser obtido gratuitamente no &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Versões anteriores à recorrente podem ser acessadas no &lt;a href=&quot;https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive&quot;&gt;arquivo&lt;/a&gt; de downloads.&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;PICkit2&lt;/strong&gt; é a plataforma de software e hardware para a gravação do firmware na memória de programa do PIC. É uma versão descontinuada pela Microchip mas amplamente distribuida e de fácil montagem. 
+Algumas informações adicionais podem ser encontradas em &lt;a href=&quot;https://www.microchip.com/developmenttools/ProductDetails/pg164120&quot;&gt;pickit2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalação-no-gnulinux---mplab-x-32bits&quot;&gt;Instalação no GNU/Linux - MPLAB-X 32bits&lt;/h2&gt;
+
+&lt;p&gt;O processo de instalação apresentado aqui é uma das possíveis opções devido ao caráter multiplataforma da IDE.&lt;/p&gt;
+
+&lt;p&gt;O sistema operacional que utilizo é o &lt;a href=&quot;https://www.debian.org/index.pt.html&quot;&gt;Debian&lt;/a&gt;, assim, após o script de instalação baixado, atentar para alterar o seu privilégio da seguinte forma:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x MPLABX-v3.15-linux-installer.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ao executar o &lt;em&gt;script&lt;/em&gt; de instalação do MPLAB-X IDE, para versões de 32 bits, 
+sendo instalada em arquitetura de 64 bits, a seguinte mensagem é apresentada:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./MPLABX-v3.15-linux-installer.sh
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; senha para curtaeletronica:
+64 Bit, check libraries
+Check &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;32 Bit libraries
+These 32 bit libraries were not found and are needed &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;MPLAB X to run:
+libc.so
+libdl.so
+libgcc_s.so
+libm.so
+libpthread.so
+librt.so
+libstdc++.so
+libexpat.so
+libX11.so
+libXext.so
+
+For more information visit http://microchip.wikidot.com/install:mplabx-lin64
+
+curtaeletronica@uC:~&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;O &lt;em&gt;script&lt;/em&gt; de instalação executa uma busca por dependências no sistema, ou seja,  bibliotecas, para a correta execução do programa a ser instalado.&lt;/p&gt;
+
+&lt;p&gt;Para instalar as dependências a seguinte linha de comando pode ser executada:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libc6:i386 lib32stdc++-10-dev libexpat1:i386 libx11-dev:i386 libxext-dev:i386
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Com esse comando, as dependências devem ser atendidas.&lt;/p&gt;
+
+&lt;p&gt;Informações relevantes, sobre a instalação das bibliotecas em um sistema baseado em Ubuntu/Debian, podem ser encontradas no &lt;a href=&quot;https://www.edivaldobrito.com.br/suporte-a-32-bits-no-ubuntu-de-64-bits/&quot;&gt;blog Edivaldo&lt;/a&gt; e em &lt;a href=&quot;http://microchipdeveloper.com/install:mplabx-lin64&quot;&gt;microchipDevHelp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Após todas as dependências serem atendidas, a instalação é iniciada. 
+Para versões com suporte a arquitetura de 64 bits, essas dependências não são necessárias.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalação-da-ide&quot;&gt;Instalação da IDE&lt;/h2&gt;
+
+&lt;p&gt;Para a instalação aqui apresentada é utilizada a versão para arquitetura de 64 bits, v5.45, conforme o comando que segue:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./MPLABX-v5.45-linux-installer.sh 
+64-bit Linux detected.
+Check &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;64-bit libraries
+Verifying archive integrity... All good.
+Uncompressing MPLAB X v5.45 installer..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Um assistente do processo de instalação é aberto dando boas vindas, 
+informando a versão que será instalada, que neste caso é a &lt;strong&gt;MPLAB X IDE 5.45&lt;/strong&gt;, conforme Figura 2.&lt;/p&gt;
+
+&lt;p&gt;Para prosseguir, basta clicar em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Setup&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/ide-01-setup.png?raw=true&quot; alt=&quot;mp00-setup&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acordo:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Selecione a opção &lt;strong&gt;&lt;em&gt;I accept the agreement&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Em seguida clique em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Licensa&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/ide-02-license.png?raw=true&quot; alt=&quot;Licensa&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Escolha o diretório de instalação.
+    &lt;ul&gt;
+      &lt;li&gt;Recomenda-se manter o local padrão.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Diretório de Instalação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/ide-03-instOptions?raw=true&quot; alt=&quot;Diretório de Instalação&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A tela a seguir apresenta a opção de instalação das aplicações de desenvolvimento e de programação, respectivamente IDE e IPE e logo abaixo as opções de compiladores para as arquiteturas de 8, 16 ou 32 bits, além de outras arquiteturas suportadas.&lt;/p&gt;
+
+&lt;p&gt;A recomendação é a instalação das opções conforme a Figura 5, 
+pois as demais opções não são necessárias.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Após a escolha das opções clicar em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Seleção de Ferramentas/Aplicações&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/ide-04-selectApp?raw=true&quot; alt=&quot;Seleção de Ferramentas/Aplicações &quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O sistema está pronto para iniciar a instalação.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Resumo da Instalação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/ide-05-readyToInstall?raw=true&quot; alt=&quot;Resumo da Instalação&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A instalação segue em progresso, e o tempo depende do poder de processamento do 
+computador que se está realizando a instalação, neste caso a duração foi inferior a três minutos.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalação-do-compilador-xc8&quot;&gt;Instalação do compilador XC8&lt;/h2&gt;
+
+&lt;p&gt;Após o compilador ter sido baixado e receber o privilégio de execução, basta iniciar e seguir os passos do assistente de instalação, conforme segue:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Instalação do XC8&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-01-setup?raw=true&quot; alt=&quot;Instalação do XC8&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acordo:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Selecionar a opção &lt;strong&gt;&lt;em&gt;I accept the agreement&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
+  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Next&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 8: Licensa da instalação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-02-license?raw=true&quot; alt=&quot;Licensa da instalação&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;No tipo de licensa usamos a versão &lt;strong&gt;&lt;em&gt;free&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 9: Tipo de instalação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-03-licenseType?raw=true&quot; alt=&quot;Tipo de instalação&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;É possível escolher o local da instalação do compilador, 
+mas a recomendação é usar o diretório padrão, já indicado na instalação.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 10: Diretório de instalação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-04-instDirectory?raw=true&quot; alt=&quot;Diretório de instalação&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Selecione as opções conforme segue, para que as configurações sejam atribuidos a todos os usuários da máquina (computador) além de compartilhar o caminho do xc8 na variável de ambiente.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 11: Parâmetros do compilador&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-05-compilerSettings?raw=true&quot; alt=&quot;Parâmetros do compilador&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Última tela antes do início da instalação, caso queira realizar alguma alteração, a hora é agora.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 12: Pronto para instalar&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-06-ready?raw=true&quot; alt=&quot;Pronto para instalar&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Instalação em progresso.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 13: Progresso da instalação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-07-installing?raw=true&quot; alt=&quot;Progresso da instalação&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Informações da licensa. Apenas prossiga.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 14: Instalação completa&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-08-complete?raw=true&quot; alt=&quot;Instalação completa&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Fim da instalação.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 15: Fim da instalação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/capA-instalacao/xc8-09-complete?raw=true&quot; alt=&quot;Fim da instalação&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Anexo A - Instalação do MPLAB-X e XC8 » &lt;a href=&quot;/ddp/2021/capB-novoProjeto&quot;&gt;Anexo B - Novo Projeto »&lt;/a&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Instalação de IDE e Compilador</summary></entry><entry><title type="html">Arquivo de Configuração (config.h)</title><link href="http://localhost:4000/ddp/2021/config/" rel="alternate" type="text/html" title="Arquivo de Configuração (config.h)" /><published>2021-01-22T12:28:21-03:00</published><updated>2021-01-22T12:28:21-03:00</updated><id>http://localhost:4000/ddp/2021/config</id><content type="html" xml:base="http://localhost:4000/ddp/2021/config/">&lt;h1 id=&quot;configurações-do-uc&quot;&gt;Configurações do uC&lt;/h1&gt;
+
 &lt;p&gt;Existem configurações de periféricos que modificam o comportamento do microcontrolador e por isso são realizadas apenas no momento da gravação, não podendo ser realizadas durante a execução do código, como por exemplo a habilitação do &lt;em&gt;Watchdog timer&lt;/em&gt;, a proteção da memória de código, a disponibilização de um determinado pino para &lt;em&gt;Master clear&lt;/em&gt; ou I/O, etc.&lt;/p&gt;
 
 &lt;p&gt;A plataforma MPLAB-X proporciona uma aba para realizar tais configuraçãos de forma fácil, inclusive gerando o respectivo código a ser inserido no programa. Este código é aqui gerado e inserido em um arquivo de cabeçalho (.h) com o nome de &lt;strong&gt;config&lt;/strong&gt;, modularizando e concentrando os comandos de configuração do microcontrolador.&lt;/p&gt;
@@ -250,22 +1569,14 @@ Uma nova aba com o código gerado é exibida.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;blockquote&gt;
     &lt;blockquote&gt;
-      &lt;p&gt;&lt;a href=&quot;/ddp/2020/P0021-novoArquivo&quot;&gt;« P0021 - Novo arquivo (main.c)&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capD-versionamento&quot;&gt;« Anexo D - Controle de Versão&lt;/a&gt; « Arquivo de Configuração (config.h)&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
-
-&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
-
-&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
-
-&lt;p&gt;Bom trabalho!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Configurações do uC Existem configurações de periféricos que modificam o comportamento do microcontrolador e por isso são realizadas apenas no momento da gravação, não podendo ser realizadas durante a execução do código, como por exemplo a habilitação do Watchdog timer, a proteção da memória de código, a disponibilização de um determinado pino para Master clear ou I/O, etc.</summary></entry><entry><title type="html">P0021 - Novo Arquivo (main.c)</title><link href="http://localhost:4000/ddp/2020/P0021-novoArquivo/" rel="alternate" type="text/html" title="P0021 - Novo Arquivo (main.c)" /><published>2020-12-26T17:48:21-03:00</published><updated>2020-12-26T17:48:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0021-novoArquivo</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0021-novoArquivo/">&lt;h1 id=&quot;novo-arquivo---mainc&quot;&gt;Novo Arquivo - main.c&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Configurações do uC</summary></entry><entry><title type="html">P0021 - Novo Arquivo (main.c)</title><link href="http://localhost:4000/ddp/2020/P0021-novoArquivo/" rel="alternate" type="text/html" title="P0021 - Novo Arquivo (main.c)" /><published>2020-12-26T17:48:21-03:00</published><updated>2020-12-26T17:48:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0021-novoArquivo</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0021-novoArquivo/">&lt;h1 id=&quot;novo-arquivo---mainc&quot;&gt;Novo Arquivo - main.c&lt;/h1&gt;
 
 &lt;p&gt;Dentro de um projeto para microcontrolador, são criados basicamente arquivos fonte e de cabeçalho.&lt;/p&gt;
 
@@ -1481,772 +2792,4 @@ Assim faz-se necessária uma biblioteca mínima para seu uso.&lt;/p&gt;
 
 &lt;p&gt;Bom trabalho!&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Display LCD</summary></entry><entry><title type="html">P0112 - Borda Botão Pulsador</title><link href="http://localhost:4000/ddp/2020/P0112-bordaBotaoPulsador/" rel="alternate" type="text/html" title="P0112 - Borda Botão Pulsador" /><published>2020-08-13T23:02:21-03:00</published><updated>2020-08-13T23:02:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0112-bordaBotaoPulsador</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0112-bordaBotaoPulsador/">&lt;h1 id=&quot;detecção-de-borda-em-botão-pulsador&quot;&gt;Detecção de borda em botão pulsador&lt;/h1&gt;
-
-&lt;p&gt;A leitura simples de um botão implica em alguns comportamentos não desejados como um incremento maior do que a quantidade de vezes que um botão é pressionado. Para solucionar esse problema pode-se utilizar não o estado lógico do botão, mas sim o evendo associado a mudança de estado, evento único dentro de um ciclo de operação.&lt;/p&gt;
-
-&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
-
-&lt;p&gt;Detectar as bordas de subida e descida em botão pulsador.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;1-circuito-hardware&quot;&gt;1. Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: Incremento por borda de subida e decremento por borda de descida&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0112/bordaBotaoPulsador.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;2-programa-firmware&quot;&gt;2. Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0112/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
-
-&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
- * File:   main.c
- * Author: josewrpereira
- *
- * Created on 13 de Agosto de 2020, 23:02:21
- * 
- * -------------------------------------------------
- *          MAPA DE ENTRADAS E SAIDAS
- * -------------------------------------------------
- *  Pinos   |nº     |Conexão
- * ---------|-------|-------------------------------
- *  RB0     |33     | Segmento a
- *  RB1     |34     | Segmento b
- *  RB2     |35     | Segmento c
- *  RB3     |36     | Segmento d
- *  RB4     |37     | Segmento e
- *  RB5     |38     | Segmento f
- *  RB6     |39     | Segmento g
- *  RB7     |40     | Segmento p
- *  RD7     |30     | Hab. Dezena (Catodo comum)
- *  RD6     |29     | Hab. Unidade (Catodo comum)
- * ---------|-------|-------------------------------
- *  RD2     |21     | Botão -1
- *  RD3     |22     | Botão +1
- * -------------------------------------------------
- * -------------------------------------------------
- */&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-#include &quot;delay.h&quot;
-#include &quot;disp7seg.h&quot;
-#include &quot;botao.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;disp7segX2_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;botao_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;disp7segX2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1_bordaSubida&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b0_bordaDescida&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        
-        &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
- * File:   botao.c
- * Author: josewrpereira
- *
- * Created on 13 de Agosto de 2020, 23:00
- * 
- * -------------------------------------------------
- *          MAPA DE ENTRADAS E SAIDAS
- * -------------------------------------------------
- *  Pinos   |nº     |Conexão
- * ---------|-------|-------------------------------
- *  RD2     |21     | Botão -1
- *  RD3     |22     | Botão +1
- * -------------------------------------------------
- */&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define B0      PORTDbits.RD2
-#define B1      PORTDbits.RD3
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;botao_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;// ************************** Botão 0&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PORTBbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RB0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b0_bordaSubida&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// b0: 000000000001111111111111100000000&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ret:000000000001000000000000000000000&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b0_bordaDescida&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// b0: 000000000001111111111111100000000&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ret:000000000000000000000000010000000&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b0_borda&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// b0: 000000000001111111111111100000000&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ret:000000000001000000000000010000000&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;b0Anterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-
-
-&lt;span class=&quot;c1&quot;&gt;// ************************** Botão 1&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b1_bordaSubida&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// b1: 000000000001111111111111100000000&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ret:000000000001000000000000000000000&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b1_bordaDescida&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// b1: 000000000001111111111111100000000&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ret:000000000000000000000000010000000&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;b1_borda&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// b1: 000000000001111111111111100000000&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// ret:000000000001000000000000010000000&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;b1Anterior&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
-
-&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
-
-&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
-
-&lt;p&gt;Bom trabalho!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Detecção de borda em botão pulsador</summary></entry><entry><title type="html">P0111 - 2 Displays de 7 segmentos</title><link href="http://localhost:4000/ddp/2020/P0111-disp7segX2/" rel="alternate" type="text/html" title="P0111 - 2 Displays de 7 segmentos" /><published>2020-08-13T20:40:21-03:00</published><updated>2020-08-13T20:40:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0111-disp7segX2</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0111-disp7segX2/">&lt;h1 id=&quot;display-de-7-segmentos-2-dígitos&quot;&gt;Display de 7 segmentos: 2 dígitos&lt;/h1&gt;
-
-&lt;p&gt;Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORT&lt;/code&gt; de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.&lt;/p&gt;
-
-&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
-
-&lt;p&gt;Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;1-circuito-hardware&quot;&gt;1. Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: 2 Displays de 7 segmentos catodo comum&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0111/disp7segX2.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;2-programa-firmware&quot;&gt;2. Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0111/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
-
-&lt;p&gt;O programa presente no arquivo fonte &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; possui o seguinte arranjo:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Inclusão de bibliotecas;&lt;/li&gt;
-  &lt;li&gt;Programa principal;
-    &lt;ul&gt;
-      &lt;li&gt;Declaração e inicializações;&lt;/li&gt;
-      &lt;li&gt;Laço de repetição.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
- * File:   main.c
- * Author: josewrpereira
- *
- * Created on 13 de Agosto de 2020, 17:31:21
- * 
- * -------------------------------------------------
- *          MAPA DE ENTRADAS E SAIDAS
- * -------------------------------------------------
- *  Pinos   |nº     |Conexão
- * ---------|-------|-------------------------------
- *  RB0     |33     | Segmento a
- *  RB1     |34     | Segmento b
- *  RB2     |35     | Segmento c
- *  RB3     |36     | Segmento d
- *  RB4     |37     | Segmento e
- *  RB5     |38     | Segmento f
- *  RB6     |39     | Segmento g
- *  RB7     |40     | Segmento p
- *  RD7     |30     | Hab. Dezena (Catodo comum)
- *  RD6     |29     | Hab. Unidade (Catodo comum)
- * -------------------------------------------------
- */&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-#include &quot;delay.h&quot;
-#include &quot;disp7seg.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nScan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;disp7segX2_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;disp7segX2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nScan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;nScan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
- * File:   delay.c
- * Author: josewrpereira
- *
- * Created on 13 de Agosto de 2020, 17:32
- * 
- * -------------------------------------------------
- *          MAPA DE ENTRADAS E SAIDAS
- * -------------------------------------------------
- *  Pinos   |nº     |Conexão
- * ---------|-------|-------------------------------
- *  RB0     |33     | Segmento a
- *  RB1     |34     | Segmento b
- *  RB2     |35     | Segmento c
- *  RB3     |36     | Segmento d
- *  RB4     |37     | Segmento e
- *  RB5     |38     | Segmento f
- *  RB6     |39     | Segmento g
- *  RB7     |40     | Segmento p
- *  RD7     |30     | Hab. Dezena (Catodo comum)
- *  RD6     |29     | Hab. Unidade (Catodo comum)
- * ------------------------------------------------- 
- */&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-#include &quot;delay.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define QTD_DIGITOS         2
-#define BASE                10
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define DISP7SEG_BUS( x )   PORTB = x
-#define HAB_DEZENA( x )     PORTDbits.RD7 = x
-#define HAB_UNIDADE( x )    PORTDbits.RD6 = x
-&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    &lt;span class=&quot;mh&quot;&gt;0x3F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x06&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x5B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x4F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                            &lt;span class=&quot;mh&quot;&gt;0x66&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x6D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x07&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                            &lt;span class=&quot;mh&quot;&gt;0x7F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x6F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x77&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                            &lt;span class=&quot;mh&quot;&gt;0x39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x5E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x79&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x71&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7segX2_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ANSELH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;HAB_DEZENA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;HAB_UNIDADE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DISP7SEG_BUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DISP7SEG_BUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DISP7SEG_BUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;DISP7SEG_BUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posicao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7segX2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posicao&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Unidade&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;HAB_DEZENA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;DISP7SEG_BUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;HAB_UNIDADE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Dezena&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;HAB_UNIDADE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;DISP7SEG_BUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BASE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;HAB_DEZENA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;posicao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posicao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QTD_DIGITOS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
-
-&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
-
-&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
-
-&lt;p&gt;Bom trabalho!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Display de 7 segmentos: 2 dígitos</summary></entry><entry><title type="html">P0110 - Display de 7 segmentos</title><link href="http://localhost:4000/ddp/2020/P0110-disp7seg/" rel="alternate" type="text/html" title="P0110 - Display de 7 segmentos" /><published>2020-08-05T19:55:21-03:00</published><updated>2020-08-05T19:55:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0110-disp7seg</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0110-disp7seg/">&lt;h1 id=&quot;display-de-7-segmentos&quot;&gt;Display de 7 segmentos&lt;/h1&gt;
-
-&lt;p&gt;O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.&lt;/p&gt;
-
-&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
-
-&lt;p&gt;Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F&lt;/code&gt;;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;1-circuito-hardware&quot;&gt;1. Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;p&gt;O display de 7 segmentos basicamente é um conjunto de LEDs dispostos de forma a cada um deles iluminar um segmento no encapsulamento. Existem vários modelos para diferentes necessidades, mas aqui usamos o mais comum.&lt;/p&gt;
-
-&lt;p&gt;O display, além dos sete segmentos possui ainda um ponto, que pode ser utilizado para sinalizar um ponto decimal (vírgula) ao associar vários displays para mostrar um número fracionário ou qualquer separação entre dois dígitos. Nesse projeto o ponto não será utilzado.&lt;/p&gt;
-
-&lt;p&gt;Para o acionamento do display foi utilizado o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; conforme mostrado na Figura 1.1.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: Display de 7 segmentos catodo comum&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg0-F.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Existem dois modelos de display, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Anodo comum&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Catodo comum&lt;/code&gt;, que se referem aos terminais conectados em comum, conforme exemplo da Figura 1.2.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.2: Segmentos do display&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-segmentos.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Cada segmento recebe uma identificação em letra minúscula de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g&lt;/code&gt; e o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;. 
-O display possui um terminal para cada segmento do display.&lt;/p&gt;
-
-&lt;p&gt;Cada pino do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; está conectado a um segmento do display.&lt;/p&gt;
-
-&lt;p&gt;Note que cada segmento, composto por um LED, necessita de um resistor para limitar a corrente que percorre ele. Como cada pino do uC fornece uma tensão de 5V para acionar o segmento. A queda de tensão no LED é de \(2V\), aproximadamente. Pode-se assim calcular o valor do resistor limitador de corrente:&lt;/p&gt;
-
-&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo separator=&quot;true&quot;&gt;,&lt;/mo&gt;&lt;mn&gt;020&lt;/mn&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;150&lt;/mn&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;Ω&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;R = \frac{ V_{pino}-V_{LED}}{I_{LED}} = \frac{5-2}{0,020} = 150\Omega&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.00773em;&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:2.19633em;vertical-align:-0.8360000000000001em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:1.36033em;&quot;&gt;&lt;span style=&quot;top:-2.3139999999999996em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.07847em;&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.32833099999999993em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.05764em;&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.02778em;&quot;&gt;D&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.15em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.677em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.22222em;&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.311664em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;o&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.286108em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;−&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.22222em;&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.32833099999999993em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.05764em;&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.02778em;&quot;&gt;D&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.15em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8360000000000001em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:2.20188em;vertical-align:-0.8804400000000001em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:1.32144em;&quot;&gt;&lt;span style=&quot;top:-2.314em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mpunct&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.16666666666666666em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.677em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;−&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8804400000000001em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;Ω&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-
-&lt;p&gt;O circuito apresenta um conjunto de resistores em um mesmo encapsulamento, mas poderia ser um resistor individual para cada segmento.&lt;/p&gt;
-
-&lt;p&gt;O display aqui utilizado é do tipo catodo comum, assim basta acionar os pinos do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; que correspondam aos segmentos a serem acionados para formar o dígito que se deseja exibir.&lt;/p&gt;
-
-&lt;p&gt;Para mostrar o dígito 0(zero), aciona-se os segmento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a, b, c, d, e, f&lt;/code&gt;conforme mostrado na Figura 1.3.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.3: Dígito 0 (zero)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digito0.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;É importante notar a sequência de pinos do display e do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORT&lt;/code&gt; utilizado, pois uma alteração de ordem muda o que é exibido no display.&lt;/p&gt;
-
-&lt;p&gt;Para o dígito 1(um) é necessário ligar apenas os segmentos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;, mantendo os demais desligados.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.4: Dígito 1 (um)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digito1.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Para o dígito 2(dois) é mais fácil perceber os dígitos desligados, pois estão em menor quantidade, sendo o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt; e o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt; desligados e os demais ligados (exceto o ponto como já foi citado).&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.5: Dígito 2 (um)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digito2.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A Figura 1.6 mostra uma tabela com todas as combinações para os dígitos decimais e seus valores correspondentes em hexadecimal. Ao atribuir ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; um dos valores em hexadecimal da tabela, o digito correspondente deve ser mostrado no display.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.6: Dígitos e equivalência em hexadecimal&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/disp7seg-digitos.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Estão faltando os dados dos dígitos que completam o conjunto hexadecimal, que podem te servir como exercícios. Bom trabalho!&lt;/p&gt;
-
-&lt;h2 id=&quot;2-programa-firmware&quot;&gt;2. Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;p&gt;O programa pode ser escrito todo em um único arquivo, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt;, mas esta é uma forma não conveniente pois dificulta a manuteção e a organização do código. Assim, cada arquivo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.c&lt;/code&gt; deve possuir somente funções correlatas ao nome desse arquivo. Por exemplo: todas as funções de manipulação do display de 7 segmentos estão contidas em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg.c&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Para poder executar as funções do display no programa principal é necessário incluir o cabeçalho delas que está contido em&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &quot;disp7seg.h&quot;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0110/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
-
-&lt;p&gt;O programa presente no arquivo fonte &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; possui o seguinte arranjo:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Inclusão de bibliotecas;&lt;/li&gt;
-  &lt;li&gt;Programa principal;
-    &lt;ul&gt;
-      &lt;li&gt;Declaração e inicializações;&lt;/li&gt;
-      &lt;li&gt;Laço de repetição.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
- * File:   main.c
- * Author: josewrpereira
- *
- * Created on 5 de Agosto de 2020, 20:21:59
- * 
- * -------------------------------------------------
- *          MAPA DE ENTRADAS E SAIDAS
- * -------------------------------------------------
- *  Pinos   |nº     |Conexão
- * ---------|-------|-------------------------------
- *  RD0     |19     | Segmento a
- *  RD1     |20     | Segmento b
- *  RD2     |21     | Segmento c
- *  RD3     |22     | Segmento d
- *  RD4     |27     | Segmento e
- *  RD5     |28     | Segmento f
- *  RD6     |29     | Segmento g
- *  RD7     |30     | Segmento p
- * -------------------------------------------------
- */&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-#include &quot;delay.h&quot;
-#include &quot;disp7seg.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;O laço de repetição que compõe a execução do programa possui apenas três instruçẽos:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Exibição da variável de contagem;&lt;/li&gt;
-  &lt;li&gt;Atraso de 500ms, para que o valor da contagem permaneça em exibição por esse tempo;&lt;/li&gt;
-  &lt;li&gt;Incremento seguido de uma delimitação da contagem utilizando a operação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod&lt;/code&gt; ou &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt;, que é o operador que tem como resultado o resto da divisão. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cont&lt;/code&gt; assume apenas valores entre 0 e 15.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef CONFIG_H
-#define CONFIG_H
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#pragma config FOSC  = INTRC_NOCLKOUT   // Fonte de clock: oscilador interno
-#pragma config WDTE  = OFF              // Desabilita WatchDog Timer 
-#pragma config MCLRE = OFF              // Desab. Master Clear via pino
-#pragma config LVP   = OFF              // Desab. gravaГЦo em baixa tensЦo
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define _XTAL_FREQ     4000000          // Freq. clock interno: 4MHz(padrЦo)
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#endif
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef DELAY_H
-#define DELAY_H
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#endif
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef DISP7SEG_H
-#define	DISP7SEG_H
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#endif
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sub-rotinas&quot;&gt;Sub-rotinas&lt;/h3&gt;
-
-&lt;p&gt;Trechos de programa, que podem ser executados com parâmetros diferentes, porém que executam a mesma ação levando em conta os argumentos da função.&lt;/p&gt;
-
-&lt;h4 id=&quot;delay&quot;&gt;Delay&lt;/h4&gt;
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;display-7-segmentos&quot;&gt;Display 7 segmentos&lt;/h4&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-#include &quot;delay.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    &lt;span class=&quot;mh&quot;&gt;0x3F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x06&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x5B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x4F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                            &lt;span class=&quot;mh&quot;&gt;0x66&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x6D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x07&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                            &lt;span class=&quot;mh&quot;&gt;0x7F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x6F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x77&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                            &lt;span class=&quot;mh&quot;&gt;0x39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x5E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x79&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x71&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;O vetor &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitos7seg[16]&lt;/code&gt; contém todos os valores que correspondem aos caracteres de representação hexadecimal, associados diretamente com a posição de cada valor, sendo o valor que corresponde ao dígito 0 na posição 0 do vetor, o dígito 1 na posição 1, e assim por diante, com todos os demais valores.&lt;/p&gt;
-
-&lt;p&gt;O procedimento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg_init&lt;/code&gt; além de inicializar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt;, também faz um teste de diagnóstico do display, fazendo o acionamento e desligando todos os segmentos de forma alternada, possibilitando a verificação da integridade de todas as vias, segmentos e conexões envolvidas.&lt;/p&gt;
-
-&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg&lt;/code&gt; possui um argumento, que é o número correspondente ao dígito a ser exibido pelo display. Somente são exibidos dígitos hexadecimais entre os valores 0 e F. Valores fora deste intervalo o display fica apagado.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
-&lt;h4 class=&quot;alert-heading&quot;&gt;Operador Unário&lt;/h4&gt;
-(condição) ? valor se a condição é verdadeira : valor se a condição é falsa ;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
-
-&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
-
-&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
-
-&lt;p&gt;Bom trabalho!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Display de 7 segmentos</summary></entry><entry><title type="html">COM110 - Introdução a algoritmos</title><link href="http://localhost:4000/ddp/2020/com110-algoritmo/" rel="alternate" type="text/html" title="COM110 - Introdução a algoritmos" /><published>2020-08-03T21:15:21-03:00</published><updated>2020-08-03T21:15:21-03:00</updated><id>http://localhost:4000/ddp/2020/com110-algoritmo</id><content type="html" xml:base="http://localhost:4000/ddp/2020/com110-algoritmo/">&lt;h1 id=&quot;algorítmos&quot;&gt;&lt;a href=&quot;https://cursos.univesp.br/courses/3163/pages/semana-1?module_item_id=264918&quot;&gt;Algorítmos&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Todo &lt;strong&gt;programa&lt;/strong&gt; visa &lt;strong&gt;solucionar um problema&lt;/strong&gt; posto, partindo da definição do problema (O que?) e seguindo para o desenvolvimento do programa (Como?), que pode ser dividido em três partes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Projetar a solucação (algoritmo);&lt;/li&gt;
-  &lt;li&gt;Codificar a solução (Programar em linguagem de programação);&lt;/li&gt;
-  &lt;li&gt;Testar o programa.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Um &lt;strong&gt;algoritmo&lt;/strong&gt; é uma sequência bem definida, explícita e precisa, de passos que visam atingir um objetivo.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Cada passo do algorítmo deve ser uma ação realizável;&lt;/li&gt;
-  &lt;li&gt;A ordem dos passos devem ser precisamente determinadas;&lt;/li&gt;
-  &lt;li&gt;O algoritmo deve ter fim.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Um algoritmo deve conter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sequenciamento: estabelece um padrão de comportamento, em que as ações devem ser executadas linearmente;&lt;/li&gt;
-  &lt;li&gt;Teste seletivo ou estrutura condicional;&lt;/li&gt;
-  &lt;li&gt;Repetição: mesmo trecho é repetido até que a condição de parada seja alcançada. O número de repetições é indefinido apesar de ser finito;&lt;/li&gt;
-  &lt;li&gt;Condição de parada.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;O algoritmo deve ser:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;refinado de forma sucessiva até que as instruções possam ser codificadas;&lt;/li&gt;
-  &lt;li&gt;independente da linguagem.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As linguagens possuem:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;um número restrito de instruções;&lt;/li&gt;
-  &lt;li&gt;possuem um conjunto de instruções comuns a todas as linguagens:
-    &lt;ul&gt;
-      &lt;li&gt;Entradas e Saídas;&lt;/li&gt;
-      &lt;li&gt;Testes seletivos;&lt;/li&gt;
-      &lt;li&gt;Repetições; etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Os algoritmos podem ser apresentados em forma de fluxograma, que é uma representação esquemática, feito com gráficos que ilustram transições de informações entre os elementos que o compõem. Um fluxograma representa a lógica interna do programa e possui simbologia própria.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnologia&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="Computação" /><summary type="html">Algorítmos</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Display LCD</summary></entry></feed>
