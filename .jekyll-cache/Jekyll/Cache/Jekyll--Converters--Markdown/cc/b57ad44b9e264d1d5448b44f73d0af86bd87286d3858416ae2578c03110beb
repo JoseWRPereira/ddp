@@ -1,4 +1,4 @@
-I"X�<h1 id="pisca-led">Pisca LED</h1>
+I"��<h1 id="pisca-led">Pisca LED</h1>
 
 <p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.</p>
 
@@ -12,7 +12,7 @@
 
 <!--more-->
 
-<h2 id="circuito-hardware">Circuito (<em>Hardware</em>)</h2>
+<h2 id="circuito-hardware">Circuito (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED"><em>Hardware</em></a>)</h2>
 
 <p>O dispositivo responsável por acionar o LED é o microcontrolador(uC), através de um pino configurado como saída. Este pino pode estar fornecendo corrente como fonte (<em>source</em>) ao ramo ou drenando (<em>sink</em>) corrente dele.</p>
 

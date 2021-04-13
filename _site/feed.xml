@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-12T21:16:54-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-12T22:59:35-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">C1 - Pisca LED</title><link href="http://localhost:4000/ddp/2021/c1-piscaLED/" rel="alternate" type="text/html" title="C1 - Pisca LED" /><published>2021-04-12T20:02:21-03:00</published><updated>2021-04-12T20:02:21-03:00</updated><id>http://localhost:4000/ddp/2021/c1-piscaLED</id><content type="html" xml:base="http://localhost:4000/ddp/2021/c1-piscaLED/">&lt;h1 id=&quot;pisca-led&quot;&gt;Pisca LED&lt;/h1&gt;
 
 &lt;p&gt;Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Hello world&quot;&lt;/code&gt;&lt;/em&gt; ou em português &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Ola mundo&quot;&lt;/code&gt;. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.&lt;/p&gt;
@@ -13,7 +13,7 @@
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;circuito-hardware&quot;&gt;Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
+&lt;h2 id=&quot;circuito-hardware&quot;&gt;Circuito (&lt;a href=&quot;https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED&quot;&gt;&lt;em&gt;Hardware&lt;/em&gt;&lt;/a&gt;)&lt;/h2&gt;
 
 &lt;p&gt;O dispositivo responsável por acionar o LED é o microcontrolador(uC), através de um pino configurado como saída. Este pino pode estar fornecendo corrente como fonte (&lt;em&gt;source&lt;/em&gt;) ao ramo ou drenando (&lt;em&gt;sink&lt;/em&gt;) corrente dele.&lt;/p&gt;
 
@@ -47,7 +47,7 @@ Bem como para o &lt;strong&gt;PORTC e PORTD&lt;/strong&gt; também limitado a &l
 
 &lt;p&gt;A vantagem de utilizar o pino como fonte é trabalhar com uma lógica direta, em que o estado lógico 1(verdadeiro, +5V) produz o acionamento do LED, enquanto que na configuração do pino como dreno a lógica de acionamento é invertida, pois o pino em estado lógico 0(falso, 0V) produz o acionamento do LED.&lt;/p&gt;
 
-&lt;h2 id=&quot;programa-firmware&quot;&gt;Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+&lt;h2 id=&quot;programa-firmware&quot;&gt;Programa (&lt;a href=&quot;https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_piscaLED.X&quot;&gt;&lt;em&gt;Firmware&lt;/em&gt;&lt;/a&gt;)&lt;/h2&gt;
 
 &lt;p&gt;O programa em microcontrolador é denominado &lt;em&gt;firmware&lt;/em&gt;, assim como para computador é denominado &lt;em&gt;software&lt;/em&gt;.&lt;/p&gt;
 
