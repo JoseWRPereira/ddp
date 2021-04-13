@@ -42,7 +42,7 @@ Alternativamente pode-se utilizar uma ferramenta online:
 
 ## Programas Básicos
 * [Arquivo de Configuração (config.h)]({{site.baseurl}}/2021/config)
-* [P0101 - Pisca LED]({{site.baseurl}}/2020/P0101-piscaLED)
+* [C1 - Pisca LED]({{site.baseurl}}/2021/c1-piscaLED)
 * [P0102 - Botão LED]({{site.baseurl}}/2020/P0102-botaoLED)
 * [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)
 * [P0111 - 2 Displays de 7 segmentos]({{site.baseurl}}/2020/P0111-disp7segX2)

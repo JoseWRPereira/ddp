@@ -1,5 +1,457 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-10T20:42:15-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">Anexo D - Controle de Versão</title><link href="http://localhost:4000/ddp/2021/capD-versionamento/" rel="alternate" type="text/html" title="Anexo D - Controle de Versão" /><published>2021-04-10T18:14:21-03:00</published><updated>2021-04-10T18:14:21-03:00</updated><id>http://localhost:4000/ddp/2021/capD-versionamento</id><content type="html" xml:base="http://localhost:4000/ddp/2021/capD-versionamento/">&lt;h1 id=&quot;git-e-github&quot;&gt;Git e GitHub&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-12T21:13:15-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">C1 - Pisca LED</title><link href="http://localhost:4000/ddp/2021/c1-piscaLED/" rel="alternate" type="text/html" title="C1 - Pisca LED" /><published>2021-04-12T20:02:21-03:00</published><updated>2021-04-12T20:02:21-03:00</updated><id>http://localhost:4000/ddp/2021/c1-piscaLED</id><content type="html" xml:base="http://localhost:4000/ddp/2021/c1-piscaLED/">&lt;h1 id=&quot;pisca-led&quot;&gt;Pisca LED&lt;/h1&gt;
+
+&lt;p&gt;Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Hello world&quot;&lt;/code&gt;&lt;/em&gt; ou em português &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Ola mundo&quot;&lt;/code&gt;. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.&lt;/p&gt;
+
+&lt;p&gt;Em um sistema microcontrolado, o programa equivalente ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Ola mundo&quot;&lt;/code&gt; é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pisca LED&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Assim, o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pisca LED&lt;/code&gt; ou &lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Blink LED&lt;/code&gt;&lt;/em&gt; é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (&lt;em&gt;firmware&lt;/em&gt;), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Acionar um LED de forma que ‘pisque’ com frequência de 1Hz.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;circuito-hardware&quot;&gt;Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O dispositivo responsável por acionar o LED é o microcontrolador(uC), através de um pino configurado como saída. Este pino pode estar fornecendo corrente como fonte (&lt;em&gt;source&lt;/em&gt;) ao ramo ou drenando (&lt;em&gt;sink&lt;/em&gt;) corrente dele.&lt;/p&gt;
+
+&lt;p&gt;As configurações como fonte e dreno são mostradas na Figura 1 respectivamente em (a) e (b).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(a): Ligação de pino como fonte (&lt;em&gt;source&lt;/em&gt;)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1(b): Ligação de pino como dreno (&lt;em&gt;sink&lt;/em&gt;)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsource.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsink.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O pino do uC possui limitação de corrente, que pode variar a depender do modelo ou fabricante.&lt;/p&gt;
+
+&lt;p&gt;O uC aqui utilizado, PIC16F887, possui &lt;strong&gt;corrente máxima de 25mA por pino&lt;/strong&gt;, tanto como &lt;strong&gt;fonte&lt;/strong&gt; quanto como &lt;strong&gt;dreno&lt;/strong&gt;, conforme indica o seu &lt;a href=&quot;http://ww1.microchip.com/downloads/en/devicedoc/41291d.pdf&quot;&gt;datasheet&lt;/a&gt; (seção &lt;em&gt;17.0 Electrical especifications&lt;/em&gt;, página 241).&lt;/p&gt;
+
+&lt;p&gt;Note que apesar de cada pino possuir uma corrente máxima, outra limitação é que a somatória dessas corrente não pode ultrapassar &lt;strong&gt;200mA&lt;/strong&gt; para o conjunto dos pinos do &lt;strong&gt;PORTA, PORTB e PORTE&lt;/strong&gt;.
+Bem como para o &lt;strong&gt;PORTC e PORTD&lt;/strong&gt; também limitado a &lt;strong&gt;200mA&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Como em ambas as ocasiões a corrente máxima é a mesma, não existe uma predileção por uma configuração de montagem ou outra. Tal predileção ocorre quando a capacidade combinada de uma configuração é maior do que a outra, normalmente drenar corrente é a condição mais comum.&lt;/p&gt;
+
+&lt;p&gt;Para o uC aqui abordado, ambas as formas de ligação possuem as mesmas condições, não havendo diferença em capacidade de condução para o pino como fonte ou dreno.&lt;/p&gt;
+
+&lt;p&gt;A vantagem de utilizar o pino como fonte é trabalhar com uma lógica direta, em que o estado lógico 1(verdadeiro, +5V) produz o acionamento do LED, enquanto que na configuração do pino como dreno a lógica de acionamento é invertida, pois o pino em estado lógico 0(falso, 0V) produz o acionamento do LED.&lt;/p&gt;
+
+&lt;h2 id=&quot;programa-firmware&quot;&gt;Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O programa em microcontrolador é denominado &lt;em&gt;firmware&lt;/em&gt;, assim como para computador é denominado &lt;em&gt;software&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Um único arquivo de código fonte (&lt;em&gt;Source Files&lt;/em&gt;) é criado nesse projeto, como pode-se ver na Figura 2, denominado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;É uma boa prática nomear o arquivo fonte com o nome &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; quando ele possuir a função principal do programa, que possui o mesmo nome. Os demais arquivos fonte devem possuir nomes relacionados às funções que eles contém.&lt;/p&gt;
+
+&lt;p&gt;Segue o código fonte para o projeto Pisca LED.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 12 April 2021, 19:39
+ * 
+ * IDE:         MPLAB X IDE v5.45
+ * Compiler:    XC8 v2.31
+ * Operating System: Debian GNU/Linux bullseye/sid
+ * Kernel: Linux 5.10.0-5-amd64
+ * Architecture: x86-64
+ * 
+ * Objetivo: 
+ *      Piscar o LED com intervalo de 500 ms
+ * 
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD0     |19     | LED (source/sink)
+ */&lt;/span&gt;
+
+                                &lt;span class=&quot;c1&quot;&gt;// Inclui diretivas de configuração do uC&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// CONFIG1&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
+#pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
+#pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
+#pragma config CP = OFF         // Code Protection bit (Program memory code protection is disabled)
+#pragma config CPD = OFF        // Data Code Protection bit (Data memory code protection is disabled)
+#pragma config BOREN = OFF      // Brown Out Reset Selection bits (BOR disabled)
+#pragma config IESO = OFF       // Internal External Switchover bit (Internal/External Switchover mode is disabled)
+#pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
+#pragma config LVP = OFF        // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// CONFIG2&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
+#pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;                 // Inclui biblioteca padrão do compilador XC8 
+&lt;/span&gt;                                &lt;span class=&quot;c1&quot;&gt;// para microcontroladores Microchip.&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#define _XTAL_FREQ 4000000      // Define frequência do oscilador em uso.
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                 &lt;span class=&quot;c1&quot;&gt;// Função principal = main.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                               &lt;span class=&quot;c1&quot;&gt;// Início do escopo da função main.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;// Inicia RD0 com o valor 0.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;// Configura RD0 como Saída.&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                  &lt;span class=&quot;c1&quot;&gt;// Laço de repetição infinito.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;// Inicio do escopo do laço de repetição.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// Liga RD0.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// Espera 500 ms.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// Desliga RD0.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// Espera 500 ms.&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;// Fim do escopo laço de repetição.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                     &lt;span class=&quot;c1&quot;&gt;// Caracteriza main como uma função sem retorno.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                               &lt;span class=&quot;c1&quot;&gt;// Fim do escopo da função main.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
+
+&lt;p&gt;O programa presente no arquivo fonte &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt; possui o seguinte arranjo:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Comentários;&lt;/li&gt;
+  &lt;li&gt;Diretivas de configuração;&lt;/li&gt;
+  &lt;li&gt;Inclusão de bibliotecas;&lt;/li&gt;
+  &lt;li&gt;Diretivas de compilação;&lt;/li&gt;
+  &lt;li&gt;Definições úteis ao programa;&lt;/li&gt;
+  &lt;li&gt;Programa principal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;comentários&quot;&gt;Comentários&lt;/h3&gt;
+
+&lt;p&gt;Os comentários são trechos do código que não são compilados e servem para auxiliar na compreesão do código.&lt;/p&gt;
+
+&lt;p&gt;Os comentários são importantes para evidenciar ou explicar trechos de código que não são explícitos, de forma a garantir uma boa compreensão para quem venha a estudar o código, ou ainda evidenciar a identificação do projeto, do autor, informações de versão de interfaces e  compiladores utilizados para criar o projeto, seu objetivo e um mapa simplificado de alocação de pinos, como usado no código aqui apresentado.&lt;/p&gt;
+
+&lt;p&gt;Em linguagem C os comentátios podem ser feitos em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bloco&lt;/code&gt; ou em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linha&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Bloco&lt;/strong&gt;: tem como delimitador inicial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/*&lt;/code&gt; e o final &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*/&lt;/code&gt;. Todo o conteúdo entre os delimitadores não são considerados pelo compilador, sendo úteis apenas para os programadores.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Linha&lt;/strong&gt;: a marcação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//&lt;/code&gt; indica que todo o conteúdo à direita até o fim da linha é comentário, e da mesma forma não é considerado pelo compilador.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Uma das informações possíveis para inserir nos comentários e que considero ser útil é mostrar quais pinos são usados e em qual aplicação, como um mapa de alocação de pinos, conforme segue:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;cm&quot;&gt;/*
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD0     |19     | LED (source/sink)
+*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;diretivas-de-configuração&quot;&gt;Diretivas de configuração&lt;/h3&gt;
+
+&lt;p&gt;Algumas diretivas como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#pragma&lt;/code&gt; possibilitam um método de disponibilizar informaçẽos direto ao compilador, como por exemplo o acesso a registradores de configuração do microcontrolador, que ocorrem de forma exclusiva durante a gravação do código.&lt;/p&gt;
+
+&lt;p&gt;Existem diversas configurações possíveis, inicialmente usaremos as seguintes configurações:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// CONFIG1&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
+#pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
+#pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
+#pragma config CP = OFF         // Code Protection bit (Program memory code protection is disabled)
+#pragma config CPD = OFF        // Data Code Protection bit (Data memory code protection is disabled)
+#pragma config BOREN = OFF      // Brown Out Reset Selection bits (BOR disabled)
+#pragma config IESO = OFF       // Internal External Switchover bit (Internal/External Switchover mode is disabled)
+#pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
+#pragma config LVP = OFF        // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// CONFIG2&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
+#pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Um destaque para a primeira linha em que o registrador &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FOSC&lt;/code&gt; é configurado para o oscilador interno. Por uma questão de simplificação de montagem inicial do circuito, optou-se por tal configuração por não necessitar de um cristal oscilador e seus capacitores conectados externamente junto aos pinos 13 e 14. A limitação dessa escolha é que a frequência do oscilador interno, que por padrão é de 4MHz, atinge no máximo 8MHz, enquanto que ao utilizar um cristal externo pode-se trabalhar com até 20MHz, e a tolerância de calibração do oscilador interno pode variar em função da temperatura, o que não afeta nossas aplicações didáticas.&lt;/p&gt;
+
+&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
+
+&lt;p&gt;O código &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &amp;lt;xc.h&amp;gt;&lt;/code&gt; inclui a biblioteca padrão do compilador XC8 para microcontroladores Microchip, de modo a oferecer funções básicas e as definições ou nomenclaturas dos registradores.&lt;/p&gt;
+
+&lt;p&gt;Todas as definições como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTDbits.RD0&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRISDbits.TRISD0&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FOSC&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WDTE&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__delay_ms()&lt;/code&gt; estão declaradas ou &lt;em&gt;linkadas&lt;/em&gt; em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xc.h&lt;/code&gt;, assim sendo uma biblioteca obrigatória para nosso uso.&lt;/p&gt;
+
+&lt;h3 id=&quot;definições-úteis-ao-programa&quot;&gt;Definições úteis ao programa&lt;/h3&gt;
+
+&lt;p&gt;A diretiva &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define&lt;/code&gt;, como o próprio nome indica, define um “apelido” para um valor. Esse apelido é substituido pelo real valor antes da compilação do código pelo pré-processador, de modo que apenas faz sentido para o programador.&lt;/p&gt;
+
+&lt;p&gt;A grande vantagem é que ao utilizar um valor muitas vezes durante o código pode-se alterá-lo falcilmente se ele possuir um &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define&lt;/code&gt; associado. Suponha um código que utiliza um valor constante em seus cálculos, e é definido como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define PI 3.14&lt;/code&gt;. Dorante os cáculos usa-se o “apelido” &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PI&lt;/code&gt; (… PI * raio … ), e ele aparece imuneras vezes no programa. Daí você programador percebe que precisa aumentar a precisão dos cálculos, e esta aproximação com duas casas decimais não é mais suficiente, agora são necessárias cinco casas decimais. Seria penoso demais procurar por todas as inserções do PI no código para mudá-los um a um, além do fato de ser muito provavel a inserção de erros. Com o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define&lt;/code&gt; basta mudar na sua declaração para &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#define PI 3.14159&lt;/code&gt;, que o pré-processador substitui em todos os lugares que foi utilizado o seu “apelido”.&lt;/p&gt;
+
+&lt;p&gt;A definição &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_XTAL_FREQ&lt;/code&gt; deve assumir o valor do oscilador que estiver sendo utilizado na configuração, neste caso, o oscilador interno com o valor padrão é 4MHz.&lt;/p&gt;
+
+&lt;p&gt;Essa definição é importante sempre que for utilizada alguma função que envolva contagem de tempo, como a função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__delay_ms()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
+
+&lt;p&gt;Todo programa em linguagem C deve possuir uma &lt;strong&gt;função principal&lt;/strong&gt;, cujo nome é obrigatório &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt;&lt;/strong&gt;. 
+As demais funções devem possuir nomes de acordo com a tarefa que executam, mas são de total responsabilidade do programador.&lt;/p&gt;
+
+&lt;p&gt;Como no microcontrolador não há um sistema operacional para invocar a execução do programa, a função principal não necessita de um retorno, bem como não possui argumentos de entrada. 
+Para indicar essa ausência de parâmetros usa-se a palavra reservada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;void&lt;/code&gt; que significa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vazio&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                               &lt;span class=&quot;c1&quot;&gt;// Início do escopo da função main.&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;                     &lt;span class=&quot;c1&quot;&gt;// Caracteriza main como uma função sem retorno.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;                               &lt;span class=&quot;c1&quot;&gt;// Fim do bloco da função main.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;parametrizar-habilitar-e-inicializar&quot;&gt;Parametrizar, habilitar e inicializar&lt;/h4&gt;
+
+&lt;p&gt;A estrutura básica do programa para o microcontrolador(&lt;em&gt;firmware&lt;/em&gt;) consiste em dois blocos de código, sendo o primeiro para a configuração e o segundo para executar as funções do programa.&lt;/p&gt;
+
+&lt;p&gt;O bloco de configuração consiste em parametrizar, habilitar e/ou inicializar os periféricos e dados utilizados no programa.&lt;/p&gt;
+
+&lt;p&gt;O bloco para as funções do programa consiste no código que normalmente é executado de forma repetida enquanto o sistema estiver em execução, ou seja, enquanto o microcontrolador estiver ligado.&lt;/p&gt;
+
+&lt;p&gt;O programa aqui apresentado utiliza o pino D0 do PORTD do microcontrolador por ser o PORT mais fácil de trabalhar.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Como esse pino é parametrizado, habilitado e inicializado?&lt;/h4&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Como configurar o pino como saída?&lt;/h4&gt;
+
+&lt;/div&gt;
+
+&lt;h4 id=&quot;registradores&quot;&gt;Registradores&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Todos os pinos&lt;/strong&gt; estão conectados ao menos em um &lt;strong&gt;circuito específico&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cada circuito específico realiza funções como, entrada digital, saída digital, contadores, comunicação, leitura de sinal analógico, etc, e são chamados de &lt;strong&gt;periféricos&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Todos os periféricos, são configurados por sinais elétricos em portas específicas, e tais sinais podem ser acessados através do mapeamento deles em um conjunto de registradores denominados &lt;strong&gt;Registradores de Funções Especiais&lt;/strong&gt; (&lt;em&gt;SFR - Special Function Register&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;A Figura 3 mostra o mapa de registradores do PIC16F887 e pode ser acessada na página 25 do seu &lt;a href=&quot;http://ww1.microchip.com/downloads/en/devicedoc/41291d.pdf&quot;&gt;&lt;em&gt;datasheet&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Mapa dos Registradores de Funções Especiais (&lt;em&gt;SFR&lt;/em&gt;)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/sfr-PIC16F886-7.png?raw=true&quot; alt=&quot;SFR     &quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Em destaque estão os registradores &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRISD&lt;/code&gt;, que são os responsáveis pela configuração e manipulação dos pinos conectados ao PORTD, entre eles o pino &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;D0&lt;/code&gt; em que está conectado o ramo do circuito com o LED.&lt;/p&gt;
+
+&lt;p&gt;A Figura 4 mostra a representação do registrador &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt;, utilizado para acessar (ler ou escrever) os pinos nele associado, como o pino 19 ou RD0 do microcontrolador.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Registrador PORTD&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portdreg.png?raw=true&quot; alt=&quot;PORTDreg&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O PORTD possui 8 bits acessíveis individualmente e independentes, como indicado pelo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R/W&lt;/code&gt; acima do nome de cada bit, respectivamente cada bit pode ser lido ou escrito.&lt;/p&gt;
+
+&lt;p&gt;O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code&gt; significa que o valor de &lt;em&gt;reset&lt;/em&gt; é desconhecido, podendo ser 0 ou 1, mas não é possível afirmar qual valor que estará cada bit ao ligar ou religar o microcontrolador.&lt;/p&gt;
+
+&lt;p&gt;Ao &lt;em&gt;setar&lt;/em&gt; qualquer um dos bits do registrador com a instrução &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTDbits.RDn = 1;&lt;/code&gt; sendo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; o número do bit que se está manipilando, o respectivo pino assume a tensão de alimentação do chip, +5V.&lt;/p&gt;
+
+&lt;p&gt;Ao &lt;em&gt;resetar&lt;/em&gt; qualquer um dos bits do registrador com a instrução &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTDbits.RDn = 0;&lt;/code&gt; sendo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; o número do bit que se está manipilando, o respectivo pino assume o valor de 0V.&lt;/p&gt;
+
+&lt;p&gt;Para realizar a leitura do pino, pode-se utilizar o seguinte comando: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var = PORTDbits.RDn;&lt;/code&gt;, sendo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; o número do bit acessado e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt; a variável que recebe o estado do pino acessado.&lt;/p&gt;
+
+&lt;p&gt;Os dois estados lógicos são representados com os valores booleanos 0 e 1 e tais estados são assumidos quando a tensão no pino está dentro de um determinado intervalo de tensão:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2,0V &amp;lt; Nível Lógico Alto &amp;lt; 5.0V&lt;/li&gt;
+  &lt;li&gt;0,0V &amp;lt; Nível Lógico Baixo &amp;lt; 0,8V&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note que para o intervalo entre 0,8 e 2,0, não há um estado bem definido, assim não é possível garantir para qual estado lógico será interpretada a leitura do pino.&lt;/p&gt;
+
+&lt;p&gt;As ações de &lt;em&gt;setar&lt;/em&gt; e &lt;em&gt;resetar&lt;/em&gt; somente são válidas se o pino estiver configurado como saída de dados. A ação de ler o estado do pino pode ser feita independente de configuração, seja entrada ou saída.&lt;/p&gt;
+
+&lt;p&gt;Para a configuração da direção de dados em um pino do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt;, utiliza-se o registrador &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRISD&lt;/code&gt;, conforme mostrado na Figura 5.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Registrador TRISD&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/trisdreg.png?raw=true&quot; alt=&quot;TRISDreg&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887 pág. 57&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O TRISD possui 8 bits acessíveis para leitura ou escrita individualmente e independentes, como indicado pelo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R/W&lt;/code&gt; acima do nome de cada bit. 
+O &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-1&lt;/code&gt; significa que o valor de &lt;em&gt;reset&lt;/em&gt; é &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;, ou seja, todos os pinos são inicializados como entrada ao ligar o uC.&lt;/p&gt;
+
+&lt;p&gt;Um pino do PORTD pode ser configurado como entrada de dados com a seguinte instrução: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRISDbits.TRISDn = 1;&lt;/code&gt;, onde &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; é o número do bit que está se configurando.&lt;/p&gt;
+
+&lt;p&gt;Para a configuração do pino como saída pode-se utilizar o seguinte comando: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRISDbits.TRISDn = 0;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tais registradores são um mapeamento do circuito da Figura 6, conforme segue.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Diagrama dos pinos RD&amp;lt;4:0&amp;gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portD4-0_diagrama.png?raw=true&quot; alt=&quot;DiagramaRD0-4&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887 pág. 58&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Note que as ações de escrita e leitura de determinados registradores produzem sinais de controle (borda de descida no biestável) no circuito do respectivo pino.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;O terminal &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WR PORTD&lt;/code&gt; é acionado quando a ação de escrita no PORTD ocorre.&lt;/li&gt;
+  &lt;li&gt;O mesmo ocorre para &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WR TRISD&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Para a ação de leitura do registrador, é gerado um sinal de acionamento em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RD TRISD&lt;/code&gt; ou &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RD PORTD&lt;/code&gt;, respectivamente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Os comandos de escrita acionam biestáveis (&lt;em&gt;flip-flops&lt;/em&gt;) para armazenar a configuração ou o último dado escrito no pino.&lt;/p&gt;
+
+&lt;p&gt;Para a leitura há apenas &lt;em&gt;buffers&lt;/em&gt; de acesso ao dado do pino mediante os sinais de controle.&lt;/p&gt;
+
+&lt;p&gt;As instruções de inicialização e configuração são apresentados abaixo e cada linha está ilustrada nas Figuras 7 e 8 em seguida:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;    PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
+    TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Inicialização do pino RD0-4&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 8: Configuração do RD0-4 como saída&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portD0_0.png?raw=true&quot; alt=&quot;PORTD0-0&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/trisd0_0.png?raw=true&quot; alt=&quot;TRISD0-0&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887 pág. 58&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fonte: &lt;em&gt;Datasheet&lt;/em&gt; do PIC16F887 pág. 58&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;ao-infinito-e-além&quot;&gt;Ao infinito e além&lt;/h3&gt;
+&lt;p&gt;A condição mais comum é que o programa fique sendo executado de forma repetida durante todo o período em que o microcontrolador estiver ligado, assim utiliza-se um laço de repetição com uma condição que é verdadeira sempre.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;    while( 1 )                  // Laço de repetição infinito.
+    {                           // Inicio do laço de repetição.
+      /*Aqui vai o seu programa*/
+    }                           // Fim do laço de repetição.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note que em linguagem C, para uma &lt;strong&gt;variável numérica&lt;/strong&gt;, &lt;strong&gt;todo valor diferente de zero&lt;/strong&gt; possui o estado lógico &lt;strong&gt;1&lt;/strong&gt; (verdadeiro), enquanto que &lt;strong&gt;apenas o zero&lt;/strong&gt; possui o estado lógico &lt;strong&gt;0&lt;/strong&gt; (falso).&lt;/p&gt;
+
+&lt;p&gt;Após a configuração do pino e sua inicialização, dentro do loop infinito é inserida a sequência de passos que atende ao objetivo proposto.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Acionar RD0, ligando o LED;&lt;/li&gt;
+  &lt;li&gt;Produzir um atraso de 500ms;&lt;/li&gt;
+  &lt;li&gt;Desacionar RD0, desligando o LED;&lt;/li&gt;
+  &lt;li&gt;Produzir um atraso de 500ms.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Codificando esses passos temos:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// Liga RD0.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// Espera 500 ms.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;PORTDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RD0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// Desliga RD0.&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// Espera 500 ms.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Os quatro passos completam o ciclo de acionamento do LED, e então este ciclo se repete em função do laço a qual ele está inserido, garantindo assim a correta execução e atendendo ao objetivo inicial de acionar o LED de forma intermitente com frequẽncia de 1Hz, ou seja, 500ms ligado e o mesmo tempo desligado.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Ligação de pino como fonte (&lt;em&gt;source&lt;/em&gt;)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Ligação de pino como dreno (&lt;em&gt;sink&lt;/em&gt;)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsource.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsink.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
+
+&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
+
+&lt;p&gt;Ficou alguma dúvida, entre em contato.&lt;/p&gt;
+
+&lt;p&gt;Bom trabalho!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/config&quot;&gt;« Arquivo de Configuração (config.h) &lt;/a&gt; « C1 - Pisca LED »&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W R Pereira</name></author><category term="ucPIC" /><summary type="html">Pisca LED</summary></entry><entry><title type="html">Anexo D - Controle de Versão</title><link href="http://localhost:4000/ddp/2021/capD-versionamento/" rel="alternate" type="text/html" title="Anexo D - Controle de Versão" /><published>2021-04-10T18:14:21-03:00</published><updated>2021-04-10T18:14:21-03:00</updated><id>http://localhost:4000/ddp/2021/capD-versionamento</id><content type="html" xml:base="http://localhost:4000/ddp/2021/capD-versionamento/">&lt;h1 id=&quot;git-e-github&quot;&gt;Git e GitHub&lt;/h1&gt;
 
 &lt;p&gt;Com o MPLAB-X é possível realizar o controle de versão dos projetos com algumas ferramentas específicas, entre elas o Git, e fazer a conexão com um repositório remoto, como o GitHub.&lt;/p&gt;
 
@@ -516,7 +968,7 @@ para obter um arquivo de boa legibilidade.&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capD-versionamento/26.png?raw=true&quot; alt=&quot;Árvore do projeto&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capD-versionamento/26.png?raw=true&quot; alt=&quot;Arquivo README_md&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -606,7 +1058,7 @@ abaixo da lista de arquivos, facilitanto o seu acesso e visualização.&lt;/p&gt
 &lt;blockquote&gt;
   &lt;blockquote&gt;
     &lt;blockquote&gt;
-      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capC-novosArquivos&quot;&gt;« Anexo C - Novos arquivos&lt;/a&gt; « Anexo D - Controle de Versão » &lt;a href=&quot;/ddp/2021/config&quot;&gt;« Arquivo de Configuração (config.h)&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capC-novosArquivos&quot;&gt;« Anexo C - Novos arquivos&lt;/a&gt; « Anexo D - Controle de Versão » &lt;a href=&quot;/ddp/2021/config&quot;&gt;Arquivo de Configuração (config.h) »&lt;/a&gt;&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
@@ -1569,7 +2021,7 @@ Uma nova aba com o código gerado é exibida.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;blockquote&gt;
     &lt;blockquote&gt;
-      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capD-versionamento&quot;&gt;« Anexo D - Controle de Versão&lt;/a&gt; « Arquivo de Configuração (config.h)&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/capD-versionamento&quot;&gt;« Anexo D - Controle de Versão&lt;/a&gt; « Arquivo de Configuração (config.h) » &lt;a href=&quot;/ddp/2021/c1-piscaLED&quot;&gt;C1 - Pisca LED »&lt;/a&gt;&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
@@ -2362,356 +2814,6 @@ Perceba que na aba &lt;strong&gt;&lt;em&gt;Projects&lt;/em&gt;&lt;/strong&gt; o 
 
     &lt;span class=&quot;n&quot;&gt;LCD_EN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_FUNCTION_SET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_FS_DATA_LENGTH_4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_FS_LINE_NUMBER_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_DISPLAY_CONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_DC_DISPLAY_ON&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_DC_CURSOR_OFF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_DC_BLINK_OFF&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_CLEAR_DISPLAY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_RETURN_HOME&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Escreve uma string no display&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dispLCD_lincol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dispLCD_dataReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Escreve um número inteiro no display&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dispLCD_num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tam&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sinal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 0:+ 1:-&lt;/span&gt;
-   
-    &lt;span class=&quot;n&quot;&gt;sinal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sinal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;dispLCD_lincol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   
-    &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sinal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dispLCD_dataReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sinal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dispLCD_dataReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'-'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- 
-    &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;dispLCD_dataReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'0'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Apaga todos os caracteres no display&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dispLCD_clr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_CLEAR_DISPLAY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
-
-&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
-
-&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
-
-&lt;p&gt;Bom trabalho!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Display LCD</summary></entry><entry><title type="html">P0120 - Display LCD com 8 vias de barramento</title><link href="http://localhost:4000/ddp/2020/P0120-dispLCD8vias/" rel="alternate" type="text/html" title="P0120 - Display LCD com 8 vias de barramento" /><published>2020-08-15T16:23:21-03:00</published><updated>2020-08-15T16:23:21-03:00</updated><id>http://localhost:4000/ddp/2020/P0120-dispLCD8vias</id><content type="html" xml:base="http://localhost:4000/ddp/2020/P0120-dispLCD8vias/">&lt;h1 id=&quot;display-lcd&quot;&gt;Display LCD&lt;/h1&gt;
-
-&lt;p&gt;O dispositivo mais comum para a exibição de cadeia de caracteres (&lt;em&gt;strings&lt;/em&gt;) e variáveis numéricas é o display de cristal líquido (&lt;em&gt;Liquid Crystal Display&lt;/em&gt; - LCD). 
-Assim faz-se necessária uma biblioteca mínima para seu uso.&lt;/p&gt;
-&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
-
-&lt;p&gt;Exibir uma mensagem de texto e uma variável no display LCD.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;1-circuito-hardware&quot;&gt;1. Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: Display LCD HD44780&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0120/dispLCD8vias.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;2-programa-firmware&quot;&gt;2. Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0120/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;estrutura-do-programa&quot;&gt;Estrutura do programa&lt;/h2&gt;
-
-&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
- * File:   main.c
- * Author: josewrpereira
- *
- * Created on 15 de Agosto de 2020, 14:03:21
- *
- * -------------------------------------------------
- *          MAPA DE ENTRADAS E SAIDAS
- * -------------------------------------------------
- *  Pinos   |nº     | Conexão
- * ---------|-------|-------------------------------
- *  RD6     |29     | LCD_RS
- *  RD7     |30     | LCD_EN
- *  RB0     |33     | LCD_D0
- *  RB1     |34     | LCD_D1
- *  RB2     |35     | LCD_D2
- *  RB3     |36     | LCD_D3
- *  RB4     |37     | LCD_D4
- *  RB5     |38     | LCD_D5
- *  RB6     |39     | LCD_D6
- *  RB7     |40     | LCD_D7
- * -------------------------------------------------
- * -------------------------------------------------
- */&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-#include &quot;delay.h&quot;
-#include &quot;dispLCD8vias.h&quot;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;dispLCD_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;  Display LCD   &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;    HD44780     &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispLCD_clr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; dispLCD_init() &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;  inicializa    &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dispLCD(l,c,str)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;l: linha        &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c: coluna       &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;str: string     &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;  Display LCD   &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;dispLCD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Fibonacci:      &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;n_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;n_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;n_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-                        &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;dispLCD_num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-                    &lt;span class=&quot;n&quot;&gt;tela&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;inclusão-de-bibliotecas&quot;&gt;Inclusão de bibliotecas&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
- * File:   dispLCD8vias.c
- * Author: josewrpereira
- *
- * Created on 15 de Agosto de 2020, 14:06
- * 
- * -------------------------------------------------
- *          MAPA DE ENTRADAS E SAIDAS
- * -------------------------------------------------
- *  Pinos   |nº     |Conexão
- * ---------|-------|-------------------------------
- *  RD6     |29     | LCD_RS
- *  RD7     |30     | LCD_EN
- *  RB0     |33     | LCD_D0
- *  RB1     |34     | LCD_D1
- *  RB2     |35     | LCD_D2
- *  RB3     |36     | LCD_D3
- *  RB4     |37     | LCD_D4
- *  RB5     |38     | LCD_D5
- *  RB6     |39     | LCD_D6
- *  RB7     |40     | LCD_D7
- * -------------------------------------------------
- */&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#include &quot;config.h&quot;
-&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;//***************** Interface com PORTs/Pinos&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_BUS         PORTB
-#define LCD_EN          PORTDbits.RD7
-#define LCD_RS          PORTDbits.RD6
-#define LCD_ROWS        2
-#define LCD_COLS        16
-&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;//***************** Definicao de Comandos ao LCD &lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_CLEAR_DISPLAY           0x01
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_RETURN_HOME             0x02
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_ENTRY_MODE_SET          0x04
-#define LCD_EMS_CURSOR_RIGHT        0x02
-#define LCD_EMS_CURSOR_LEFT         0x00
-#define LCD_EMS_SHIFT_DISPLAY       0x01
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_DISPLAY_CONTROL         0x08
-#define LCD_DC_DISPLAY_ON           0x04
-#define LCD_DC_DISPLAY_OFF          0x00
-#define LCD_DC_CURSOR_ON            0x02
-#define LCD_DC_CURSOR_OFF           0x00
-#define LCD_DC_BLINK_ON             0x01
-#define LCD_DC_BLINK_OFF            0x00
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_CURSOR_SHIFT            0x10
-#define LCD_CS_LEFT                 0x00
-#define LCD_CS_RIGHT                0x04
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_DISPLAY_SHIFT           0x10
-#define LCD_DS_LEFT                 0x08
-#define LCD_DS_RIGHt                0x0C
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_FUNCTION_SET            0x20
-#define LCD_FS_DATA_LENGTH_8        0x10
-#define LCD_FS_DATA_LENGTH_4        0x00
-#define LCD_FS_LINE_NUMBER_1        0x00
-#define LCD_FS_LINE_NUMBER_2        0x08
-#define LCD_FS_DOTS_FORMAT_5x8      0x00
-#define LCD_FS_DOTS_FORMAT_5x11     0x04
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_SET_CGRAM_ADDRS( adrs ) (0x40+(adrs &amp;amp; 0x3F))
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define LCD_SET_DDRAM_ADDRS( adrs ) (0x80+(adrs &amp;amp; 0x7F))
-#define LCD_ADDR_LINE_0             0x00
-#define LCD_ADDR_LINE_1             0x40
-&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;// Escreve um comando no display (Instruction Register)&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_RS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_BUS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_EN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_EN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Escreve um dado no display (Data Register))&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dispLCD_dataReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_RS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_BUS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_EN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;__delay_us&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;LCD_EN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Posicionar o cursor na coordenada: linha e coluna &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dispLCD_lincol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_SET_DDRAM_ADDRS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_ADDR_LINE_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;col&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_ADDR_LINE_0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Inicializa os pinos conectados ao display&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dispLCD_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;ANSELH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;TRISDbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TRISD6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;LCD_EN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_FUNCTION_SET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_FS_DATA_LENGTH_8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_FS_LINE_NUMBER_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_DISPLAY_CONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_DC_DISPLAY_ON&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_DC_CURSOR_OFF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LCD_DC_BLINK_OFF&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_CLEAR_DISPLAY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;dispLCD_instReg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LCD_RETURN_HOME&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
