@@ -1,4 +1,4 @@
-I"\<h1 id="pisca-led">Pisca LED</h1>
+I"X�<h1 id="pisca-led">Pisca LED</h1>
 
 <p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.</p>
 
@@ -27,8 +27,8 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -60,7 +60,7 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/projectTree.jpg?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/projectTree.png?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -258,7 +258,7 @@ Para indicar essa ausência de parâmetros usa-se a palavra reservada <code clas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/sfr-PIC16F886-7.png?raw=true" alt="SFR     " /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/sfr-PIC16F886-7.png?raw=true" alt="SFR     " /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
@@ -278,7 +278,7 @@ Para indicar essa ausência de parâmetros usa-se a palavra reservada <code clas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portdreg.png?raw=true" alt="PORTDreg" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portdreg.png?raw=true" alt="PORTDreg" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
@@ -316,7 +316,7 @@ Para indicar essa ausência de parâmetros usa-se a palavra reservada <code clas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisdreg.png?raw=true" alt="TRISDreg" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/trisdreg.png?raw=true" alt="TRISDreg" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 57</td>
@@ -341,7 +341,7 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD4-0_diagrama.png?raw=true" alt="DiagramaRD0-4" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portD4-0_diagrama.png?raw=true" alt="DiagramaRD0-4" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
@@ -375,8 +375,8 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD0_0.png?raw=true" alt="PORTD0-0" /></td>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisd0_0.png?raw=true" alt="TRISD0-0" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portD0_0.png?raw=true" alt="PORTD0-0" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/trisd0_0.png?raw=true" alt="TRISD0-0" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
@@ -424,8 +424,8 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -437,6 +437,18 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
 <p>Ficou alguma dúvida, entre em contato.</p>
 
 <p>Bom trabalho!</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/config">« Arquivo de Configuração (config.h) </a> « C1 - Pisca LED »</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
 
 <p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 :ET
