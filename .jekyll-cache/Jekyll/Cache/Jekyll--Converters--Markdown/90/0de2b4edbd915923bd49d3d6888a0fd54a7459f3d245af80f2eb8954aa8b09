@@ -1,4 +1,4 @@
-I"�'<h1 id="configurações-do-uc">Configurações do uC</h1>
+I"�'<h1 id="configurações-do-uc">Configurações do uC</h1>
 
 <p>Existem configurações de periféricos que modificam o comportamento do microcontrolador e por isso são realizadas apenas no momento da gravação, não podendo ser realizadas durante a execução do código, como por exemplo a habilitação do <em>Watchdog timer</em>, a proteção da memória de código, a disponibilização de um determinado pino para <em>Master clear</em> ou I/O, etc.</p>
 
@@ -250,7 +250,7 @@ Uma nova aba com o código gerado é exibida.</p>
 <blockquote>
   <blockquote>
     <blockquote>
-      <p><a href="/ddp/2021/capD-versionamento">« Anexo D - Controle de Versão</a> « Arquivo de Configuração (config.h)</p>
+      <p><a href="/ddp/2021/capD-versionamento">« Anexo D - Controle de Versão</a> « Arquivo de Configuração (config.h) » <a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED »</a></p>
     </blockquote>
   </blockquote>
 </blockquote>

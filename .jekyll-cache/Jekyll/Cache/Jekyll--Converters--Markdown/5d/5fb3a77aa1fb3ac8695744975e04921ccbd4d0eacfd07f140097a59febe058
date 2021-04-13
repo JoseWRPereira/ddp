@@ -1,4 +1,4 @@
-I"XP<h1 id="git-e-github">Git e GitHub</h1>
+I"]P<h1 id="git-e-github">Git e GitHub</h1>
 
 <p>Com o MPLAB-X é possível realizar o controle de versão dos projetos com algumas ferramentas específicas, entre elas o Git, e fazer a conexão com um repositório remoto, como o GitHub.</p>
 
@@ -24,7 +24,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capD-github/capD-versionamento/01.png?raw=true" alt="Plataforma GitHub" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capD-versionamento/01.png?raw=true" alt="Plataforma GitHub" /></td>
     </tr>
   </tbody>
 </table>
@@ -510,12 +510,12 @@ para obter um arquivo de boa legibilidade.</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Figura 25:</th>
+      <th style="text-align: center">Figura 25: Arquivo README.md</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capD-versionamento/26.png?raw=true" alt="Árvore do projeto" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capD-versionamento/26.png?raw=true" alt="Arquivo README_md" /></td>
     </tr>
   </tbody>
 </table>
@@ -605,7 +605,7 @@ abaixo da lista de arquivos, facilitanto o seu acesso e visualização.</p>
 <blockquote>
   <blockquote>
     <blockquote>
-      <p><a href="/ddp/2021/capC-novosArquivos">« Anexo C - Novos arquivos</a> « Anexo D - Controle de Versão » <a href="/ddp/2021/config">« Arquivo de Configuração (config.h)</a></p>
+      <p><a href="/ddp/2021/capC-novosArquivos">« Anexo C - Novos arquivos</a> « Anexo D - Controle de Versão » <a href="/ddp/2021/config">Arquivo de Configuração (config.h) »</a></p>
     </blockquote>
   </blockquote>
 </blockquote>

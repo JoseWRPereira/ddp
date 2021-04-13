@@ -280,7 +280,7 @@ para obter um arquivo de boa legibilidade.
 
 | Figura 25: Arquivo README.md  |
 |:---------------------------------------------:|
-| ![Árvore do projeto]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/26.png{{site.rawimg}}) |
+| ![Arquivo README_md]({{site.baseurlimg}}_posts/tUcPIC/capD-versionamento/26.png{{site.rawimg}}) |
 
 Note que o **README.md** está como uma arquivo ***untracked***.
 Então, inclua ele no controle de versão (GIT).
@@ -326,7 +326,7 @@ abaixo da lista de arquivos, facilitanto o seu acesso e visualização.
 
 <hr/>
 
->>> [<< Anexo C - Novos arquivos]({{site.baseurl}}/2021/capC-novosArquivos) << Anexo D - Controle de Versão >> [<< Arquivo de Configuração (config.h)]({{site.baseurl}}/2021/config)
+>>> [<< Anexo C - Novos arquivos]({{site.baseurl}}/2021/capC-novosArquivos) << Anexo D - Controle de Versão >> [Arquivo de Configuração (config.h) >>]({{site.baseurl}}/2021/config)
 
 <hr/>
 

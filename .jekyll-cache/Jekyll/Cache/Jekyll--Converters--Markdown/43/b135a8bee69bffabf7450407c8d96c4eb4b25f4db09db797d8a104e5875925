@@ -1,6 +1,6 @@
-I"�x<h1 id="pisca-led">Pisca LED</h1>
+I"X�<h1 id="pisca-led">Pisca LED</h1>
 
-<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que fazer a exibição de uma mensagem na saída padrão, que geralmente é o monitor, ser o programa mínimo funcional que se pode fazer em um programa de computador.</p>
+<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.</p>
 
 <p>Em um sistema microcontrolado, o programa equivalente ao <code class="language-plaintext highlighter-rouge">"Ola mundo"</code> é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: <code class="language-plaintext highlighter-rouge">Pisca LED</code>.</p>
 
@@ -8,7 +8,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-<p>Acionar um LED de forma intermitente com frequência de 1Hz.</p>
+<p>Acionar um LED de forma que ‘pisque’ com frequência de 1Hz.</p>
 
 <!--more-->
 
@@ -27,8 +27,8 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -60,7 +60,7 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/projectTree.jpg?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/projectTree.png?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -72,13 +72,14 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
  * File:   main.c
  * Author: josewrpereira
+ *
+ * Created on 12 April 2021, 19:39
  * 
- * Created on 21 de Setembro de 2019, 19:01
- * 
- * IDE:         MPLAB X IDE v3.15
- * Compiler:    XC8 v1.45
- * OS:          Deepin 15.11 X86_64
- * Kernel:      4.15.0-30deepin-generic
+ * IDE:         MPLAB X IDE v5.45
+ * Compiler:    XC8 v2.31
+ * Operating System: Debian GNU/Linux bullseye/sid
+ * Kernel: Linux 5.10.0-5-amd64
+ * Architecture: x86-64
  * 
  * Objetivo: 
  *      Piscar o LED com intervalo de 500 ms
@@ -89,25 +90,42 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
  *  RD0     |19     | LED (source/sink)
  */</span>
 
-<span class="cp">#include "config.h"             // Inclui diretivas de configuração do uC
-#include &lt;xc.h&gt;                 // Inclui biblioteca padrão do compilador XC8 
+                                <span class="c1">// Inclui diretivas de configuração do uC</span>
+<span class="c1">// CONFIG1</span>
+<span class="cp">#pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
+#pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
+#pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
+#pragma config CP = OFF         // Code Protection bit (Program memory code protection is disabled)
+#pragma config CPD = OFF        // Data Code Protection bit (Data memory code protection is disabled)
+#pragma config BOREN = OFF      // Brown Out Reset Selection bits (BOR disabled)
+#pragma config IESO = OFF       // Internal External Switchover bit (Internal/External Switchover mode is disabled)
+#pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
+#pragma config LVP = OFF        // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
+</span>
+<span class="c1">// CONFIG2</span>
+<span class="cp">#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
+#pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
+</span>
+<span class="cp">#include &lt;xc.h&gt;                 // Inclui biblioteca padrão do compilador XC8 
 </span>                                <span class="c1">// para microcontroladores Microchip.</span>
 
+<span class="cp">#define _XTAL_FREQ 4000000      // Define frequência do oscilador em uso.
+</span>
 <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>                 <span class="c1">// Função principal = main.</span>
-<span class="p">{</span>                               <span class="c1">// Início do bloco da função main.</span>
+<span class="p">{</span>                               <span class="c1">// Início do escopo da função main.</span>
     <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>          <span class="c1">// Inicia RD0 com o valor 0.</span>
     <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// Configura RD0 como Saída.</span>
     
     <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>                  <span class="c1">// Laço de repetição infinito.</span>
-    <span class="p">{</span>                           <span class="c1">// Inicio do laço de repetição.</span>
+    <span class="p">{</span>                           <span class="c1">// Inicio do escopo do laço de repetição.</span>
         <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>      <span class="c1">// Liga RD0.</span>
         <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>        <span class="c1">// Espera 500 ms.</span>
         <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>      <span class="c1">// Desliga RD0.</span>
         <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>        <span class="c1">// Espera 500 ms.</span>
-    <span class="p">}</span>                           <span class="c1">// Fim do laço de repetição.</span>
+    <span class="p">}</span>                           <span class="c1">// Fim do escopo laço de repetição.</span>
     <span class="k">return</span><span class="p">;</span>                     <span class="c1">// Caracteriza main como uma função sem retorno.</span>
-<span class="p">}</span>                               <span class="c1">// Fim do bloco da função main.</span>
-
+<span class="p">}</span>                               <span class="c1">// Fim do escopo da função main.</span>
 </code></pre></div></div>
 
 <h2 id="estrutura-do-programa">Estrutura do programa</h2>
@@ -115,6 +133,7 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
 <p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
 <ul>
   <li>Comentários;</li>
+  <li>Diretivas de configuração;</li>
   <li>Inclusão de bibliotecas;</li>
   <li>Diretivas de compilação;</li>
   <li>Definições úteis ao programa;</li>
@@ -144,15 +163,9 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
 */</span>
 </code></pre></div></div>
 
-<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
+<h3 id="diretivas-de-configuração">Diretivas de configuração</h3>
 
-<p>O código <code class="language-plaintext highlighter-rouge">#include &lt;xc.h&gt;</code> inclui a biblioteca padrão do compilador XC8 para microcontroladores Microchip, de modo a oferecer funções básicas e as definições ou nomenclaturas dos registradores.</p>
-
-<p>Todas as definições como <code class="language-plaintext highlighter-rouge">PORTDbits.RD0</code>, <code class="language-plaintext highlighter-rouge">TRISDbits.TRISD0</code>, <code class="language-plaintext highlighter-rouge">FOSC</code>, <code class="language-plaintext highlighter-rouge">WDTE</code>, <code class="language-plaintext highlighter-rouge">__delay_ms()</code> estão declaradas ou <em>linkadas</em> em <code class="language-plaintext highlighter-rouge">xc.h</code>, assim sendo uma biblioteca obrigatória para nosso uso.</p>
-
-<h3 id="diretivas-de-compilação-configh">Diretivas de compilação (config.h)</h3>
-
-<p>Algumas diretivas de compilação como <code class="language-plaintext highlighter-rouge">#pragma config</code> possibilitam o acesso a registradores de alguns periféricos de forma exclusiva durante a gravação do código.</p>
+<p>Algumas diretivas como <code class="language-plaintext highlighter-rouge">#pragma</code> possibilitam um método de disponibilizar informaçẽos direto ao compilador, como por exemplo o acesso a registradores de configuração do microcontrolador, que ocorrem de forma exclusiva durante a gravação do código.</p>
 
 <p>Existem diversas configurações possíveis, inicialmente usaremos as seguintes configurações:</p>
 
@@ -172,14 +185,15 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
 <span class="cp">#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
 </span>
-<span class="cp">#define _XTAL_FREQ 4000000
-</span></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Um destaque para a primeira linha em que o registrador <code class="language-plaintext highlighter-rouge">FOSC</code> é configurado para o oscilador interno. Por uma questão de simplificação de montagem inicial do circuito, optou-se por tal configuração por não necessitar de um cristal oscilador e seus capacitores conectados externamente junto aos pinos 13 e 14. A limitação dessa escolha é que a frequência do oscilador interno, que por padrão é de 4MHz, atinge no máximo 8MHz, enquanto que ao utilizar um cristal externo pode-se trabalhar com até 20MHz, e a tolerância de calibração do oscilador interno pode variar em função da temperatura, o que não afeta nossas aplicações didáticas.</p>
 
-<p>A definição <code class="language-plaintext highlighter-rouge">_XTAL_FREQ</code> deve assumir o valor do oscilador que estiver sendo utilizado na configuração, neste caso, o oscilador interno com o valor padrão é 4MHz.</p>
+<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
 
-<p>Essa definição é importante sempre que for utilizada alguma função que envolva contagem de tempo, como a função <code class="language-plaintext highlighter-rouge">__delay_ms()</code>.</p>
+<p>O código <code class="language-plaintext highlighter-rouge">#include &lt;xc.h&gt;</code> inclui a biblioteca padrão do compilador XC8 para microcontroladores Microchip, de modo a oferecer funções básicas e as definições ou nomenclaturas dos registradores.</p>
+
+<p>Todas as definições como <code class="language-plaintext highlighter-rouge">PORTDbits.RD0</code>, <code class="language-plaintext highlighter-rouge">TRISDbits.TRISD0</code>, <code class="language-plaintext highlighter-rouge">FOSC</code>, <code class="language-plaintext highlighter-rouge">WDTE</code>, <code class="language-plaintext highlighter-rouge">__delay_ms()</code> estão declaradas ou <em>linkadas</em> em <code class="language-plaintext highlighter-rouge">xc.h</code>, assim sendo uma biblioteca obrigatória para nosso uso.</p>
 
 <h3 id="definições-úteis-ao-programa">Definições úteis ao programa</h3>
 
@@ -187,16 +201,20 @@ Bem como para o <strong>PORTC e PORTD</strong> também limitado a <strong>200mA<
 
 <p>A grande vantagem é que ao utilizar um valor muitas vezes durante o código pode-se alterá-lo falcilmente se ele possuir um <code class="language-plaintext highlighter-rouge">#define</code> associado. Suponha um código que utiliza um valor constante em seus cálculos, e é definido como <code class="language-plaintext highlighter-rouge">#define PI 3.14</code>. Dorante os cáculos usa-se o “apelido” <code class="language-plaintext highlighter-rouge">PI</code> (… PI * raio … ), e ele aparece imuneras vezes no programa. Daí você programador percebe que precisa aumentar a precisão dos cálculos, e esta aproximação com duas casas decimais não é mais suficiente, agora são necessárias cinco casas decimais. Seria penoso demais procurar por todas as inserções do PI no código para mudá-los um a um, além do fato de ser muito provavel a inserção de erros. Com o <code class="language-plaintext highlighter-rouge">#define</code> basta mudar na sua declaração para <code class="language-plaintext highlighter-rouge">#define PI 3.14159</code>, que o pré-processador substitui em todos os lugares que foi utilizado o seu “apelido”.</p>
 
+<p>A definição <code class="language-plaintext highlighter-rouge">_XTAL_FREQ</code> deve assumir o valor do oscilador que estiver sendo utilizado na configuração, neste caso, o oscilador interno com o valor padrão é 4MHz.</p>
+
+<p>Essa definição é importante sempre que for utilizada alguma função que envolva contagem de tempo, como a função <code class="language-plaintext highlighter-rouge">__delay_ms()</code>.</p>
+
 <h3 id="programa-principal">Programa principal</h3>
 
-<p>Todo programa em linguagem C deve possuir uma função principal, cujo nome é obrigatório <code class="language-plaintext highlighter-rouge">main</code>. 
+<p>Todo programa em linguagem C deve possuir uma <strong>função principal</strong>, cujo nome é obrigatório <strong><code class="language-plaintext highlighter-rouge">main</code></strong>. 
 As demais funções devem possuir nomes de acordo com a tarefa que executam, mas são de total responsabilidade do programador.</p>
 
 <p>Como no microcontrolador não há um sistema operacional para invocar a execução do programa, a função principal não necessita de um retorno, bem como não possui argumentos de entrada. 
 Para indicar essa ausência de parâmetros usa-se a palavra reservada <code class="language-plaintext highlighter-rouge">void</code> que significa <code class="language-plaintext highlighter-rouge">vazio</code>.</p>
 
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>                               <span class="c1">// Início do bloco da função main.</span>
+<span class="p">{</span>                               <span class="c1">// Início do escopo da função main.</span>
 
     <span class="k">return</span><span class="p">;</span>                     <span class="c1">// Caracteriza main como uma função sem retorno.</span>
 <span class="p">}</span>                               <span class="c1">// Fim do bloco da função main.</span>
@@ -204,11 +222,11 @@ Para indicar essa ausência de parâmetros usa-se a palavra reservada <code clas
 
 <h4 id="parametrizar-habilitar-e-inicializar">Parametrizar, habilitar e inicializar</h4>
 
-<p>A estrutura básica do programa para o microcontrolador(<em>firmware</em>) consiste em dois blocos de código, sendo o primeiro para a configuração e o segundo para o programa.</p>
+<p>A estrutura básica do programa para o microcontrolador(<em>firmware</em>) consiste em dois blocos de código, sendo o primeiro para a configuração e o segundo para executar as funções do programa.</p>
 
 <p>O bloco de configuração consiste em parametrizar, habilitar e/ou inicializar os periféricos e dados utilizados no programa.</p>
 
-<p>O bloco para o programa consiste no código que normalmente é executado de forma repetida enquanto o sistema estiver em execução, ou seja, enquanto o microcontrolador estiver ligado.</p>
+<p>O bloco para as funções do programa consiste no código que normalmente é executado de forma repetida enquanto o sistema estiver em execução, ou seja, enquanto o microcontrolador estiver ligado.</p>
 
 <p>O programa aqui apresentado utiliza o pino D0 do PORTD do microcontrolador por ser o PORT mais fácil de trabalhar.</p>
 
@@ -240,7 +258,7 @@ Para indicar essa ausência de parâmetros usa-se a palavra reservada <code clas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/sfr-PIC16F886-7.png?raw=true" alt="SFR     " /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/sfr-PIC16F886-7.png?raw=true" alt="SFR     " /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
@@ -260,7 +278,7 @@ Para indicar essa ausência de parâmetros usa-se a palavra reservada <code clas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portdreg.png?raw=true" alt="PORTDreg" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portdreg.png?raw=true" alt="PORTDreg" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887</td>
@@ -298,7 +316,7 @@ Para indicar essa ausência de parâmetros usa-se a palavra reservada <code clas
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisdreg.png?raw=true" alt="TRISDreg" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/trisdreg.png?raw=true" alt="TRISDreg" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 57</td>
@@ -323,7 +341,7 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD4-0_diagrama.png?raw=true" alt="DiagramaRD0-4" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portD4-0_diagrama.png?raw=true" alt="DiagramaRD0-4" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
@@ -357,8 +375,8 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/portD0_0.png?raw=true" alt="PORTD0-0" /></td>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/trisd0_0.png?raw=true" alt="TRISD0-0" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/portD0_0.png?raw=true" alt="PORTD0-0" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/trisd0_0.png?raw=true" alt="TRISD0-0" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Fonte: <em>Datasheet</em> do PIC16F887 pág. 58</td>
@@ -406,8 +424,8 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0101/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsource.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-piscaLED/P0101-piscaLEDsink.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -419,6 +437,18 @@ O <code class="language-plaintext highlighter-rouge">-1</code> significa que o v
 <p>Ficou alguma dúvida, entre em contato.</p>
 
 <p>Bom trabalho!</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/config">« Arquivo de Configuração (config.h) </a> « C1 - Pisca LED »</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
 
 <p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 :ET

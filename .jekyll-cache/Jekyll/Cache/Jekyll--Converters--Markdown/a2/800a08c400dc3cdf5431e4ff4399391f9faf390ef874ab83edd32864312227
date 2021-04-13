@@ -1,5 +1,4 @@
-I"
-<h1 id="curta-eletrônica">Curta Eletrônica</h1>
+I"�	<h1 id="curta-eletrônica">Curta Eletrônica</h1>
 <h2 id="aprendendo-com-desafios">Aprendendo com Desafios</h2>
 
 <p>A resolução de problemas está contida das competências gerais da <a href="/ddp/docs/#2-pensamento-científico-criativo-e-crítico">BNCC</a> e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.</p>
@@ -34,7 +33,7 @@
 <h2 id="programas-básicos">Programas Básicos</h2>
 <ul>
   <li><a href="/ddp/2021/config">Arquivo de Configuração (config.h)</a></li>
-  <li><a href="/ddp/2020/P0101-piscaLED">P0101 - Pisca LED</a></li>
+  <li><a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a></li>
   <li><a href="/ddp/2020/P0102-botaoLED">P0102 - Botão LED</a></li>
   <li><a href="/ddp/2020/P0110-disp7seg">P0110 - Display de 7 segmentos</a></li>
   <li><a href="/ddp/2020/P0111-disp7segX2">P0111 - 2 Displays de 7 segmentos</a></li>
