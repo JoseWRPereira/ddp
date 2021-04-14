@@ -1,20 +1,18 @@
-I"�^<h1 id="botão-led">Botão LED</h1>
-
-<p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
+I"e<p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
 
 <p>Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.</p>
 
-<h2 id="objetivo">Objetivo</h2>
+<h1 id="objetivo">Objetivo</h1>
 
 <p>Acionar um LED copiando o estado lógico de um botão.</p>
 
 <!--more-->
 
-<h2 id="circuito-hardware">Circuito (<em>Hardware</em>)</h2>
+<h2 id="circuito-hardware">Circuito (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED_botao"><em>Hardware</em></a>)</h2>
 
 <p>O circuito para atender o objetivo possui um LED como elemento de saída e um botão pulsador como elemento de entrada.</p>
 
-<p>Na saída temos uma saída configurada como fonte (<em>source</em>), como tratado em <a href="/ddp/2020/P0101-piscaLED">P0101 - Pisca LED</a>.</p>
+<p>Na saída temos uma saída configurada como fonte (<em>source</em>), como tratado em <a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a>.</p>
 
 <p>A entrada deve possuir um estado lógico bem definido, mas um botão pulsador não garante esse estado lógico, pois possui apenas dois contatos, podendo sua configuração ser normalmente aberto (NA) ou normalmente fechado(NF). Na Figura 1 é utilizado um botão pulsador NA, que é a configuração mais comum.</p>
 
@@ -31,8 +29,8 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pullupres.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pullupres.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -47,7 +45,7 @@
 
 <p>A configuração com o resistor de <em>pull-down</em> é a que proporciona uma lógica direta a entrada do dado: botão pressionado.</p>
 
-<h2 id="programa-firmware">Programa (<em>Firmware</em>)</h2>
+<h2 id="programa-firmware">Programa (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_botaoLED.X"><em>Firmware</em></a>)</h2>
 
 <p>A Figura 2 mostra a árvore de diretórios do projeto em que são utilizados dois arquivos, sendo que o <code class="language-plaintext highlighter-rouge">main.c</code> possui o programa e o <code class="language-plaintext highlighter-rouge">config.h</code> as diretivas de configuração.</p>
 
@@ -59,7 +57,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/projectTree.jpg?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/projectTree.png?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -69,17 +67,26 @@
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef CONFIG_H
 #define CONFIG_H
 </span>
-<span class="cp">#pragma config FOSC  = INTRC_NOCLKOUT   // Fonte de clock: oscilador interno
-#pragma config WDTE  = OFF              // Desabilita WatchDog Timer 
-#pragma config MCLRE = OFF              // Desab. Master Clear via pino
-#pragma config LVP   = OFF              // Desab. gravação em baixa tensão
+<span class="c1">// CONFIG1</span>
+<span class="cp">#pragma config FOSC = INTRC_NOCLKOUT    // Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF               // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
+#pragma config PWRTE = OFF              // Power-up Timer Enable bit (PWRT disabled)
+#pragma config MCLRE = OFF              // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
+#pragma config CP = OFF                 // Code Protection bit (Program memory code protection is disabled)
+#pragma config CPD = OFF                // Data Code Protection bit (Data memory code protection is disabled)
+#pragma config BOREN = OFF              // Brown Out Reset Selection bits (BOR disabled)
+#pragma config IESO = OFF               // Internal External Switchover bit (Internal/External Switchover mode is disabled)
+#pragma config FCMEN = OFF              // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
+#pragma config LVP = OFF                // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
 </span>
-<span class="cp">#define _XTAL_FREQ     4000000          // Freq. clock interno: 4MHz(padrão)
+<span class="c1">// CONFIG2</span>
+<span class="cp">#pragma config BOR4V = BOR40V           // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
+#pragma config WRT = OFF                // Flash Program Memory Self Write Enable bits (Write protection off)
 </span>
 <span class="cp">#endif
 </span></code></pre></div></div>
 
-<p>A separação das diretivas de compilação é interessante por facilitar o tratamento dessas configurações, no caso de mudanças ou mesmo na inclusão de outras diretivas. Esse arquivo pode ser copiado para os demais projetos.</p>
+<p>A separação das diretivas de compilação é interessante por facilitar o tratamento dessas configurações, no caso de mudanças ou mesmo na inclusão de outras diretivas. Esse arquivo pode ser copiado para os demais projetos ou pode ser criado conforme descrito em <a href="/ddp/2021/config">config.h</a>.</p>
 
 <p>Segue o código fonte do <code class="language-plaintext highlighter-rouge">main.c</code>.</p>
 
@@ -87,45 +94,44 @@
  * File:   main.c
  * Author: josewrpereira
  *
- * Created on 23 de Setembro de 2019, 13:03
+ * Created on 12 April 2021, 21:39
  * 
- * IDE:         MPLAB X IDE v3.15
- * Compiler:    XC8 v1.45
- * OS:          Deepin 15.11 X86_64
- * Kernel:      4.15.0-30deepin-generic
+ * IDE:                 MPLAB X IDE v5.45
+ * Compiler:            XC8 v2.31
+ * Operating System:    Debian GNU/Linux bullseye/sid
+ * Kernel:              Linux 5.10.0-5-amd64
+ * Architecture:        x86-64
  * 
  * Objetivo: 
- *      Acionar um LED através do estado lógico de um botão
+ *      Acionar o LED em função do botão
  * 
  * Pinos    |nº     |Conexão
  *  VDD     |11,32  | Alimentação (Vcc/+5V)
  *  VSS     |12,31  | Alimentação (GND/0V)
- *  RD0     |19     |LED (source)
- *  RD3     |22     |Botão
+ *  RD0     |19     | LED (source/sink)
  */</span>
 
 
-<span class="cp">#include &lt;xc.h&gt;                 // Inclui biblioteca padrão do compilador XC8 
+<span class="cp">#include "config.h"             // Inclui diretivas de configuração do uC
+#include &lt;xc.h&gt;                 // Inclui biblioteca padrão do compilador XC8 
 </span>                                <span class="c1">// para microcontroladores Microchip.</span>
-<span class="cp">#include "config.h"             // Inclui arq. de config. (biblioteca) local.
-</span>
+
 <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>                 <span class="c1">// Função principal = main.</span>
-<span class="p">{</span>                               <span class="c1">// Início do bloco da função main.</span>
+<span class="p">{</span>                               <span class="c1">// Início do escopo da função main.</span>
     <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>          <span class="c1">// Inicia RD0 com o valor 0.</span>
     <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// Configura RD0 como Saída.</span>
     <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">// Configura RD3 como Entrada;</span>
                                 <span class="c1">// Não precisa inicialização do valor do pino.</span>
-    
+
     <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>                  <span class="c1">// Laço de repetição infinito.</span>
-    <span class="p">{</span>                           <span class="c1">// Inicio do laço de repetição.</span>
+    <span class="p">{</span>                           <span class="c1">// Inicio do escopo do laço de repetição.</span>
         <span class="k">if</span><span class="p">(</span> <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span><span class="c1">// Condição: Se o botão estiver pressionado.</span>
             <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// Liga RD0.</span>
         <span class="k">else</span>                    <span class="c1">// Senão.</span>
             <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Desliga RD0.</span>
-    <span class="p">}</span>                           <span class="c1">// Fim do laço de repetição.</span>
+    <span class="p">}</span>                           <span class="c1">// Fim do escopo do laço de repetição.</span>
     <span class="k">return</span><span class="p">;</span>                     <span class="c1">// Caracteriza main como uma função sem retorno.</span>
-<span class="p">}</span>                               <span class="c1">// Fim do bloco da função main.</span>
-
+<span class="p">}</span>                               <span class="c1">// Fim do escopo da função main.</span>
 </code></pre></div></div>
 
 <h2 id="estrutura-do-programa">Estrutura do programa</h2>
@@ -133,12 +139,12 @@
 <p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
 <ul>
   <li>Comentários;</li>
-  <li>Inclusão de bibliotecas;</li>
+  <li>Inclusão de configuração e bibliotecas;</li>
   <li>Programa principal.</li>
 </ul>
 
 <h3 id="comentários">Comentários</h3>
-<p>Os comentários estão descritos em <a href="/ddp/2020/P0101-piscaLED">P0101 - Pisca LED</a> e são semelhantes em todos os projetos aqui apresentados, assim serão omitidos para simplificar e focar no código que resolve o objetivo apresentado, mas é importante que você faça os comentários em todos os seus projetos.</p>
+<p>Os comentários estão descritos em <a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a> e são semelhantes em todos os projetos aqui apresentados, assim serão omitidos para simplificar e focar no código que resolve o objetivo apresentado, mas é importante que você faça os comentários em todos os seus projetos.</p>
 
 <h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
 <p>Note que além da biblioteca padrão <code class="language-plaintext highlighter-rouge">xc.h</code>, agora está incluído o arquivo de cabeçalho <code class="language-plaintext highlighter-rouge">config.h</code>, como já citado anteriormente.</p>
@@ -279,7 +285,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -298,7 +304,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pullupres.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pullupres.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -335,7 +341,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/imgP0102/P0102-botaoLED-pullupresInv.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pullupresInv.gif?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
@@ -349,6 +355,18 @@
 <p>Ficou com alguma dúvida, entre em contato.</p>
 
 <p>Bom trabalho!</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/c1-piscaLED">« C1 - Pisca LED</a> « C1 - Botão pulsador e LED » <a href="">»</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
 
 <p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 :ET

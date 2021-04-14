@@ -40,10 +40,11 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [Anexo D - Controle de Versão]({{site.baseurl}}/2021/capD-versionamento)
 
 
-## Programas Básicos
+## Ciclo 1 - Programas Básicos
 * [Arquivo de Configuração (config.h)]({{site.baseurl}}/2021/config)
 * [C1 - Pisca LED]({{site.baseurl}}/2021/c1-piscaLED) [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_piscaLED.X)] [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED)]
-* [P0102 - Botão LED]({{site.baseurl}}/2020/P0102-botaoLED)
+* [C1 - Botão e LED]({{site.baseurl}}/2021/c1-botaoLED)
+
 * [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)
 * [P0111 - 2 Displays de 7 segmentos]({{site.baseurl}}/2020/P0111-disp7segX2)
 * [P0112 - Detecção de borda]({{site.baseurl}}/2020/P0112-bordaBotaoPulsador)

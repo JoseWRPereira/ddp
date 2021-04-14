@@ -1,0 +1,373 @@
+I"/e<p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
+
+<p>Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.</p>
+
+<h1 id="objetivo">Objetivo</h1>
+
+<p>Acionar um LED copiando o estado lógico de um botão.</p>
+
+<!--more-->
+
+<h2 id="circuito-hardware">Circuito (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED_botao"><em>Hardware</em></a>)</h2>
+
+<p>O circuito para atender o objetivo possui um LED como elemento de saída e um botão pulsador como elemento de entrada.</p>
+
+<p>Na saída temos uma saída configurada como fonte (<em>source</em>), como tratado em <a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a>.</p>
+
+<p>A entrada deve possuir um estado lógico bem definido, mas um botão pulsador não garante esse estado lógico, pois possui apenas dois contatos, podendo sua configuração ser normalmente aberto (NA) ou normalmente fechado(NF). Na Figura 1 é utilizado um botão pulsador NA, que é a configuração mais comum.</p>
+
+<p>Para garantir o tal estado lógico bem definido, é montado um ramo com o botão e um resistor, geralmente com 10kΩ, ligados em série, entre o Vcc e o GND. No ponto de conexão entre esses dois componentes temos, em relação ao terra (<em>GND</em>), uma tensão que é a tensão do componente conectado ao terra. Este ponto é conectado ao pino do uC, assim a tensão no pino é a mesma tensão sobre o componente ligado ao terra.</p>
+
+<p>As duas configurações possíves são mostradas na Figura 1(a) e 1(b), em que o botão está conectado ao Vcc e a outra em que o botão está conectado ao terra.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1(a): Resistor de <em>Pull-down</em></th>
+      <th style="text-align: center">Figura 1(b): Resistor de <em>Pull-up</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pullupres.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Na configuração <em>pull-down</em> o resistor está conectado ao terra, o que garante, quando o botão estiver aberto, o nível lógico 0 (terra/GND).</p>
+
+<p>Ao pressionar o botão, ele fecha e conecta o ponto de conexão com o pino ao Vcc, aplicando o nível lógico 1 a ele.</p>
+
+<p>Na configuração <em>pull-up</em> o resistor está conectado ao positivo da fonte, Vcc. O botão na condição de não acionado está com contato aberto, assim a tensão sobre ele é a tensão da fonte, nesse caso 5V, conforme a 2ª lei de Kirchhoff, garantindo o nível lógico 1.</p>
+
+<p>Ao pressionar o botão, ele fecha, ligando o ponto de conexão com o pino do uC ao GND, aplicando o nível lógico 0 a ele.</p>
+
+<p>A configuração com o resistor de <em>pull-down</em> é a que proporciona uma lógica direta a entrada do dado: botão pressionado.</p>
+
+<h2 id="programa-firmware">Programa (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_botaoLED.X"><em>Firmware</em></a>)</h2>
+
+<p>A Figura 2 mostra a árvore de diretórios do projeto em que são utilizados dois arquivos, sendo que o <code class="language-plaintext highlighter-rouge">main.c</code> possui o programa e o <code class="language-plaintext highlighter-rouge">config.h</code> as diretivas de configuração.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/projectTree.png?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O arquivo de configuração deve ser incluído no <code class="language-plaintext highlighter-rouge">main.c</code> com o comando <code class="language-plaintext highlighter-rouge">#include "config.h"</code> logo no início do código.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef CONFIG_H
+#define CONFIG_H
+</span>
+<span class="c1">// CONFIG1</span>
+<span class="cp">#pragma config FOSC = INTRC_NOCLKOUT    // Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF               // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
+#pragma config PWRTE = OFF              // Power-up Timer Enable bit (PWRT disabled)
+#pragma config MCLRE = OFF              // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
+#pragma config CP = OFF                 // Code Protection bit (Program memory code protection is disabled)
+#pragma config CPD = OFF                // Data Code Protection bit (Data memory code protection is disabled)
+#pragma config BOREN = OFF              // Brown Out Reset Selection bits (BOR disabled)
+#pragma config IESO = OFF               // Internal External Switchover bit (Internal/External Switchover mode is disabled)
+#pragma config FCMEN = OFF              // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
+#pragma config LVP = OFF                // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
+</span>
+<span class="c1">// CONFIG2</span>
+<span class="cp">#pragma config BOR4V = BOR40V           // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
+#pragma config WRT = OFF                // Flash Program Memory Self Write Enable bits (Write protection off)
+</span>
+<span class="cp">#endif
+</span></code></pre></div></div>
+
+<p>A separação das diretivas de compilação é interessante por facilitar o tratamento dessas configurações, no caso de mudanças ou mesmo na inclusão de outras diretivas. Esse arquivo pode ser copiado para os demais projetos ou pode ser criado conforme descrito em <a href="/ddp/2021/config">config.h</a>.</p>
+
+<p>Segue o código fonte do <code class="language-plaintext highlighter-rouge">main.c</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 13 April 2021, 21:45
+ * 
+ * IDE:                 MPLAB X IDE v5.45
+ * Compiler:            XC8 v2.31
+ * Operating System:    Debian GNU/Linux bullseye/sid
+ * Kernel:              Linux 5.10.0-5-amd64
+ * Architecture:        x86-64
+ * 
+ * Objetivo: 
+ *      Acionar o LED em função do botão
+ * 
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD0     |19     | LED   (source)
+ *  RD3     |22     | BOTAO (pullDown)
+ */</span>
+
+
+<span class="cp">#include "config.h"             // Inclui diretivas de configuração do uC
+#include &lt;xc.h&gt;                 // Inclui biblioteca padrão do compilador XC8 
+</span>                                <span class="c1">// para microcontroladores Microchip.</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>                 <span class="c1">// Função principal = main.</span>
+<span class="p">{</span>                               <span class="c1">// Início do escopo da função main.</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>          <span class="c1">// Inicia RD0 com o valor 0.</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// Configura RD0 como Saída.</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">// Configura RD3 como Entrada;</span>
+                                <span class="c1">// Não precisa inicialização do valor do pino.</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>                  <span class="c1">// Laço de repetição infinito.</span>
+    <span class="p">{</span>                           <span class="c1">// Inicio do escopo do laço de repetição.</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span><span class="c1">// Condição: Se o botão estiver pressionado.</span>
+            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// Liga RD0.</span>
+        <span class="k">else</span>                    <span class="c1">// Senão.</span>
+            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Desliga RD0.</span>
+    <span class="p">}</span>                           <span class="c1">// Fim do escopo do laço de repetição.</span>
+    <span class="k">return</span><span class="p">;</span>                     <span class="c1">// Caracteriza main como uma função sem retorno.</span>
+<span class="p">}</span>                               <span class="c1">// Fim do escopo da função main.</span>
+</code></pre></div></div>
+
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
+
+<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
+<ul>
+  <li>Comentários;</li>
+  <li>Inclusão de configuração e bibliotecas;</li>
+  <li>Programa principal.</li>
+</ul>
+
+<h3 id="comentários">Comentários</h3>
+<p>Os comentários estão descritos em <a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a> e são semelhantes em todos os projetos aqui apresentados, assim serão omitidos para simplificar e focar no código que resolve o objetivo apresentado, mas é importante que você faça os comentários em todos os seus projetos.</p>
+
+<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
+<p>Note que além da biblioteca padrão <code class="language-plaintext highlighter-rouge">xc.h</code>, agora está incluído o arquivo de cabeçalho <code class="language-plaintext highlighter-rouge">config.h</code>, como já citado anteriormente.</p>
+
+<h3 id="programa-principal">Programa principal</h3>
+
+<p>O programa principal pode ser dividido em duas partes: configuração e laço de repetição.</p>
+
+<p>O trecho de configuração no código inicializa o pino RD0 do PORTD com o valor zero, que é para iniciar com o LED desligado.</p>
+
+<p>A linha seguinte configura o RD0 como saída, porque é o pino que aciona o LED.</p>
+
+<p>Em seguida é configurado como entrada o pino RD3.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>          <span class="c1">// Inicia RD0 com o valor 0.</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// Configura RD0 como Saída.</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>       <span class="c1">// Configura RD3 como Entrada;</span>
+</code></pre></div></div>
+
+<p>Note que o RD3 não é inicializado porque o dado vem de fora do uC, assim não faz sentido inicializá-lo pois não é um dado de saída.</p>
+
+<p>O loop infinito possui o ciclo de execução que atende o objetivo proposto sendo estruturado da seguinte forma:</p>
+<ul>
+  <li>leitura do estado lógico no pino de entrada;</li>
+  <li>ligar o LED se o estado lógico do pino é 1;</li>
+  <li>desligar o LED se o estado lógico do pino é 0;</li>
+</ul>
+
+<p>Segue a codificação da estrutura do laço de repetição.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>                  <span class="c1">// Laço de repetição infinito.</span>
+    <span class="p">{</span>                           <span class="c1">// Inicio do laço de repetição.</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span><span class="c1">// Condição: Se o botão estiver pressionado.</span>
+            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// Liga RD0.</span>
+        <span class="k">else</span>                    <span class="c1">// Senão.</span>
+            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Desliga RD0.</span>
+    <span class="p">}</span>                           <span class="c1">// Fim do laço de repetição.</span>
+</code></pre></div></div>
+
+<h2 id="utilizando-defines">Utilizando defines</h2>
+
+<p>Uma das ferramentas mais interessantes de trabalhar é utilizando os <code class="language-plaintext highlighter-rouge">defines</code> pois facilitam muito a interpretação e leitura do código, pois pode-se utilizar um termo que faça sentido com a aplicação.</p>
+
+<p>Sendo assim, pode-se definir os pinos utilizados com um termo mais coerente com as suas funções.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+</span>
+<span class="cp">#define LED     PORTDbits.RD0
+#define BOTAO   PORTDbits.RD3
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">LED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">BOTAO</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
+            <span class="n">LED</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="n">LED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Observando a estrutura condicional dentro do laço de repetição, pode-se ver que a leitura e interpretação do funcionamento do programa está mais evidente.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Se o BOTAO estiver acionado</code>
+<code class="language-plaintext highlighter-rouge">ligar o LED</code>
+<code class="language-plaintext highlighter-rouge">senão</code>
+<code class="language-plaintext highlighter-rouge">desligar o LED</code></p>
+
+<p>A estrutura condicional <code class="language-plaintext highlighter-rouge">if</code> verifica se o conteúdo entre os parênteses é verdadeiro para executar o código à seguir. A condição <code class="language-plaintext highlighter-rouge">BOTAO == 1</code> é uma comparação que verifica a igualdade(<code class="language-plaintext highlighter-rouge">==</code>) entre os dois termos <code class="language-plaintext highlighter-rouge">BOTAO</code> e <code class="language-plaintext highlighter-rouge">1</code>.</p>
+
+<p>A condição verdadeira dentro da estrutura do <code class="language-plaintext highlighter-rouge">if</code> não precisa ser uma comparação, pode ser o estado lógico de uma variável ou de um registrador. Assim pode-se utilizar a seguinte condição: <code class="language-plaintext highlighter-rouge">if( BOTAO )</code> pois <code class="language-plaintext highlighter-rouge">BOTAO</code> é o <code class="language-plaintext highlighter-rouge">PORTDbits.RD3</code>, que é um registrador e pode assumir os estado lógicos 1 ou 0, respectivamente verdadeiro ou falso.</p>
+
+<p>O código abaixo utiliza a condicional sem a comparação, apenas com o estado lógico da entrada.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+</span>
+<span class="cp">#define LED     PORTDbits.RD0
+#define BOTAO   PORTDbits.RD3
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">LED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">BOTAO</span> <span class="p">)</span>
+            <span class="n">LED</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="n">LED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="simplificando-o-código">Simplificando o código</h2>
+
+<p>O processo de codificação envolve muitas etapas e compromissos com um equilíbrio entre simplicidade, tamanho e velocidade de execução, sendo que o ideal seria um código o <strong>mais simples</strong> possível, com o <strong>menor tamanho</strong> e com a maior <strong>velocidade de execução</strong>. Porém essa condição combinada é praticamente uma utopia. Então o programador deve escolher qual dessas características é prioritária.</p>
+
+<p>A simplificação do codigo exposto acima, num dos raros casos, pode ser melhorado nesses três aspectos.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+</span>
+<span class="cp">#define LED             PORTDbits.RD0
+#define BOTAO           PORTDbits.RD3
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">LED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">LED</span> <span class="o">=</span> <span class="n">BOTAO</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Como a condição para acionar o LED é o botão estar pressionado, a lógica é direta nesse acionamento. Assim, basta atribuir o valor da entrada (<code class="language-plaintext highlighter-rouge">BOTAO</code>) à saída (<code class="language-plaintext highlighter-rouge">LED</code>).</p>
+
+<p>O código dentro do laço de repetição assim ficou mais simples de compreender, menor em extensão e por consequência com execução mais rápida.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Botão com resistor de <em>pull-down</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pulldownres.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="inversão-da-entrada">Inversão da entrada</h2>
+
+<p>Como visto no início desta postagem, existe a possibilidade de ligar o botão com um resistor de <em>pull-down</em> ou <em>pull-up</em>. Caso a ligação já esteja feita, é muito mais simples mudar o estado lógico do pino no programa do que mudar no circuito, seja no esquemático ou na montagem.</p>
+
+<p>A condição do circuito abaixo utilizando o código já apresentado, mostra que o comportamento do LED está invertido em relação ao pressionar do botão. O botão pressionado apaga o LED e o botão não pressionado mantém o LED ligado.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Botão com resistor de <em>pull-up</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pullupres.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Para inverter o estado lógico da entrada, e garantir que ao pressionar o botão o LED acenda, basta inserir o operador de inversão lógica <code class="language-plaintext highlighter-rouge">!</code>, equivalente a uma porta lógica inversora: <code class="language-plaintext highlighter-rouge">LED = !BOTAO;</code>. Essa instrução significa que o LED recebe o estado lógico inverso do BOTAO.</p>
+
+<p>Segue o código com o estado lógico do botão invertido e abaixo o seu comportamento no simulador.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+</span>
+<span class="cp">#define LED             PORTDbits.RD0
+#define BOTAO           PORTDbits.RD3
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">LED</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">LED</span> <span class="o">=</span> <span class="o">!</span><span class="n">BOTAO</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Botão com resistor de <em>pull-up</em>  e inversão de estado lógico em código</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-botaoLED/P0102-botaoLED-pullupresInv.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/c1-piscaLED">« C1 - Pisca LED</a> « C1 - Botão pulsador e LED » <a href="">»</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET
