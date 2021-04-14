@@ -1,4 +1,4 @@
-I"�
+I"�
 <h1 id="curta-eletrônica">Curta Eletrônica</h1>
 <h2 id="aprendendo-com-desafios">Aprendendo com Desafios</h2>
 
@@ -31,11 +31,13 @@
   <li><a href="/ddp/2021/capD-versionamento">Anexo D - Controle de Versão</a></li>
 </ul>
 
-<h2 id="programas-básicos">Programas Básicos</h2>
+<h2 id="ciclo-1---programas-básicos">Ciclo 1 - Programas Básicos</h2>
 <ul>
   <li><a href="/ddp/2021/config">Arquivo de Configuração (config.h)</a></li>
   <li><a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a> [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_piscaLED.X">src</a>] [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED">sim</a>]</li>
-  <li><a href="/ddp/2020/P0102-botaoLED">P0102 - Botão LED</a></li>
+  <li>
+    <p><a href="/ddp/2021/c1-botaoLED">C1 - Botão e LED</a></p>
+  </li>
   <li><a href="/ddp/2020/P0110-disp7seg">P0110 - Display de 7 segmentos</a></li>
   <li><a href="/ddp/2020/P0111-disp7segX2">P0111 - 2 Displays de 7 segmentos</a></li>
   <li><a href="/ddp/2020/P0112-bordaBotaoPulsador">P0112 - Detecção de borda</a></li>
