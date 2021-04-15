@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-13T21:54:34-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-15T15:32:13-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">Botão pulsador e LED</title><link href="http://localhost:4000/ddp/2021/c1-botaoLED/" rel="alternate" type="text/html" title="Botão pulsador e LED" /><published>2021-04-13T21:38:21-03:00</published><updated>2021-04-13T21:38:21-03:00</updated><id>http://localhost:4000/ddp/2021/c1-botaoLED</id><content type="html" xml:base="http://localhost:4000/ddp/2021/c1-botaoLED/">&lt;p&gt;Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (&lt;em&gt;push button&lt;/em&gt;) para ligar um LED.&lt;/p&gt;
 
 &lt;p&gt;Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.&lt;/p&gt;
@@ -6,6 +6,17 @@
 &lt;h1 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h1&gt;
 
 &lt;p&gt;Acionar um LED copiando o estado lógico de um botão.&lt;/p&gt;
+
+&lt;h1 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Configuração e leitura de pino como entrada digital;&lt;/li&gt;
+  &lt;li&gt;Arquivo de cabeçalho;&lt;/li&gt;
+  &lt;li&gt;Estrutura condicional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;Estrutura de repetição infinita &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;while( 1 )&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;Definições;&lt;/li&gt;
+  &lt;li&gt;Simplificação de código.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;!--more--&gt;
 
@@ -381,6 +392,17 @@
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
 
 &lt;p&gt;Acionar um LED de forma que ‘pisque’ com frequência de 1Hz.&lt;/p&gt;
+
+&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Estrutura básica de um programa;&lt;/li&gt;
+  &lt;li&gt;Comentários;&lt;/li&gt;
+  &lt;li&gt;Diretivas de configuração;&lt;/li&gt;
+  &lt;li&gt;Inclusão de biblioteca padrão;&lt;/li&gt;
+  &lt;li&gt;Programa principal;&lt;/li&gt;
+  &lt;li&gt;Configuração e acionamento de pino como saída.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;!--more--&gt;
 

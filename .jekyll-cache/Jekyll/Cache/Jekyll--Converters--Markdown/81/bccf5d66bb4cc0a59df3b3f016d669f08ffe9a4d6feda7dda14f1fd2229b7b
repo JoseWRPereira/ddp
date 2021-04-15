@@ -1,4 +1,4 @@
-I"�0<h1 id="postagens">Postagens</h1>
+I"�3<h1 id="postagens">Postagens</h1>
 
 <p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
@@ -17,6 +17,17 @@
 <h1 id="objetivo">Objetivo</h1>
 
 <p>Acionar um LED copiando o estado lógico de um botão.</p>
+
+<h1 id="conteúdo">Conteúdo</h1>
+
+<ul>
+  <li>Configuração e leitura de pino como entrada digital;</li>
+  <li>Arquivo de cabeçalho;</li>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">if</code> e <code class="language-plaintext highlighter-rouge">else</code>;</li>
+  <li>Estrutura de repetição infinita <code class="language-plaintext highlighter-rouge">while( 1 )</code>;</li>
+  <li>Definições;</li>
+  <li>Simplificação de código.</li>
+</ul>
 
 
    
@@ -40,6 +51,17 @@
 <h2 id="objetivo">Objetivo</h2>
 
 <p>Acionar um LED de forma que ‘pisque’ com frequência de 1Hz.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura básica de um programa;</li>
+  <li>Comentários;</li>
+  <li>Diretivas de configuração;</li>
+  <li>Inclusão de biblioteca padrão;</li>
+  <li>Programa principal;</li>
+  <li>Configuração e acionamento de pino como saída.</li>
+</ul>
 
 
    

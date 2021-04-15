@@ -1,4 +1,4 @@
-I"C�<h1 id="pisca-led">Pisca LED</h1>
+I"h�<h1 id="pisca-led">Pisca LED</h1>
 
 <p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.</p>
 
@@ -9,6 +9,17 @@
 <h2 id="objetivo">Objetivo</h2>
 
 <p>Acionar um LED de forma que ‘pisque’ com frequência de 1Hz.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura básica de um programa;</li>
+  <li>Comentários;</li>
+  <li>Diretivas de configuração;</li>
+  <li>Inclusão de biblioteca padrão;</li>
+  <li>Programa principal;</li>
+  <li>Configuração e acionamento de pino como saída.</li>
+</ul>
 
 <!--more-->
 

@@ -1,10 +1,21 @@
-I"e<p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
+I"g<p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
 
 <p>Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.</p>
 
 <h1 id="objetivo">Objetivo</h1>
 
 <p>Acionar um LED copiando o estado lógico de um botão.</p>
+
+<h1 id="conteúdo">Conteúdo</h1>
+
+<ul>
+  <li>Configuração e leitura de pino como entrada digital;</li>
+  <li>Arquivo de cabeçalho;</li>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">if</code> e <code class="language-plaintext highlighter-rouge">else</code>;</li>
+  <li>Estrutura de repetição infinita <code class="language-plaintext highlighter-rouge">while( 1 )</code>;</li>
+  <li>Definições;</li>
+  <li>Simplificação de código.</li>
+</ul>
 
 <!--more-->
 
@@ -94,7 +105,7 @@
  * File:   main.c
  * Author: josewrpereira
  *
- * Created on 12 April 2021, 21:39
+ * Created on 13 April 2021, 21:45
  * 
  * IDE:                 MPLAB X IDE v5.45
  * Compiler:            XC8 v2.31
@@ -108,7 +119,8 @@
  * Pinos    |nº     |Conexão
  *  VDD     |11,32  | Alimentação (Vcc/+5V)
  *  VSS     |12,31  | Alimentação (GND/0V)
- *  RD0     |19     | LED (source/sink)
+ *  RD0     |19     | LED   (source)
+ *  RD3     |22     | BOTAO (pullDown)
  */</span>
 
 
@@ -186,7 +198,7 @@
 
 <h2 id="utilizando-defines">Utilizando defines</h2>
 
-<p>Uma das ferramentas mais interessantes de trabalhar é utilizando os <code class="language-plaintext highlighter-rouge">defines</code> pois facilitam muito a interpretação e leitura do código, pois pode-se utilizar um termo que faça sentido com a aplicação.</p>
+<p>Uma das ferramentas mais interessantes de se trabalhar é a utilização dos <code class="language-plaintext highlighter-rouge">defines</code> pois facilitam muito a interpretação e a leitura do código, podendo-se utilizar um termo que faça sentido com a aplicação.</p>
 
 <p>Sendo assim, pode-se definir os pinos utilizados com um termo mais coerente com as suas funções.</p>
 
@@ -226,8 +238,8 @@
 
 <p>O código abaixo utiliza a condicional sem a comparação, apenas com o estado lógico da entrada.</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
-#include "config.h"
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
 </span>
 <span class="cp">#define LED     PORTDbits.RD0
 #define BOTAO   PORTDbits.RD3
@@ -254,8 +266,8 @@
 <p>O processo de codificação envolve muitas etapas e compromissos com um equilíbrio entre simplicidade, tamanho e velocidade de execução, sendo que o ideal seria um código o <strong>mais simples</strong> possível, com o <strong>menor tamanho</strong> e com a maior <strong>velocidade de execução</strong>. Porém essa condição combinada é praticamente uma utopia. Então o programador deve escolher qual dessas características é prioritária.</p>
 
 <p>A simplificação do codigo exposto acima, num dos raros casos, pode ser melhorado nesses três aspectos.</p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
-#include "config.h"
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
 </span>
 <span class="cp">#define LED             PORTDbits.RD0
 #define BOTAO           PORTDbits.RD3
@@ -313,8 +325,8 @@
 
 <p>Segue o código com o estado lógico do botão invertido e abaixo o seu comportamento no simulador.</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
-#include "config.h"
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
 </span>
 <span class="cp">#define LED             PORTDbits.RD0
 #define BOTAO           PORTDbits.RD3
