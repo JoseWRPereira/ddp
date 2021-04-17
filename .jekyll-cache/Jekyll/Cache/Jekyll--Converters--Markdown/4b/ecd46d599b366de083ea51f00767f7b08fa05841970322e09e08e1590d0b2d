@@ -1,10 +1,34 @@
-I"�3<h1 id="postagens">Postagens</h1>
+I"�3<h1 id="postagens">Postagens</h1>
 
 <p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
 <br />
 <hr /><hr />
 
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos/">C1 - Semáforo de Veículos</a></h2>
+   <span class="post-date">2021-04-15</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar 3 saídas simulando um semáforo de veículos.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Uso de definições;</li>
+  <li>Encapsulamento de trechos de código: procedimentos e funções;</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos/">leia mais </a>
+   
+   </div>
+   <hr />
 
    <div class="post-preview">
    <h2><a href="/ddp/2021/c1-botaoLED/">Botão pulsador e LED</a></h2>
@@ -219,25 +243,6 @@
 
    
       <a href="/ddp/2020/P0020-novoProjeto/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0130-teclado4x4/">P0130 - Teclado Matricial</a></h2>
-   <span class="post-date">2020-08-16</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="teclado-4x4">Teclado 4x4</h1>
-
-<p>A interface com o operador popularmente denominada Interface Homem Máquina(IHM), costumeiramente possui a dupla display LCD e teclado matricial.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Implementar uma interface com um teclado matricial 4x4 para entrada de dados.</p>
-
-
-   
-      <a href="/ddp/2020/P0130-teclado4x4/">leia mais </a>
    
    </div>
    <hr />

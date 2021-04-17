@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Artigos</title>
-<meta property="og:title" content="Artigos" />
+<title>C1 - Semáforo de Veículos</title>
+<meta property="og:title" content="C1 - Semáforo de Veículos" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Artigos">
+<meta itemprop="name" content="C1 - Semáforo de Veículos">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Artigos"/>
+<meta name="twitter:title" content="C1 - Semáforo de Veículos"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -288,8 +288,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/pages/archive.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/pages/archive.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2021-04-15-c1-semaforo_veiculos.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2021-04-15-c1-semaforo_veiculos.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -306,280 +306,247 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/archive/">Artigos</a>
+                <a href="http://localhost:4000/ddp/2021/c1-semaforo_veiculos/">C1 - Semáforo de Veículos</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="índice-de-artigos">Índice de Artigos</h1>
+            <h1 style="margin-bottom:0px">C1 - Semáforo de Veículos</h1>
+<span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+<span class="post-date" style="font-style: italic;">2021-04-15</span>
+<h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
 
-<h2 class="c-archives__year" id="2021-ref">2021</h2>
-<ul class="c-archives__list">
-<li class="c-archives__item">
-  21-04-15: <a href="/ddp/2021/c1-semaforo_veiculos/">C1 - Semáforo de Veículos</a>
-  </li>
+<h2 id="objetivo">Objetivo</h2>
 
+<p>Acionar 3 saídas simulando um semáforo de veículos.</p>
 
-<li class="c-archives__item">
-  21-04-13: <a href="/ddp/2021/c1-botaoLED/">Botão pulsador e LED</a>
-  </li>
+<h2 id="conteúdo">Conteúdo</h2>
 
-
-<li class="c-archives__item">
-  21-04-12: <a href="/ddp/2021/c1-piscaLED/">C1 - Pisca LED</a>
-  </li>
-
-
-<li class="c-archives__item">
-  21-04-10: <a href="/ddp/2021/capD-versionamento/">Anexo D - Controle de Versão</a>
-  </li>
-
-
-<li class="c-archives__item">
-  21-04-10: <a href="/ddp/2021/capC-novosArquivos/">Anexo C - Novos Arquivos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  21-04-10: <a href="/ddp/2021/capB-novoProjeto/">Anexo B - Novo Projeto</a>
-  </li>
-
-
-<li class="c-archives__item">
-  21-04-10: <a href="/ddp/2021/capA-instalacao/">Anexo A - Instalação do MPLAB-X e XC8</a>
-  </li>
-
-
-<li class="c-archives__item">
-  21-01-22: <a href="/ddp/2021/config/">Arquivo de Configuração (config.h)</a>
-  </li>
+<ul>
+  <li>Uso de definições;</li>
+  <li>Encapsulamento de trechos de código: procedimentos e funções;</li>
 </ul>
-<h2 class="c-archives__year" id="2020-ref">2020</h2>
-<ul class="c-archives__list">
 
+<!--more-->
+
+<h2 id="circuito-hardware">Circuito (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo"><em>Hardware</em></a>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1: Semáforo de Veículos de via simples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-semaforo_veiculos/semaforo_veiculos.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="programa-firmware">Programa (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos.X"><em>Firmware</em></a>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-semaforo_veiculos/projectTree.png?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 15 April 2021, 21:11
+ * 
+ * IDE:                 MPLAB X IDE v5.45
+ * Compiler:            XC8 v2.31
+ * Operating System:    Debian GNU/Linux bullseye/sid
+ * Kernel:              Linux 5.10.0-5-amd64
+ * Architecture:        x86-64
+ * 
+ * Objetivo: 
+ *      Acionar 3 saídas simulando um semáforo com os respectivos tempos:
+ *          Vermelha: 5s
+ *          Verde: 4s
+ *          Amarela: 1s
+ * 
+ * 
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD7     |30     | LED Vermelho (source)
+ *  RD6     |29     | LED Amarelo (source)
+ *  RD5     |28     | LED Verde (source)
+ * 
+ */</span>
+
+<span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+</span>
+<span class="cp">#define _XTAL_FREQ  4000000
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">// Configuração dos pinos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// LED Vermelho</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// LED Amarelo</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// LED Verde</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+            <span class="c1">// LED Vermelho</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// LED Verde                </span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">4000</span><span class="p">);</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// LED Amarelo</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="utilização-de-defines">Utilização de #defines</h2>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+</span>
+<span class="cp">#define _XTAL_FREQ  4000000
+</span>
+<span class="cp">#define SEMAFORO_VERMELHO   PORTDbits.RD7
+#define SEMAFORO_AMARELO    PORTDbits.RD6
+#define SEMAFORO_VERDE      PORTDbits.RD5
+</span>
+<span class="cp">#define TEMPO_SEMAFORO_VERMELHO 5000
+#define TEMPO_SEMAFORO_AMARELO  1000
+#define TEMPO_SEMAFORO_VERDE    4000
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">// Configuração dos pinos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="c1">// Inicialização do estado dos LEDs</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERMELHO</span> <span class="p">);</span>
+        <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERDE</span> <span class="p">);</span>
+        <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_AMARELO</span> <span class="p">);</span>
+        <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="encapsulamento-de-código">Encapsulamento de código</h2>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+</span>
+<span class="cp">#define _XTAL_FREQ  4000000
+</span>
+<span class="cp">#define SEMAFORO_VERMELHO   PORTDbits.RD7
+#define SEMAFORO_AMARELO    PORTDbits.RD6
+#define SEMAFORO_VERDE      PORTDbits.RD5
+</span>
+<span class="cp">#define TEMPO_SEMAFORO_VERMELHO 5000
+#define TEMPO_SEMAFORO_AMARELO  1000
+#define TEMPO_SEMAFORO_VERDE    4000
+</span>
+<span class="kt">void</span> <span class="nf">semaforo_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">// Configuração dos pinos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="c1">// Inicialização do estado dos LEDs</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">semaforo_vermelho</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERMELHO</span> <span class="p">);</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">semaforo_verde</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERDE</span> <span class="p">);</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">semaforo_amarelo</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_AMARELO</span> <span class="p">);</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">semaforo_init</span><span class="p">();</span>
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">semaforo_vermelho</span><span class="p">();</span>
+        <span class="n">semaforo_verde</span><span class="p">();</span>
+        <span class="n">semaforo_amarelo</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/c1-botaoLED">« Botão pulsador e LED </a> « C1 - Semáforo de Veículos » <a href="/ddp/2021/c1-botaoLED">C1 - Botão pulsador e LED »</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 
-<li class="c-archives__item">
-  20-12-26: <a href="/ddp/2020/P0021-novoArquivo/">P0021 - Novo Arquivo (main.c)</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-12-19: <a href="/ddp/2020/P0020-novoProjeto/">P0020 - Novo Projeto</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-08-16: <a href="/ddp/2020/P0130-teclado4x4/">P0130 - Teclado Matricial</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-08-15: <a href="/ddp/2020/P0122-dispLCD4vias/">P0122 - Display LCD com 4 vias de barramento</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-08-15: <a href="/ddp/2020/P0120-dispLCD8vias/">P0120 - Display LCD com 8 vias de barramento</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-08-13: <a href="/ddp/2020/P0112-bordaBotaoPulsador/">P0112 - Borda Botão Pulsador</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-08-13: <a href="/ddp/2020/P0111-disp7segX2/">P0111 - 2 Displays de 7 segmentos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-08-05: <a href="/ddp/2020/P0110-disp7seg/">P0110 - Display de 7 segmentos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-08-03: <a href="/ddp/2020/com110-algoritmo/">COM110 - Introdução a algoritmos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-07-23: <a href="/ddp/2020/uri1010/">URI1010</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-07-23: <a href="/ddp/2020/uri1009/">URI1009</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-07-23: <a href="/ddp/2020/uri1005/">URI1005</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-07-23: <a href="/ddp/2020/uri1002/">URI1002</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-07-23: <a href="/ddp/2020/uri1001/">URI1001</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-06-23: <a href="/ddp/2020/uri1010py/">URI1010</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-06-23: <a href="/ddp/2020/uri1002py/">URI1002 - Formatação de casas decimais</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-06-22: <a href="/ddp/2020/uri1009c/">URI1009</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-06-22: <a href="/ddp/2020/uri1005c/">URI1005</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-06-22: <a href="/ddp/2020/uri1002c/">URI1002 - Variável de dupla precisão</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-06-13: <a href="/ddp/2020/uri1001c/">URI1001 - Entrada e Saída de Dados</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-06-13: <a href="/ddp/2020/uri1001py/">URI1001</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-05-26: <a href="/ddp/2020/aula-ele-calculaReqOhm/">Resistência equivalente total e 1ª Lei de Ohm</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-05-13: <a href="/ddp/2020/aula-ele-interpretaCircuitosEletricos/">Interpretação de circuitos elétricos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  20-05-05: <a href="/ddp/2020/univesp-1ecs-resumo/">Ética, Cidadania e Sociedade</a>
-  </li>
-</ul>
-<h2 class="c-archives__year" id="2019-ref">2019</h2>
-<ul class="c-archives__list">
-
-
-<li class="c-archives__item">
-  19-04-21: <a href="/ddp/2019/lobo-de-rua/">Lobo de rua</a>
-  </li>
-
-
-<li class="c-archives__item">
-  19-01-07: <a href="/ddp/2019/o-auto-da-maga-josefa/">O auto da maga Josefa</a>
-  </li>
-</ul>
-<h2 class="c-archives__year" id="2017-ref">2017</h2>
-<ul class="c-archives__list">
-
-
-<li class="c-archives__item">
-  17-12-02: <a href="/ddp/2017/deuses-americanos/">Deuses americanos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-07-30: <a href="/ddp/2017/sonhar-e-sorrir-milho-verde/">Sonhar e sorrir (milho verde)</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-07-15: <a href="/ddp/2017/a-velha-casa-da-colina/">A velha casa da colina</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-07-11: <a href="/ddp/2017/a-fundacao/">A fundação</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-07-01: <a href="/ddp/2017/sobre-preposicao/">Sobre (preposição)</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-06-16: <a href="/ddp/2017/o-guia-do-mochileiro-das-galaxias/">Filhos do fim do mundo</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-06-07: <a href="/ddp/2017/no-hospital/">No hospital</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-05-28: <a href="/ddp/2017/filhos-do-fim-do-mundo/">Filhos do fim do mundo</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-05-15: <a href="/ddp/2017/doente-de-cidade/">Doente de cidade</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-05-07: <a href="/ddp/2017/jogador-n1/">Jogador nº 1</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-13: <a href="/ddp/2017/Tia-Vanda/">Tia Vanda</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-10: <a href="/ddp/2017/farelos-de-sonhos/">Farelos de sonhos</a>
-  </li>
-
-
-<li class="c-archives__item">
-  17-04-09: <a href="/ddp/2017/A-Jornada-do-Heroi-como-ferramenta-para-desenvolver-leitura-escrita/">A Jornada do Herói como ferramenta para desenvolver a leitura e a escrita</a>
-  </li>
-</ul>
-<h2 class="c-archives__year" id="2014-ref">2014</h2>
-<ul class="c-archives__list">
-
-
-<li class="c-archives__item">
-  14-12-08: <a href="/ddp/2014/educ-conservacao-transformacao/">Educação: conservação e transformação</a>
-  </li>
-
-
-<li class="c-archives__item">
-  14-10-05: <a href="/ddp/2014/introspeccao/">Introspecção</a>
-  </li>
-
-
-<li class="c-archives__item">
-  14-10-05: <a href="/ddp/2014/educacao/">Educação: espaço para criar e ser autor</a>
-  </li>
-
-
-<li class="c-archives__item">
-  14-10-05: <a href="/ddp/2014/solidao/">Solidão solidão</a>
-  </li></ul>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -630,7 +597,8 @@ $.each(headers, function(i, header){
 })
 </script>
 
-
+<script>
+$('h1').first().append('<div></div>')</script>
 
 
             
