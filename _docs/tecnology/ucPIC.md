@@ -44,6 +44,8 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [Arquivo de Configuração (config.h)]({{site.baseurl}}/2021/config)
 * [C1 - Pisca LED]({{site.baseurl}}/2021/c1-piscaLED) [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_piscaLED.X)] [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED)]
 * [C1 - Botão e LED]({{site.baseurl}}/2021/c1-botaoLED)
+* [C1 - Semaforo de Veículos]({{site.baseurl}}/2021/c1-semaforo_veiculos)
+* [C1 - Semaforo de Veículos e de Pedestres]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres)
 
 * [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)
 * [P0111 - 2 Displays de 7 segmentos]({{site.baseurl}}/2020/P0111-disp7segX2)

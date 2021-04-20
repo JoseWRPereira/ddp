@@ -1,10 +1,35 @@
-I"�3<h1 id="postagens">Postagens</h1>
+I"�2<h1 id="postagens">Postagens</h1>
 
 <p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
 <br />
 <hr /><hr />
 
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">C1 - Semáforo de Veículos e de Pedestres</a></h2>
+   <span class="post-date">2021-04-19</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Encapsulamento de trechos de código em procedimentos e funções;</li>
+  <li>Definições de parâmetros para funções;</li>
+  <li>Função de atraso bloqueante: delay();</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">leia mais </a>
+   
+   </div>
+   <hr />
 
    <div class="post-preview">
    <h2><a href="/ddp/2021/c1-semaforo_veiculos/">C1 - Semáforo de Veículos</a></h2>
@@ -220,29 +245,6 @@
 
    
       <a href="/ddp/2020/P0021-novoArquivo/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0020-novoProjeto/">P0020 - Novo Projeto</a></h2>
-   <span class="post-date">2020-12-19</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
-   <h1 id="projeto">Projeto</h1>
-
-<p>Um <strong>programa para o microcontrolador</strong> é composto por <strong>diversos arquivos fontes, escritos em</strong> alguma linguagem de programação, costumeiramente a <strong>linguagem C</strong>.</p>
-
-<p>Esses <strong>arquivos são agrupados, organizados</strong> e acompanhados de outros arquivos necessários para a construção de <strong>um projeto</strong>.</p>
-
-<p>Um projeto é composto por arquivos fonte e de cabeçalho(<strong>.c e .h</strong>), arquivos para sua construção (<strong><em>makefile</em></strong>) no processo de compilação, arquivos de montagem (<strong><em>assembly</em></strong>), diversos arquivos intermediários e por fim o arquivo executável (<strong>.hex</strong>).</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Criar um novo projeto utilizando a plataforma MPLAB-X.</p>
-
-
-   
-      <a href="/ddp/2020/P0020-novoProjeto/">leia mais </a>
    
    </div>
    <hr />

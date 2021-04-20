@@ -229,7 +229,7 @@ Bom trabalho!
 
 <hr/>
 
->>> [<< Botão pulsador e LED ]({{site.baseurl}}/2021/c1-botaoLED) << C1 - Semáforo de Veículos >> [C1 - Botão pulsador e LED >>]({{site.baseurl}}/2021/c1-botaoLED)
+>>> [<< C1 - Botão pulsador e LED ]({{site.baseurl}}/2021/c1-botaoLED) << C1 - Semáforo de Veículos >> [C1 - Semáforo de Veículos e de Pedestres >>]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres)
 
 <hr/>
 
