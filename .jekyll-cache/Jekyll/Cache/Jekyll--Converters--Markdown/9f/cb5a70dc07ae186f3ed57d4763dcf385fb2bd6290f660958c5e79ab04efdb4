@@ -1,10 +1,58 @@
-I"R2<h1 id="postagens">Postagens</h1>
+I"�/<h1 id="postagens">Postagens</h1>
 
 <p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
 
 <br />
 <hr /><hr />
 
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-partida_estrela_triangulo/">C1 - Partida Estrela/Triângulo</a></h2>
+   <span class="post-date">2021-04-20</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular uma partida estrela/triângulo de motor trifásico.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
+  <li>Máquina de estados.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-partida_estrela_triangulo/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">C1 - Semáforo de Veíc. e Ped. com Máquina de Estados</a></h2>
+   <span class="post-date">2021-04-20</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo">Semáforo</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres utilizando uma máquina de estados.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
+  <li>Máquina de estados.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">leia mais </a>
+   
+   </div>
+   <hr />
 
    <div class="post-preview">
    <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">C1 - Semáforo de Veículos e de Pedestres</a></h2>
@@ -14,7 +62,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-<p>Acionar 3 saídas simulando um semáforo de veículos.</p>
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres.</p>
 
 <h2 id="conteúdo">Conteúdo</h2>
 
@@ -201,50 +249,6 @@
 
    
       <a href="/ddp/2021/capA-instalacao/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/config/">Arquivo de Configuração (config.h)</a></h2>
-   <span class="post-date">2021-01-22</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
-   <h1 id="configurações-do-uc">Configurações do uC</h1>
-
-<p>Existem configurações de periféricos que modificam o comportamento do microcontrolador e por isso são realizadas apenas no momento da gravação, não podendo ser realizadas durante a execução do código, como por exemplo a habilitação do <em>Watchdog timer</em>, a proteção da memória de código, a disponibilização de um determinado pino para <em>Master clear</em> ou I/O, etc.</p>
-
-<p>A plataforma MPLAB-X proporciona uma aba para realizar tais configuraçãos de forma fácil, inclusive gerando o respectivo código a ser inserido no programa. Este código é aqui gerado e inserido em um arquivo de cabeçalho (.h) com o nome de <strong>config</strong>, modularizando e concentrando os comandos de configuração do microcontrolador.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Criar um arquivo para a configuração do microcontrolador utilizando a plataforma MPLAB-X.</p>
-
-
-   
-      <a href="/ddp/2021/config/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2020/P0021-novoArquivo/">P0021 - Novo Arquivo (main.c)</a></h2>
-   <span class="post-date">2020-12-26</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
-   <h1 id="novo-arquivo---mainc">Novo Arquivo - main.c</h1>
-
-<p>Dentro de um projeto para microcontrolador, são criados basicamente arquivos fonte e de cabeçalho.</p>
-
-<p>Os arquivos <strong>fontes</strong> são aqueles com extensão <strong>.c</strong> e são escritos seguindo a sintaxe da linguagem de programação C, a mais utilizada para este tipo de aplicação.</p>
-
-<p>Os arquivos de <strong>cabeçalho</strong> (<em>header</em>) são aqueles com a extensão <strong>.h</strong> e são utilizados como apresentação de funções em arquivos fontes diferentes de onde estão declaradas, permitindo assim que elas sejam invocadas (chamadas).</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Criar o arquivo fonte <strong>main.c</strong> no projeto utilizando a plataforma MPLAB-X.</p>
-
-
-   
-      <a href="/ddp/2020/P0021-novoArquivo/">leia mais </a>
    
    </div>
    <hr />

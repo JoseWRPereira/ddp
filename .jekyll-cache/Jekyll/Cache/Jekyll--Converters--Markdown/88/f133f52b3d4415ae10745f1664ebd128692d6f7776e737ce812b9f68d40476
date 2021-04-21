@@ -1,4 +1,4 @@
-I"�F<h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+I"�r<h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
 
 <h2 id="objetivo">Objetivo</h2>
 
@@ -44,7 +44,8 @@
   </tbody>
 </table>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cm">/*
  * File:   main.c
  * Author: josewrpereira
  *
@@ -211,17 +212,174 @@
 
     <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">semaforo</span><span class="p">(</span><span class="n">VERDE</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+        <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
 
         <span class="k">if</span><span class="p">(</span> <span class="n">botao_pedestre</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
         <span class="p">{</span>
-            <span class="n">semaforo</span><span class="p">(</span><span class="n">VERDE</span><span class="p">,</span> <span class="mi">2000</span> <span class="p">);</span>
-            <span class="n">semaforo</span><span class="p">(</span><span class="n">AMARELO</span><span class="p">,</span> <span class="mi">3000</span> <span class="p">);</span>
-            <span class="n">semaforo</span><span class="p">(</span><span class="n">VERMELHO</span><span class="p">,</span> <span class="mi">5000</span> <span class="p">);</span>
+            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span>    <span class="mi">2000</span> <span class="p">);</span>
+            <span class="n">semaforo</span><span class="p">(</span> <span class="n">AMARELO</span><span class="p">,</span>  <span class="mi">3000</span> <span class="p">);</span>
+            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERMELHO</span><span class="p">,</span> <span class="mi">5000</span> <span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<h2 id="biblioteca-local">Biblioteca local</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 3: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-semaforo_veiculos_pedestres/projectTree2.png?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 19 April 2021, 20:42
+ * 
+ * IDE:                 MPLAB X IDE v5.45
+ * Compiler:            XC8 v2.31
+ * Operating System:    Debian GNU/Linux bullseye/sid
+ * Kernel:              Linux 5.10.0-5-amd64
+ * Architecture:        x86-64
+ * 
+ * Objetivo: 
+ *      Simular um semáforo de veículos e de pedestre, 
+ *      incluindo o botão para bloqueio da via e 
+ *      liberação da atravessia aos pedestres.
+ * 
+ * 
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD7     |30     | LED Vermelho Veículos (source)
+ *  RD6     |29     | LED Amarelo Veículos (source)
+ *  RD5     |28     | LED Verde Veículos (source)
+ *  RD3     |22     | LED Vermelho Pedestres(source)
+ *  RD2     |21     | LED Verde Pedestres(source)
+ *  RD0     |19     | Botão Pulsador Pedestres (pullDown)
+ * 
+ */</span>
+
+<span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+#include "semaforo.h"
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">semaforo_init</span><span class="p">();</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">botao_pedestre</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span>    <span class="mi">2000</span> <span class="p">);</span>
+            <span class="n">semaforo</span><span class="p">(</span> <span class="n">AMARELO</span><span class="p">,</span>  <span class="mi">3000</span> <span class="p">);</span>
+            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERMELHO</span><span class="p">,</span> <span class="mi">5000</span> <span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#define _XTAL_FREQ  4000000
+</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">while</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">__delay_ms</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+        <span class="o">--</span><span class="n">t</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DELAY_H
+#define DELAY_H
+</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
+#include "delay.h"
+#include "semaforo.h"
+</span>
+<span class="kt">void</span> <span class="nf">semaforo_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">// Configuração dos pinos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Vermelho veículos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Amarelo veículos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Verde veículos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Vermelho pedestre</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Verde pedestre</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>   <span class="c1">// Entrada: Botão pedestre</span>
+    
+        <span class="c1">// Inicialização do estado dos LEDs</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">char</span> <span class="nf">botao_pedestre</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span><span class="p">(</span> <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">semaforo</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">cor</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">tempo</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">VERMELHO</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">AMARELO</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">VERDE</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">delay</span><span class="p">(</span> <span class="n">tempo</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef SEMAFORO_H
+#define SEMAFORO_H
+</span>
+<span class="cp">#define VERMELHO    'R'
+#define AMARELO     'Y'
+#define VERDE       'G'
+</span>
+<span class="kt">void</span> <span class="nf">semaforo_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
+<span class="kt">char</span> <span class="nf">botao_pedestre</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">semaforo</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">cor</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">tempo</span> <span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div>
 
 <p>Agora é a sua vez!</p>
 
@@ -236,7 +394,7 @@
 <blockquote>
   <blockquote>
     <blockquote>
-      <p><a href="/ddp/2021/c1-semaforo_veiculos">« C1 - Semáforo de Veículos </a> « C1 - Semáforo de Veículos e de Pedestres » <a href="/ddp/2021/c1-semaforo_veiculos_pedestres"> »</a></p>
+      <p><a href="/ddp/2021/c1-semaforo_veiculos">« C1 - Semáforo de Veículos </a> « C1 - Semáforo de Veículos e de Pedestres » <a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">C1 - Semáforo com Máquina de Estados »</a></p>
     </blockquote>
   </blockquote>
 </blockquote>

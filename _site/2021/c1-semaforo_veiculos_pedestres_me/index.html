@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>C1 - Semáforo de Veículos e de Pedestres</title>
-<meta property="og:title" content="C1 - Semáforo de Veículos e de Pedestres" />
+<title>C1 - Semáforo de Veíc. e Ped. com Máquina de Estados</title>
+<meta property="og:title" content="C1 - Semáforo de Veíc. e Ped. com Máquina de Estados" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="C1 - Semáforo de Veículos e de Pedestres">
+<meta itemprop="name" content="C1 - Semáforo de Veíc. e Ped. com Máquina de Estados">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C1 - Semáforo de Veículos e de Pedestres"/>
+<meta name="twitter:title" content="C1 - Semáforo de Veíc. e Ped. com Máquina de Estados"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -288,8 +288,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2021-04-19-c1-semaforo_veiculos_pedestres.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2021-04-19-c1-semaforo_veiculos_pedestres.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2021-04-20-c1-semaforo_veiculos_pedestres_me.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2021-04-20-c1-semaforo_veiculos_pedestres_me.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -306,26 +306,25 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/2021/c1-semaforo_veiculos_pedestres/">C1 - Semáforo de Veículos e de Pedestres</a>
+                <a href="http://localhost:4000/ddp/2021/c1-semaforo_veiculos_pedestres_me/">C1 - Semáforo de Veíc. e Ped. com Máquina de Estados</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 style="margin-bottom:0px">C1 - Semáforo de Veículos e de Pedestres</h1>
+            <h1 style="margin-bottom:0px">C1 - Semáforo de Veíc. e Ped. com Máquina de Estados</h1>
 <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-<span class="post-date" style="font-style: italic;">2021-04-19</span>
-<h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+<span class="post-date" style="font-style: italic;">2021-04-20</span>
+<h1 id="semáforo">Semáforo</h1>
 
 <h2 id="objetivo">Objetivo</h2>
 
-<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres.</p>
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres utilizando uma máquina de estados.</p>
 
 <h2 id="conteúdo">Conteúdo</h2>
 
 <ul>
-  <li>Encapsulamento de trechos de código em procedimentos e funções;</li>
-  <li>Definições de parâmetros para funções;</li>
-  <li>Função de atraso bloqueante: delay();</li>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
+  <li>Máquina de estados.</li>
 </ul>
 
 <!--more-->
@@ -345,7 +344,7 @@
   </tbody>
 </table>
 
-<h2 id="programa-firmware">Programa (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres.X"><em>Firmware</em></a>)</h2>
+<h2 id="programa-firmware">Programa (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres_me.X"><em>Firmware</em></a>)</h2>
 
 <table>
   <thead>
@@ -355,257 +354,12 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-semaforo_veiculos_pedestres/projectTree.png?raw=true" alt="circuito" /></td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="cm">/*
- * File:   main.c
- * Author: josewrpereira
- *
- * Created on 19 April 2021, 20:42
- * 
- * IDE:                 MPLAB X IDE v5.45
- * Compiler:            XC8 v2.31
- * Operating System:    Debian GNU/Linux bullseye/sid
- * Kernel:              Linux 5.10.0-5-amd64
- * Architecture:        x86-64
- * 
- * Objetivo: 
- *      Simular um semáforo de veículos e de pedestre, 
- *      incluindo o botão para bloqueio da via e 
- *      liberação da atravessia aos pedestres.
- * 
- * 
- * Pinos    |nº     |Conexão
- *  VDD     |11,32  | Alimentação (Vcc/+5V)
- *  VSS     |12,31  | Alimentação (GND/0V)
- *  RD7     |30     | LED Vermelho Veículos (source)
- *  RD6     |29     | LED Amarelo Veículos (source)
- *  RD5     |28     | LED Verde Veículos (source)
- *  RD3     |22     | LED Vermelho Pedestres(source)
- *  RD2     |21     | LED Verde Pedestres(source)
- *  RD0     |19     | Botão Pulsador Pedestres (pullDown)
- * 
- */</span>
-
-<span class="cp">#include "config.h"
-#include &lt;xc.h&gt;
-</span>
-<span class="cp">#define _XTAL_FREQ  4000000
-</span>
-<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-        <span class="c1">// Configuração dos pinos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Vermelho veículos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Amarelo veículos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Verde veículos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Vermelho pedestre</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Verde pedestre</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>   <span class="c1">// Entrada: Botão pedestre</span>
-    
-        <span class="c1">// Inicialização do estado dos LEDs</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        
-        <span class="k">if</span><span class="p">(</span> <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">tempo</span> <span class="p">);</span>
-</code></pre></div></div>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">main</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">82</span><span class="o">::</span> <span class="n">error</span><span class="o">:</span> <span class="p">(</span><span class="mi">1387</span><span class="p">)</span> <span class="kr">inline</span> <span class="n">delay</span> <span class="n">argument</span> <span class="n">must</span> <span class="n">be</span> <span class="n">constant</span>
-</code></pre></div></div>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">while</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">__delay_ms</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
-        <span class="o">--</span><span class="n">t</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
-#include &lt;xc.h&gt;
-</span>
-<span class="cp">#define _XTAL_FREQ  4000000
-</span>
-<span class="cp">#define VERMELHO    'R'
-#define AMARELO     'Y'
-#define VERDE       'G'
-</span>
-
-
-<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">while</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">__delay_ms</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
-        <span class="o">--</span><span class="n">t</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">semaforo_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
-<span class="p">{</span>
-        <span class="c1">// Configuração dos pinos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Vermelho veículos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Amarelo veículos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Verde veículos</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Vermelho pedestre</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Saída: Verde pedestre</span>
-    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>   <span class="c1">// Entrada: Botão pedestre</span>
-    
-        <span class="c1">// Inicialização do estado dos LEDs</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">char</span> <span class="nf">botao_pedestre</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span><span class="p">(</span> <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">semaforo</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">cor</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">tempo</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">VERMELHO</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">AMARELO</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">VERDE</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="n">delay</span><span class="p">(</span> <span class="n">tempo</span> <span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">semaforo_init</span><span class="p">();</span>
-
-    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
-
-        <span class="k">if</span><span class="p">(</span> <span class="n">botao_pedestre</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span>    <span class="mi">2000</span> <span class="p">);</span>
-            <span class="n">semaforo</span><span class="p">(</span> <span class="n">AMARELO</span><span class="p">,</span>  <span class="mi">3000</span> <span class="p">);</span>
-            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERMELHO</span><span class="p">,</span> <span class="mi">5000</span> <span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="biblioteca-local">Biblioteca local</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Figura 3: Árvore de diretório do projeto</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
       <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-semaforo_veiculos_pedestres/projectTree2.png?raw=true" alt="circuito" /></td>
     </tr>
   </tbody>
 </table>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
- * File:   main.c
- * Author: josewrpereira
- *
- * Created on 19 April 2021, 20:42
- * 
- * IDE:                 MPLAB X IDE v5.45
- * Compiler:            XC8 v2.31
- * Operating System:    Debian GNU/Linux bullseye/sid
- * Kernel:              Linux 5.10.0-5-amd64
- * Architecture:        x86-64
- * 
- * Objetivo: 
- *      Simular um semáforo de veículos e de pedestre, 
- *      incluindo o botão para bloqueio da via e 
- *      liberação da atravessia aos pedestres.
- * 
- * 
- * Pinos    |nº     |Conexão
- *  VDD     |11,32  | Alimentação (Vcc/+5V)
- *  VSS     |12,31  | Alimentação (GND/0V)
- *  RD7     |30     | LED Vermelho Veículos (source)
- *  RD6     |29     | LED Amarelo Veículos (source)
- *  RD5     |28     | LED Verde Veículos (source)
- *  RD3     |22     | LED Vermelho Pedestres(source)
- *  RD2     |21     | LED Verde Pedestres(source)
- *  RD0     |19     | Botão Pulsador Pedestres (pullDown)
- * 
- */</span>
-
-<span class="cp">#include "config.h"
-#include &lt;xc.h&gt;
-#include "semaforo.h"
-</span>
-<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">semaforo_init</span><span class="p">();</span>
-
-    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
-
-        <span class="k">if</span><span class="p">(</span> <span class="n">botao_pedestre</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span><span class="p">,</span>    <span class="mi">2000</span> <span class="p">);</span>
-            <span class="n">semaforo</span><span class="p">(</span> <span class="n">AMARELO</span><span class="p">,</span>  <span class="mi">3000</span> <span class="p">);</span>
-            <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERMELHO</span><span class="p">,</span> <span class="mi">5000</span> <span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<h2 id="biblioteca-local-delay">Biblioteca local delay</h2>
 
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
 #define _XTAL_FREQ  4000000
@@ -628,8 +382,9 @@
 <span class="cp">#endif
 </span></code></pre></div></div>
 
+<h2 id="biblioteca-local-semáforo">Biblioteca local semáforo</h2>
+
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
-#include "delay.h"
 #include "semaforo.h"
 </span>
 <span class="kt">void</span> <span class="nf">semaforo_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
@@ -655,7 +410,7 @@
     <span class="k">return</span><span class="p">(</span> <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD0</span> <span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">semaforo</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">cor</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">tempo</span> <span class="p">)</span>
+<span class="kt">void</span> <span class="nf">semaforo</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">cor</span> <span class="p">)</span>
 <span class="p">{</span>
     <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -663,26 +418,23 @@
     <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">VERMELHO</span> <span class="p">)</span>
+    <span class="k">switch</span><span class="p">(</span> <span class="n">cor</span> <span class="p">)</span>
     <span class="p">{</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">VERMELHO</span><span class="p">:</span>
+                    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">AMARELO</span><span class="p">:</span>
+                    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">VERDE</span><span class="p">:</span>
+                    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">AMARELO</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">cor</span> <span class="o">==</span> <span class="n">VERDE</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="n">delay</span><span class="p">(</span> <span class="n">tempo</span> <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
-
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef SEMAFORO_H
 #define SEMAFORO_H
 </span>
@@ -692,10 +444,110 @@
 </span>
 <span class="kt">void</span> <span class="nf">semaforo_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
 <span class="kt">char</span> <span class="nf">botao_pedestre</span><span class="p">(</span> <span class="kt">void</span> <span class="p">);</span>
-<span class="kt">void</span> <span class="nf">semaforo</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">cor</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">tempo</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">semaforo</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">cor</span> <span class="p">);</span>
 
 <span class="cp">#endif
 </span></code></pre></div></div>
+
+<h3 id="programa-principal">Programa principal</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span>
+ <span class="o">*</span> <span class="n">File</span><span class="o">:</span>   <span class="n">main</span><span class="p">.</span><span class="n">c</span>
+ <span class="o">*</span> <span class="n">Author</span><span class="o">:</span> <span class="n">josewrpereira</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="n">Created</span> <span class="n">on</span> <span class="mi">20</span> <span class="n">April</span> <span class="mi">2021</span><span class="p">,</span> <span class="mi">20</span><span class="o">:</span><span class="mi">42</span>
+ <span class="o">*</span> 
+ <span class="o">*</span> <span class="n">IDE</span><span class="o">:</span>                 <span class="n">MPLAB</span> <span class="n">X</span> <span class="n">IDE</span> <span class="n">v5</span><span class="p">.</span><span class="mi">45</span>
+ <span class="o">*</span> <span class="n">Compiler</span><span class="o">:</span>            <span class="n">XC8</span> <span class="n">v2</span><span class="p">.</span><span class="mi">31</span>
+ <span class="o">*</span> <span class="n">Operating</span> <span class="n">System</span><span class="o">:</span>    <span class="n">Debian</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span> <span class="n">bullseye</span><span class="o">/</span><span class="n">sid</span>
+ <span class="o">*</span> <span class="n">Kernel</span><span class="o">:</span>              <span class="n">Linux</span> <span class="mi">5</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">amd64</span>
+ <span class="o">*</span> <span class="n">Architecture</span><span class="o">:</span>        <span class="n">x86</span><span class="o">-</span><span class="mi">64</span>
+ <span class="o">*</span> 
+ <span class="o">*</span> <span class="n">Objetivo</span><span class="o">:</span> 
+ <span class="o">*</span>      <span class="n">Simular</span> <span class="n">um</span> <span class="n">sem</span><span class="err">á</span><span class="n">foro</span> <span class="n">de</span> <span class="n">ve</span><span class="err">í</span><span class="n">culos</span> <span class="n">e</span> <span class="n">de</span> <span class="n">pedestre</span><span class="p">,</span> 
+ <span class="o">*</span>      <span class="n">incluindo</span> <span class="n">o</span> <span class="n">bot</span><span class="err">ã</span><span class="n">o</span> <span class="n">para</span> <span class="n">bloqueio</span> <span class="n">da</span> <span class="n">via</span> <span class="n">e</span> 
+ <span class="o">*</span>      <span class="n">libera</span><span class="err">çã</span><span class="n">o</span> <span class="n">da</span> <span class="n">atravessia</span> <span class="n">aos</span> <span class="n">pedestres</span> 
+ <span class="o">*</span>      <span class="n">utilizando</span> <span class="n">M</span><span class="err">á</span><span class="n">quina</span> <span class="n">de</span> <span class="n">Estados</span><span class="p">.</span>
+ <span class="o">*</span> 
+ <span class="o">*</span> 
+ <span class="o">*</span> <span class="n">Pinos</span>    <span class="o">|</span><span class="n">n</span><span class="err">º</span>     <span class="o">|</span><span class="n">Conex</span><span class="err">ã</span><span class="n">o</span>
+ <span class="o">*</span>  <span class="n">VDD</span>     <span class="o">|</span><span class="mi">11</span><span class="p">,</span><span class="mi">32</span>  <span class="o">|</span> <span class="n">Alimenta</span><span class="err">çã</span><span class="n">o</span> <span class="p">(</span><span class="n">Vcc</span><span class="o">/+</span><span class="mi">5</span><span class="n">V</span><span class="p">)</span>
+ <span class="o">*</span>  <span class="n">VSS</span>     <span class="o">|</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span>  <span class="o">|</span> <span class="n">Alimenta</span><span class="err">çã</span><span class="n">o</span> <span class="p">(</span><span class="n">GND</span><span class="o">/</span><span class="mi">0</span><span class="n">V</span><span class="p">)</span>
+ <span class="o">*</span>  <span class="n">RD7</span>     <span class="o">|</span><span class="mi">30</span>     <span class="o">|</span> <span class="n">LED</span> <span class="n">Vermelho</span> <span class="n">Ve</span><span class="err">í</span><span class="n">culos</span> <span class="p">(</span><span class="n">source</span><span class="p">)</span>
+ <span class="o">*</span>  <span class="n">RD6</span>     <span class="o">|</span><span class="mi">29</span>     <span class="o">|</span> <span class="n">LED</span> <span class="n">Amarelo</span> <span class="n">Ve</span><span class="err">í</span><span class="n">culos</span> <span class="p">(</span><span class="n">source</span><span class="p">)</span>
+ <span class="o">*</span>  <span class="n">RD5</span>     <span class="o">|</span><span class="mi">28</span>     <span class="o">|</span> <span class="n">LED</span> <span class="n">Verde</span> <span class="n">Ve</span><span class="err">í</span><span class="n">culos</span> <span class="p">(</span><span class="n">source</span><span class="p">)</span>
+ <span class="o">*</span>  <span class="n">RD3</span>     <span class="o">|</span><span class="mi">22</span>     <span class="o">|</span> <span class="n">LED</span> <span class="n">Vermelho</span> <span class="nf">Pedestres</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+ <span class="o">*</span>  <span class="n">RD2</span>     <span class="o">|</span><span class="mi">21</span>     <span class="o">|</span> <span class="n">LED</span> <span class="n">Verde</span> <span class="n">Pedestres</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+ <span class="o">*</span>  <span class="n">RD0</span>     <span class="o">|</span><span class="mi">19</span>     <span class="o">|</span> <span class="n">Bot</span><span class="err">ã</span><span class="n">o</span> <span class="n">Pulsador</span> <span class="n">Pedestres</span> <span class="p">(</span><span class="n">pullDown</span><span class="p">)</span>
+ <span class="o">*</span> 
+ <span class="err">*/</span>
+
+<span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+#include "semaforo.h"
+#include "delay.h"
+</span>
+<span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">estado</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">tempo</span><span class="p">;</span>
+    <span class="n">semaforo_init</span><span class="p">();</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">switch</span><span class="p">(</span> <span class="n">estado</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERDE</span> <span class="p">);</span>
+                    <span class="n">estado</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">if</span><span class="p">(</span> <span class="n">botao_pedestre</span><span class="p">()</span> <span class="p">)</span>
+                        <span class="n">estado</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="n">tempo</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
+                    <span class="n">estado</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                    <span class="o">--</span><span class="n">tempo</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span> <span class="n">tempo</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+                        <span class="n">estado</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                    <span class="n">semaforo</span><span class="p">(</span> <span class="n">AMARELO</span> <span class="p">);</span>
+                    <span class="n">estado</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+                    <span class="n">tempo</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span>
+                    <span class="n">estado</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">6</span><span class="p">:</span>
+                    <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                    <span class="o">--</span><span class="n">tempo</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span> <span class="n">tempo</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+                        <span class="n">estado</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">7</span><span class="p">:</span>
+                    <span class="n">semaforo</span><span class="p">(</span> <span class="n">VERMELHO</span> <span class="p">);</span>
+                    <span class="n">estado</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">8</span><span class="p">:</span>
+                    <span class="n">tempo</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+                    <span class="n">estado</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">9</span><span class="p">:</span>
+                    <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+                    <span class="o">--</span><span class="n">tempo</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span> <span class="n">tempo</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+                        <span class="n">estado</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
 
 <p>Agora é a sua vez!</p>
 
@@ -710,7 +562,7 @@
 <blockquote>
   <blockquote>
     <blockquote>
-      <p><a href="/ddp/2021/c1-semaforo_veiculos">« C1 - Semáforo de Veículos </a> « C1 - Semáforo de Veículos e de Pedestres » <a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">C1 - Semáforo com Máquina de Estados »</a></p>
+      <p><a href="/ddp/2021/c1-semaforo_veiculos_pedestres">« C1 - Semáforo de Veículos e de Pedestres </a> « C1 - Semáforo com Máquina de Estados » <a href="/ddp/2021/c1-partida_estrela_triangulo">C1 - Partida Estrela/Triângulo »</a></p>
     </blockquote>
   </blockquote>
 </blockquote>

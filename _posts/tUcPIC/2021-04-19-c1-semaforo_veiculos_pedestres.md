@@ -49,6 +49,7 @@ Simular um semáforo de veículos e de pedestre, incluindo o botão para bloquei
 
 
 ```c
+
 /*
  * File:   main.c
  * Author: josewrpereira
@@ -305,7 +306,8 @@ void delay( unsigned int t )
         __delay_ms( 1 );
         --t;
     }
-}```
+}
+```
 
 ```c
 #ifndef DELAY_H
@@ -384,7 +386,8 @@ void semaforo_init( void );
 char botao_pedestre( void );
 void semaforo( unsigned char cor, unsigned int tempo );
 
-#endif```
+#endif
+```
 
 
 
@@ -401,10 +404,8 @@ Bom trabalho!
 
 <hr/>
 
->>> [<< C1 - Semáforo de Veículos ]({{site.baseurl}}/2021/c1-semaforo_veiculos) << C1 - Semáforo de Veículos e de Pedestres >> [ >>]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres)
+>>> [<< C1 - Semáforo de Veículos ]({{site.baseurl}}/2021/c1-semaforo_veiculos) << C1 - Semáforo de Veículos e de Pedestres >> [C1 - Semáforo com Máquina de Estados >>]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres_me)
 
 <hr/>
-
-
 
 [Voltar]({{site.baseurl}}/docs/tecnology/ucPIC)
