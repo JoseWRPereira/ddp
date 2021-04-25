@@ -220,6 +220,8 @@ void main(void)
                     --tempo;
                     if( tempo == 0 )
                         estado = 4;
+                    if( pet_s0() )
+                        estado = 0;
                     break;
             case 4:
                     pet_k3_reset();
@@ -249,7 +251,7 @@ Bom trabalho!
 
 <hr/>
 
->>> [<< C1 - Semáforo com Máquina de Estados ]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres_me) << C1 - Partida Estrela/Triângulo >> [ >>]({{site.baseurl}}/2021/c1-partida_estrela_triangulo)
+>>> [<< C1 - Semáforo com Máquina de Estados ]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres_me) << C1 - Partida Estrela/Triângulo >> [ C1 - Display de 7 segmentos >>]({{site.baseurl}}/2021/c1-disp7seg)
 
 <hr/>
 

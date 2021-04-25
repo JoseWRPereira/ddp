@@ -1,4 +1,4 @@
-I"�9<h1 id="partida-de-motor-trifásico">Partida de Motor Trifásico</h1>
+I"�:<h1 id="partida-de-motor-trifásico">Partida de Motor Trifásico</h1>
 
 <h2 id="objetivo">Objetivo</h2>
 
@@ -210,6 +210,8 @@
                     <span class="o">--</span><span class="n">tempo</span><span class="p">;</span>
                     <span class="k">if</span><span class="p">(</span> <span class="n">tempo</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
                         <span class="n">estado</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span> <span class="n">pet_s0</span><span class="p">()</span> <span class="p">)</span>
+                        <span class="n">estado</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
                     <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
                     <span class="n">pet_k3_reset</span><span class="p">();</span>
@@ -238,7 +240,7 @@
 <blockquote>
   <blockquote>
     <blockquote>
-      <p><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">« C1 - Semáforo com Máquina de Estados </a> « C1 - Partida Estrela/Triângulo » <a href="/ddp/2021/c1-partida_estrela_triangulo"> »</a></p>
+      <p><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">« C1 - Semáforo com Máquina de Estados </a> « C1 - Partida Estrela/Triângulo » <a href="/ddp/2021/c1-disp7seg"> C1 - Display de 7 segmentos »</a></p>
     </blockquote>
   </blockquote>
 </blockquote>

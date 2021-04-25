@@ -48,10 +48,8 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [C1 - Semaforo de Veículos e de Pedestres]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres)
 * [C1 - Semaforo com Máquina de Estados]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres_me)
 * [C1 - Partida Estrela/Triângulo]({{site.baseurl}}/2021/c1-partida_estrela_triangulo)
+* [C1 - Display de 7 segmentos]({{site.baseurl}}/2021/c1-disp7seg)
 
-
-
-* [P0110 - Display de 7 segmentos]({{site.baseurl}}/2020/P0110-disp7seg)
 * [P0111 - 2 Displays de 7 segmentos]({{site.baseurl}}/2020/P0111-disp7segX2)
 * [P0112 - Detecção de borda]({{site.baseurl}}/2020/P0112-bordaBotaoPulsador)
 * [P0120 - Display LCD 8 vias]({{site.baseurl}}/2020/P0120-dispLCD8vias)

@@ -1,5 +1,354 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-20T21:43:49-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
-</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">C1 - Partida Estrela/Triângulo</title><link href="http://localhost:4000/ddp/2021/c1-partida_estrela_triangulo/" rel="alternate" type="text/html" title="C1 - Partida Estrela/Triângulo" /><published>2021-04-20T21:32:21-03:00</published><updated>2021-04-20T21:32:21-03:00</updated><id>http://localhost:4000/ddp/2021/c1-partida_estrela_triangulo</id><content type="html" xml:base="http://localhost:4000/ddp/2021/c1-partida_estrela_triangulo/">&lt;h1 id=&quot;partida-de-motor-trifásico&quot;&gt;Partida de Motor Trifásico&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-24T22:39:55-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+</subtitle><author><name>José W R Pereira</name></author><entry><title type="html">C1 - Display de 7 segmentos</title><link href="http://localhost:4000/ddp/2021/c1-disp7seg/" rel="alternate" type="text/html" title="C1 - Display de 7 segmentos" /><published>2021-04-24T21:43:21-03:00</published><updated>2021-04-24T21:43:21-03:00</updated><id>http://localhost:4000/ddp/2021/c1-disp7seg</id><content type="html" xml:base="http://localhost:4000/ddp/2021/c1-disp7seg/">&lt;h1 id=&quot;display-de-7-segmentos&quot;&gt;Display de 7 segmentos&lt;/h1&gt;
+
+&lt;p&gt;O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.&lt;/p&gt;
+
+&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
+
+&lt;p&gt;Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F&lt;/code&gt;;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;1-circuito-hardware&quot;&gt;1. Circuito (&lt;em&gt;Hardware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O display de 7 segmentos basicamente é um conjunto de LEDs dispostos de forma a cada um deles iluminar um segmento no encapsulamento. Existem vários modelos para diferentes necessidades, mas aqui usamos o mais comum.&lt;/p&gt;
+
+&lt;p&gt;O display, além dos sete segmentos possui ainda um ponto, que pode ser utilizado para sinalizar um ponto decimal (vírgula) ao associar vários displays para mostrar um número fracionário ou qualquer separação entre dois dígitos. Nesse projeto o ponto não será utilzado.&lt;/p&gt;
+
+&lt;p&gt;Para o acionamento do display foi utilizado o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; conforme mostrado na Figura 1.1.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.1: Display de 7 segmentos catodo comum&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/disp7seg0-F.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Existem dois modelos de display, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Anodo comum&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Catodo comum&lt;/code&gt;, que se referem aos terminais conectados em comum, conforme exemplo da Figura 1.2.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.2: Segmentos do display&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/disp7seg-segmentos.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Cada segmento recebe uma identificação em letra minúscula de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g&lt;/code&gt; e o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt;. 
+O display possui um terminal para cada segmento do display.&lt;/p&gt;
+
+&lt;p&gt;Cada pino do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; está conectado a um segmento do display.&lt;/p&gt;
+
+&lt;p&gt;Note que cada segmento, composto por um LED, necessita de um resistor para limitar a corrente que percorre ele. Como cada pino do uC fornece uma tensão de 5V para acionar o segmento. A queda de tensão no LED é de \(2V\), aproximadamente. Pode-se assim calcular o valor do resistor limitador de corrente:&lt;/p&gt;
+
+&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo separator=&quot;true&quot;&gt;,&lt;/mo&gt;&lt;mn&gt;020&lt;/mn&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;150&lt;/mn&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;Ω&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;R = \frac{ V_{pino}-V_{LED}}{I_{LED}} = \frac{5-2}{0,020} = 150\Omega&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&quot;katex-html&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.00773em;&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:2.19633em;vertical-align:-0.8360000000000001em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:1.36033em;&quot;&gt;&lt;span style=&quot;top:-2.3139999999999996em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.07847em;&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.32833099999999993em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.05764em;&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.02778em;&quot;&gt;D&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.15em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.677em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.22222em;&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.311664em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;o&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.286108em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;−&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord mathdefault&quot; style=&quot;margin-right:0.22222em;&quot;&gt;V&lt;/span&gt;&lt;span class=&quot;msupsub&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.32833099999999993em;&quot;&gt;&lt;span style=&quot;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:2.7em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sizing reset-size6 size3 mtight&quot;&gt;&lt;span class=&quot;mord mtight&quot;&gt;&lt;span class=&quot;mord mathdefault mtight&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.05764em;&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;mord mathdefault mtight&quot; style=&quot;margin-right:0.02778em;&quot;&gt;D&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.15em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8360000000000001em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:2.20188em;vertical-align:-0.8804400000000001em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mopen nulldelimiter&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mfrac&quot;&gt;&lt;span class=&quot;vlist-t vlist-t2&quot;&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:1.32144em;&quot;&gt;&lt;span style=&quot;top:-2.314em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mpunct&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.16666666666666666em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.23em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;frac-line&quot; style=&quot;border-bottom-width:0.04em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;top:-3.677em;&quot;&gt;&lt;span class=&quot;pstrut&quot; style=&quot;height:3em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;&lt;span class=&quot;mord&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mbin&quot;&gt;−&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2222222222222222em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-s&quot;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;vlist-r&quot;&gt;&lt;span class=&quot;vlist&quot; style=&quot;height:0.8804400000000001em;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mclose nulldelimiter&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mrel&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mspace&quot; style=&quot;margin-right:0.2777777777777778em;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;base&quot;&gt;&lt;span class=&quot;strut&quot; style=&quot;height:0.68333em;vertical-align:0em;&quot;&gt;&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mord&quot;&gt;Ω&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;p&gt;O circuito apresenta um conjunto de resistores em um mesmo encapsulamento, mas poderia ser um resistor individual para cada segmento.&lt;/p&gt;
+
+&lt;p&gt;O display aqui utilizado é do tipo catodo comum, assim basta acionar os pinos do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; que correspondam aos segmentos a serem acionados para formar o dígito que se deseja exibir.&lt;/p&gt;
+
+&lt;p&gt;Para mostrar o dígito 0(zero), aciona-se os segmento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a, b, c, d, e, f&lt;/code&gt;conforme mostrado na Figura 1.3.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.3: Dígito 0 (zero)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/disp7seg-digito0.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;É importante notar a sequência de pinos do display e do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORT&lt;/code&gt; utilizado, pois uma alteração de ordem muda o que é exibido no display.&lt;/p&gt;
+
+&lt;p&gt;Para o dígito 1(um) é necessário ligar apenas os segmentos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;, mantendo os demais desligados.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.4: Dígito 1 (um)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/disp7seg-digito1.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Para o dígito 2(dois) é mais fácil perceber os dígitos desligados, pois estão em menor quantidade, sendo o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt; e o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt; desligados e os demais ligados (exceto o ponto como já foi citado).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.5: Dígito 2 (um)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/disp7seg-digito2.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A Figura 1.6 mostra uma tabela com todas as combinações para os dígitos decimais e seus valores correspondentes em hexadecimal. Ao atribuir ao &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt; um dos valores em hexadecimal da tabela, o digito correspondente deve ser mostrado no display.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1.6: Dígitos e equivalência em hexadecimal&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/disp7seg-digitos.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Estão faltando os dados dos dígitos que completam o conjunto hexadecimal, que podem te servir como exercícios. Bom trabalho!&lt;/p&gt;
+
+&lt;h2 id=&quot;2-programa-firmware&quot;&gt;2. Programa (&lt;em&gt;Firmware&lt;/em&gt;)&lt;/h2&gt;
+
+&lt;p&gt;O programa pode ser escrito todo em um único arquivo, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.c&lt;/code&gt;, mas esta é uma forma não conveniente pois dificulta a manuteção e a organização do código. Assim, cada arquivo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.c&lt;/code&gt; deve possuir somente funções correlatas ao nome desse arquivo. Por exemplo: todas as funções de manipulação do display de 7 segmentos estão contidas em &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg.c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para poder executar as funções do display no programa principal é necessário incluir o cabeçalho delas que está contido em&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &quot;disp7seg.h&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Árvore de diretório do projeto&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/projectTree.jpg?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;programa-principal&quot;&gt;Programa principal&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 5 de Agosto de 2020, 20:21:59
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RD0     |19     | Segmento a
+ *  RD1     |20     | Segmento b
+ *  RD2     |21     | Segmento c
+ *  RD3     |22     | Segmento d
+ *  RD4     |27     | Segmento e
+ *  RD5     |28     | Segmento f
+ *  RD6     |29     | Segmento g
+ *  RD7     |30     | Segmento p
+ * -------------------------------------------------
+ */&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+#include &quot;delay.h&quot;
+#include &quot;disp7seg.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;O laço de repetição que compõe a execução do programa possui apenas três instruçẽos:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Exibição da variável de contagem;&lt;/li&gt;
+  &lt;li&gt;Atraso de 500ms, para que o valor da contagem permaneça em exibição por esse tempo;&lt;/li&gt;
+  &lt;li&gt;Incremento seguido de uma delimitação da contagem utilizando a operação &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod&lt;/code&gt; ou &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt;, que é o operador que tem como resultado o resto da divisão. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cont&lt;/code&gt; assume apenas valores entre 0 e 15.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sub-rotinas&quot;&gt;Sub-rotinas&lt;/h3&gt;
+
+&lt;p&gt;Trechos de programa, que podem ser executados com parâmetros diferentes, porém que executam a mesma ação levando em conta os argumentos da função.&lt;/p&gt;
+
+&lt;h4 id=&quot;display-7-segmentos&quot;&gt;Display 7 segmentos&lt;/h4&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;config.h&quot;
+#include &quot;delay.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    &lt;span class=&quot;mh&quot;&gt;0x3F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x06&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x5B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x4F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;mh&quot;&gt;0x66&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x6D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x07&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;mh&quot;&gt;0x7F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x6F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x77&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;mh&quot;&gt;0x39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x5E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x79&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x71&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTD&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitos7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;O vetor &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digitos7seg[16]&lt;/code&gt; contém todos os valores que correspondem aos caracteres de representação hexadecimal, associados diretamente com a posição de cada valor, sendo o valor que corresponde ao dígito 0 na posição 0 do vetor, o dígito 1 na posição 1, e assim por diante, com todos os demais valores.&lt;/p&gt;
+
+&lt;p&gt;O procedimento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg_init&lt;/code&gt; além de inicializar o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PORTD&lt;/code&gt;, também faz um teste de diagnóstico do display, fazendo o acionamento e desligando todos os segmentos de forma alternada, possibilitando a verificação da integridade de todas as vias, segmentos e conexões envolvidas.&lt;/p&gt;
+
+&lt;p&gt;A função &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;disp7seg&lt;/code&gt; possui um argumento, que é o número correspondente ao dígito a ser exibido pelo display. Somente são exibidos dígitos hexadecimais entre os valores 0 e F. Valores fora deste intervalo o display fica apagado.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+&lt;h4 class=&quot;alert-heading&quot;&gt;Operador Unário&lt;/h4&gt;
+(condição) ? valor se a condição é verdadeira : valor se a condição é falsa ;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;alterando-o-display-de-port&quot;&gt;Alterando o Display de PORT&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Display 7 segmntos no PORT B&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7seg/disp7segCont.gif?raw=true&quot; alt=&quot;circuito&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 24 April 2021, 20:45
+ * 
+ * IDE:                 MPLAB X IDE v5.45
+ * Compiler:            XC8 v2.31
+ * Operating System:    Debian GNU/Linux bullseye/sid
+ * Kernel:              Linux 5.10.0-5-amd64
+ * Architecture:        x86-64
+ * 
+ * Objetivo: 
+ *      Exibir um contador de 0..F através de um display de 7 segmentos.
+ * 
+ * nº Pinos| PORT |Conexão
+ *  11,32  | VDD  | Alimentação (Vcc/+5V)
+ *  12,31  | VSS  | Alimentação (GND/0V)
+ * 
+ *  40     | RB7  | Segmento a (Catodo Comum)
+ *  39     | RB6  | Segmento b
+ *  38     | RB6  | Segmento c
+ *  37     | RB6  | Segmento d
+ *  36     | RB6  | Segmento e
+ *  35     | RB6  | Segmento f
+ *  34     | RB6  | Segmento g
+ *  33     | RB6  | Ponto 
+ * 
+ */&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#include &quot;config.h&quot;
+#include &amp;lt;xc.h&amp;gt;
+#include &quot;delay.h&quot;
+#include &quot;display7segmentos.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;alteração-da-biblioteca-do-display&quot;&gt;Alteração da biblioteca do display&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
+#include &quot;delay.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disp7seg_digitos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   &lt;span class=&quot;mh&quot;&gt;0xFC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xDA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xF2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+    &lt;span class=&quot;mh&quot;&gt;0x66&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xB6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xBE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xE0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+    &lt;span class=&quot;mh&quot;&gt;0xFE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xF6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xEE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x3E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+    &lt;span class=&quot;mh&quot;&gt;0x9C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x9E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x8E&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg_init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ANSELH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;TRISB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disp7seg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;PORTB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disp7seg_digitos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Agora é a sua vez!&lt;/p&gt;
+
+&lt;p&gt;Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.&lt;/p&gt;
+
+&lt;p&gt;Ficou com alguma dúvida, entre em contato.&lt;/p&gt;
+
+&lt;p&gt;Bom trabalho!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/c1-partida_estrela_triangulo&quot;&gt;« C1 - Partida Estrela/Triângulo&lt;/a&gt; « C1 - Display de 7 segmentos » &lt;a href=&quot;/ddp/2021/c1-disp7seg&quot;&gt; »&lt;/a&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Display de 7 segmentos</summary></entry><entry><title type="html">C1 - Partida Estrela/Triângulo</title><link href="http://localhost:4000/ddp/2021/c1-partida_estrela_triangulo/" rel="alternate" type="text/html" title="C1 - Partida Estrela/Triângulo" /><published>2021-04-20T21:32:21-03:00</published><updated>2021-04-20T21:32:21-03:00</updated><id>http://localhost:4000/ddp/2021/c1-partida_estrela_triangulo</id><content type="html" xml:base="http://localhost:4000/ddp/2021/c1-partida_estrela_triangulo/">&lt;h1 id=&quot;partida-de-motor-trifásico&quot;&gt;Partida de Motor Trifásico&lt;/h1&gt;
 
 &lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
 
@@ -211,6 +560,8 @@
                     &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tempo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
                     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
                         &lt;span class=&quot;n&quot;&gt;estado&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pet_s0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                        &lt;span class=&quot;n&quot;&gt;estado&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
                     &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
                     &lt;span class=&quot;n&quot;&gt;pet_k3_reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -239,7 +590,7 @@
 &lt;blockquote&gt;
   &lt;blockquote&gt;
     &lt;blockquote&gt;
-      &lt;p&gt;&lt;a href=&quot;/ddp/2021/c1-semaforo_veiculos_pedestres_me&quot;&gt;« C1 - Semáforo com Máquina de Estados &lt;/a&gt; « C1 - Partida Estrela/Triângulo » &lt;a href=&quot;/ddp/2021/c1-partida_estrela_triangulo&quot;&gt; »&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;/ddp/2021/c1-semaforo_veiculos_pedestres_me&quot;&gt;« C1 - Semáforo com Máquina de Estados &lt;/a&gt; « C1 - Partida Estrela/Triângulo » &lt;a href=&quot;/ddp/2021/c1-disp7seg&quot;&gt; C1 - Display de 7 segmentos »&lt;/a&gt;&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/blockquote&gt;
 &lt;/blockquote&gt;
@@ -2930,372 +3281,4 @@ produzidos pela Microchip.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Projeto</summary></entry><entry><title type="html">Anexo A - Instalação do MPLAB-X e XC8</title><link href="http://localhost:4000/ddp/2021/capA-instalacao/" rel="alternate" type="text/html" title="Anexo A - Instalação do MPLAB-X e XC8" /><published>2021-04-10T17:17:21-03:00</published><updated>2021-04-10T17:17:21-03:00</updated><id>http://localhost:4000/ddp/2021/capA-instalacao</id><content type="html" xml:base="http://localhost:4000/ddp/2021/capA-instalacao/">&lt;h1 id=&quot;instalação-de-ide-e-compilador&quot;&gt;Instalação de IDE e Compilador&lt;/h1&gt;
-
-&lt;p&gt;Para o desenvolvimento de projetos para microcontroladores das famílias PIC e AVR, a Microchip disponibiliza o ambiente de desenvolvimento integrado (&lt;em&gt;Integrated Development Environment - IDE&lt;/em&gt;) &lt;strong&gt;MPLAB-X&lt;/strong&gt; e compiladores para as diversas arquiteturas disponíveis.&lt;/p&gt;
-
-&lt;h2 id=&quot;objetivo&quot;&gt;Objetivo&lt;/h2&gt;
-
-&lt;p&gt;Realizar a instalação da IDE MPLAB-X e do compilador XC8 em sistema operacional GNU/Linux (Debian).&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;O &lt;strong&gt;MPLAB-X&lt;/strong&gt; é uma ferramenta que reúne (integra) diversas funcionalidades de apoio ao desenvolvimento de aplicações ou projetos, tais como um editor de código, colorização e destaque de palavras reservadas, chamadas ao compilador, navegação entre os arquivos, integração com ferramentas de versionamento, entre outras funções.&lt;/p&gt;
-
-&lt;p&gt;O &lt;strong&gt;XC8&lt;/strong&gt; é o compilador para dispositivos de 8 bits, os mais simples da família. Ele é o esponsável por traduzir o código escrito pelo programador em linguagem C na linguagem de execução do microcontrolador, ou seja, um cojunto de códigos binários com a sequência de passos logicamente ordenados a serem processados e executados pelo microcontrolador.&lt;/p&gt;
-
-&lt;p&gt;A Microhip disponibiliza em seu site o &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide&quot;&gt;MPLAB-X&lt;/a&gt; e o &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers&quot;&gt;XC-8&lt;/a&gt; de forma gratuita, bem como a versão online, o &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress&quot;&gt;MPLAB Xpress Cloud Based IDE&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;versões&quot;&gt;Versões&lt;/h2&gt;
-&lt;p&gt;Existem diversas versões tanto da IDE quanto do compilador, e apesar da recomendação padrão ser o uso da versão mais recente, caso você use o gravador PICkit2, como é o meu caso, use a versão do compilador XC8 v1.45 e da IDE 4.40. 
-A partir da versão da IDE 5.x não há mais suporte ao gravador citado, sendo necessária a utilização do PICkit3 ou mesmo o PICkit4.&lt;/p&gt;
-
-&lt;p&gt;Caso use apenas com simulador, a recomendação é usar as versões mais recentes de 
-compilador e IDE.&lt;/p&gt;
-
-&lt;h2 id=&quot;instalação&quot;&gt;Instalação&lt;/h2&gt;
-
-&lt;p&gt;A Microchip fornece um conjunto de ferramentas de desenvolvimento de forma gratuita e multiplataforma para programar os seus microcontroladores.&lt;/p&gt;
-
-&lt;p&gt;Serão baixados apenas os dois programas mostrados na Figura 1.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: MPLAB X IDE e XC Compiler&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/logos-IDE-XC.png?raw=true&quot; alt=&quot;logos-IDE-XC&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A IDE pode ser baixada diretamente do &lt;em&gt;site&lt;/em&gt; onde pode-se escolher a versão adequada para o sistema operacional em que será realizada a instalação, Windows, &lt;strong&gt;Linux&lt;/strong&gt; ou Mac.&lt;/p&gt;
-
-&lt;p&gt;O compilador precisa ser baixado e instalado separadamente, pois deve ser instalado em função da família e arquitetura do microcontrolador que será utilizado, podendo ser de 8, 16 ou 32 bits.
-A compilação para os microcontroladores de 8 bits é realizada com o compilador XC8, 
-que também pode ser obtido gratuitamente no &lt;a href=&quot;https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Versões anteriores à recorrente podem ser acessadas no &lt;a href=&quot;https://www.microchip.com/development-tools/pic-and-dspic-downloads-archive&quot;&gt;arquivo&lt;/a&gt; de downloads.&lt;/p&gt;
-
-&lt;p&gt;O &lt;strong&gt;PICkit2&lt;/strong&gt; é a plataforma de software e hardware para a gravação do firmware na memória de programa do PIC. É uma versão descontinuada pela Microchip mas amplamente distribuida e de fácil montagem. 
-Algumas informações adicionais podem ser encontradas em &lt;a href=&quot;https://www.microchip.com/developmenttools/ProductDetails/pg164120&quot;&gt;pickit2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;instalação-no-gnulinux---mplab-x-32bits&quot;&gt;Instalação no GNU/Linux - MPLAB-X 32bits&lt;/h2&gt;
-
-&lt;p&gt;O processo de instalação apresentado aqui é uma das possíveis opções devido ao caráter multiplataforma da IDE.&lt;/p&gt;
-
-&lt;p&gt;O sistema operacional que utilizo é o &lt;a href=&quot;https://www.debian.org/index.pt.html&quot;&gt;Debian&lt;/a&gt;, assim, após o script de instalação baixado, atentar para alterar o seu privilégio da seguinte forma:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x MPLABX-v3.15-linux-installer.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Ao executar o &lt;em&gt;script&lt;/em&gt; de instalação do MPLAB-X IDE, para versões de 32 bits, 
-sendo instalada em arquitetura de 64 bits, a seguinte mensagem é apresentada:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./MPLABX-v3.15-linux-installer.sh
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; senha para curtaeletronica:
-64 Bit, check libraries
-Check &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;32 Bit libraries
-These 32 bit libraries were not found and are needed &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;MPLAB X to run:
-libc.so
-libdl.so
-libgcc_s.so
-libm.so
-libpthread.so
-librt.so
-libstdc++.so
-libexpat.so
-libX11.so
-libXext.so
-
-For more information visit http://microchip.wikidot.com/install:mplabx-lin64
-
-curtaeletronica@uC:~&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;O &lt;em&gt;script&lt;/em&gt; de instalação executa uma busca por dependências no sistema, ou seja,  bibliotecas, para a correta execução do programa a ser instalado.&lt;/p&gt;
-
-&lt;p&gt;Para instalar as dependências a seguinte linha de comando pode ser executada:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libc6:i386 lib32stdc++-10-dev libexpat1:i386 libx11-dev:i386 libxext-dev:i386
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Com esse comando, as dependências devem ser atendidas.&lt;/p&gt;
-
-&lt;p&gt;Informações relevantes, sobre a instalação das bibliotecas em um sistema baseado em Ubuntu/Debian, podem ser encontradas no &lt;a href=&quot;https://www.edivaldobrito.com.br/suporte-a-32-bits-no-ubuntu-de-64-bits/&quot;&gt;blog Edivaldo&lt;/a&gt; e em &lt;a href=&quot;http://microchipdeveloper.com/install:mplabx-lin64&quot;&gt;microchipDevHelp&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Após todas as dependências serem atendidas, a instalação é iniciada. 
-Para versões com suporte a arquitetura de 64 bits, essas dependências não são necessárias.&lt;/p&gt;
-
-&lt;h2 id=&quot;instalação-da-ide&quot;&gt;Instalação da IDE&lt;/h2&gt;
-
-&lt;p&gt;Para a instalação aqui apresentada é utilizada a versão para arquitetura de 64 bits, v5.45, conforme o comando que segue:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curtaeletronica@uC:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./MPLABX-v5.45-linux-installer.sh 
-64-bit Linux detected.
-Check &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;64-bit libraries
-Verifying archive integrity... All good.
-Uncompressing MPLAB X v5.45 installer..
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Um assistente do processo de instalação é aberto dando boas vindas, 
-informando a versão que será instalada, que neste caso é a &lt;strong&gt;MPLAB X IDE 5.45&lt;/strong&gt;, conforme Figura 2.&lt;/p&gt;
-
-&lt;p&gt;Para prosseguir, basta clicar em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 2: Setup&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/ide-01-setup.png?raw=true&quot; alt=&quot;mp00-setup&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acordo:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Selecione a opção &lt;strong&gt;&lt;em&gt;I accept the agreement&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
-  &lt;li&gt;Em seguida clique em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 3: Licensa&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/ide-02-license.png?raw=true&quot; alt=&quot;Licensa&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Escolha o diretório de instalação.
-    &lt;ul&gt;
-      &lt;li&gt;Recomenda-se manter o local padrão.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 4: Diretório de Instalação&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/ide-03-instOptions.png?raw=true&quot; alt=&quot;Diretório de Instalação&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A tela a seguir apresenta a opção de instalação das aplicações de desenvolvimento e de programação, respectivamente IDE e IPE e logo abaixo as opções de compiladores para as arquiteturas de 8, 16 ou 32 bits, além de outras arquiteturas suportadas.&lt;/p&gt;
-
-&lt;p&gt;A recomendação é a instalação das opções conforme a Figura 5, 
-pois as demais opções não são necessárias.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Após a escolha das opções clicar em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 5: Seleção de Ferramentas/Aplicações&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/ide-04-selectApp.png?raw=true&quot; alt=&quot;Seleção de Ferramentas/Aplicações &quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;O sistema está pronto para iniciar a instalação.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Forward&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 6: Resumo da Instalação&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/ide-05-readyToInstall.png?raw=true&quot; alt=&quot;Resumo da Instalação&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A instalação segue em progresso, e o tempo depende do poder de processamento do 
-computador que se está realizando a instalação, neste caso a duração foi inferior a três minutos.&lt;/p&gt;
-
-&lt;h2 id=&quot;instalação-do-compilador-xc8&quot;&gt;Instalação do compilador XC8&lt;/h2&gt;
-
-&lt;p&gt;Após o compilador ter sido baixado e receber o privilégio de execução, basta iniciar e seguir os passos do assistente de instalação, conforme segue:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 7: Instalação do XC8&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-01-setup.png?raw=true&quot; alt=&quot;Instalação do XC8&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;A tela seguinte é do Contrato de Licensa, em que após leitura, estando de acordo:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Selecionar a opção &lt;strong&gt;&lt;em&gt;I accept the agreement&lt;/em&gt;&lt;/strong&gt;;&lt;/li&gt;
-  &lt;li&gt;Clique em &lt;strong&gt;&lt;em&gt;Next&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 8: Licensa da instalação&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-02-license.png?raw=true&quot; alt=&quot;Licensa da instalação&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;No tipo de licensa usamos a versão &lt;strong&gt;&lt;em&gt;free&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 9: Tipo de instalação&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-03-licenseType.png?raw=true&quot; alt=&quot;Tipo de instalação&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;É possível escolher o local da instalação do compilador, 
-mas a recomendação é usar o diretório padrão, já indicado na instalação.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 10: Diretório de instalação&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-04-instDirectory.png?raw=true&quot; alt=&quot;Diretório de instalação&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Selecione as opções conforme segue, para que as configurações sejam atribuidos a todos os usuários da máquina (computador) além de compartilhar o caminho do xc8 na variável de ambiente.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 11: Parâmetros do compilador&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-05-compilerSettings.png?raw=true&quot; alt=&quot;Parâmetros do compilador&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Última tela antes do início da instalação, caso queira realizar alguma alteração, a hora é agora.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 12: Pronto para instalar&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-06-ready.png?raw=true&quot; alt=&quot;Pronto para instalar&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Instalação em progresso.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 13: Progresso da instalação&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-07-installing.png?raw=true&quot; alt=&quot;Progresso da instalação&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Informações da licensa. Apenas prossiga.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 14: Instalação completa&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-08-complete.png?raw=true&quot; alt=&quot;Instalação completa&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Fim da instalação.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 15: Fim da instalação&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;https://github.com/JoseWRPereira/ddp/blob/master/_posts/tUcPIC/capA-instalacao/xc8-09-complete.png?raw=true&quot; alt=&quot;Fim da instalação&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;Anexo A - Instalação do MPLAB-X e XC8 » &lt;a href=&quot;/ddp/2021/capB-novoProjeto&quot;&gt;Anexo B - Novo Projeto »&lt;/a&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Instalação de IDE e Compilador</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;/ddp/docs/tecnology/ucPIC&quot;&gt;Voltar&lt;/a&gt;&lt;/p&gt;</content><author><name>José W. R. Pereira</name></author><category term="ucPIC" /><summary type="html">Projeto</summary></entry></feed>
