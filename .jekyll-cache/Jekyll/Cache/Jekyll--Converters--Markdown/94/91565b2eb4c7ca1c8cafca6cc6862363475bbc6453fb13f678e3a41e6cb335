@@ -1,0 +1,233 @@
+I"4<h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar 3 saídas simulando um semáforo de veículos.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Uso de definições;</li>
+  <li>Encapsulamento de trechos de código: procedimentos e funções;</li>
+</ul>
+
+<!--more-->
+
+<h2 id="circuito-hardware">Circuito (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo"><em>Hardware</em></a>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1: Semáforo de Veículos para uma via simples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-semaforo_veiculos/semaforo_veiculos.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="programa-firmware">Programa (<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos.X"><em>Firmware</em></a>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-semaforo_veiculos/projectTree.png?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 15 April 2021, 21:11
+ * 
+ * IDE:                 MPLAB X IDE v5.45
+ * Compiler:            XC8 v2.31
+ * Operating System:    Debian GNU/Linux bullseye/sid
+ * Kernel:              Linux 5.10.0-5-amd64
+ * Architecture:        x86-64
+ * 
+ * Objetivo: 
+ *      Acionar 3 saídas simulando um semáforo com os respectivos tempos:
+ *          Vermelha: 5s
+ *          Verde: 4s
+ *          Amarela: 1s
+ * 
+ * 
+ * Pinos    |nº     |Conexão
+ *  VDD     |11,32  | Alimentação (Vcc/+5V)
+ *  VSS     |12,31  | Alimentação (GND/0V)
+ *  RD7     |30     | LED Vermelho (source)
+ *  RD6     |29     | LED Amarelo (source)
+ *  RD5     |28     | LED Verde (source)
+ * 
+ */</span>
+
+<span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+</span>
+<span class="cp">#define _XTAL_FREQ  4000000
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">// Configuração dos pinos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// LED Vermelho</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// LED Amarelo</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       <span class="c1">// LED Verde</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+            <span class="c1">// LED Vermelho</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// LED Verde                </span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">4000</span><span class="p">);</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="c1">// LED Amarelo</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+        <span class="n">PORTDbits</span><span class="p">.</span><span class="n">RD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="utilização-de-defines">Utilização de #defines</h2>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+</span>
+<span class="cp">#define _XTAL_FREQ  4000000
+</span>
+<span class="cp">#define SEMAFORO_VERMELHO   PORTDbits.RD7
+#define SEMAFORO_AMARELO    PORTDbits.RD6
+#define SEMAFORO_VERDE      PORTDbits.RD5
+</span>
+<span class="cp">#define TEMPO_SEMAFORO_VERMELHO 5000
+#define TEMPO_SEMAFORO_AMARELO  1000
+#define TEMPO_SEMAFORO_VERDE    4000
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">// Configuração dos pinos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="c1">// Inicialização do estado dos LEDs</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERMELHO</span> <span class="p">);</span>
+        <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERDE</span> <span class="p">);</span>
+        <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_AMARELO</span> <span class="p">);</span>
+        <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="encapsulamento-de-código">Encapsulamento de código</h2>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "config.h"
+#include &lt;xc.h&gt;
+</span>
+<span class="cp">#define _XTAL_FREQ  4000000
+</span>
+<span class="cp">#define SEMAFORO_VERMELHO   PORTDbits.RD7
+#define SEMAFORO_AMARELO    PORTDbits.RD6
+#define SEMAFORO_VERDE      PORTDbits.RD5
+</span>
+<span class="cp">#define TEMPO_SEMAFORO_VERMELHO 5000
+#define TEMPO_SEMAFORO_AMARELO  1000
+#define TEMPO_SEMAFORO_VERDE    4000
+</span>
+<span class="kt">void</span> <span class="nf">semaforo_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">// Configuração dos pinos</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD5</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="c1">// Inicialização do estado dos LEDs</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">semaforo_vermelho</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERMELHO</span> <span class="p">);</span>
+    <span class="n">SEMAFORO_VERMELHO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">semaforo_verde</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_VERDE</span> <span class="p">);</span>
+    <span class="n">SEMAFORO_VERDE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">semaforo_amarelo</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">__delay_ms</span><span class="p">(</span> <span class="n">TEMPO_SEMAFORO_AMARELO</span> <span class="p">);</span>
+    <span class="n">SEMAFORO_AMARELO</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">semaforo_init</span><span class="p">();</span>
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">semaforo_vermelho</span><span class="p">();</span>
+        <span class="n">semaforo_verde</span><span class="p">();</span>
+        <span class="n">semaforo_amarelo</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/c1-botaoLED">« C1 - Botão pulsador e LED </a> « C1 - Semáforo de Veículos » <a href="/ddp/2021/c1-semaforo_veiculos_pedestres">C1 - Semáforo de Veículos e de Pedestres »</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET

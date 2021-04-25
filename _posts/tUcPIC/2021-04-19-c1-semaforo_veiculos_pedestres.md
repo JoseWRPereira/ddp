@@ -34,7 +34,7 @@ Simular um semáforo de veículos e de pedestre, incluindo o botão para bloquei
 ## Circuito ([*Hardware*](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo))
 
 
-| Figura 1: Semáforo de Veículos de via simples |
+| Figura 1: Semáforo de Veículos para uma via simples com botão de pedestre |
 |:----------------:|
 | ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c1-semaforo_veiculos_pedestres/semaforo_veiculos_pedestres.gif{{site.rawimg}})|
 
