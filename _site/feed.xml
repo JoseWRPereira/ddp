@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-24T22:39:55-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/ddp/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ddp/" rel="alternate" type="text/html" /><updated>2021-04-24T23:27:59-03:00</updated><id>http://localhost:4000/ddp/feed.xml</id><title type="html">Diferença de Potencial</title><subtitle>Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 </subtitle><author><name>José W R Pereira</name></author><entry><title type="html">C1 - Display de 7 segmentos</title><link href="http://localhost:4000/ddp/2021/c1-disp7seg/" rel="alternate" type="text/html" title="C1 - Display de 7 segmentos" /><published>2021-04-24T21:43:21-03:00</published><updated>2021-04-24T21:43:21-03:00</updated><id>http://localhost:4000/ddp/2021/c1-disp7seg</id><content type="html" xml:base="http://localhost:4000/ddp/2021/c1-disp7seg/">&lt;h1 id=&quot;display-de-7-segmentos&quot;&gt;Display de 7 segmentos&lt;/h1&gt;
 
 &lt;p&gt;O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.&lt;/p&gt;
@@ -368,7 +368,7 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Semáforo de Veículos de via simples&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Partida Estrela-Triângulo para motor trifásico&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -392,29 +392,6 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&quot;biblioteca-local-delay&quot;&gt;Biblioteca local delay&lt;/h2&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;xc.h&amp;gt;
-#define _XTAL_FREQ  4000000
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;__delay_ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef DELAY_H
-#define DELAY_H
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;cp&quot;&gt;#endif
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;biblioteca-local-partida-estrela-triângulo&quot;&gt;Biblioteca local partida Estrela-Triângulo&lt;/h2&gt;
 
@@ -617,7 +594,7 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Semáforo de Veículos de via simples&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Semáforo de Veículos para uma via simples com botão de pedestre&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -873,7 +850,7 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Semáforo de Veículos de via simples&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Semáforo de Veículos para uma via simples com botão de pedestre&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -1275,7 +1252,7 @@ O display possui um terminal para cada segmento do display.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Semáforo de Veículos de via simples&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Figura 1: Semáforo de Veículos para uma via simples&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;

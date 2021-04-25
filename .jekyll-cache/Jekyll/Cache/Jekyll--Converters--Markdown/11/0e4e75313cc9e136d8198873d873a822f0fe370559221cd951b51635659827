@@ -1,0 +1,70 @@
+I"}<h1 id="curta-eletrônica">Curta Eletrônica</h1>
+<h2 id="aprendendo-com-desafios">Aprendendo com Desafios</h2>
+
+<p>A resolução de problemas está contida das competências gerais da <a href="/ddp/docs/#2-pensamento-científico-criativo-e-crítico">BNCC</a> e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.</p>
+
+<p>Para alcançar um bom nível ou excelência em uma habilidade, ela precisa ser lapidada de forma prática, pela repetição, análise e avaliação crítica dos resultados obtidos e também do processo de resolução.</p>
+
+<p>O <strong>objetivo é resolver os problemas</strong>, mas no caminho, <strong>apreciar o aprendizado</strong> de linguagens de programação e da interface com o mundo físico.</p>
+
+<p>Para o desenvolvimento dos projetos são utilizadas as seguintes ferramentas:</p>
+
+<ul>
+  <li>Ambiente de desenvolvimento integrada - IDE <a href="https://www.microchip.com/mplab/mplab-x-ide">MPLAB X</a>;</li>
+  <li>Compilador <a href="https://www.microchip.com/mplab/compilers">XC8</a>;</li>
+  <li>Simulador <a href="https://www.simulide.com/p/downloads.html">SimulIDE</a></li>
+</ul>
+
+<p>Alternativamente pode-se utilizar uma ferramenta online:</p>
+<ul>
+  <li>IDE/compilador <a href="https://www.microchip.com/mplab/mplab-xpress">MPLAB Xpress</a>.</li>
+</ul>
+
+<hr />
+
+<h2 id="antes-de-programar">Antes de Programar…</h2>
+<ul>
+  <li><a href="/ddp/2021/capA-instalacao">Anexo A - Instalação</a></li>
+  <li><a href="/ddp/2021/capB-novoProjeto">Anexo B - Novo Projeto</a></li>
+  <li><a href="/ddp/2021/capC-novosArquivos">Anexo C - Novos Arquivos</a></li>
+  <li><a href="/ddp/2021/capD-versionamento">Anexo D - Controle de Versão</a></li>
+</ul>
+
+<h2 id="ciclo-1---programas-básicos">Ciclo 1 - Programas Básicos</h2>
+<ul>
+  <li><a href="/ddp/2021/config">Arquivo de Configuração</a> 
+[<a href="https://raw.githubusercontent.com/JoseWRPereira/ucPICsimulIDE/master/NomeDoProjeto.X/config.h">config.h</a>]</li>
+  <li><a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_piscaLED.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-botaoLED">C1 - Botão e LED</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_botaoLED.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED_botao">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-semaforo_veiculos">C1 - Semaforo de Veículos</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres">C1 - Semaforo de Veículos e de Pedestres</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">C1 - Semaforo com Máquina de Estados</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres_me.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-partida_estrela_triangulo">C1 - Partida Estrela/Triângulo</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_partida_estrela_triangulo.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_partida_estrela_triangulo">sim</a>]</li>
+  <li>
+    <p><a href="/ddp/2021/c1-disp7seg">C1 - Display de 7 segmentos</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_display7segmentos.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_disp7seg">sim</a>]</p>
+  </li>
+  <li><a href="/ddp/2020/P0111-disp7segX2">P0111 - 2 Displays de 7 segmentos</a></li>
+  <li><a href="/ddp/2020/P0112-bordaBotaoPulsador">P0112 - Detecção de borda</a></li>
+  <li><a href="/ddp/2020/P0120-dispLCD8vias">P0120 - Display LCD 8 vias</a></li>
+  <li><a href="/ddp/2020/P0122-dispLCD4vias">P0122 - Display LCD 4 vias</a></li>
+  <li><a href="/ddp/2020/P0130-teclado4x4">P0130 - Teclado Matricial 4x4</a></li>
+</ul>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnologia">Voltar</a></p>
+:ET

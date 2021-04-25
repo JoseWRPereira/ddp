@@ -33,7 +33,7 @@ Simular uma partida estrela/triângulo de motor trifásico.
 ## Circuito ([*Hardware*](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_partida_estrela_triangulo))
 
 
-| Figura 1: Semáforo de Veículos de via simples |
+| Figura 1: Partida Estrela-Triângulo para motor trifásico |
 |:----------------:|
 | ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c1-partida_estrela_triangulo/partida_estrela_triangulo.gif{{site.rawimg}})|
 
@@ -45,32 +45,6 @@ Simular uma partida estrela/triângulo de motor trifásico.
 |:----------------------------------------:|
 | ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c1-partida_estrela_triangulo/projectTree.png{{site.rawimg}})| 
 
-
-
-## Biblioteca local delay
-
-```c
-#include <xc.h>
-#define _XTAL_FREQ  4000000
-
-void delay( unsigned int t )
-{
-    while( t )
-    {
-        __delay_ms( 1 );
-        --t;
-    }
-}
-```
-
-```c
-#ifndef DELAY_H
-#define DELAY_H
-
-void delay( unsigned int t );
-
-#endif
-```
 
 
 ## Biblioteca local partida Estrela-Triângulo

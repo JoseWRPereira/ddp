@@ -334,7 +334,7 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Figura 1: Semáforo de Veículos de via simples</th>
+      <th style="text-align: center">Figura 1: Partida Estrela-Triângulo para motor trifásico</th>
     </tr>
   </thead>
   <tbody>
@@ -358,29 +358,6 @@
     </tr>
   </tbody>
 </table>
-
-<h2 id="biblioteca-local-delay">Biblioteca local delay</h2>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;xc.h&gt;
-#define _XTAL_FREQ  4000000
-</span>
-<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">while</span><span class="p">(</span> <span class="n">t</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">__delay_ms</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
-        <span class="o">--</span><span class="n">t</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef DELAY_H
-#define DELAY_H
-</span>
-<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">t</span> <span class="p">);</span>
-
-<span class="cp">#endif
-</span></code></pre></div></div>
 
 <h2 id="biblioteca-local-partida-estrela-triângulo">Biblioteca local partida Estrela-Triângulo</h2>
 

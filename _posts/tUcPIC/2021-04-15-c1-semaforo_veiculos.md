@@ -33,7 +33,7 @@ Acionar 3 saídas simulando um semáforo de veículos.
 ## Circuito ([*Hardware*](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo))
 
 
-| Figura 1: Semáforo de Veículos de via simples |
+| Figura 1: Semáforo de Veículos para uma via simples |
 |:----------------:|
 | ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c1-semaforo_veiculos/semaforo_veiculos.gif{{site.rawimg}})|
 
