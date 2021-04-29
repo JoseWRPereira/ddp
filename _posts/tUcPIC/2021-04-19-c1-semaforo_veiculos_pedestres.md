@@ -503,7 +503,6 @@ Ficou alguma dúvida, entre em contato.
 
 Bom trabalho! 
 
-
 <hr/>
 
 >>> [<< C1 - Semáforo de Veículos ]({{site.baseurl}}/2021/c1-semaforo_veiculos) << C1 - Semáforo de Veículos e de Pedestres >> [C1 - Semáforo com Máquina de Estados >>]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres_me)
