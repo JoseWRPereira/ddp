@@ -1,4 +1,4 @@
-I"}<h1 id="curta-eletrônica">Curta Eletrônica</h1>
+I"y<h1 id="curta-eletrônica">Curta Eletrônica</h1>
 <h2 id="aprendendo-com-desafios">Aprendendo com Desafios</h2>
 
 <p>A resolução de problemas está contida das competências gerais da <a href="/ddp/docs/#2-pensamento-científico-criativo-e-crítico">BNCC</a> e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.</p>
@@ -40,24 +40,24 @@
   <li><a href="/ddp/2021/c1-botaoLED">C1 - Botão e LED</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_botaoLED.X">src</a>]
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED_botao">sim</a>]</li>
-  <li><a href="/ddp/2021/c1-semaforo_veiculos">C1 - Semaforo de Veículos</a> 
+  <li><a href="/ddp/2021/c1-semaforo_veiculos">C1 - Semáforo de Veículos</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos.X">src</a>]
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
-  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres">C1 - Semaforo de Veículos e de Pedestres</a> 
+  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres">C1 - Semáforo de Veículos e de Pedestres</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres.X">src</a>]
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
-  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">C1 - Semaforo com Máquina de Estados</a> 
+  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">C1 - Semáforo com Máquina de Estados</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres_me.X">src</a>]
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
   <li><a href="/ddp/2021/c1-partida_estrela_triangulo">C1 - Partida Estrela/Triângulo</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_partida_estrela_triangulo.X">src</a>]
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_partida_estrela_triangulo">sim</a>]</li>
-  <li>
-    <p><a href="/ddp/2021/c1-disp7seg">C1 - Display de 7 segmentos</a> 
+  <li><a href="/ddp/2021/c1-disp7seg">C1 - Display de 7 segmentos</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_display7segmentos.X">src</a>]
-[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_disp7seg">sim</a>]</p>
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_disp7seg">sim</a>]</li>
+  <li>
+    <p><a href="/ddp/2021/c-disp7segX2">C1 - 2 Displays de 7 segmentos</a></p>
   </li>
-  <li><a href="/ddp/2020/P0111-disp7segX2">P0111 - 2 Displays de 7 segmentos</a></li>
   <li><a href="/ddp/2020/P0112-bordaBotaoPulsador">P0112 - Detecção de borda</a></li>
   <li><a href="/ddp/2020/P0120-dispLCD8vias">P0120 - Display LCD 8 vias</a></li>
   <li><a href="/ddp/2020/P0122-dispLCD4vias">P0122 - Display LCD 4 vias</a></li>

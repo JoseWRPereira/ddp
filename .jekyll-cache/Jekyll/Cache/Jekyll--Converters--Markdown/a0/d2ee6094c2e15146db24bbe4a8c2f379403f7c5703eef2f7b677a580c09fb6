@@ -1,4 +1,4 @@
-I"v<h1 id="curta-eletrônica">Curta Eletrônica</h1>
+I"�<h1 id="curta-eletrônica">Curta Eletrônica</h1>
 <h2 id="aprendendo-com-desafios">Aprendendo com Desafios</h2>
 
 <p>A resolução de problemas está contida das competências gerais da <a href="/ddp/docs/#2-pensamento-científico-criativo-e-crítico">BNCC</a> e é de extrema importância no desenvolvimento da ciência, da tecnologia e no mercado de trabalho.</p>
@@ -32,14 +32,21 @@
 
 <h2 id="ciclo-1---programas-básicos">Ciclo 1 - Programas Básicos</h2>
 <ul>
-  <li><a href="/ddp/2021/config">Arquivo de Configuração</a> [<a href="https://raw.githubusercontent.com/JoseWRPereira/ucPICsimulIDE/master/NomeDoProjeto.X/config.h">config.h</a>]</li>
-  <li><a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a> [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_piscaLED.X">src</a>][<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED">sim</a>]</li>
-  <li><a href="/ddp/2021/c1-botaoLED">C1 - Botão e LED</a> [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_botaoLED.X">src</a>][<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED_botao">sim</a>]</li>
-  <li><a href="/ddp/2021/c1-semaforo_veiculos">C1 - Semaforo de Veículos</a> [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos.X">src</a>][<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
-  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres">C1 - Semaforo de Veículos e de Pedestres</a> 
+  <li><a href="/ddp/2021/config">Arquivo de Configuração</a> 
+[<a href="https://raw.githubusercontent.com/JoseWRPereira/ucPICsimulIDE/master/NomeDoProjeto.X/config.h">config.h</a>]</li>
+  <li><a href="/ddp/2021/c1-piscaLED">C1 - Pisca LED</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_piscaLED.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-botaoLED">C1 - Botão e LED</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_botaoLED.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED_botao">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-semaforo_veiculos">C1 - Semáforo de Veículos</a> 
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos.X">src</a>]
+[<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
+  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres">C1 - Semáforo de Veículos e de Pedestres</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres.X">src</a>]
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
-  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">C1 - Semaforo com Máquina de Estados</a> 
+  <li><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me">C1 - Semáforo com Máquina de Estados</a> 
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres_me.X">src</a>]
 [<a href="https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo">sim</a>]</li>
   <li><a href="/ddp/2021/c1-partida_estrela_triangulo">C1 - Partida Estrela/Triângulo</a> 
