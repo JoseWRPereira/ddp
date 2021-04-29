@@ -49,13 +49,13 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [C1 - Botão e LED]({{site.baseurl}}/2021/c1-botaoLED) 
 [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_botaoLED.X)]
 [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_LED_botao)]
-* [C1 - Semaforo de Veículos]({{site.baseurl}}/2021/c1-semaforo_veiculos) 
+* [C1 - Semáforo de Veículos]({{site.baseurl}}/2021/c1-semaforo_veiculos) 
 [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos.X)]
 [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo)]
-* [C1 - Semaforo de Veículos e de Pedestres]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres) 
+* [C1 - Semáforo de Veículos e de Pedestres]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres) 
 [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres.X)]
 [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo)]
-* [C1 - Semaforo com Máquina de Estados]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres_me) 
+* [C1 - Semáforo com Máquina de Estados]({{site.baseurl}}/2021/c1-semaforo_veiculos_pedestres_me) 
 [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_semaforo_veiculos_pedestres_me.X)]
 [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_semaforo)]
 * [C1 - Partida Estrela/Triângulo]({{site.baseurl}}/2021/c1-partida_estrela_triangulo) 
@@ -64,8 +64,8 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [C1 - Display de 7 segmentos]({{site.baseurl}}/2021/c1-disp7seg) 
 [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_display7segmentos.X)]
 [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_disp7seg)]
+* [C1 - 2 Displays de 7 segmentos]({{site.baseurl}}/2021/c1-disp7segX2)
 
-* [P0111 - 2 Displays de 7 segmentos]({{site.baseurl}}/2020/P0111-disp7segX2)
 * [P0112 - Detecção de borda]({{site.baseurl}}/2020/P0112-bordaBotaoPulsador)
 * [P0120 - Display LCD 8 vias]({{site.baseurl}}/2020/P0120-dispLCD8vias)
 * [P0122 - Display LCD 4 vias]({{site.baseurl}}/2020/P0122-dispLCD4vias)

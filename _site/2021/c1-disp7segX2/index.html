@@ -20,20 +20,20 @@
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/ddp/assets/favicons/android-icon-192x192.png"sizes="192x192">
 
-<title>Diferença de Potencial - DdP</title>
-<meta property="og:title" content="Diferença de Potencial - DdP" />
+<title>C1 - 2 Displays de 7 segmentos</title>
+<meta property="og:title" content="C1 - 2 Displays de 7 segmentos" />
 <meta property="og:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 " />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://localhost:4000" />
 <meta property="og:site_name" content="http://localhost:4000" />
 
-<meta itemprop="name" content="Diferença de Potencial - DdP">
+<meta itemprop="name" content="C1 - 2 Displays de 7 segmentos">
 <meta itemprop="description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 ">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Diferença de Potencial - DdP"/>
+<meta name="twitter:title" content="C1 - 2 Displays de 7 segmentos"/>
 <meta name="twitter:description" content="Site/Blog para publicação de material de estudo, notas de aula e devaneios.
 "/>
 
@@ -288,8 +288,8 @@
         </div>
         <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
           <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/pages/index.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
-<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/pages/index.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
+            <!--<a href="https://github.com/JoseWRPereira/ddp/edit/master/_posts/tUcPIC/2021-04-29-c1-disp7segX2.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>-->
+<!--<a href="https://github.com/JoseWRPereira/ddp/issues/new?labels=question&title=Question:&body=Question on: https://github.com/JoseWRPereira/ddp/tree/master/_posts/tUcPIC/2021-04-29-c1-disp7segX2.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>-->
 <!--<a href="https://github.com/JoseWRPereira/ddp/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>-->
 <!-- this will parse through the header fields and add a button to open
      an issue / ask a question on Github. The editable field should be in
@@ -306,24 +306,15 @@
           <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
             <ol class="breadcrumb spb-1">
               <li class="breadcrumb-item active" aria-current="page">
-                <a href="http://localhost:4000/ddp/">Diferença de Potencial - DdP</a>
+                <a href="http://localhost:4000/ddp/2021/c1-disp7segX2/">C1 - 2 Displays de 7 segmentos</a>
               </li>
             </ol>
           </nav>
           <div class="td-content">
-            <h1 id="postagens">Postagens</h1>
-
-<p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
-
-<br />
-<hr /><hr />
-
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-disp7segX2/">C1 - 2 Displays de 7 segmentos</a></h2>
-   <span class="post-date">2021-04-29</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
+            <h1 style="margin-bottom:0px">C1 - 2 Displays de 7 segmentos</h1>
+<span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+<span class="post-date" style="font-style: italic;">2021-04-29</span>
+<h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
 
 <p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
 
@@ -331,242 +322,206 @@
 
 <p>Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.</p>
 
+<!--more-->
 
-   
-      <a href="/ddp/2021/c1-disp7segX2/">leia mais </a>
-   
-   </div>
-   <hr />
+<h2 id="1-circuito-hardware">1. Circuito (<em>Hardware</em>)</h2>
 
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-disp7seg/">C1 - Display de 7 segmentos</a></h2>
-   <span class="post-date">2021-04-24</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.1: 2 Displays de 7 segmentos catodo comum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7segX2/disp7segX2.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.</p>
+<h2 id="2-programa-firmware">2. Programa (<em>Firmware</em>)</h2>
 
-<h2 id="objetivo">Objetivo</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7segX2/projectTree.jpg?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais:</p>
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
 
-<p><code class="language-plaintext highlighter-rouge">0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F</code>;</p>
-
-
-   
-      <a href="/ddp/2021/c1-disp7seg/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-partida_estrela_triangulo/">C1 - Partida Estrela/Triângulo</a></h2>
-   <span class="post-date">2021-04-20</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="partida-de-motor-trifásico">Partida de Motor Trifásico</h1>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Simular uma partida estrela/triângulo de motor trifásico.</p>
-
-<h2 id="conteúdo">Conteúdo</h2>
-
+<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
 <ul>
-  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
-  <li>Máquina de estados.</li>
+  <li>Inclusão de bibliotecas;</li>
+  <li>Programa principal;
+    <ul>
+      <li>Declaração e inicializações;</li>
+      <li>Laço de repetição.</li>
+    </ul>
+  </li>
 </ul>
 
+<h3 id="programa-principal">Programa principal</h3>
 
-   
-      <a href="/ddp/2021/c1-partida_estrela_triangulo/">leia mais </a>
-   
-   </div>
-   <hr />
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 13 de Agosto de 2020, 17:31:21
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Segmento a
+ *  RB1     |34     | Segmento b
+ *  RB2     |35     | Segmento c
+ *  RB3     |36     | Segmento d
+ *  RB4     |37     | Segmento e
+ *  RB5     |38     | Segmento f
+ *  RB6     |39     | Segmento g
+ *  RB7     |40     | Segmento p
+ *  RD7     |30     | Hab. Dezena (Catodo comum)
+ *  RD6     |29     | Hab. Unidade (Catodo comum)
+ * -------------------------------------------------
+ */</span>
 
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">C1 - Semáforo de Veíc. e Ped. com Máquina de Estados</a></h2>
-   <span class="post-date">2021-04-20</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="semáforo">Semáforo</h1>
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+#include "disp7seg.h"
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">nScan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="n">disp7segX2_init</span><span class="p">();</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">disp7segX2</span><span class="p">(</span> <span class="n">num</span> <span class="p">);</span>
+        
+        <span class="k">if</span><span class="p">(</span> <span class="o">++</span><span class="n">nScan</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">nScan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="o">++</span><span class="n">num</span> <span class="o">%</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-<h2 id="objetivo">Objetivo</h2>
+<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
 
-<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres utilizando uma máquina de estados.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   delay.c
+ * Author: josewrpereira
+ *
+ * Created on 13 de Agosto de 2020, 17:32
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Segmento a
+ *  RB1     |34     | Segmento b
+ *  RB2     |35     | Segmento c
+ *  RB3     |36     | Segmento d
+ *  RB4     |37     | Segmento e
+ *  RB5     |38     | Segmento f
+ *  RB6     |39     | Segmento g
+ *  RB7     |40     | Segmento p
+ *  RD7     |30     | Hab. Dezena (Catodo comum)
+ *  RD6     |29     | Hab. Unidade (Catodo comum)
+ * ------------------------------------------------- 
+ */</span>
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+</span>
+<span class="cp">#define QTD_DIGITOS         2
+#define BASE                10
+</span>
+<span class="cp">#define DISP7SEG_BUS( x )   PORTB = x
+#define HAB_DEZENA( x )     PORTDbits.RD7 = x
+#define HAB_UNIDADE( x )    PORTDbits.RD6 = x
+</span>
 
-<h2 id="conteúdo">Conteúdo</h2>
+<span class="kt">char</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>    <span class="mh">0x3F</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x5B</span><span class="p">,</span> <span class="mh">0x4F</span><span class="p">,</span> 
+                            <span class="mh">0x66</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x7D</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> 
+                            <span class="mh">0x7F</span><span class="p">,</span> <span class="mh">0x6F</span><span class="p">,</span> <span class="mh">0x77</span><span class="p">,</span> <span class="mh">0x7C</span><span class="p">,</span> 
+                            <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0x5E</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0x71</span>  <span class="p">};</span>
 
-<ul>
-  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
-  <li>Máquina de estados.</li>
-</ul>
+<span class="kt">void</span> <span class="nf">disp7segX2_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ANSELH</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISB</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+    <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
 
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">posicao</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">disp7segX2</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span><span class="p">(</span> <span class="n">posicao</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">// Unidade</span>
+                <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+                <span class="n">DISP7SEG_BUS</span><span class="p">(</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="n">num</span> <span class="o">%</span> <span class="n">BASE</span><span class="p">]</span> <span class="p">);</span>
+                <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
 
-   
-      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">leia mais </a>
-   
-   </div>
-   <hr />
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">// Dezena</span>
+                <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+                <span class="n">DISP7SEG_BUS</span><span class="p">(</span> <span class="n">digitos7seg</span><span class="p">[(</span><span class="n">num</span> <span class="o">/</span> <span class="n">BASE</span><span class="p">)</span> <span class="o">%</span> <span class="n">BASE</span><span class="p">]</span> <span class="p">);</span>
+                <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">posicao</span> <span class="o">=</span> <span class="o">++</span><span class="n">posicao</span> <span class="o">%</span> <span class="n">QTD_DIGITOS</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">C1 - Semáforo de Veículos e de Pedestres</a></h2>
-   <span class="post-date">2021-04-19</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+<hr />
 
-<h2 id="objetivo">Objetivo</h2>
+<p>Agora é a sua vez!</p>
 
-<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres.</p>
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
 
-<h2 id="conteúdo">Conteúdo</h2>
+<p>Ficou com alguma dúvida, entre em contato.</p>
 
-<ul>
-  <li>Encapsulamento de trechos de código em procedimentos e funções;</li>
-  <li>Definições de parâmetros para funções;</li>
-  <li>Função de atraso bloqueante: delay();</li>
-</ul>
+<p>Bom trabalho!</p>
 
+<hr />
 
-   
-      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">leia mais </a>
-   
-   </div>
-   <hr />
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/c1-disp7seg">« C1 - Display de 7 segmentos</a> « C1 - 2 Displays de 7 segmentos » <a href="/ddp/2021/c1-disp7segX2">»</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
 
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-semaforo_veiculos/">C1 - Semáforo de Veículos</a></h2>
-   <span class="post-date">2021-04-15</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+<hr />
 
-<h2 id="objetivo">Objetivo</h2>
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
 
-<p>Acionar 3 saídas simulando um semáforo de veículos.</p>
-
-<h2 id="conteúdo">Conteúdo</h2>
-
-<ul>
-  <li>Uso de definições;</li>
-  <li>Encapsulamento de trechos de código: procedimentos e funções;</li>
-</ul>
-
-
-   
-      <a href="/ddp/2021/c1-semaforo_veiculos/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-botaoLED/">Botão pulsador e LED</a></h2>
-   <span class="post-date">2021-04-13</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
-
-<p>Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.</p>
-
-<h1 id="objetivo">Objetivo</h1>
-
-<p>Acionar um LED copiando o estado lógico de um botão.</p>
-
-<h1 id="conteúdo">Conteúdo</h1>
-
-<ul>
-  <li>Configuração e leitura de pino como entrada digital;</li>
-  <li>Arquivo de cabeçalho;</li>
-  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">if</code> e <code class="language-plaintext highlighter-rouge">else</code>;</li>
-  <li>Estrutura de repetição infinita <code class="language-plaintext highlighter-rouge">while( 1 )</code>;</li>
-  <li>Definições;</li>
-  <li>Simplificação de código.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2021/c1-botaoLED/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/c1-piscaLED/">C1 - Pisca LED</a></h2>
-   <span class="post-date">2021-04-12</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
-   <h1 id="pisca-led">Pisca LED</h1>
-
-<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.</p>
-
-<p>Em um sistema microcontrolado, o programa equivalente ao <code class="language-plaintext highlighter-rouge">"Ola mundo"</code> é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: <code class="language-plaintext highlighter-rouge">Pisca LED</code>.</p>
-
-<p>Assim, o <code class="language-plaintext highlighter-rouge">Pisca LED</code> ou <em><code class="language-plaintext highlighter-rouge">Blink LED</code></em> é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (<em>firmware</em>), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Acionar um LED de forma que ‘pisque’ com frequência de 1Hz.</p>
-
-<h2 id="conteúdo">Conteúdo</h2>
-
-<ul>
-  <li>Estrutura básica de um programa;</li>
-  <li>Comentários;</li>
-  <li>Diretivas de configuração;</li>
-  <li>Inclusão de biblioteca padrão;</li>
-  <li>Programa principal;</li>
-  <li>Configuração e acionamento de pino como saída.</li>
-</ul>
-
-
-   
-      <a href="/ddp/2021/c1-piscaLED/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/capD-versionamento/">Anexo D - Controle de Versão</a></h2>
-   <span class="post-date">2021-04-10</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
-   <h1 id="git-e-github">Git e GitHub</h1>
-
-<p>Com o MPLAB-X é possível realizar o controle de versão dos projetos com algumas ferramentas específicas, entre elas o Git, e fazer a conexão com um repositório remoto, como o GitHub.</p>
-
-<p>O Git é uma ferramenta de controle de versão que será aqui utilizada num recorte bem simples e básica, não sendo o intuito ensinar seu uso amplo ou profundo.</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Utilizar o Git e o GitHub, através do MPLAB-X, para fazer o controle de versão de um projeto.</p>
-
-
-   
-      <a href="/ddp/2021/capD-versionamento/">leia mais </a>
-   
-   </div>
-   <hr />
-
-   <div class="post-preview">
-   <h2><a href="/ddp/2021/capC-novosArquivos/">Anexo C - Novos Arquivos</a></h2>
-   <span class="post-date">2021-04-10</span><br />
-   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
-   <h1 id="arquivo-fonte-c-e-de-cabeçalho-h">Arquivo fonte (.c) e de cabeçalho (.h)</h1>
-
-<p>Dentro de um projeto para microcontrolador, são criados basicamente arquivos fonte e de cabeçalho.</p>
-
-<p>Os arquivos <strong>fontes</strong> são aqueles com extensão <strong>.c</strong> e são escritos seguindo a sintaxe da linguagem de programação C, a mais utilizada para este tipo de aplicação.</p>
-
-<p>Os arquivos de <strong>cabeçalho</strong> (<em>header</em>) são aqueles com a extensão <strong>.h</strong> e são utilizados como apresentação de funções em arquivos fontes diferentes de onde estão declaradas, permitindo assim que elas sejam invocadas (chamadas).</p>
-
-<h2 id="objetivo">Objetivo</h2>
-
-<p>Criar um arquivo fonte no projeto utilizando a plataforma MPLAB-X.</p>
-
-
-   
-      <a href="/ddp/2021/capC-novosArquivos/">leia mais </a>
-   
-   </div>
-   <hr />
-
-
-Quer ver mais? Acesse <a href="/ddp/archive/">artigos</a>.
-</p>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -617,7 +572,8 @@ $.each(headers, function(i, header){
 })
 </script>
 
-
+<script>
+$('h1').first().append('<div></div>')</script>
 
 
             
