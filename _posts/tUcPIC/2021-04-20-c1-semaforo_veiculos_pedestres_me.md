@@ -51,7 +51,7 @@ Simular um semáforo de veículos e de pedestre, incluindo o botão para bloquei
 
 ```c
 #include <xc.h>
-#define _XTAL_FREQ  4000000
+#include "delay.h"
 
 void delay( unsigned int t )
 {
@@ -66,6 +66,8 @@ void delay( unsigned int t )
 ```c
 #ifndef DELAY_H
 #define DELAY_H
+
+#define _XTAL_FREQ  4000000
 
 void delay( unsigned int t );
 
@@ -145,7 +147,7 @@ void semaforo( unsigned char cor );
 ### Programa principal 
 
 ```c
-*
+/*
  * File:   main.c
  * Author: josewrpereira
  *

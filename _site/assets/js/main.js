@@ -45,7 +45,7 @@
                         return
                     }
                     var query = $(this).val();
-                    var searchPage = "http://localhost:4000/ddp/search/?q=" + query;
+                    var searchPage = "https://josewrpereira.github.io/ddp/search/?q=" + query;
                     document.location = searchPage;
                     return false;
                 });
