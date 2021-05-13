@@ -1,0 +1,208 @@
+I"�.<h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
+
+<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.</p>
+
+<!--more-->
+
+<h2 id="1-circuito-hardware">1. Circuito (<em>Hardware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 1.1: 2 Displays de 7 segmentos catodo comum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7segX2/disp7segX2.gif?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-programa-firmware">2. Programa (<em>Firmware</em>)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Figura 2: Árvore de diretório do projeto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://github.com/JoseWRPereira/ddp/blob/master//_posts/tUcPIC/c1-disp7segX2/projectTree.jpg?raw=true" alt="circuito" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="estrutura-do-programa">Estrutura do programa</h2>
+
+<p>O programa presente no arquivo fonte <code class="language-plaintext highlighter-rouge">main.c</code> possui o seguinte arranjo:</p>
+<ul>
+  <li>Inclusão de bibliotecas;</li>
+  <li>Programa principal;
+    <ul>
+      <li>Declaração e inicializações;</li>
+      <li>Laço de repetição.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="programa-principal">Programa principal</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   main.c
+ * Author: josewrpereira
+ *
+ * Created on 13 de Agosto de 2020, 17:31:21
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Segmento a
+ *  RB1     |34     | Segmento b
+ *  RB2     |35     | Segmento c
+ *  RB3     |36     | Segmento d
+ *  RB4     |37     | Segmento e
+ *  RB5     |38     | Segmento f
+ *  RB6     |39     | Segmento g
+ *  RB7     |40     | Segmento p
+ *  RD7     |30     | Hab. Dezena (Catodo comum)
+ *  RD6     |29     | Hab. Unidade (Catodo comum)
+ * -------------------------------------------------
+ */</span>
+
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+#include "disp7seg.h"
+</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">nScan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="n">disp7segX2_init</span><span class="p">();</span>
+    
+    <span class="k">while</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">disp7segX2</span><span class="p">(</span> <span class="n">num</span> <span class="p">);</span>
+        
+        <span class="k">if</span><span class="p">(</span> <span class="o">++</span><span class="n">nScan</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">nScan</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="o">++</span><span class="n">num</span> <span class="o">%</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="inclusão-de-bibliotecas">Inclusão de bibliotecas</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * File:   delay.c
+ * Author: josewrpereira
+ *
+ * Created on 13 de Agosto de 2020, 17:32
+ * 
+ * -------------------------------------------------
+ *          MAPA DE ENTRADAS E SAIDAS
+ * -------------------------------------------------
+ *  Pinos   |nº     |Conexão
+ * ---------|-------|-------------------------------
+ *  RB0     |33     | Segmento a
+ *  RB1     |34     | Segmento b
+ *  RB2     |35     | Segmento c
+ *  RB3     |36     | Segmento d
+ *  RB4     |37     | Segmento e
+ *  RB5     |38     | Segmento f
+ *  RB6     |39     | Segmento g
+ *  RB7     |40     | Segmento p
+ *  RD7     |30     | Hab. Dezena (Catodo comum)
+ *  RD6     |29     | Hab. Unidade (Catodo comum)
+ * ------------------------------------------------- 
+ */</span>
+<span class="cp">#include &lt;xc.h&gt;
+#include "config.h"
+#include "delay.h"
+</span>
+<span class="cp">#define QTD_DIGITOS         2
+#define BASE                10
+</span>
+<span class="cp">#define DISP7SEG_BUS( x )   PORTB = x
+#define HAB_DEZENA( x )     PORTDbits.RD7 = x
+#define HAB_UNIDADE( x )    PORTDbits.RD6 = x
+</span>
+
+<span class="kt">char</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>    <span class="mh">0x3F</span><span class="p">,</span> <span class="mh">0x06</span><span class="p">,</span> <span class="mh">0x5B</span><span class="p">,</span> <span class="mh">0x4F</span><span class="p">,</span> 
+                            <span class="mh">0x66</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">,</span> <span class="mh">0x7D</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> 
+                            <span class="mh">0x7F</span><span class="p">,</span> <span class="mh">0x6F</span><span class="p">,</span> <span class="mh">0x77</span><span class="p">,</span> <span class="mh">0x7C</span><span class="p">,</span> 
+                            <span class="mh">0x39</span><span class="p">,</span> <span class="mh">0x5E</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">,</span> <span class="mh">0x71</span>  <span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">disp7segX2_init</span><span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ANSELH</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISB</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD7</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">TRISDbits</span><span class="p">.</span><span class="n">TRISD6</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+    <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+    <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">DISP7SEG_BUS</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">posicao</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">disp7segX2</span><span class="p">(</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">num</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span><span class="p">(</span> <span class="n">posicao</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span> <span class="c1">// Unidade</span>
+                <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+                <span class="n">DISP7SEG_BUS</span><span class="p">(</span> <span class="n">digitos7seg</span><span class="p">[</span><span class="n">num</span> <span class="o">%</span> <span class="n">BASE</span><span class="p">]</span> <span class="p">);</span>
+                <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">// Dezena</span>
+                <span class="n">HAB_UNIDADE</span><span class="p">(</span> <span class="mi">0</span> <span class="p">);</span>
+                <span class="n">DISP7SEG_BUS</span><span class="p">(</span> <span class="n">digitos7seg</span><span class="p">[(</span><span class="n">num</span> <span class="o">/</span> <span class="n">BASE</span><span class="p">)</span> <span class="o">%</span> <span class="n">BASE</span><span class="p">]</span> <span class="p">);</span>
+                <span class="n">HAB_DEZENA</span><span class="p">(</span> <span class="mi">1</span> <span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">posicao</span> <span class="o">=</span> <span class="o">++</span><span class="n">posicao</span> <span class="o">%</span> <span class="n">QTD_DIGITOS</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Agora é a sua vez!</p>
+
+<p>Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, seja resiliente, leia novamente a explicação, busque outras fontes, pergunte, responda, explique, faça alterações conscientes no código, explore, divirta-se.</p>
+
+<p>Ficou com alguma dúvida, entre em contato.</p>
+
+<p>Bom trabalho!</p>
+
+<hr />
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><a href="/ddp/2021/c1-disp7seg">« C1 - Display de 7 segmentos</a> « C1 - 2 Displays de 7 segmentos » <a href="/ddp/2021/c1-bordaBotaoPulsador">C1 - Borda do botão pulsador »</a></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnology/ucPIC">Voltar</a></p>
+:ET

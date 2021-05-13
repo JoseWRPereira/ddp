@@ -65,16 +65,13 @@ Alternativamente pode-se utilizar uma ferramenta online:
 [[src](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/c1_display7segmentos.X)]
 [[sim](https://github.com/JoseWRPereira/ucPICsimulIDE/tree/master/sim_disp7seg)]
 * [C1 - 2 Displays de 7 segmentos]({{site.baseurl}}/2021/c1-disp7segX2)
-
-* [P0112 - Detecção de borda]({{site.baseurl}}/2020/P0112-bordaBotaoPulsador)
+* [C1 - Detecção de borda]({{site.baseurl}}/2021/c1-bordaBotaoPulsador)
 
 
 ## Ciclo 2 - IHM: display e teclado
 * [C2 - Display LCD 8 vias]({{site.baseurl}}/2021/c2-dispLCD8vias)
-* [C2 - Display LCD 4 vias]({{site.baseurl}}/2020/c2-dispLCD4vias)
-* [C2 - Teclado Matricial 4x4]({{site.baseurl}}/2020/P0130-teclado4x4)
-
-
+* [C2 - Display LCD 4 vias]({{site.baseurl}}/2021/c2-dispLCD4vias)
+* [C2 - Teclado Matricial 4x4]({{site.baseurl}}/2021/c2-teclado4x4)
 
 
 <hr/>
