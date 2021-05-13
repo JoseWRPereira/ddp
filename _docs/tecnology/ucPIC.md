@@ -40,7 +40,7 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [Anexo D - Controle de Versão]({{site.baseurl}}/2021/capD-versionamento)
 
 
-## Ciclo 1 - Programas Básicos
+## Ciclo 1 - Manipulando Entradas e Saídas
 * [Arquivo de Configuração]({{site.baseurl}}/2021/config) 
 [[config.h](https://raw.githubusercontent.com/JoseWRPereira/ucPICsimulIDE/master/NomeDoProjeto.X/config.h)]
 * [C1 - Pisca LED]({{site.baseurl}}/2021/c1-piscaLED) 
@@ -67,9 +67,15 @@ Alternativamente pode-se utilizar uma ferramenta online:
 * [C1 - 2 Displays de 7 segmentos]({{site.baseurl}}/2021/c1-disp7segX2)
 
 * [P0112 - Detecção de borda]({{site.baseurl}}/2020/P0112-bordaBotaoPulsador)
-* [P0120 - Display LCD 8 vias]({{site.baseurl}}/2020/P0120-dispLCD8vias)
-* [P0122 - Display LCD 4 vias]({{site.baseurl}}/2020/P0122-dispLCD4vias)
-* [P0130 - Teclado Matricial 4x4]({{site.baseurl}}/2020/P0130-teclado4x4)
+
+
+## Ciclo 2 - IHM: display e teclado
+* [C2 - Display LCD 8 vias]({{site.baseurl}}/2021/c2-dispLCD8vias)
+* [C2 - Display LCD 4 vias]({{site.baseurl}}/2020/c2-dispLCD4vias)
+* [C2 - Teclado Matricial 4x4]({{site.baseurl}}/2020/P0130-teclado4x4)
+
+
+
 
 <hr/>
 

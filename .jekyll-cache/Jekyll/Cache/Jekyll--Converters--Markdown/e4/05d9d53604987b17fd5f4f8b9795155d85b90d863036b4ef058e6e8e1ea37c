@@ -1,0 +1,253 @@
+I"J.<h1 id="postagens">Postagens</h1>
+
+<p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
+
+<br />
+<hr /><hr />
+
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c2-dispLCD8vias/">C2 - Display LCD com 8 vias de barramento</a></h2>
+   <span class="post-date">2021-05-13</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-lcd">Display LCD</h1>
+
+<p>O dispositivo mais comum para a exibição de cadeia de caracteres (<em>strings</em>) e variáveis numéricas é o display de cristal líquido (<em>Liquid Crystal Display</em> - LCD). 
+Assim faz-se necessária uma biblioteca mínima para seu uso.</p>
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Exibir uma mensagem de texto e uma variável no display LCD.</p>
+
+
+   
+      <a href="/ddp/2021/c2-dispLCD8vias/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-disp7segX2/">C1 - 2 Displays de 7 segmentos</a></h2>
+   <span class="post-date">2021-04-29</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
+
+<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.</p>
+
+
+   
+      <a href="/ddp/2021/c1-disp7segX2/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-disp7seg/">C1 - Display de 7 segmentos</a></h2>
+   <span class="post-date">2021-04-24</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
+
+<p>O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais:</p>
+
+<p><code class="language-plaintext highlighter-rouge">0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F</code>;</p>
+
+
+   
+      <a href="/ddp/2021/c1-disp7seg/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-partida_estrela_triangulo/">C1 - Partida Estrela/Triângulo</a></h2>
+   <span class="post-date">2021-04-20</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="partida-de-motor-trifásico">Partida de Motor Trifásico</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular uma partida estrela/triângulo de motor trifásico.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
+  <li>Máquina de estados.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-partida_estrela_triangulo/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">C1 - Semáforo de Veíc. e Ped. com Máquina de Estados</a></h2>
+   <span class="post-date">2021-04-20</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo">Semáforo</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres utilizando uma máquina de estados.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
+  <li>Máquina de estados.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">C1 - Semáforo de Veículos e de Pedestres</a></h2>
+   <span class="post-date">2021-04-19</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Encapsulamento de trechos de código em procedimentos e funções;</li>
+  <li>Definições de parâmetros para funções;</li>
+  <li>Função de atraso bloqueante: delay();</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos/">C1 - Semáforo de Veículos</a></h2>
+   <span class="post-date">2021-04-15</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar 3 saídas simulando um semáforo de veículos.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Uso de definições;</li>
+  <li>Encapsulamento de trechos de código: procedimentos e funções;</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-botaoLED/">Botão pulsador e LED</a></h2>
+   <span class="post-date">2021-04-13</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <p>Agora que sabemos como acionar uma saída digital, vamos fazer a leitura de uma entrada também digital, utilizando um botão pulsador (<em>push button</em>) para ligar um LED.</p>
+
+<p>Toda construção de programa deve ser feita de forma incremental, iniciando com uma estrutura básica e agregando parte a parte do código até atingir o objetivo.</p>
+
+<h1 id="objetivo">Objetivo</h1>
+
+<p>Acionar um LED copiando o estado lógico de um botão.</p>
+
+<h1 id="conteúdo">Conteúdo</h1>
+
+<ul>
+  <li>Configuração e leitura de pino como entrada digital;</li>
+  <li>Arquivo de cabeçalho;</li>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">if</code> e <code class="language-plaintext highlighter-rouge">else</code>;</li>
+  <li>Estrutura de repetição infinita <code class="language-plaintext highlighter-rouge">while( 1 )</code>;</li>
+  <li>Definições;</li>
+  <li>Simplificação de código.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-botaoLED/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-piscaLED/">C1 - Pisca LED</a></h2>
+   <span class="post-date">2021-04-12</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="pisca-led">Pisca LED</h1>
+
+<p>Uma prática costumeira em programação, sempre que se testa a compilação em um projeto novo, é exibir na tela a mensagem <em><code class="language-plaintext highlighter-rouge">"Hello world"</code></em> ou em português <code class="language-plaintext highlighter-rouge">"Ola mundo"</code>. Tal prática ocorre pelo fato de que, exibir uma mensagem na saída padrão, que geralmente é o monitor, é o programa mínimo funcional que se pode executar em um computador.</p>
+
+<p>Em um sistema microcontrolado, o programa equivalente ao <code class="language-plaintext highlighter-rouge">"Ola mundo"</code> é o acionamento intermitente de uma dispositivo de sinalização em uma saída digital, ou seja, fazer um LED conectado a uma pino piscar: <code class="language-plaintext highlighter-rouge">Pisca LED</code>.</p>
+
+<p>Assim, o <code class="language-plaintext highlighter-rouge">Pisca LED</code> ou <em><code class="language-plaintext highlighter-rouge">Blink LED</code></em> é o programa mínimo e ponto de partida no estudo dos sistemas microcontrolados, e de extrema importância por testar a compilação do programa (<em>firmware</em>), sua gravação no dispositivo alvo e ao menos uma parte do circuito em sua execução, validando o processo de compilação, gravação e execução.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar um LED de forma que ‘pisque’ com frequência de 1Hz.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura básica de um programa;</li>
+  <li>Comentários;</li>
+  <li>Diretivas de configuração;</li>
+  <li>Inclusão de biblioteca padrão;</li>
+  <li>Programa principal;</li>
+  <li>Configuração e acionamento de pino como saída.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-piscaLED/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/capD-versionamento/">Anexo D - Controle de Versão</a></h2>
+   <span class="post-date">2021-04-10</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span>
+   <h1 id="git-e-github">Git e GitHub</h1>
+
+<p>Com o MPLAB-X é possível realizar o controle de versão dos projetos com algumas ferramentas específicas, entre elas o Git, e fazer a conexão com um repositório remoto, como o GitHub.</p>
+
+<p>O Git é uma ferramenta de controle de versão que será aqui utilizada num recorte bem simples e básica, não sendo o intuito ensinar seu uso amplo ou profundo.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Utilizar o Git e o GitHub, através do MPLAB-X, para fazer o controle de versão de um projeto.</p>
+
+
+   
+      <a href="/ddp/2021/capD-versionamento/">leia mais </a>
+   
+   </div>
+   <hr />
+
+
+Quer ver mais? Acesse <a href="/ddp/archive/">artigos</a>.
+</p>
+:ET

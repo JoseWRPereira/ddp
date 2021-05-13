@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "P0120 - Display LCD com 8 vias de barramento"
-date: 2020-08-15 16:23:21 -0300
+title: "C2 - Display LCD com 8 vias de barramento"
+date: 2021-05-13 06:23:21 -0300
 author: José W. R. Pereira
 categories: ucPIC
 badges:
@@ -35,7 +35,7 @@ Exibir uma mensagem de texto e uma variável no display LCD.
 
 | Figura 1.1: Display LCD HD44780 |
 |:---------------------------------------------:|
-| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/imgP0120/dispLCD8vias.gif{{site.rawimg}}) |
+| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c2-dispLCD8vias/dispLCD8vias.gif{{site.rawimg}}) |
 
 
 
@@ -45,7 +45,7 @@ Exibir uma mensagem de texto e uma variável no display LCD.
 
 | Figura 2: Árvore de diretório do projeto |
 |:----------------------------------------:|
-| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/imgP0120/projectTree.jpg{{site.rawimg}})| 
+| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c2-dispLCD8vias/projectTree.jpg{{site.rawimg}})| 
 
 
 ## Estrutura do programa
@@ -81,8 +81,8 @@ Exibir uma mensagem de texto e uma variável no display LCD.
  * -------------------------------------------------
  */
 
-#include <xc.h>
 #include "config.h"
+#include <xc.h>
 #include "delay.h"
 #include "dispLCD8vias.h"
 
@@ -195,7 +195,7 @@ void main(void)
  */
 
 #include <xc.h>
-#include "config.h"
+#include "delay.h"
 
 
 //***************** Interface com PORTs/Pinos
@@ -355,8 +355,6 @@ void dispLCD_clr( void )
 
 ```
 
-
-
 <hr/>
 
 Agora é a sua vez! 
@@ -366,5 +364,14 @@ Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, sej
 Ficou com alguma dúvida, entre em contato. 
 
 Bom trabalho! 
+
+
+<hr/>
+
+>>> []({{site.baseurl}}/2021/c2-dispLCD8vias) << C2 - Display LCD 8 vias >> [ C2 - Display LCD 4 vias >>]({{site.baseurl}}/2021/c2-dispLCD4vias)
+
+<hr/>
+
+
 
 [Voltar]({{site.baseurl}}/docs/tecnology/ucPIC)

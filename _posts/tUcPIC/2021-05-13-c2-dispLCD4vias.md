@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "P0122 - Display LCD com 4 vias de barramento"
-date: 2020-08-15 17:58:21 -0300
+title: "C2 - Display LCD com 4 vias de barramento"
+date: 2021-05-13 06:58:21 -0300
 author: José W. R. Pereira
 categories: ucPIC
 badges:
@@ -35,7 +35,7 @@ Adaptar a biblioteca dispLCD8vias para trabalhar com um barramento de 4 vias de 
 
 | Figura 1.1: Display LCD HD44780 |
 |:---------------------------------------------:|
-| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/imgP0122/dispLCD4vias.gif{{site.rawimg}}) |
+| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c2-dispLCD4vias/dispLCD4vias.gif{{site.rawimg}}) |
 
 
 
@@ -45,7 +45,7 @@ Adaptar a biblioteca dispLCD8vias para trabalhar com um barramento de 4 vias de 
 
 | Figura 2: Árvore de diretório do projeto |
 |:----------------------------------------:|
-| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/imgP0122/projectTree.jpg{{site.rawimg}})| 
+| ![circuito]({{site.baseurlimg}}/_posts/tUcPIC/c2-dispLCD4vias/projectTree.jpg{{site.rawimg}})| 
 
 
 ## Estrutura do programa
@@ -77,8 +77,8 @@ Adaptar a biblioteca dispLCD8vias para trabalhar com um barramento de 4 vias de 
  * -------------------------------------------------
  */
 
-#include <xc.h>
 #include "config.h"
+#include <xc.h>
 #include "delay.h"
 #include "dispLCD4vias.h"
 
@@ -187,7 +187,7 @@ void main(void)
  */
 
 #include <xc.h>
-#include "config.h"
+#include "delay.h"
 
 //***************** Interface com PORTs/Pinos
 #define LCD_BUS         LCDbits.BUS
@@ -399,5 +399,13 @@ Crie o seu projeto, copie o código, execute-o, procure os erros, arrume-os, sej
 Ficou com alguma dúvida, entre em contato. 
 
 Bom trabalho! 
+
+
+<hr/>
+
+>>> [<< C2 - Display LCD 8 vias ]({{site.baseurl}}/2021/c2-dispLCD8vias) << C2 - Display LCD 4 vias >> [C2 - Teclado Matricial 4x4 >>]({{site.baseurl}}/2021/c2-teclado4x4)
+
+
+<hr/>
 
 [Voltar]({{site.baseurl}}/docs/tecnology/ucPIC)
