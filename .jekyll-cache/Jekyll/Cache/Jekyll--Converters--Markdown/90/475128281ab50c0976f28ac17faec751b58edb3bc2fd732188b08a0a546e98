@@ -1,0 +1,273 @@
+I"�B<h1 id="postagens">Postagens</h1>
+
+<p>Assine o <a href="/ddp/feed.xml">RSS</a> para acompanhar as últimas postagens.
+
+<br />
+<hr /><hr />
+
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/probEstatistica/">Estatística</a></h2>
+   <span class="post-date">2021-06-03</span><br />
+   <span class="badge badge-primary">UniVESP</span><span class="badge badge-secondary">Computação</span>
+   <h1 id="estatística"><a href="https://www.youtube.com/playlist?list=PLxI8Can9yAHdJq561NyRN9wZpTqVJn0Z0">Estatística</a></h1>
+
+<p>Associa dados dos problemas gerando informações relevantes para o estabelecimento de conclusões capazes de viabilizar a tomada de decisões em ambientes de incertezas e variações.</p>
+
+<p>A estatística trata então dos processos que apresentam um grau de variabilidade em seu comportamento ou nos seus resultados, buscando responder as seguintes questões:</p>
+<ul>
+  <li>Que <strong>tipo</strong> de informações são necessárias?</li>
+  <li>Qual a <strong>quantidade</strong> de informações é suficiente?</li>
+  <li>Como <strong>processar</strong> estas informações?</li>
+</ul>
+
+<p>Divide-se em três áres principais:</p>
+<ul>
+  <li>Probabilidade;</li>
+  <li>Estatística descritiva;</li>
+  <li>Estatística indutiva.</li>
+</ul>
+
+<h2 id="probabilidade">Probabilidade</h2>
+
+<p>Estudo da <strong>eleatoriedade</strong> e <strong>incerteza</strong>, medida de informação sobre a ocorrência de um evento.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Definição</th>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Frequencialista</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">Clássica</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><msub><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mfrac><mi>m</mi><mi>n</mi></mfrac></mrow><annotation encoding="application/x-tex">p = \lim_{n\rightarrow \infty} \frac{m}{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.040392em;vertical-align:-0.345em;"></span><span class="mop"><span class="mop">lim</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">→</span><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.695392em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mi>M</mi><mi>N</mi></mfrac></mrow><annotation encoding="application/x-tex">P = \frac{M}{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Onde:</td>
+      <td style="text-align: center">p, P <br /> m, M <br /> n, N</td>
+      <td style="text-align: center">Probabilidade <br /> Núm. de Sucessos <br />  Núm. de Possibilidades</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="espaço-amostral-s">Espaço Amostral (S)</h3>
+<p>Conjunto ou coleção definida de objetos ou itens, com todos os possíveis resultados.</p>
+
+<p>Ex: Lançamento de uma moeda 
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mrow><mi>C</mi><mo separator="true">,</mo><mi>K</mi></mrow></mrow><annotation encoding="application/x-tex">S = {C, K}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span></span></p>
+
+<hr />
+
+<p><a href="/ddp/docs/tecnologia">Voltar</a></p>
+
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c2-teclado4x4/">C2 - Teclado Matricial</a></h2>
+   <span class="post-date">2021-05-13</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="teclado-4x4">Teclado 4x4</h1>
+
+<p>A interface com o operador popularmente denominada Interface Homem Máquina(IHM), costumeiramente possui a dupla display LCD e teclado matricial.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Implementar uma interface com um teclado matricial 4x4 para entrada de dados.</p>
+
+
+   
+      <a href="/ddp/2021/c2-teclado4x4/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c2-dispLCD4vias/">C2 - Display LCD com 4 vias de barramento</a></h2>
+   <span class="post-date">2021-05-13</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-lcd">Display LCD</h1>
+
+<p>O LCD permite uma transferência de dados por um barramento de 8 ou 4 vias, economizando assim quatro bits que podem ser utilizados para outros fins.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Adaptar a biblioteca dispLCD8vias para trabalhar com um barramento de 4 vias de dados.</p>
+
+
+   
+      <a href="/ddp/2021/c2-dispLCD4vias/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c2-dispLCD8vias/">C2 - Display LCD com 8 vias de barramento</a></h2>
+   <span class="post-date">2021-05-13</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-lcd">Display LCD</h1>
+
+<p>O dispositivo mais comum para a exibição de cadeia de caracteres (<em>strings</em>) e variáveis numéricas é o display de cristal líquido (<em>Liquid Crystal Display</em> - LCD). 
+Assim faz-se necessária uma biblioteca mínima para seu uso.</p>
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Exibir uma mensagem de texto e uma variável no display LCD.</p>
+
+
+   
+      <a href="/ddp/2021/c2-dispLCD8vias/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-bordaBotaoPulsador/">C1 - Borda Botão Pulsador</a></h2>
+   <span class="post-date">2021-04-29</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="detecção-de-borda-em-botão-pulsador">Detecção de borda em botão pulsador</h1>
+
+<p>A leitura simples de um botão implica em alguns comportamentos não desejados como um incremento maior do que a quantidade de vezes que um botão é pressionado. Para solucionar esse problema pode-se utilizar não o estado lógico do botão, mas sim o evendo associado a mudança de estado, evento único dentro de um ciclo de operação.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Detectar as bordas de subida e descida em botão pulsador.</p>
+
+
+   
+      <a href="/ddp/2021/c1-bordaBotaoPulsador/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-disp7segX2/">C1 - 2 Displays de 7 segmentos</a></h2>
+   <span class="post-date">2021-04-29</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-de-7-segmentos-2-dígitos">Display de 7 segmentos: 2 dígitos</h1>
+
+<p>Raramente um único display de 7 segmentos é suficiente para exibir o valor de alguma grandeza. Assim faz-se necessária a ligação de ao menos outro dígito. Para acionar este outro dígito pode-se utilizar outro <code class="language-plaintext highlighter-rouge">PORT</code> de 8 pinos do uC. A quantidade de pinos utilizados para o display começa a ficar inviável ao aumentar a quantidade de dígitos. Para viabilizar a utilização de vários dígitos, é utilizada uma técnica chamada multiplexação.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar dois displays de 7 segmentos de forma multiplexada para exibir uma contagem de 0 a 99.</p>
+
+
+   
+      <a href="/ddp/2021/c1-disp7segX2/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-disp7seg/">C1 - Display de 7 segmentos</a></h2>
+   <span class="post-date">2021-04-24</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="display-de-7-segmentos">Display de 7 segmentos</h1>
+
+<p>O display de 7 segmentos é uma das formas mais comuns de exibir um número, que pode representar o “peso” (massa) em uma balança, horas, minutos e segundos em um relógio ou cronômetro ou um simples contador de objetos em um processo qualquer.</p>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Acionar um display de 7 segmentos para exibir os 16 dígitos hexadecimais:</p>
+
+<p><code class="language-plaintext highlighter-rouge">0,1,2,3,4,5,6,7,8,9,A,B,C,D,E e F</code>;</p>
+
+
+   
+      <a href="/ddp/2021/c1-disp7seg/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-partida_estrela_triangulo/">C1 - Partida Estrela/Triângulo</a></h2>
+   <span class="post-date">2021-04-20</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="partida-de-motor-trifásico">Partida de Motor Trifásico</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular uma partida estrela/triângulo de motor trifásico.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
+  <li>Máquina de estados.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-partida_estrela_triangulo/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">C1 - Semáforo de Veíc. e Ped. com Máquina de Estados</a></h2>
+   <span class="post-date">2021-04-20</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo">Semáforo</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres utilizando uma máquina de estados.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Estrutura condicional <code class="language-plaintext highlighter-rouge">switch case</code>;</li>
+  <li>Máquina de estados.</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres_me/">leia mais </a>
+   
+   </div>
+   <hr />
+
+   <div class="post-preview">
+   <h2><a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">C1 - Semáforo de Veículos e de Pedestres</a></h2>
+   <span class="post-date">2021-04-19</span><br />
+   <span class="badge badge-warning">Microcontrolador</span><span class="badge badge-secondary">PIC</span><span class="badge badge-secondary">PIC16F887</span><span class="badge badge-danger">MPLABX-XC8</span><span class="badge badge-success">SimulIDE</span>
+   <h1 id="semáforo-de-veículos">Semáforo de Veículos</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+
+<p>Simular um semáforo de veículos e de pedestre, incluindo o botão para bloqueio da via e liberação da atravessia aos pedestres.</p>
+
+<h2 id="conteúdo">Conteúdo</h2>
+
+<ul>
+  <li>Encapsulamento de trechos de código em procedimentos e funções;</li>
+  <li>Definições de parâmetros para funções;</li>
+  <li>Função de atraso bloqueante: delay();</li>
+</ul>
+
+
+   
+      <a href="/ddp/2021/c1-semaforo_veiculos_pedestres/">leia mais </a>
+   
+   </div>
+   <hr />
+
+
+Quer ver mais? Acesse <a href="/ddp/archive/">artigos</a>.
+</p>
+:ET

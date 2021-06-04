@@ -235,7 +235,7 @@ Bom trabalho!
 
 <hr/>
 
->>> [<< C1 - 2 Displays de 7 segmentos]({{site.baseurl}}/2021/c1-disp7segX2) << C1 - Detecção de borda em botão pulsador >> [ >>]({{site.baseurl}}/2021/c1-bordaBotaoPulsador)
+>>> [<< C1 - 2 Displays de 7 segmentos]({{site.baseurl}}/2021/c1-disp7segX2 ) << C1 - Detecção de borda em botão pulsador >> [ >>]({{site.baseurl}}/2021/c1-bordaBotaoPulsador)
 
 <hr/>
 
