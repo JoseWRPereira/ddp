@@ -213,7 +213,7 @@ O erro apresentado pelo compilador é:
 main.c:82:: error: (1387) inline delay argument must be constant
 ```
 
-Que significa basicamente que o argumento da função delay precisa ser uma constante, é não uma variável como foi foito.
+Que significa basicamente que o argumento da função delay precisa ser uma constante, é não uma variável como foi feito.
 
 Para resolver esse problema é criada uma função denominada `delay`, que vai executar a mesma função que `__delay_ms`, porém aceitando uma variável como parâmetro.
 

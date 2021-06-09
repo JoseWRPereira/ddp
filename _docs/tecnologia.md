@@ -24,3 +24,4 @@ As principais áreas de interesse e estudo, tanto pessoal quanto profissionalmen
 
 * [UniVESP - Computação]({{site.baseurl}}/2020/com110-algoritmo)
 * [UniVESP - Estatística]({{site.baseurl}}/2021/estatistica)
+* [UniVESP - Inovação]({{site.baseurl}}/2021/inovacao)
